@@ -108,10 +108,6 @@ class SagaAlgorithm(SagaAlgorithmBase):
     def svgIconPath(self):
         return QgsApplication.iconPath("providerSaga.svg")
 
-    def flags(self):
-        # TODO - maybe it's safe to background thread this?
-        return super().flags() | QgsProcessingAlgorithm.FlagNoThreading
-
     def defineCharacteristicsFromFile(self):
         with open(self.description_file, encoding="utf-8") as lines:
             line = lines.readline().strip('\n').strip()

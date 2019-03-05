@@ -54,7 +54,7 @@ from processing.algs.help import shortHelp
 from processing.tools.system import getTempFilename
 from processing.algs.saga.SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
 from processing.algs.saga.SagaParameters import Parameters
-from . import SagaUtils
+from . import utils
 from .SagaAlgorithmBase import SagaAlgorithmBase
 
 pluginPath = os.path.normpath(os.path.join(
@@ -334,15 +334,15 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
         # 3: Run SAGA
         commands = self.editCommands(commands)
-        SagaUtils.createSagaBatchJobFileFromSagaCommands(commands)
+        utils.createSagaBatchJobFileFromSagaCommands(commands)
         loglines = []
         loglines.append(self.tr('SAGA execution commands'))
         for line in commands:
             feedback.pushCommandInfo(line)
             loglines.append(line)
-        if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_COMMANDS):
+        if ProcessingConfig.getSetting(utils.SAGA_LOG_COMMANDS):
             QgsMessageLog.logMessage('\n'.join(loglines), self.tr('Processing'), Qgis.Info)
-        SagaUtils.executeSaga(feedback)
+        utils.executeSaga(feedback)
 
         if crs is not None:
             for out in output_layers:

@@ -2,7 +2,7 @@
 
 """
 ***************************************************************************
-    SagaAlgorithmProvider.py
+    provider.py
     ---------------------
     Date                 : August 2012
     Copyright            : (C) 2012 by Victor Olaya
@@ -26,27 +26,22 @@ __copyright__ = '(C) 2012, Victor Olaya'
 __revision__ = '$Format:%H$'
 
 import os
-from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import (Qgis,
                        QgsProcessingProvider,
-                       QgsProcessingUtils,
                        QgsApplication,
                        QgsMessageLog)
 from processing.core.ProcessingConfig import ProcessingConfig, Setting
-from processing.tools.system import isWindows, isMac
 
 from .SagaAlgorithm import SagaAlgorithm
 from .SplitRGBBands import SplitRGBBands
-from . import SagaUtils
+import processing_saga_nextgen.processing.utils as SagaUtils
+from processing_saga_nextgen.gui.gui_utils import GuiUtils
 
-pluginPath = os.path.normpath(os.path.join(
-    os.path.split(os.path.dirname(__file__))[0], os.pardir))
-
-REQUIRED_VERSION = '2.3.'
+REQUIRED_VERSION = '7.2.'
 
 
-class SagaAlgorithmProvider(QgsProcessingProvider):
+class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
 
     def __init__(self):
         super().__init__()
@@ -54,15 +49,13 @@ class SagaAlgorithmProvider(QgsProcessingProvider):
 
     def load(self):
         ProcessingConfig.settingIcons[self.name()] = self.icon()
-        ProcessingConfig.addSetting(Setting("SAGA", 'ACTIVATE_SAGA',
-                                            self.tr('Activate'), True))
-        ProcessingConfig.addSetting(Setting("SAGA",
+        ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_IMPORT_EXPORT_OPTIMIZATION,
                                             self.tr('Enable SAGA Import/Export optimizations'), False))
-        ProcessingConfig.addSetting(Setting("SAGA",
+        ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_LOG_COMMANDS,
                                             self.tr('Log execution commands'), True))
-        ProcessingConfig.addSetting(Setting("SAGA",
+        ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_LOG_CONSOLE,
                                             self.tr('Log console output'), True))
         ProcessingConfig.readSettings()
@@ -70,33 +63,23 @@ class SagaAlgorithmProvider(QgsProcessingProvider):
         return True
 
     def unload(self):
-        ProcessingConfig.removeSetting('ACTIVATE_SAGA')
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_CONSOLE)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_COMMANDS)
-
-    def isActive(self):
-        return ProcessingConfig.getSetting('ACTIVATE_SAGA')
-
-    def setActive(self, active):
-        ProcessingConfig.setSettingValue('ACTIVATE_SAGA', active)
-
-    def canBeActivated(self):
-        version = SagaUtils.getInstalledVersion(True)
-        if version is not None and version.startswith(REQUIRED_VERSION):
-            return True
-        return False
 
     def loadAlgorithms(self):
         version = SagaUtils.getInstalledVersion(True)
         if version is None:
-            QgsMessageLog.logMessage(self.tr('Problem with SAGA installation: SAGA was not found or is not correctly installed'),
-                                     self.tr('Processing'), Qgis.Critical)
+            QgsMessageLog.logMessage(
+                self.tr('Problem with SAGA installation: SAGA was not found or is not correctly installed'),
+                self.tr('Processing'), Qgis.Critical)
             return
 
         if not version.startswith(REQUIRED_VERSION):
-            QgsMessageLog.logMessage(self.tr('Problem with SAGA installation: unsupported SAGA version (found: {}, required: {}).').format(version, REQUIRED_VERSION),
-                                     self.tr('Processing'),
-                                     Qgis.Critical)
+            QgsMessageLog.logMessage(
+                self.tr('Problem with SAGA installation: unsupported SAGA version (found: {}, required: {}).').format(
+                    version, REQUIRED_VERSION),
+                self.tr('Processing'),
+                Qgis.Critical)
             return
 
         self.algs = []
@@ -111,36 +94,62 @@ class SagaAlgorithmProvider(QgsProcessingProvider):
                         QgsMessageLog.logMessage(self.tr('Could not open SAGA algorithm: {}'.format(descriptionFile)),
                                                  self.tr('Processing'), Qgis.Critical)
                 except Exception as e:
-                    QgsMessageLog.logMessage(self.tr('Could not open SAGA algorithm: {}\n{}'.format(descriptionFile, str(e))),
-                                             self.tr('Processing'), Qgis.Critical)
+                    QgsMessageLog.logMessage(
+                        self.tr('Could not open SAGA algorithm: {}\n{}'.format(descriptionFile, str(e))),
+                        self.tr('Processing'), Qgis.Critical)
 
         self.algs.append(SplitRGBBands())
         for a in self.algs:
             self.addAlgorithm(a)
 
     def name(self):
-        return 'SAGA'
+        """
+        Display name for provider
+        """
+        return 'SAGA Next Gen'
 
     def longName(self):
+        """
+        Display long name for provider
+        """
         version = SagaUtils.getInstalledVersion()
-        return 'SAGA ({})'.format(version) if version is not None else 'SAGA'
+        return 'SAGA Next Gen ({})'.format(version) if version is not None else 'SAGA'
 
     def id(self):
-        return 'saga'
+        """
+        Unique ID for provider
+        """
+        return 'sagang'
 
     def defaultVectorFileExtension(self, hasGeometry=True):
+        """
+        Default extension -- we use shapefile for spatial layers, dbf for non-spatial layers
+        """
         return 'shp' if hasGeometry else 'dbf'
 
     def defaultRasterFileExtension(self):
+        """
+        Default extension -- only sdat supported
+        """
         return 'sdat'
 
     def supportedOutputRasterLayerExtensions(self):
+        """
+        Only sdat supported
+        """
         return ['sdat']
 
     def supportedOutputVectorLayerExtensions(self):
+        """
+        Only shapefile supported
+        """
+
         return ['shp', 'dbf']
 
     def supportedOutputTableExtensions(self):
+        """
+        Only dbf supported
+        """
         return ['dbf']
 
     def supportsNonFileBasedOutput(self):
@@ -150,9 +159,21 @@ class SagaAlgorithmProvider(QgsProcessingProvider):
         return False
 
     def icon(self):
-        return QgsApplication.getThemeIcon("/providerSaga.svg")
+        """
+        Returns the provider's icon
+        """
+        return GuiUtils.get_icon("providerSaga.svg")
+
+    def svgIconPath(self):
+        """
+        Returns a path to the provider's icon as a SVG file
+        """
+        return GuiUtils.get_icon_svg("providerSaga.svg")
 
     def tr(self, string, context=''):
+        """
+        Translates a string
+        """
         if context == '':
-            context = 'SagaAlgorithmProvider'
+            context = 'SagaNgAlgorithmProvider'
         return QCoreApplication.translate(context, string)

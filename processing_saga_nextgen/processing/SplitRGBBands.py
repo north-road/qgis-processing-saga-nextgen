@@ -29,7 +29,7 @@ import os
 from qgis.core import (QgsProcessingParameterRasterLayer,
                        QgsProcessingParameterRasterDestination)
 from processing.tools.system import getTempFilename
-from . import SagaUtils
+from . import utils
 from .SagaAlgorithmBase import SagaAlgorithmBase
 
 pluginPath = os.path.normpath(os.path.join(
@@ -78,7 +78,7 @@ class SplitRGBBands(SagaAlgorithmBase):
         b = self.parameterAsOutputLayer(parameters, self.B, context)
 
         commands = []
-        version = SagaUtils.getInstalledVersion(True)
+        version = utils.getInstalledVersion(True)
         trailing = ""
         lib = ""
         commands.append('%sio_gdal 0 -GRIDS "%s" -FILES "%s"' % (lib, temp, input)
@@ -90,7 +90,7 @@ class SplitRGBBands(SagaAlgorithmBase):
         commands.append('%sio_gdal 1 -GRIDS "%s_%s3.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"' % (lib, temp, trailing, b)
                         )
 
-        SagaUtils.createSagaBatchJobFileFromSagaCommands(commands)
-        SagaUtils.executeSaga(feedback)
+        utils.createSagaBatchJobFileFromSagaCommands(commands)
+        utils.executeSaga(feedback)
 
         return {self.R: r, self.G: g, self.B: b}

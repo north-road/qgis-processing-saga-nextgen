@@ -18,7 +18,7 @@ from qgis.PyQt.QtCore import (QTranslator,
                               QCoreApplication)
 from qgis.core import QgsApplication
 from qgis.gui import QgisInterface
-from processing_saga_nextgen.processing.provider import RAlgorithmProvider
+from processing_saga_nextgen.processing.provider import SagaNextGenAlgorithmProvider
 VERSION = '1.0.5'
 
 
@@ -50,8 +50,7 @@ class SagaNextGenProviderPlugin:
             self.translator.load(locale_path)
             QCoreApplication.installTranslator(self.translator)
 
-        # processing framework
-        self.provider = RAlgorithmProvider()
+        self.provider = None
 
     @staticmethod
     def tr(message):
@@ -70,6 +69,7 @@ class SagaNextGenProviderPlugin:
 
     def initProcessing(self):
         """Create the Processing provider"""
+        self.provider = SagaNextGenAlgorithmProvider()
         QgsApplication.processingRegistry().addProvider(self.provider)
 
     def initGui(self):

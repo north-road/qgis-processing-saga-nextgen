@@ -2,7 +2,7 @@
 
 """
 ***************************************************************************
-    SagaUtils.py
+    utils.py
     ---------------------
     Date                 : August 2012
     Copyright            : (C) 2012 by Victor Olaya
@@ -92,7 +92,7 @@ def sagaPath():
 
 
 def sagaDescriptionPath():
-    return os.path.join(os.path.dirname(__file__), 'description')
+    return os.path.join(os.path.dirname(__file__), '..', 'description')
 
 
 def createSagaBatchJobFileFromSagaCommands(commands):

@@ -38,9 +38,9 @@ from qgis.core import (Qgis,
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.tools.system import isWindows, isMac, userFolder
 
-SAGA_LOG_COMMANDS = 'SAGA_LOG_COMMANDS'
-SAGA_LOG_CONSOLE = 'SAGA_LOG_CONSOLE'
-SAGA_IMPORT_EXPORT_OPTIMIZATION = 'SAGA_IMPORT_EXPORT_OPTIMIZATION'
+SAGA_LOG_COMMANDS = 'SAGANG_LOG_COMMANDS'
+SAGA_LOG_CONSOLE = 'SAGANG_LOG_CONSOLE'
+SAGA_IMPORT_EXPORT_OPTIMIZATION = 'SAGANG_IMPORT_EXPORT_OPTIMIZATION'
 
 _installedVersion = None
 _installedVersionFound = False

@@ -19,7 +19,7 @@ from qgis.PyQt.QtCore import (QTranslator,
 from qgis.core import QgsApplication
 from qgis.gui import QgisInterface
 from processing_saga_nextgen.processing.provider import SagaNextGenAlgorithmProvider
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 
 
 class SagaNextGenProviderPlugin:

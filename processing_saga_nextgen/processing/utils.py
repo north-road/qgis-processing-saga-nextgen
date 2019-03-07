@@ -29,6 +29,7 @@ import os
 import stat
 import subprocess
 import time
+import platform
 
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import (Qgis,
@@ -60,7 +61,7 @@ class SagaUtils:
     @staticmethod
     def findSagaFolder():
         folder = None
-        if isMac():
+        if isMac() or platform.system() == 'FreeBSD':
             testfolder = os.path.join(QgsApplication.prefixPath(), 'bin')
             if os.path.exists(os.path.join(testfolder, 'saga_cmd')):
                 folder = testfolder
@@ -85,7 +86,7 @@ class SagaUtils:
 
     @staticmethod
     def sagaPath():
-        if not isWindows() and not isMac():
+        if not isWindows() and not isMac() and not platform.system() == 'FreeBSD':
             return ''
 
         folder = SagaUtils.findSagaFolder()
@@ -103,7 +104,7 @@ class SagaUtils:
                 fout.write('set SAGA=' + SagaUtils.sagaPath() + '\n')
                 fout.write('set SAGA_MLB=' + os.path.join(SagaUtils.sagaPath(), 'modules') + '\n')
                 fout.write('PATH=%PATH%;%SAGA%;%SAGA_MLB%\n')
-            elif isMac():
+            elif isMac() or platform.system() == 'FreeBSD':
                 fout.write('export SAGA_MLB=' + os.path.join(SagaUtils.sagaPath(), '../lib/saga') + '\n')
                 fout.write('export PATH=' + SagaUtils.sagaPath() + ':$PATH\n')
             else:
@@ -125,7 +126,7 @@ class SagaUtils:
 
         if isWindows():
             commands = [os.path.join(SagaUtils.sagaPath(), "saga_cmd.exe"), "-v"]
-        elif isMac():
+        elif isMac() or platform.system() == 'FreeBSD':
             commands = [os.path.join(SagaUtils.sagaPath(), "saga_cmd -v")]
         else:
             # for Linux use just one string instead of separated parameters as the list
@@ -141,7 +142,7 @@ class SagaUtils:
                     stderr=subprocess.STDOUT,
                     universal_newlines=True,
             ) as proc:
-                if isMac():  # This trick avoids having an uninterrupted system call exception if SAGA is not installed
+                if isMac() or platform.system() == 'FreeBSD':  # This trick avoids having an uninterrupted system call exception if SAGA is not installed
                     time.sleep(1)
                 try:
                     lines = proc.stdout.readlines()

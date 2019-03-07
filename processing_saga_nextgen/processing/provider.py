@@ -47,7 +47,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         self.algs = []
 
     def load(self):
-        ProcessingConfig.settingIcons[self.name()] = self.icon()
+        ProcessingConfig.settingIcons["SAGANG"] = self.icon()
         ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_IMPORT_EXPORT_OPTIMIZATION,
                                             self.tr('Enable SAGA Import/Export optimizations'), False))

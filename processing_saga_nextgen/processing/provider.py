@@ -35,7 +35,7 @@ from processing.core.ProcessingConfig import ProcessingConfig, Setting
 
 from .SagaAlgorithm import SagaAlgorithm
 from .SplitRGBBands import SplitRGBBands
-import processing_saga_nextgen.processing.utils as SagaUtils
+from processing_saga_nextgen.processing.utils import SagaUtils
 from processing_saga_nextgen.gui.gui_utils import GuiUtils
 
 REQUIRED_VERSION = '7.2.'

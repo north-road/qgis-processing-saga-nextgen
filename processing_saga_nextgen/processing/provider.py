@@ -29,7 +29,6 @@ import os
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import (Qgis,
                        QgsProcessingProvider,
-                       QgsApplication,
                        QgsMessageLog)
 from processing.core.ProcessingConfig import ProcessingConfig, Setting
 
@@ -53,6 +52,10 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                                             SagaUtils.SAGA_IMPORT_EXPORT_OPTIMIZATION,
                                             self.tr('Enable SAGA Import/Export optimizations'), False))
         ProcessingConfig.addSetting(Setting("SAGANG",
+                                                SagaUtils.SAGA_FOLDER, self.tr('SAGA folder'),
+                                                '',
+                                                valuetype=Setting.FOLDER))
+        ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_LOG_COMMANDS,
                                             self.tr('Log execution commands'), True))
         ProcessingConfig.addSetting(Setting("SAGANG",
@@ -65,6 +68,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
     def unload(self):
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_CONSOLE)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_COMMANDS)
+        ProcessingConfig.removeSetting(SagaUtils.SAGA_FOLDER)
 
     def loadAlgorithms(self):
         version = SagaUtils.getInstalledVersion(True)

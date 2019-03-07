@@ -40,11 +40,11 @@ from processing.tools.system import isWindows, isMac, userFolder
 
 
 class SagaUtils:
+    SAGA_FOLDER = 'SAGA_FOLDER'
     SAGA_LOG_COMMANDS = 'SAGANG_LOG_COMMANDS'
     SAGA_LOG_CONSOLE = 'SAGANG_LOG_CONSOLE'
     SAGA_IMPORT_EXPORT_OPTIMIZATION = 'SAGANG_IMPORT_EXPORT_OPTIMIZATION'
 
-    _installedVersion = None
     _installedVersionFound = False
 
     @staticmethod
@@ -71,10 +71,8 @@ class SagaUtils:
                     folder = testfolder
         elif isWindows():
             folders = []
-            folders.append(os.path.join(os.path.dirname(QgsApplication.prefixPath()), 'saga-ltr'))
             folders.append(os.path.join(os.path.dirname(QgsApplication.prefixPath()), 'saga'))
             if "OSGEO4W_ROOT" in os.environ:
-                folders.append(os.path.join(str(os.environ['OSGEO4W_ROOT']), "apps", "saga-ltr"))
                 folders.append(os.path.join(str(os.environ['OSGEO4W_ROOT']), "apps", "saga"))
 
             for testfolder in folders:
@@ -86,10 +84,15 @@ class SagaUtils:
 
     @staticmethod
     def sagaPath():
-        if not isWindows() and not isMac() and not platform.system() == 'FreeBSD':
-            return ''
+        folder = ProcessingConfig.getSetting(SagaUtils.SAGA_FOLDER)
+        if folder and not os.path.isdir(folder):
+            folder = None
+            QgsMessageLog.logMessage('Specified SAGA folder does not exist. Will try to find built-in binaries.',
+                                     'Processing', QgsMessageLog.WARNING)
 
-        folder = SagaUtils.findSagaFolder()
+        if not folder:
+            folder = SagaUtils.findSagaFolder()
+
         return folder or ''
 
     @staticmethod
@@ -117,11 +120,10 @@ class SagaUtils:
     @staticmethod
     def getInstalledVersion(runSaga=False):
         global _installedVersion
-        global _installedVersionFound
 
         maxRetries = 5
         retries = 0
-        if _installedVersionFound and not runSaga:
+        if SagaUtils._installedVersionFound and not runSaga:
             return _installedVersion
 
         if isWindows():
@@ -149,7 +151,7 @@ class SagaUtils:
                     for line in lines:
                         if line.startswith("SAGA Version:"):
                             _installedVersion = line[len("SAGA Version:"):].strip().split(" ")[0]
-                            _installedVersionFound = True
+                            SagaUtils._installedVersionFound = True
                             return _installedVersion
                     return None
                 except IOError:

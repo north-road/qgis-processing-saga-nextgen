@@ -78,9 +78,9 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                 self.tr('Processing'), Qgis.Critical)
             return
 
-        if not version.startswith(REQUIRED_VERSION):
+        if version < REQUIRED_VERSION:
             QgsMessageLog.logMessage(
-                self.tr('Problem with SAGA installation: unsupported SAGA version (found: {}, required: {}).').format(
+                self.tr('Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={}).').format(
                     version, REQUIRED_VERSION),
                 self.tr('Processing'),
                 Qgis.Critical)

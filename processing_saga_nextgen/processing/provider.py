@@ -125,6 +125,12 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         """
         return 'sagang'
 
+    def versionInfo(self):
+        """
+        Provider plugin version
+        """
+        return "0.0.4"
+
     def defaultVectorFileExtension(self, hasGeometry=True):
         """
         Default extension -- we use shapefile for spatial layers, dbf for non-spatial layers

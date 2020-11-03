@@ -129,7 +129,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         """
         Provider plugin version
         """
-        return "0.0.4"
+        return "0.0.5"
 
     def defaultVectorFileExtension(self, hasGeometry=True):
         """

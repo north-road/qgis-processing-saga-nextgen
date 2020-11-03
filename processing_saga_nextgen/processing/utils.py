@@ -88,7 +88,7 @@ class SagaUtils:
         if folder and not os.path.isdir(folder):
             folder = None
             QgsMessageLog.logMessage('Specified SAGA folder does not exist. Will try to find built-in binaries.',
-                                     'Processing', QgsMessageLog.WARNING)
+                                     'Processing', Qgis.Warning)
 
         if not folder:
             folder = SagaUtils.findSagaFolder()

@@ -1,10 +1,12 @@
 Fuzzify
 grid_calculus
 QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
-QgsProcessingParameterNumber|A|A|QgsProcessingParameterNumber.Double|0.0|False|None|None
-QgsProcessingParameterNumber|B|B|QgsProcessingParameterNumber.Double|0.0|False|None|None
-QgsProcessingParameterNumber|C|C|QgsProcessingParameterNumber.Double|0.0|False|None|None
-QgsProcessingParameterNumber|D|D|QgsProcessingParameterNumber.Double|0.0|False|None|None
-QgsProcessingParameterEnum|TYPE|Membership Function Type|[0] linear;[1] sigmoidal;[2] j-shaped
-QgsProcessingParameterBoolean|AUTOFIT     |Adjust to Grid|True
+QgsProcessingParameterNumber|INC_MIN|Increase From|QgsProcessingParameterNumber.Double|0.0|False|None|None
+QgsProcessingParameterNumber|INC_MAX|Increase To|QgsProcessingParameterNumber.Double|0.3|False|None|None
+QgsProcessingParameterNumber|DEC_MIN|Decrease From|QgsProcessingParameterNumber.Double|0.7|False|None|None
+QgsProcessingParameterNumber|DEC_MAX|Decrease To|QgsProcessingParameterNumber.Double|1.0|False|None|None
+QgsProcessingParameterEnum|METHOD|Method|[0] Increase;[1] Decrease;[2] Increase and Decrease
+QgsProcessingParameterEnum|TRANSITION|Membership Function Type|[0] linear;[1] sigmoidal;[2] j-shaped
+QgsProcessingParameterBoolean|INVERT|Invert|False
+QgsProcessingParameterBoolean|AUTOFIT|Adjust to Grid|True
 QgsProcessingParameterRasterDestination|OUTPUT|Fuzzified Grid

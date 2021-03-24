@@ -321,11 +321,11 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
         # special treatment for RGB algorithm
         # TODO: improve this and put this code somewhere else
-        for out in self.destinationParameterDefinitions():
-            if isinstance(out, QgsProcessingParameterRasterDestination):
-                filename = self.parameterAsOutputLayer(parameters, out.name(), context)
-                filename2 = os.path.splitext(filename)[0] + '.sgrd'
-                if self.cmdname == 'RGB Composite':
+        if self.cmdname == 'RGB Composite':
+            for out in self.destinationParameterDefinitions():
+                if isinstance(out, QgsProcessingParameterRasterDestination):
+                    filename = self.parameterAsOutputLayer(parameters, out.name(), context)
+                    filename2 = os.path.splitext(filename)[0] + '.sgrd'
                     commands.append('io_grid_image 0 -COLOURING 4 -GRID:"{}" -FILE:"{}"'.format(filename2, filename))
 
         # 3: Run SAGA
@@ -357,11 +357,11 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 oldPath = os.path.join(oldFolder, f)
                 shutil.move(oldPath, newPath)
 
-        result = {}
-        for o in self.outputDefinitions():
-            if o.name() in output_files:
-                result[o.name()] = output_files[o.name()]
-        return result
+        return {
+            o.name(): output_files[o.name()]
+            for o in self.outputDefinitions()
+            if o.name() in output_files
+        }
 
     def preProcessInputs(self):
         name = self.name().replace('.', '_')

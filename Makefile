@@ -60,7 +60,8 @@ deploy:
 	# The deploy  target only works on unix like operating system where
 	# the Python plugin directory is located at:
 	# $HOME/$(QGISDIR)/python/plugins
-	ln -s `pwd`/qgis-r $(HOME)/$(QGISDIR)/python/plugins/${PWD##*/}
+	ln -s `pwd`/$(PLUGIN_NAME) $(HOME)/$(QGISDIR)/python/plugins/${PWD##*/}
+
 
 
 transup:

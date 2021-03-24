@@ -1,0 +1,12 @@
+Local Statistical Measures
+imagery_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|CONTRAST|Contrast
+QgsProcessingParameterRasterDestination|ENERGY|Energy
+QgsProcessingParameterRasterDestination|ENTROPY|Entropy
+QgsProcessingParameterRasterDestination|VARIANCE|Variance
+QgsProcessingParameterEnum|TYPE|Kernel|[0] square;[1] circle|False|1
+QgsProcessingParameterNumber|RADIUS|Radius|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterEnum|NORMALIZE|Normalization|[0] no;[1] scale to range|False|1
+QgsProcessingParameterNumber|NORM_MIN|Minimum|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|NORM_MAX|Maximum|QgsProcessingParameterNumber.Double|255.000000|False|None|None

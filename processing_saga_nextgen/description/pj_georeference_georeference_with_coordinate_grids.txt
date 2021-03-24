@@ -1,0 +1,12 @@
+Georeference with Coordinate Grids
+pj_georeference
+QgsProcessingParameterRasterLayer|GRID_X|X Coordinates|None|False
+QgsProcessingParameterRasterLayer|GRID_Y|Y Coordinates|None|False
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Grids
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
+QgsProcessingParameterBoolean|BYTEWISE|Bytewise Interpolation|False
+QgsProcessingParameterBoolean|KEEP_TYPE|Preserve Data Type|False
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None

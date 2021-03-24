@@ -1,0 +1,7 @@
+LS Factor (One Step)
+toolchains_terrain_analysis
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterRasterDestination|LS_FACTOR|LS Factor
+QgsProcessingParameterEnum|LS_METHOD|Method|[0] Moore et al. 1991;[1] Desmond & Govers 1996|False|0
+QgsProcessingParameterEnum|PREPROCESSING|Preprocessing|[0] none;[1] Fill Sinks (Wang & Liu);[2] Sink Removal|False|2
+QgsProcessingParameterNumber|MINSLOPE|Minimum Slope|QgsProcessingParameterNumber.Double|0.000100|False|0.000000|None

@@ -1,0 +1,15 @@
+Evapotranspiration (Table)
+climate_tools
+QgsProcessingParameterFeatureSource|TABLE|Data|5|None|False
+QgsProcessingParameterVectorDestination|RESULT|Evapotranspiration
+QgsProcessingParameterField|T|Mean Temperature|None|TABLE|-1|False|False
+QgsProcessingParameterField|T_MIN|Minimum Temperature|None|TABLE|-1|False|False
+QgsProcessingParameterField|T_MAX|Maximum Temperature|None|TABLE|-1|False|False
+QgsProcessingParameterField|RH|Relative Humidity|None|TABLE|-1|False|False
+QgsProcessingParameterField|SR|Solar Radiation|None|TABLE|-1|False|False
+QgsProcessingParameterField|WS|Wind Speed|None|TABLE|-1|False|False
+QgsProcessingParameterField|P|Air Pressure|None|TABLE|-1|False|False
+QgsProcessingParameterField|DATE|Date|None|TABLE|-1|False|False
+QgsProcessingParameterField|ET|Evapotranspiration|None|TABLE|-1|False|False
+QgsProcessingParameterNumber|LAT|Latitude|QgsProcessingParameterNumber.Double|53.000000|False|-90.000000|90.000000
+QgsProcessingParameterEnum|METHOD|Method|[0] Turc;[1] Hargreave;[2] Penman (simplified);[3] Penman-Monteith|False|0

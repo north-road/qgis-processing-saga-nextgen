@@ -1,0 +1,7 @@
+Breach Depressions
+ta_preprocessor
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|NOSINKS|Preprocessed
+QgsProcessingParameterNumber|MAX_LENGTH|Maximum Breach Channel Length|QgsProcessingParameterNumber.Integer|50|False|1|None
+QgsProcessingParameterNumber|MAX_ZDEC|Maximum Elevation Decrement|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|MIN_ZDROP|Minimum Elevation Drop|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

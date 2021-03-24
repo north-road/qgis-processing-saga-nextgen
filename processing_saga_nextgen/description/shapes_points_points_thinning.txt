@@ -1,0 +1,6 @@
+Points Thinning
+shapes_points
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|THINNED|Thinned Points
+QgsProcessingParameterNumber|RESOLUTION|Resolution|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

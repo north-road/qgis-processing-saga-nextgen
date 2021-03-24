@@ -1,0 +1,7 @@
+Downslope Distance Gradient
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|GRADIENT|Gradient
+QgsProcessingParameterRasterDestination|DIFFERENCE|Gradient Difference
+QgsProcessingParameterNumber|DISTANCE|Vertical Distance|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterEnum|OUTPUT|Output|[0] distance;[1] gradient (tangens);[2] gradient (degree)|False|2

@@ -1,0 +1,13 @@
+Coverage of Categories
+grid_analysis
+QgsProcessingParameterRasterLayer|CLASSES|Categories|None|False
+QgsProcessingParameterRasterDestination|COVERAGES|Coverages
+QgsProcessingParameterFeatureSource|LUT|Classification|5|None|True
+QgsProcessingParameterField|LUT_VAL|Value|None|LUT|-1|False|False
+QgsProcessingParameterField|LUT_MAX|Maximum Value|None|LUT|-1|False|False
+QgsProcessingParameterField|LUT_NAME|Class name|None|LUT|-1|False|False
+QgsProcessingParameterBoolean|NO_DATA|Mark No Coverage as No-Data|True
+QgsProcessingParameterEnum|DATADEPTH|Data Depth|[0] 1-byte;[1] 2-byte;[2] 4-byte;[3] 8-byte|False|1
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None

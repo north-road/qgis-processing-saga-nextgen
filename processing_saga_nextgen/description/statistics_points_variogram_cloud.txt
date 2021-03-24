@@ -1,0 +1,7 @@
+Variogram Cloud
+statistics_points
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|RESULT|Variogram Cloud
+QgsProcessingParameterNumber|DISTMAX|Maximum Distance|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|NSKIP|Skip Number|QgsProcessingParameterNumber.Integer|1|False|1|None

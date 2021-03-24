@@ -1,0 +1,9 @@
+Create Graticule
+shapes_tools
+QgsProcessingParameterVectorDestination|GRATICULE_LINE|Graticule
+QgsProcessingParameterVectorDestination|GRATICULE_RECT|Graticule
+QgsProcessingParameterEnum|TYPE|Type|[0] Lines;[1] Rectangles|False|0
+QgsProcessingParameterFeatureSource|EXTENT|Extent|-1|None|True
+QgsProcessingParameterNumber|DIVISION_X|Division Width|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterNumber|DIVISION_Y|Division Height|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterEnum|ALIGNMENT|Alignment|[0] bottom-left;[1] top-left;[2] bottom-right;[3] top-right;[4] centered|False|0

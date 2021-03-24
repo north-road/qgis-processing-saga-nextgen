@@ -1,0 +1,14 @@
+Import from Virtual Raster (VRT)
+io_gdal
+QgsProcessingParameterFile|VRT_NAME|VRT Filename|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterEnum|EXTENT|Extent|[0] user defined;[1] grid system;[2] shapes extent|False|0
+QgsProcessingParameterFeatureSource|SHAPES|Shapes Extent|-1|None|False
+QgsProcessingParameterNumber|XMIN|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|XMAX|Right|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|YMIN|Bottom|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|YMAX|Top|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|BUFFER|Buffer|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterEnum|MULTIPLE|Multiple Bands Output|[0] single grids;[1] grid collection;[2] automatic|False|2
+QgsProcessingParameterBoolean|TRANSFORM|Transformation|True
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|0

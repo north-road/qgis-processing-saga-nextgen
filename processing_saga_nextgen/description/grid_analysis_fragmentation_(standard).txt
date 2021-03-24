@@ -1,0 +1,15 @@
+Fragmentation (Standard)
+grid_analysis
+QgsProcessingParameterRasterLayer|CLASSES|Classification|None|False
+QgsProcessingParameterRasterDestination|DENSITY|Density [Percent]
+QgsProcessingParameterRasterDestination|CONNECTIVITY|Connectivity [Percent]
+QgsProcessingParameterRasterDestination|FRAGMENTATION|Fragmentation
+QgsProcessingParameterVectorDestination|FRAGSTATS|Summary
+QgsProcessingParameterNumber|CLASS|Class Identifier|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterEnum|AGGREGATION|Level Aggregation|[0] average;[1] multiplicative|False|0
+QgsProcessingParameterBoolean|BORDER|Add Border|False
+QgsProcessingParameterNumber|WEIGHT|Connectivity Weighting|QgsProcessingParameterNumber.Double|1.100000|False|0.000000|None
+QgsProcessingParameterNumber|DENSITY_MIN|Minimum Density [Percent]|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|100.000000
+QgsProcessingParameterNumber|DENSITY_INT|Minimum Density for Interior Forest [Percent]|QgsProcessingParameterNumber.Double|99.000000|False|0.000000|100.000000
+QgsProcessingParameterEnum|CIRCULAR|Neighbourhood|[0] square;[1] circle|False|1
+QgsProcessingParameterBoolean|DIAGONAL|Include diagonal neighbour relations|True

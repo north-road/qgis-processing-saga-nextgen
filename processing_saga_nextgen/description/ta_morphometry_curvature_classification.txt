@@ -1,0 +1,8 @@
+Curvature Classification
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|CLASSES|Curvature Classification
+QgsProcessingParameterNumber|STRAIGHT|Threshold Radius|QgsProcessingParameterNumber.Double|2000.000000|False|0.000010|None
+QgsProcessingParameterEnum|VERTICAL|Vertical Curvature|[0] longitudinal curvature;[1] profile curvature|False|1
+QgsProcessingParameterEnum|HORIZONTAL|Horizontal Curvature|[0] cross-sectional curvature;[1] tangential curvature|False|1
+QgsProcessingParameterNumber|SMOOTH|Smoothing|QgsProcessingParameterNumber.Integer|0|False|0|None

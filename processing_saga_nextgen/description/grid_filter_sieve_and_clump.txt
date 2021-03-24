@@ -1,0 +1,7 @@
+Sieve and Clump
+toolchains_grid_filter
+QgsProcessingParameterRasterLayer|CLASSES|Classes|None|False
+QgsProcessingParameterRasterDestination|FILTERED|Sieve and Clump
+QgsProcessingParameterEnum|MODE|Filter|[0] Neumann;[1] Moore|False|0
+QgsProcessingParameterNumber|SIEVE|Sieving Threshold|QgsProcessingParameterNumber.Integer|2|False|None|None
+QgsProcessingParameterNumber|EXPAND|Maximum Expansion Distance|QgsProcessingParameterNumber.Integer|4|False|None|None

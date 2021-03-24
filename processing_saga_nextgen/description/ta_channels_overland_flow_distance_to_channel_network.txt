@@ -1,0 +1,19 @@
+Overland Flow Distance to Channel Network
+ta_channels
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterLayer|CHANNELS|Channel Network|None|False
+QgsProcessingParameterRasterLayer|ROUTE|Preferred Routing|None|True
+QgsProcessingParameterRasterDestination|DISTANCE|Overland Flow Distance
+QgsProcessingParameterRasterDestination|DISTVERT|Vertical Overland Flow Distance
+QgsProcessingParameterRasterDestination|DISTHORZ|Horizontal Overland Flow Distance
+QgsProcessingParameterRasterDestination|TIME|Flow Travel Time
+QgsProcessingParameterRasterDestination|SDR|Sediment Yield Delivery Ratio
+QgsProcessingParameterRasterLayer|FIELDS|Fields|None|True
+QgsProcessingParameterRasterDestination|PASSES|Fields Visited
+QgsProcessingParameterEnum|METHOD|Flow Algorithm|[0] D8;[1] MFD|False|1
+QgsProcessingParameterBoolean|BOUNDARY|Boundary Cells|False
+QgsProcessingParameterNumber|FLOW_B|Beta|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|FLOW_K|Manning-Strickler Coefficient|None|True
+QgsProcessingParameterNumber|FLOW_K_DEFAULT|Default|QgsProcessingParameterNumber.Double|20.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|FLOW_R|Flow Depth|None|True
+QgsProcessingParameterNumber|FLOW_R_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.050000|False|0.000000|None

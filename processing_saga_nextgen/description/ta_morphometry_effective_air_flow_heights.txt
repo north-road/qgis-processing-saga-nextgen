@@ -1,0 +1,15 @@
+Effective Air Flow Heights
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|DIR|Wind Direction|None|True
+QgsProcessingParameterEnum|DIR_UNITS|Wind Direction Units|[0] radians;[1] degree|False|0
+QgsProcessingParameterRasterLayer|LEN|Wind Speed|None|True
+QgsProcessingParameterNumber|LEN_SCALE|Scaling|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterRasterDestination|AFH|Effective Air Flow Heights
+QgsProcessingParameterNumber|MAXDIST|Search Distance [km]|QgsProcessingParameterNumber.Double|300.000000|False|0.000000|None
+QgsProcessingParameterNumber|DIR_CONST|Constant Wind Direction|QgsProcessingParameterNumber.Double|135.000000|False|None|None
+QgsProcessingParameterBoolean|OLDVER|Old Version|False
+QgsProcessingParameterNumber|ACCEL|Acceleration|QgsProcessingParameterNumber.Double|1.500000|False|1.000000|None
+QgsProcessingParameterBoolean|PYRAMIDS|Elevation Averaging|False
+QgsProcessingParameterNumber|LEE|Windward Factor|QgsProcessingParameterNumber.Double|0.500000|False|None|None
+QgsProcessingParameterNumber|LUV|Luv Factor|QgsProcessingParameterNumber.Double|3.000000|False|None|None

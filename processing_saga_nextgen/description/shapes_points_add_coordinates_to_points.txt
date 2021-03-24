@@ -1,0 +1,10 @@
+Add Coordinates to Points
+shapes_points
+QgsProcessingParameterFeatureSource|INPUT|Points|0|None|False
+QgsProcessingParameterVectorDestination|OUTPUT|Output
+QgsProcessingParameterBoolean|X|X|True
+QgsProcessingParameterBoolean|Y|Y|True
+QgsProcessingParameterBoolean|Z|Z|True
+QgsProcessingParameterBoolean|M|M|True
+QgsProcessingParameterBoolean|LON|Longitude|False
+QgsProcessingParameterBoolean|LAT|Latitude|False

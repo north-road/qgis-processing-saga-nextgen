@@ -1,0 +1,16 @@
+Transform Shapes
+shapes_tools
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterVectorDestination|TRANSFORM|Transformed Shapes
+QgsProcessingParameterNumber|MOVEX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|MOVEY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|MOVEZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANCHORX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANCHORY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANCHORZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|SCALEX|X|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|SCALEY|Y|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|SCALEZ|Z|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|ROTATEX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ROTATEY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ROTATEZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None

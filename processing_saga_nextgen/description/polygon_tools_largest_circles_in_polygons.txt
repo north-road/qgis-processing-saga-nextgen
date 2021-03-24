@@ -1,0 +1,5 @@
+Largest Circles in Polygons
+toolchains_polygon_tools
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|CIRCLES|Circles
+QgsProcessingParameterNumber|RESOLUTION|Resolution|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None

@@ -1,0 +1,5 @@
+Split Table/Shapes by Attribute
+shapes_tools
+QgsProcessingParameterFeatureSource|TABLE|Table / Shapes|5|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|TABLE|-1|False|False
+QgsProcessingParameterVectorDestination|CUTS|Cuts

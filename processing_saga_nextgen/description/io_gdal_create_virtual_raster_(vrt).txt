@@ -1,0 +1,7 @@
+Create Virtual Raster (VRT)
+io_gdal
+QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|FILE_LIST|Input File List|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|VRT_NAME|VRT Filename|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] nearest;[1] bilinear;[2] cubic;[3] cubic spline;[4] lanczos;[5] average;[6] mode|False|0
+QgsProcessingParameterEnum|RESOLUTION|Resolution|[0] highest;[1] lowest;[2] average|False|0

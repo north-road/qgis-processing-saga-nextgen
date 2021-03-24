@@ -1,0 +1,8 @@
+Thermic Belt Classification
+climate_tools
+QgsProcessingParameterRasterLayer|GSL|Growing Season Length|None|False
+QgsProcessingParameterRasterLayer|GST|Mean Temperature|None|False
+QgsProcessingParameterRasterLayer|FROST|Frost occurence|None|False
+QgsProcessingParameterNumber|NIVAL_TEMP|Minimum Temperature Nival|QgsProcessingParameterNumber.Double|3.500000|False|None|None
+QgsProcessingParameterNumber|TREE_TEMP|Minimum Temperature Treeline|QgsProcessingParameterNumber.Double|6.400000|False|None|None
+QgsProcessingParameterRasterDestination|ATB|Thermal Belts

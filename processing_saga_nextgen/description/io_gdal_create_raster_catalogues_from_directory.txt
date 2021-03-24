@@ -1,0 +1,8 @@
+Create Raster Catalogues from Directory
+io_gdal
+QgsProcessingParameterVectorDestination|CATALOGUES|Raster Catalogues
+QgsProcessingParameterVectorDestination|CATALOGUE_GCS|Raster Catalogue
+QgsProcessingParameterVectorDestination|CATALOGUE_UKN|Raster Catalogue (unknown CRS)
+QgsProcessingParameterFile|DIRECTORY|Directory|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterString|EXTENSIONS|Extensions|sgrd; tif
+QgsProcessingParameterEnum|OUTPUT|Output|[0] one catalogue for each coordinate system;[1] one catalogue using geographic coordinates|False|1

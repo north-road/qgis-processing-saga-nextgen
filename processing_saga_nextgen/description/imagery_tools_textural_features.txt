@@ -1,0 +1,20 @@
+Textural Features
+imagery_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|ASM|Angular Second Moment
+QgsProcessingParameterRasterDestination|CONTRAST|Contrast
+QgsProcessingParameterRasterDestination|CORRELATION|Correlation
+QgsProcessingParameterRasterDestination|VARIANCE|Variance
+QgsProcessingParameterRasterDestination|IDM|Inverse Diff Moment
+QgsProcessingParameterRasterDestination|SUM_AVERAGE|Sum Average
+QgsProcessingParameterRasterDestination|SUM_ENTROPY|Sum Entropy
+QgsProcessingParameterRasterDestination|SUM_VARIANCE|Sum Variance
+QgsProcessingParameterRasterDestination|ENTROPY|Entropy
+QgsProcessingParameterRasterDestination|DIF_VARIANCE|Difference Variance
+QgsProcessingParameterRasterDestination|DIF_ENTROPY|Difference Entropy
+QgsProcessingParameterRasterDestination|MOC_1|Measure of Correlation-1
+QgsProcessingParameterRasterDestination|MOC_2|Measure of Correlation-2
+QgsProcessingParameterEnum|DIRECTION|Direction|[0] all;[1] N-S;[2] NE-SW;[3] E-W;[4] SE-NW|False|0
+QgsProcessingParameterNumber|RADIUS|Radius|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterNumber|DISTANCE|Distance|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterNumber|MAX_CATS|Maximum Number of Categories|QgsProcessingParameterNumber.Integer|256|False|2|None

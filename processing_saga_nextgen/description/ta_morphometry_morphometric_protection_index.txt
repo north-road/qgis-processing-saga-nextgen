@@ -1,0 +1,5 @@
+Morphometric Protection Index
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|PROTECTION|Protection Index
+QgsProcessingParameterNumber|RADIUS|Radius|QgsProcessingParameterNumber.Double|2000.000000|False|0.000000|None

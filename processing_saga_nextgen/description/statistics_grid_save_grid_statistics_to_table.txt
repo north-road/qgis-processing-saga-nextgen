@@ -1,0 +1,20 @@
+Save Grid Statistics to Table
+statistics_grid
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterVectorDestination|STATS|Statistics for Grids
+QgsProcessingParameterBoolean|DATA_CELLS|Number of Data Cells|False
+QgsProcessingParameterBoolean|NODATA_CELLS|Number of No-Data Cells|False
+QgsProcessingParameterBoolean|CELLSIZE|Cellsize|False
+QgsProcessingParameterBoolean|MEAN|Arithmetic Mean|True
+QgsProcessingParameterBoolean|MIN|Minimum|True
+QgsProcessingParameterBoolean|MAX|Maximum|True
+QgsProcessingParameterBoolean|RANGE|Range|False
+QgsProcessingParameterBoolean|SUM|Sum|False
+QgsProcessingParameterBoolean|SUM2|Sum of Squares|False
+QgsProcessingParameterBoolean|VAR|Variance|True
+QgsProcessingParameterBoolean|STDDEV|Standard Deviation|True
+QgsProcessingParameterBoolean|STDDEVLO|Mean less Standard Deviation|False
+QgsProcessingParameterBoolean|STDDEVHI|Mean plus Standard Deviation|False
+QgsProcessingParameterString|PCTL_VAL|Percentiles|5; 25; 50; 75; 95
+QgsProcessingParameterBoolean|PCTL_HST|From Histogram|True
+QgsProcessingParameterNumber|SAMPLES|Sample Size|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|100.000000

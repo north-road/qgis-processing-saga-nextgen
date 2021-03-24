@@ -1,0 +1,13 @@
+Wa-Tor
+sim_cellular_automata
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|GRID|Wa-Tor
+QgsProcessingParameterBoolean|REFRESH|Refresh|True
+QgsProcessingParameterNumber|INIT_FISH|Initial Number of Fishes [%]|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|100.000000
+QgsProcessingParameterNumber|INIT_SHARK|Initial Number of Sharks [%]|QgsProcessingParameterNumber.Double|7.500000|False|0.000000|100.000000
+QgsProcessingParameterVectorDestination|TABLE|Cycles
+QgsProcessingParameterNumber|FISH_BIRTH|Birth Rate of Fishes|QgsProcessingParameterNumber.Integer|3|False|0|None
+QgsProcessingParameterNumber|SHARK_BIRTH|Birth Rate of Sharks|QgsProcessingParameterNumber.Integer|12|False|0|None
+QgsProcessingParameterNumber|SHARK_STARVE|Max. Starvation Time for Sharks|QgsProcessingParameterNumber.Integer|4|False|0|None

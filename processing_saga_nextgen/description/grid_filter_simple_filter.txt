@@ -1,0 +1,7 @@
+Simple Filter
+grid_filter
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid
+QgsProcessingParameterEnum|METHOD|Filter|[0] Smooth;[1] Sharpen;[2] Edge|False|0
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

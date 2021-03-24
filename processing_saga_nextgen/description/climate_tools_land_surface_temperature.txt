@@ -1,0 +1,19 @@
+Land Surface Temperature
+climate_tools
+QgsProcessingParameterRasterLayer|IRRADIANCE|Global Irradiance|None|True
+QgsProcessingParameterNumber|IRRADIANCE_DEFAULT|Default|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|ALBEDO|Albedo|None|True
+QgsProcessingParameterNumber|ALBEDO_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.500000|False|0.000000|1.000000
+QgsProcessingParameterRasterLayer|EMISSIVITY|Emissivity|None|True
+QgsProcessingParameterNumber|EMISSIVITY_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.500000|False|0.000000|1.000000
+QgsProcessingParameterRasterLayer|CONVECTION|Convection Coefficient|None|True
+QgsProcessingParameterNumber|CONVECTION_DEFAULT|Default|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|T_AIR|Ambient Air Temperature|None|True
+QgsProcessingParameterNumber|T_AIR_DEFAULT|Default|QgsProcessingParameterNumber.Double|300.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|T_SKY|Radiant Sky Temperature|None|True
+QgsProcessingParameterNumber|T_SKY_DEFAULT|Default|QgsProcessingParameterNumber.Double|280.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|T_INITIAL|Initial Temperature Estimation|None|True
+QgsProcessingParameterNumber|T_INITIAL_DEFAULT|Default|QgsProcessingParameterNumber.Double|300.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|LST|Land Surface Temperature
+QgsProcessingParameterEnum|UNIT|Unit|[0] Kelvin;[1] Celsius|False|0
+QgsProcessingParameterNumber|ITERATIONS|Iterations|QgsProcessingParameterNumber.Integer|10|False|1|None

@@ -1,0 +1,11 @@
+Land Surface Temperature (Lapse Rates)
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|SWR|Short Wave Radiation Ratio|None|True
+QgsProcessingParameterRasterLayer|LAI|Leaf Area Index|None|True
+QgsProcessingParameterNumber|LAI_MAX|Maximum LAI|QgsProcessingParameterNumber.Double|8.000000|False|0.010000|None
+QgsProcessingParameterRasterDestination|LST|Land Surface Temperature
+QgsProcessingParameterNumber|Z_REFERENCE|Elevation|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|T_REFERENCE|Temperature|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|T_GRADIENT|Temperature Lapse Rate|QgsProcessingParameterNumber.Double|0.650000|False|None|None
+QgsProcessingParameterNumber|C_FACTOR|C Factor|QgsProcessingParameterNumber.Double|1.000000|False|None|None

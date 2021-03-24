@@ -1,0 +1,7 @@
+Gradient Vectors from Surface
+shapes_grid
+QgsProcessingParameterRasterLayer|SURFACE|Surface|None|False
+QgsProcessingParameterVectorDestination|VECTORS|Gradient Vectors
+QgsProcessingParameterNumber|STEP|Step|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterEnum|AGGR|Aggregation|[0] nearest neighbour;[1] mean value|False|1
+QgsProcessingParameterEnum|STYLE|Style|[0] simple line;[1] arrow;[2] arrow (centered to cell)|False|2

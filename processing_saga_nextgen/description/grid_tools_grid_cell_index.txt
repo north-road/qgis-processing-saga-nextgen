@@ -1,0 +1,5 @@
+Grid Cell Index
+grid_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|INDEX|Index
+QgsProcessingParameterEnum|ORDER|Sorting Order|[0] ascending;[1] descending|False|0

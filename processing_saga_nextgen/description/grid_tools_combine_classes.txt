@@ -1,0 +1,4 @@
+Combine Classes
+grid_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Output

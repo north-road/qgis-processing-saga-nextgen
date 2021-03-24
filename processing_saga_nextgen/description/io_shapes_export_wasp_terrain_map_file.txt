@@ -1,0 +1,5 @@
+Export WASP terrain map file
+io_shapes
+QgsProcessingParameterFeatureSource|SHAPES|Contour Lines|1|None|False
+QgsProcessingParameterField|ELEVATION|Map File|None|SHAPES|-1|False|False
+QgsProcessingParameterFile|FILE|File Name|QgsProcessingParameterFile.File|None|False

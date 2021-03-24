@@ -1,0 +1,8 @@
+Water Retention Capacity
+sim_hydrology
+QgsProcessingParameterFeatureSource|SHAPES|Plot Holes|0|None|False
+QgsProcessingParameterVectorDestination|OUTPUT|Final Parameters
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|RETENTION|Water Retention Capacity
+QgsProcessingParameterEnum|INTERPOL|Interpolation|[0] Multilevel B-Spline Interpolation;[1] Inverse Distance Weighted|False|0
+QgsProcessingParameterBoolean|SLOPECORR|Slope Correction|True

@@ -1,0 +1,6 @@
+Clip Grid with Polygon
+shapes_grid
+QgsProcessingParameterMultipleLayers|INPUT|Input|3|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Output
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterEnum|EXTENT|Target Extent|[0] original;[1] polygons;[2] crop to data|False|1

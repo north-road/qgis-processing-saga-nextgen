@@ -1,0 +1,10 @@
+Natural Neighbour
+grid_gridding
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid
+QgsProcessingParameterEnum|METHOD|Method|[0] Linear;[1] Sibson;[2] Non-Sibsonian|False|1
+QgsProcessingParameterNumber|WEIGHT|Minimum Weight|QgsProcessingParameterNumber.Double|0.000000|False|None|0.000000

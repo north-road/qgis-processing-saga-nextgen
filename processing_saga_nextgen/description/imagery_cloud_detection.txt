@@ -1,0 +1,11 @@
+Cloud Detection
+toolchains_imagery
+QgsProcessingParameterRasterLayer|BLUE|Blue|None|False
+QgsProcessingParameterRasterLayer|GREEN|Green|None|False
+QgsProcessingParameterRasterLayer|RED|Red|None|False
+QgsProcessingParameterRasterLayer|NIR|Near Infrared|None|False
+QgsProcessingParameterRasterDestination|CLOUDS|Clouds
+QgsProcessingParameterRasterLayer|SWIR1|Shortwave Infrared 1|None|False
+QgsProcessingParameterRasterLayer|SWIR2|Shortwave Infrared 2|None|False
+QgsProcessingParameterRasterLayer|THERMAL|Temperature [Kelvin]|None|True
+QgsProcessingParameterRasterLayer|CIRRUS|Cirrus|None|True

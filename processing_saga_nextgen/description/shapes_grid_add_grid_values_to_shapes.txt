@@ -1,0 +1,6 @@
+Add Grid Values to Shapes
+shapes_grid
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterVectorDestination|RESULT|Result
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3

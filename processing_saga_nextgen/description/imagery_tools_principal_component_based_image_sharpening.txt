@@ -1,0 +1,9 @@
+Principal Component Based Image Sharpening
+imagery_tools
+QgsProcessingParameterMultipleLayers|GRIDS|Original Channels|3|None|False
+QgsProcessingParameterRasterLayer|PAN|Panchromatic Channel|None|False
+QgsProcessingParameterRasterDestination|SHARPEN|Sharpened Channels
+QgsProcessingParameterEnum|METHOD|Method|[0] correlation matrix;[1] variance-covariance matrix;[2] sums-of-squares-and-cross-products matrix|False|1
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] nearest neighbour;[1] bilinear;[2] cubic convolution|False|2
+QgsProcessingParameterEnum|PAN_MATCH|Panchromatic Channel Matching|[0] normalized;[1] standardized|False|1
+QgsProcessingParameterBoolean|OVERWRITE|Overwrite|True

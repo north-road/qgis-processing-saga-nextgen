@@ -1,0 +1,8 @@
+Export GPX
+io_shapes
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterField|ELE|Elevation|None|SHAPES|-1|False|False
+QgsProcessingParameterField|NAME|Name|None|SHAPES|-1|False|False
+QgsProcessingParameterField|CMT|Comment|None|SHAPES|-1|False|False
+QgsProcessingParameterField|DESC|Description|None|SHAPES|-1|False|False

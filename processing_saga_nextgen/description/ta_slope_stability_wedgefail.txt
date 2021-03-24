@@ -1,0 +1,15 @@
+WEDGEFAIL
+ta_slope_stability
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterRasterLayer|C|Dip/Plunge direction grid (degree) |None|True
+QgsProcessingParameterRasterLayer|D|Dip/Plunge grid (degree) |None|True
+QgsProcessingParameterRasterLayer|Emin|Min friction angle grid (degree) |None|True
+QgsProcessingParameterRasterLayer|Emax|Max friction angle grid (degree) |None|True
+QgsProcessingParameterNumber|fC|Global dip/plunge direction (degree)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fD|Global dip/plunge (degree)|QgsProcessingParameterNumber.Double|35.000000|False|None|None
+QgsProcessingParameterNumber|fEmin|Min global friction angle (degree)|QgsProcessingParameterNumber.Double|35.000000|False|None|None
+QgsProcessingParameterNumber|fEmax|Max global friction angle (degree)|QgsProcessingParameterNumber.Double|35.000000|False|None|None
+QgsProcessingParameterNumber|ff|Cone radius (degree)|QgsProcessingParameterNumber.Integer|0|False|None|None
+QgsProcessingParameterRasterDestination|F|Failures
+QgsProcessingParameterNumber|fI|Parameter sampling runs|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterEnum|METHOD|Mode|[0] Slide;[1] Topple|False|0

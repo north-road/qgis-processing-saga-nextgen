@@ -1,0 +1,9 @@
+Fractal Brownian Noise
+grid_calculus
+QgsProcessingParameterEnum|SCALING|Scaling|[0] linear;[1] geometric|False|1
+QgsProcessingParameterNumber|MAX_SCALE|Maximum Scale|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|STEPS|Steps|QgsProcessingParameterNumber.Integer|8|False|1|None
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|OUT_GRID|Fractal Brownian Noise

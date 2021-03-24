@@ -1,0 +1,6 @@
+GDAL Formats
+io_gdal
+QgsProcessingParameterVectorDestination|FORMATS|GDAL Formats
+QgsProcessingParameterEnum|TYPE|Type|[0] raster;[1] vector;[2] all|False|2
+QgsProcessingParameterEnum|ACCESS|Access|[0] read;[1] write;[2] read or write|False|2
+QgsProcessingParameterBoolean|RECOGNIZED|All Recognized Files|True

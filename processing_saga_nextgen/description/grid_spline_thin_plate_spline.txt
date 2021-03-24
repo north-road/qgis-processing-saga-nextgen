@@ -1,0 +1,15 @@
+Thin Plate Spline
+grid_spline
+QgsProcessingParameterFeatureSource|SHAPES|Points|-1|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|SHAPES|-1|False|False
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid
+QgsProcessingParameterNumber|REGULARISATION|Regularisation|QgsProcessingParameterNumber.Double|0.000100|False|0.000000|None
+QgsProcessingParameterEnum|SEARCH_RANGE|Search Range|[0] local;[1] global|False|1
+QgsProcessingParameterNumber|SEARCH_RADIUS|Maximum Search Distance|QgsProcessingParameterNumber.Double|1000.000000|False|0.000000|None
+QgsProcessingParameterEnum|SEARCH_POINTS_ALL|Number of Points|[0] maximum number of nearest points;[1] all points within search distance|False|1
+QgsProcessingParameterNumber|SEARCH_POINTS_MIN|Minimum|QgsProcessingParameterNumber.Integer|16|False|1|None
+QgsProcessingParameterNumber|SEARCH_POINTS_MAX|Maximum|QgsProcessingParameterNumber.Integer|20|False|1|None
+QgsProcessingParameterEnum|SEARCH_DIRECTION|Direction|[0] all directions;[1] quadrants|False|0

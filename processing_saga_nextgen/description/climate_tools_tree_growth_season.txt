@@ -1,0 +1,22 @@
+Tree Growth Season
+climate_tools
+QgsProcessingParameterMultipleLayers|T|Mean Temperature|3|None|False
+QgsProcessingParameterMultipleLayers|TMIN|Minimum Temperature|3|None|False
+QgsProcessingParameterMultipleLayers|TMAX|Maximum Temperature|3|None|False
+QgsProcessingParameterMultipleLayers|P|Precipitation|3|None|False
+QgsProcessingParameterRasterLayer|SWC|Soil Water Capacity of Profile|None|True
+QgsProcessingParameterNumber|SWC_DEFAULT|Default|QgsProcessingParameterNumber.Double|220.000000|False|0.000000|None
+QgsProcessingParameterNumber|SWC_SURFACE|Top Soil Water Capacity|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|None
+QgsProcessingParameterNumber|SW1_RESIST|Transpiration Resistance|QgsProcessingParameterNumber.Double|0.500000|False|0.010000|None
+QgsProcessingParameterNumber|LAT_DEF|Default Latitude|QgsProcessingParameterNumber.Double|0.000000|False|-90.000000|90.000000
+QgsProcessingParameterRasterDestination|SMT|Mean Temperature
+QgsProcessingParameterRasterDestination|SMP|Precipitation Sum
+QgsProcessingParameterRasterDestination|LGS|Length
+QgsProcessingParameterRasterDestination|FIRST|First Growing Day
+QgsProcessingParameterRasterDestination|LAST|Last Growing Day
+QgsProcessingParameterRasterDestination|TLH|Tree Line Height
+QgsProcessingParameterNumber|DT_MIN|Threshold Temperature|QgsProcessingParameterNumber.Double|0.900000|False|None|None
+QgsProcessingParameterNumber|SW_MIN|Minimum Soil Water Content (Percent)|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
+QgsProcessingParameterNumber|LGS_MIN|Minimum Length|QgsProcessingParameterNumber.Integer|94|False|1|None
+QgsProcessingParameterNumber|SMT_MIN|Minimum Mean Temperature|QgsProcessingParameterNumber.Double|6.400000|False|None|None
+QgsProcessingParameterNumber|TLH_MAX_DIFF|Maximum Tree Line Height Difference|QgsProcessingParameterNumber.Double|3000.000000|False|0.000000|None

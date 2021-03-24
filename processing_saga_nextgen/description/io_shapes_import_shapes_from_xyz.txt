@@ -1,0 +1,5 @@
+Import Shapes from XYZ
+io_shapes
+QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterBoolean|HEADLINE|File contains headline|True
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

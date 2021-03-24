@@ -1,0 +1,4 @@
+Import Grids from KML
+io_grid_image
+QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterFile|FILE|KML/KMZ File|QgsProcessingParameterFile.File|None|False

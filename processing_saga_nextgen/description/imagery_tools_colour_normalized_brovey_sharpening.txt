@@ -1,0 +1,11 @@
+Colour Normalized Brovey Sharpening
+imagery_tools
+QgsProcessingParameterRasterLayer|R|Red|None|False
+QgsProcessingParameterRasterLayer|G|Green|None|False
+QgsProcessingParameterRasterLayer|B|Blue|None|False
+QgsProcessingParameterRasterLayer|PAN|Panchromatic Channel|None|False
+QgsProcessingParameterRasterDestination|R_SHARP|Red
+QgsProcessingParameterRasterDestination|G_SHARP|Green
+QgsProcessingParameterRasterDestination|B_SHARP|Blue
+QgsProcessingParameterRasterDestination|SHARPEN|Sharpened Channels
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] nearest neighbour;[1] bilinear;[2] cubic convolution|False|2

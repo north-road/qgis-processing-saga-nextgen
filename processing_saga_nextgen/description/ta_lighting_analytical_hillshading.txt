@@ -1,0 +1,15 @@
+Analytical Hillshading
+ta_lighting
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterDestination|SHADE|Analytical Hillshading
+QgsProcessingParameterEnum|METHOD|Shading Method|[0] Standard;[1] Limited Maximum;[2] With Shadows;[3] Shadows Only;[4] Ambient Occlusion;[5] Combined Shading|False|0
+QgsProcessingParameterEnum|POSITION|Sun's Position|[0] azimuth and height;[1] date and time|False|0
+QgsProcessingParameterNumber|AZIMUTH|Azimuth|QgsProcessingParameterNumber.Double|315.000000|False|0.000000|360.000000
+QgsProcessingParameterNumber|DECLINATION|Height|QgsProcessingParameterNumber.Double|45.000000|False|0.000000|90.000000
+QgsProcessingParameterString|DATE|Day|2021-03-24
+QgsProcessingParameterNumber|TIME|Hour|QgsProcessingParameterNumber.Double|12.000000|False|0.000000|24.000000
+QgsProcessingParameterNumber|EXAGGERATION|Exaggeration|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterEnum|UNIT|Unit|[0] radians;[1] degree|False|0
+QgsProcessingParameterEnum|SHADOW|Shadow|[0] slim;[1] fat|False|0
+QgsProcessingParameterNumber|NDIRS|Number of Directions|QgsProcessingParameterNumber.Integer|8|False|2|None
+QgsProcessingParameterNumber|RADIUS|Search Radius|QgsProcessingParameterNumber.Double|10.000000|False|0.001000|None

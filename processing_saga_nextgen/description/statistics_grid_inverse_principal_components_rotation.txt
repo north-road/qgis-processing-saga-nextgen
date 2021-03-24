@@ -1,0 +1,5 @@
+Inverse Principal Components Rotation
+statistics_grid
+QgsProcessingParameterMultipleLayers|PCA|Principal Components|3|None|False
+QgsProcessingParameterFeatureSource|EIGEN|Eigen Vectors|5|None|False
+QgsProcessingParameterRasterDestination|GRIDS|Grids

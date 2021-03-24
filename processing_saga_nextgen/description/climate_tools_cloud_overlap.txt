@@ -1,0 +1,11 @@
+Cloud Overlap
+climate_tools
+QgsProcessingParameterMultipleLayers|COVERS|Cloud Fractions|3|None|False
+QgsProcessingParameterMultipleLayers|HEIGHTS|Heights|3|None|False
+QgsProcessingParameterRasterLayer|GROUND|Surface Elevation|None|False
+QgsProcessingParameterRasterLayer|WIND|Wind effect|None|False
+QgsProcessingParameterRasterLayer|CBASE|Cloud Base|None|False
+QgsProcessingParameterRasterDestination|COVER|Total Cloud Cover
+QgsProcessingParameterRasterDestination|BLOCKS|Number of Cloud Blocks
+QgsProcessingParameterNumber|INTERVAL|Interval|QgsProcessingParameterNumber.Double|100.000000|False|1.000000|None
+QgsProcessingParameterNumber|MINCOVER|Minimum Cloud Cover Fraction|QgsProcessingParameterNumber.Double|0.100000|False|-1.000000|1.000000

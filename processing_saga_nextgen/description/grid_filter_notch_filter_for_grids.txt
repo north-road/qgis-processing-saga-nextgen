@@ -1,0 +1,8 @@
+Notch Filter for Grids
+toolchains_grid_filter
+QgsProcessingParameterRasterLayer|INPUT_GRID|Input Grid|None|False
+QgsProcessingParameterRasterDestination|LOWPASS_UPPER|Lowpass Upper
+QgsProcessingParameterRasterDestination|HIPASS_LOWER|Highpass Lower
+QgsProcessingParameterRasterDestination|FILTERED_GRID|Notch
+QgsProcessingParameterNumber|HIGH_PASS|Upper search distance |QgsProcessingParameterNumber.Double|75.000000|False|None|None
+QgsProcessingParameterNumber|LOW_PASS|Lower search distance|QgsProcessingParameterNumber.Double|25.000000|False|None|None

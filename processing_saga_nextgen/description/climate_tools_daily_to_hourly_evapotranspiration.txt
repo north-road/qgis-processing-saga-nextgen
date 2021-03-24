@@ -1,0 +1,8 @@
+Daily to Hourly Evapotranspiration
+climate_tools
+QgsProcessingParameterFeatureSource|DAYS|Daily Data|5|None|False
+QgsProcessingParameterField|JD|Julian Day|None|DAYS|-1|False|False
+QgsProcessingParameterField|ET|Evapotranspiration|None|DAYS|-1|False|False
+QgsProcessingParameterField|P|Precipitation|None|DAYS|-1|False|False
+QgsProcessingParameterVectorDestination|HOURS|Hourly Data
+QgsProcessingParameterNumber|LAT|Latitude|QgsProcessingParameterNumber.Double|53.000000|False|-90.000000|90.000000

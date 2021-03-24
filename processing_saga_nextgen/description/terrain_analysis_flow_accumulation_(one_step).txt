@@ -1,0 +1,7 @@
+Flow Accumulation (One Step)
+toolchains_terrain_analysis
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|TCA|Flow Accumulation
+QgsProcessingParameterRasterDestination|SCA|Specific Catchment Area
+QgsProcessingParameterEnum|PREPROCESSING|Preprocessing|[0] Fill Sinks (Wang & Liu);[1] Sink Removal|False|1
+QgsProcessingParameterEnum|FLOW_ROUTING|Flow Routing|[0] Deterministic 8;[1] Rho 8;[2] Braunschweiger Reliefmodell;[3] Deterministic Infinity;[4] Multiple Flow Direction;[5] Multiple Triangular Flow Direction;[6] Multiple Maximum Downslope Gradient Based Flow Direction|False|4

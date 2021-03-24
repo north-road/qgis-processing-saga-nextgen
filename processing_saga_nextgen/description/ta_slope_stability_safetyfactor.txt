@@ -1,0 +1,26 @@
+SAFETYFACTOR
+ta_slope_stability
+QgsProcessingParameterRasterLayer|A|Slope grid (rad)|None|False
+QgsProcessingParameterRasterLayer|Bmin|Min thickness grid (m) |None|True
+QgsProcessingParameterRasterLayer|Bmax|Max thickness grid (m) |None|True
+QgsProcessingParameterRasterLayer|Cmin|Min saturation grid (-) |None|True
+QgsProcessingParameterRasterLayer|Cmax|Max saturation grid (-) |None|True
+QgsProcessingParameterRasterLayer|Dmin|Min friction grid (degree) |None|True
+QgsProcessingParameterRasterLayer|Dmax|Max friction grid (degree) |None|True
+QgsProcessingParameterRasterLayer|Emin|Min density grid (g/cm3)|None|True
+QgsProcessingParameterRasterLayer|Emax|Max density grid (g/cm3)|None|True
+QgsProcessingParameterRasterLayer|Fmin|Min cohesion grid (MPa) |None|True
+QgsProcessingParameterRasterLayer|Fmax|Max cohesion grid (MPa) |None|True
+QgsProcessingParameterNumber|fBmin|Min global thickness (m)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|fBmax|Max global thickness (m)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|fCmin|Min global saturation (-)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fCmax|Max global saturation (-)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fDmin|Min global friction (degree)|QgsProcessingParameterNumber.Double|33.000000|False|None|None
+QgsProcessingParameterNumber|fDmax|Max global friction (degree)|QgsProcessingParameterNumber.Double|33.000000|False|None|None
+QgsProcessingParameterNumber|fEmin|Min global density (g/cm3)|QgsProcessingParameterNumber.Double|1.600000|False|None|None
+QgsProcessingParameterNumber|fEmax|Max global density (g/cm3)|QgsProcessingParameterNumber.Double|1.600000|False|None|None
+QgsProcessingParameterNumber|fFmin|Min global cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fFmax|Max global cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fI|Parameter sampling runs|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterRasterDestination|G|FS values
+QgsProcessingParameterRasterDestination|H|FS classes

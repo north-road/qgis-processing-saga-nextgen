@@ -1,0 +1,79 @@
+LandFlow Version 1.0 (build 3.5.1b)
+sim_rivflow
+QgsProcessingParameterRasterLayer|INPUT|Gelaendemodell (DTM)|None|False
+QgsProcessingParameterRasterLayer|INPUT2|Hoehengradienten (Grad)|None|False
+QgsProcessingParameterRasterLayer|INPUT10|Flusseinzugsgebiet (BasinShare)|None|False
+QgsProcessingParameterRasterLayer|INPUT8|HG-Raster (HGGrid)|None|False
+QgsProcessingParameterRasterLayer|INPUT9|HG-Hoehengradienten (HGGrad)|None|False
+QgsProcessingParameterRasterLayer|INPUT11|Referenzverlauf Flussbilanz|None|True
+QgsProcessingParameterRasterLayer|INPUT12|Zuflussrasterzellen (NumInFlowCells)|None|True
+QgsProcessingParameterRasterLayer|INPUT3|statische Wassserentnahme (statWUse)|None|True
+QgsProcessingParameterRasterLayer|INPUT5|Fluss-Speicher einlesen|None|True
+QgsProcessingParameterRasterLayer|INPUT6|Oberflaechenabfluss-Speicher einlesen|None|True
+QgsProcessingParameterRasterLayer|INPUT7|Grundwasserabfluss-Speicher einlesen|None|True
+QgsProcessingParameterRasterDestination|OUTPUT|Fluss-Speicher ausgeben
+QgsProcessingParameterRasterDestination|OUTPUT2|Oberflaechenabfluss-Speicher ausgeben
+QgsProcessingParameterRasterDestination|OUTPUT3|Grundwasserabfluss-Speicher ausgeben
+QgsProcessingParameterRasterDestination|OUTPUT4|Wasserflussvolumen
+QgsProcessingParameterRasterDestination|OUTPUT5|SumRunoffDrainage
+QgsProcessingParameterRasterDestination|OUTPUT6|DynWUse
+QgsProcessingParameterBoolean|onlyRB|Berechnung nur im Flusseinzugsgebiet|True
+QgsProcessingParameterNumber|TimeStep|Zeitschrittdauer [s]|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterBoolean|CalcT|automatisierter max. Zeitschritt|True
+QgsProcessingParameterNumber|sYear|Startjahr|QgsProcessingParameterNumber.Integer|1999|False|1979|2009
+QgsProcessingParameterNumber|DayNum|Anzahl der Simulationstage|QgsProcessingParameterNumber.Integer|365|False|1|7670
+QgsProcessingParameterFile|Folder2|Speicherordner|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|Folder1|Pfad LS-Daten|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|stRedFacR|Reduzierungsfaktor Surface Runoff [% / 100]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000
+QgsProcessingParameterBoolean|autoFacD|Ausgleich der Surface Runoff Reduktion|False
+QgsProcessingParameterNumber|stRedFacD|Reduzierungsfaktor Drainage [% / 100]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000
+QgsProcessingParameterNumber|OffsetR|Offsetwert Surface Runoff [m3/s]|QgsProcessingParameterNumber.Double|0.000000|False|-1.000000|1.000000
+QgsProcessingParameterNumber|OffsetD|Offsetwert Drainage [m3/s]|QgsProcessingParameterNumber.Double|0.000000|False|-1.000000|1.000000
+QgsProcessingParameterBoolean|CacheUse|Initiierung mit vorhandenen Speichern|False
+QgsProcessingParameterFile|Folder4|NCache einlesen|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|wNC|Ausgabe NCache|False
+QgsProcessingParameterNumber|ParamC|Gerinne-Parameter cG|QgsProcessingParameterNumber.Double|0.060000|False|0.000000|None
+QgsProcessingParameterNumber|ParamG|Oberflaechen-Parameter cO|QgsProcessingParameterNumber.Double|0.357000|False|0.000000|None
+QgsProcessingParameterNumber|ParamB|Grundwasser-Parameter pB|QgsProcessingParameterNumber.Double|300.000000|False|0.000000|None
+QgsProcessingParameterNumber|nG|Gerinne-Speicherkaskade nG|QgsProcessingParameterNumber.Integer|3|False|1|None
+QgsProcessingParameterEnum|RivG|Beruecksichtigung der Hauptgerinnerasterzellen?|[0] nein;[1] ja; bestimmen anhand eines Hauptgerinnerasters (HG Raster)|False|1
+QgsProcessingParameterNumber|ParamCr|Hauptgerinne-Parameter cHG|QgsProcessingParameterNumber.Double|0.007000|False|0.000000|1.000000
+QgsProcessingParameterNumber|nHG|Hauptgerinne-Speicherkaskade nHG|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterBoolean|EnfVmax|Abflussgeschwindigkeit begrenzen|True
+QgsProcessingParameterNumber|VTresh|Oberer Abflussgeschwindigkeitsgrenzwert [km/h]|QgsProcessingParameterNumber.Double|4.000000|False|0.000000|10.000000
+QgsProcessingParameterEnum|WCons|Dynamische Flaechenwassernutzung...|[0] keine;[1] ...anteilig aus den Hauptgerinnerasterzellen;[2] ...anteilig aus Rasterzellen der Teileinzugegebiete;[3] ...genau den entsprechenden Wert aus der jeweiligen Rasterzelle entnehmen|False|0
+QgsProcessingParameterFile|Folder3|Ordnerpfad der WUse Daten|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|WConUnit|WUse Einheit|[0] m3/s;[1] m3/Monat|False|0
+QgsProcessingParameterNumber|WConsD|Vorlauftage ohne Entnahmen|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterNumber|WConThres|Abflussschwellenwert [m3/s]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|stConsAll|Abflussreduzierungsfaktor Gerinnerasterzellen [% / 100]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000
+QgsProcessingParameterNumber|stConsRiv|Abflussreduzierungsfaktor HG-Rasterzellen [% / 100]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000
+QgsProcessingParameterEnum|vRM1|Abflussmanipulation Rasterzelle 1... |[0] nein;[1] Ja, berechneten Abfluss veraendern: res. Abfluss = berechn. Abfluss * q + a;[2] Ja, Abfluss manuell vorgeben: res. Abfluss = Speicherinhalt * q + a|False|0
+QgsProcessingParameterNumber|RM1x|Rasterzelle 1 [x-Koord.]|QgsProcessingParameterNumber.Integer|-1|False|-1|None
+QgsProcessingParameterNumber|RM1y|Rasterzelle 1 [y-Koord.]|QgsProcessingParameterNumber.Integer|-1|False|-1|None
+QgsProcessingParameterNumber|RM1q|q [%/100]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RM1a|a [+-m3/s]|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterEnum|vRM2|Abflussmanipulation Rasterzelle 2... |[0] nein;[1] Ja, berechneten Abfluss veraendern: res. Abfluss = berechn. Abfluss * q + a;[2] Ja, Abfluss manuell vorgeben: res. Abfluss = Speicherinhalt * q + a|False|0
+QgsProcessingParameterNumber|RM2x|Rasterzelle 2 [x-Koord.]|QgsProcessingParameterNumber.Integer|-1|False|-1|None
+QgsProcessingParameterNumber|RM2y|Rasterzelle 2 [y-Koord.]|QgsProcessingParameterNumber.Integer|-1|False|-1|None
+QgsProcessingParameterNumber|RM2q|q [%/100]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RM2a|a [+-m3/s]|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterString|EvP1s|EvP1 Name|NeuDarchau.txt
+QgsProcessingParameterNumber|EvP1x|EvP1 Rasterzelle [x-Koord.]|QgsProcessingParameterNumber.Integer|30|False|0|None
+QgsProcessingParameterNumber|EvP1y|EvP1 Rasterzelle [y-Koord.]|QgsProcessingParameterNumber.Integer|115|False|0|None
+QgsProcessingParameterString|EvP2s|EvP2 Name|Lutherstadt-Wittenberg.txt
+QgsProcessingParameterNumber|EvP2x|EvP2 Rasterzelle [x-Koord.]|QgsProcessingParameterNumber.Integer|54|False|0|None
+QgsProcessingParameterNumber|EvP2y|EvP2 Rasterzelle [y-Koord.]|QgsProcessingParameterNumber.Integer|85|False|0|None
+QgsProcessingParameterString|EvP3s|EvP3 Name|Schoena.txt
+QgsProcessingParameterNumber|EvP3x|EvP3 Rasterzelle [x-Koord.]|QgsProcessingParameterNumber.Integer|78|False|0|None
+QgsProcessingParameterNumber|EvP3y|EvP3 Rasterzelle [y-Koord.]|QgsProcessingParameterNumber.Integer|65|False|0|None
+QgsProcessingParameterNumber|RBMx|Ausgangsrasterzelle [x-Koord.]|QgsProcessingParameterNumber.Integer|16|False|0|None
+QgsProcessingParameterNumber|RBMy|Ausgangsrasterzelle [y-Koord.]|QgsProcessingParameterNumber.Integer|121|False|0|None
+QgsProcessingParameterBoolean|wP|SimParameters|True
+QgsProcessingParameterBoolean|eP|Fehlerprotokoll|True
+QgsProcessingParameterBoolean|MoniLog1|RiverBasinDay-Monitoring|True
+QgsProcessingParameterBoolean|MoniLog3|RiverBasinMonth-Monitoring|True
+QgsProcessingParameterBoolean|MoniLog2|WSystem-Monitoring|True
+QgsProcessingParameterEnum|Test1|Testroutine1 durchfuehren... |[0] nein;[1] Ja, TestRoutine1 nur fuer Teileinzugsgbiet der HG-Rasterzelle;[2] Ja, TestRoutine1 fuer Flusseinzugsgebiet bis zu der HG-Rasterzelle|False|0
+QgsProcessingParameterNumber|xt1|Hauptgerinnerasterzelle [x-Koord.]|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterNumber|yt1|Hauptgerinnerasterzelle [y-Koord.]|QgsProcessingParameterNumber.Integer|0|False|0|None

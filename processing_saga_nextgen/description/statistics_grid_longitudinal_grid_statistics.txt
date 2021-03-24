@@ -1,0 +1,4 @@
+Longitudinal Grid Statistics
+statistics_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterVectorDestination|STATS|Latitudinal Statistics

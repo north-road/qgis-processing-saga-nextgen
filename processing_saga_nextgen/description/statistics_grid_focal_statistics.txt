@@ -1,0 +1,25 @@
+Focal Statistics
+statistics_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|MEAN|Mean Value
+QgsProcessingParameterRasterDestination|MIN|Minimum Value
+QgsProcessingParameterRasterDestination|MAX|Maximum Value
+QgsProcessingParameterRasterDestination|RANGE|Value Range
+QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation
+QgsProcessingParameterRasterDestination|VARIANCE|Variance
+QgsProcessingParameterRasterDestination|SUM|Sum
+QgsProcessingParameterRasterDestination|DIFF|Difference from Mean Value
+QgsProcessingParameterRasterDestination|DEVMEAN|Deviation from Mean Value
+QgsProcessingParameterRasterDestination|PERCENT|Percentile
+QgsProcessingParameterRasterDestination|MEDIAN|Median
+QgsProcessingParameterRasterDestination|MINORITY|Minority
+QgsProcessingParameterRasterDestination|MAJORITY|Majority
+QgsProcessingParameterBoolean|BCENTER|Include Center Cell|True
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle;[2] Annulus;[3] Sector|False|1
+QgsProcessingParameterNumber|KERNEL_INNER|Inner Radius|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None
+QgsProcessingParameterNumber|KERNEL_DIRECTION|Direction|QgsProcessingParameterNumber.Double|0.000000|False|-360.000000|360.000000
+QgsProcessingParameterNumber|KERNEL_TOLERANCE|Tolerance|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|180.000000
+QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|0
+QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
+QgsProcessingParameterNumber|DW_BANDWIDTH|Bandwidth|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

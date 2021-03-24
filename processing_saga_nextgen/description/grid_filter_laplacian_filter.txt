@@ -1,0 +1,8 @@
+Laplacian Filter
+grid_filter
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid
+QgsProcessingParameterEnum|METHOD|Method|[0] standard kernel 1;[1] standard kernel 2;[2] Standard kernel 3;[3] user defined kernel|False|3
+QgsProcessingParameterNumber|SIGMA|Standard Deviation|QgsProcessingParameterNumber.Double|50.000000|False|0.000010|None
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

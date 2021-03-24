@@ -1,0 +1,9 @@
+Lapse Rate Based Temperature Downscaling
+toolchains_climate_tools
+QgsProcessingParameterRasterLayer|LORES_DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|LORES_T|Temperature|None|False
+QgsProcessingParameterRasterLayer|LAPSE_RATES|Lapse Rates|None|True
+QgsProcessingParameterRasterDestination|LORES_SLT|Temperature at Sea Level
+QgsProcessingParameterRasterLayer|HIRES_DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|HIRES_T|Temperature
+QgsProcessingParameterNumber|LAPSE_RATE|Constant Lapse Rate|QgsProcessingParameterNumber.Double|0.600000|False|0.000000|None

@@ -1,0 +1,10 @@
+Convergence Index (Search Radius)
+ta_morphometry
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterDestination|CONVERGENCE|Convergence Index
+QgsProcessingParameterBoolean|SLOPE|Gradient|False
+QgsProcessingParameterEnum|DIFFERENCE|Difference|[0] direction to the center cell;[1] center cell's aspect direction|False|0
+QgsProcessingParameterNumber|RADIUS|Radius [Cells]|QgsProcessingParameterNumber.Double|10.000000|False|1.000000|None
+QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|0
+QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
+QgsProcessingParameterNumber|DW_BANDWIDTH|Bandwidth|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

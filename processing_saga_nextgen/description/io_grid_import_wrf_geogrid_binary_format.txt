@@ -1,0 +1,4 @@
+Import WRF Geogrid Binary Format
+io_grid
+QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

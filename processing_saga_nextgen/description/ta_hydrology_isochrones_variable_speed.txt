@@ -1,0 +1,19 @@
+Isochrones Variable Speed
+ta_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|SLOPE|Slope|None|False
+QgsProcessingParameterRasterLayer|FLOWACC|Catchment Area|None|False
+QgsProcessingParameterRasterLayer|CN|Curve Number|None|True
+QgsProcessingParameterRasterLayer|MANNING|Manning's N|None|True
+QgsProcessingParameterRasterDestination|TIME|Time Out(h)
+QgsProcessingParameterRasterDestination|SPEED|Speed (m/s)
+QgsProcessingParameterNumber|AVGMANNING|Avg. Manning's N|QgsProcessingParameterNumber.Double|0.150000|False|None|None
+QgsProcessingParameterNumber|AVGCN|Avg. Curve Number|QgsProcessingParameterNumber.Double|75.000000|False|None|None
+QgsProcessingParameterNumber|THRSMIXED|Mixed Flow Threshold (ha)|QgsProcessingParameterNumber.Double|18.000000|False|None|None
+QgsProcessingParameterNumber|THRSCHANNEL|Channel Definition Threshold (ha)|QgsProcessingParameterNumber.Double|360.000000|False|None|None
+QgsProcessingParameterNumber|AVGRAINFALL|Avg. Rainfall Intensity (mm/h)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|CHANSLOPE|Channel side slope(m/m)|QgsProcessingParameterNumber.Double|0.500000|False|None|None
+QgsProcessingParameterNumber|MINSPEED|Min. Flow Speed (m/s)|QgsProcessingParameterNumber.Double|0.050000|False|None|None
+QgsProcessingParameterNumber|TARGET_PT_X|Target X Coordinate|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|TARGET_PT_Y|Target Y Coordinate|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterFeatureSource|TARGET_PT|Target Point|0|None|True

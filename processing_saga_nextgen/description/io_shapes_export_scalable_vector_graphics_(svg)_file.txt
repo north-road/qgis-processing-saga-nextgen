@@ -1,0 +1,7 @@
+Export Scalable Vector Graphics (SVG) File
+io_shapes
+QgsProcessingParameterEnum|OUTPUT|Output|[0] single layer;[1] multiple layers|False|1
+QgsProcessingParameterMultipleLayers|LAYERS|Layers|-1|None|False
+QgsProcessingParameterFeatureSource|LAYER|Layer|-1|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|LAYER|-1|False|False
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

@@ -1,0 +1,7 @@
+Multi-Scale Topographic Position Index (TPI)
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|TPI|Topographic Position Index
+QgsProcessingParameterNumber|SCALE_MIN|Minimum Scale|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterNumber|SCALE_MAX|Maximum Scale|QgsProcessingParameterNumber.Integer|8|False|1|None
+QgsProcessingParameterNumber|SCALE_NUM|Number of Scales|QgsProcessingParameterNumber.Integer|3|False|2|None

@@ -1,0 +1,9 @@
+Polygon Clipping
+shapes_polygons
+QgsProcessingParameterFeatureSource|CLIP|Clip Features|2|None|False
+QgsProcessingParameterFeatureSource|S_INPUT|Input Features|-1|None|False
+QgsProcessingParameterVectorDestination|S_OUTPUT|Output Features
+QgsProcessingParameterMultipleLayers|M_INPUT|Input Features|-1|None|False
+QgsProcessingParameterVectorDestination|M_OUTPUT|Output Features
+QgsProcessingParameterBoolean|DISSOLVE|Dissolve Clip Features|True
+QgsProcessingParameterBoolean|MULTIPLE|Multiple Input Features|True

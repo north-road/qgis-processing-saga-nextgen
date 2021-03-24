@@ -1,0 +1,8 @@
+Split Shapes Layer Randomly
+shapes_tools
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterField|FIELD|Categories|None|SHAPES|-1|False|False
+QgsProcessingParameterVectorDestination|A|Group A
+QgsProcessingParameterVectorDestination|B|Group B
+QgsProcessingParameterNumber|PERCENT|Relation B / A|QgsProcessingParameterNumber.Double|25.000000|False|0.000000|100.000000
+QgsProcessingParameterBoolean|EXACT|Exact|True

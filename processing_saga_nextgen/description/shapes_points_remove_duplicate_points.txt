@@ -1,0 +1,7 @@
+Remove Duplicate Points
+shapes_points
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|RESULT|Result
+QgsProcessingParameterEnum|NUMERIC|Value Aggregation|[0] take values from the point to be kept;[1] minimum values of all duplicates;[2] maximum values of all duplicates;[3] mean values of all duplicates|False|0
+QgsProcessingParameterEnum|METHOD|Point to Keep|[0] first point;[1] last point;[2] point with minimum attribute value;[3] point with maximum attribute value|False|0

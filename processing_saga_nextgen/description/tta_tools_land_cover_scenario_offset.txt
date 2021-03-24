@@ -1,0 +1,9 @@
+Land Cover Scenario Offset
+toolchains_tta_tools
+QgsProcessingParameterFeatureSource|ROAD_LINES|Roads|-1|None|False
+QgsProcessingParameterField|ROAD_CLASS|Attribute|None|ROAD_LINES|-1|False|False
+QgsProcessingParameterFeatureSource|CHANNEL_LINES|Channel Network|-1|None|True
+QgsProcessingParameterField|CHANNEL_ORDER|Stream Order|None|CHANNEL_LINES|-1|False|False
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|VEGETATION|Vegetation|None|False
+QgsProcessingParameterRasterDestination|LANDCOVER|Land Cover

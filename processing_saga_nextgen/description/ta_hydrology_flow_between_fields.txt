@@ -1,0 +1,7 @@
+Flow between fields
+ta_hydrology
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterLayer|FIELDS|FIELDS|None|False
+QgsProcessingParameterVectorDestination|FLOW|Flow table
+QgsProcessingParameterRasterDestination|UPAREA|Uparea
+QgsProcessingParameterBoolean|STOP|Stop at edge|True

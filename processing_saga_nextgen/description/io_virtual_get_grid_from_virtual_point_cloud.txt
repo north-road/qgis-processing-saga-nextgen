@@ -1,0 +1,16 @@
+Get Grid from Virtual Point Cloud
+io_virtual
+QgsProcessingParameterFile|FILENAME|Filename|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterRasterDestination|GRID_OUT|Grid
+QgsProcessingParameterFile|FILEPATH|Optional Output Filepath|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|ATTR_FIELD_GRID|Attribute Field to Grid|QgsProcessingParameterNumber.Integer|3|False|3|None
+QgsProcessingParameterNumber|CELL_SIZE|Cellsize|QgsProcessingParameterNumber.Double|1.000000|False|0.001000|None
+QgsProcessingParameterEnum|GRID_SYSTEM_FIT|Grid System Fit|[0] nodes;[1] cells|False|1
+QgsProcessingParameterEnum|METHOD|Aggregation|[0] lowest;[1] highest|False|1
+QgsProcessingParameterBoolean|CONSTRAIN_QUERY|Constrain Query|False
+QgsProcessingParameterNumber|ATTR_FIELD|Attribute Field|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterFeatureSource|AOI_SHP|Shape|2|None|True
+QgsProcessingParameterField|FIELD_TILENAME|Tilename|None|AOI_SHP|-1|False|False
+QgsProcessingParameterRasterLayer|AOI_GRID|Grid|None|True
+QgsProcessingParameterBoolean|AOI_ADD_OVERLAP|Add Overlap|False
+QgsProcessingParameterNumber|OVERLAP|Overlap|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|None

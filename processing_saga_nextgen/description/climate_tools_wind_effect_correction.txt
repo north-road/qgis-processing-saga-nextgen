@@ -1,0 +1,13 @@
+Wind Effect Correction
+climate_tools
+QgsProcessingParameterRasterLayer|BOUNDARY|Boundary Layer|None|False
+QgsProcessingParameterRasterLayer|WIND|Wind Effect|None|False
+QgsProcessingParameterRasterLayer|OBSERVED|Observations|None|False
+QgsProcessingParameterRasterDestination|B_GRID|Calibrated Scaling Factor
+QgsProcessingParameterRasterDestination|WINDCORR|Corrected Wind Effect
+QgsProcessingParameterEnum|B_SOURCE|Scaling Factor|[0] constant;[1] calibrate|False|1
+QgsProcessingParameterNumber|B_CONST|Constant Scaling Factor|QgsProcessingParameterNumber.Double|0.010000|False|0.000000|None
+QgsProcessingParameterNumber|B_MAX|Maximum Scaling Factor|QgsProcessingParameterNumber.Double|0.050000|False|0.000000|None
+QgsProcessingParameterNumber|B_STEPS|Number of Steps|QgsProcessingParameterNumber.Integer|10|False|1|None
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_SIZE|Kernel Size|QgsProcessingParameterNumber.Integer|2|False|1|None

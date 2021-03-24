@@ -1,0 +1,6 @@
+Colour Normalized Spectral Sharpening
+imagery_tools
+QgsProcessingParameterMultipleLayers|GRIDS|Original Channels|3|None|False
+QgsProcessingParameterRasterLayer|PAN|Panchromatic Channel|None|False
+QgsProcessingParameterRasterDestination|SHARPEN|Sharpened Channels
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] nearest neighbour;[1] bilinear;[2] cubic convolution|False|2

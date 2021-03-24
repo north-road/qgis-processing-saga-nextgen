@@ -1,0 +1,10 @@
+Cross Profiles
+ta_profiles
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
+QgsProcessingParameterVectorDestination|PROFILES|Cross Profiles
+QgsProcessingParameterNumber|DIST_LINE|Profile Distance|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterNumber|DIST_PROFILE|Profile Length|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterNumber|NUM_PROFILE|Profile Samples|QgsProcessingParameterNumber.Integer|11|False|3|None
+QgsProcessingParameterEnum|INTERPOLATION|Interpolation|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
+QgsProcessingParameterEnum|OUTPUT|Output|[0] vertices;[1] attributes;[2] vertices and attributes|False|2

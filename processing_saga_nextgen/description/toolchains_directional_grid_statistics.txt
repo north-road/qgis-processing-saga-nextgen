@@ -1,0 +1,13 @@
+Directional Grid Statistics
+toolchains_toolchains
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean
+QgsProcessingParameterNumber|BEGIN|Start Direction|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|END|Stop Direction|QgsProcessingParameterNumber.Double|359.000000|False|None|None
+QgsProcessingParameterNumber|STEP|Directional Step|QgsProcessingParameterNumber.Double|45.000000|False|1.000000|None
+QgsProcessingParameterNumber|TOLERANCE|Tolerance|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|MAXDISTANCE|Maximum Distance|QgsProcessingParameterNumber.Integer|0|False|None|None
+QgsProcessingParameterEnum|DW_WEIGHTING|Weighting|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian weighting|False|3
+QgsProcessingParameterNumber|DW_IDW_POWER|Inverse Distance Weighting Power|QgsProcessingParameterNumber.Double|2.000000|False|None|None
+QgsProcessingParameterNumber|DW_IDW_OFFSET|Inverse Distance Offset|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|DW_BANDWIDTH|Gaussian and Exponential Weighting Bandwidth|QgsProcessingParameterNumber.Double|25.000000|False|0.000000|None

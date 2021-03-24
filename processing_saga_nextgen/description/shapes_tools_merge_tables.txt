@@ -1,0 +1,7 @@
+Merge Tables
+shapes_tools
+QgsProcessingParameterMultipleLayers|INPUT|Tables|5|None|False
+QgsProcessingParameterVectorDestination|MERGED|Merged Table
+QgsProcessingParameterBoolean|SRCINFO|Add Source Information|True
+QgsProcessingParameterBoolean|MATCH|Match Fields by Name|True
+QgsProcessingParameterBoolean|DELETE|Delete|False

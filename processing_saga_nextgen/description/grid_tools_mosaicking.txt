@@ -1,0 +1,15 @@
+Mosaicking
+grid_tools
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|True
+QgsProcessingParameterFile|FILE_LIST|Input File List|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterString|NAME|Name|Mosaic
+QgsProcessingParameterEnum|TYPE|Data Storage Type|[0] 1 bit;[1] 1 byte unsigned integer;[2] 1 byte signed integer;[3] 2 byte unsigned integer;[4] 2 byte signed integer;[5] 4 byte unsigned integer;[6] 4 byte signed integer;[7] 4 byte floating point;[8] 8 byte floating point;[9] same as first grid in list|False|9
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
+QgsProcessingParameterEnum|OVERLAP|Overlapping Areas|[0] first;[1] last;[2] minimum;[3] maximum;[4] mean;[5] blend boundary;[6] feathering|False|1
+QgsProcessingParameterNumber|BLEND_DIST|Blending Distance|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterEnum|BLEND_BND|Blending Boundary|[0] valid data cells;[1] grid boundaries;[2] vertical grid boundaries;[3] horizontal grid boundaries|False|0
+QgsProcessingParameterEnum|MATCH|Match|[0] none;[1] match histogram of first grid in list;[2] match histogram of overlapping area;[3] regression|False|0
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid

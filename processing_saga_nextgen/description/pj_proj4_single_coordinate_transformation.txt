@@ -1,0 +1,8 @@
+Single Coordinate Transformation
+pj_proj4
+QgsProcessingParameterString|SOURCE_CRS|Proj4 Parameters|+proj=longlat +datum=WGS84
+QgsProcessingParameterNumber|SOURCE_X|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|SOURCE_Y|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterString|TARGET_CRS|Proj4 Parameters|+proj=longlat +datum=WGS84
+QgsProcessingParameterNumber|TARGET_X|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|TARGET_Y|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None

@@ -1,0 +1,6 @@
+Grid Buffer
+grid_tools
+QgsProcessingParameterRasterLayer|FEATURES|Features|None|False
+QgsProcessingParameterRasterDestination|BUFFER|Buffer
+QgsProcessingParameterEnum|TYPE|Type|[0] fixed;[1] cell's value|False|0
+QgsProcessingParameterNumber|DISTANCE|Distance|QgsProcessingParameterNumber.Double|1000.000000|False|0.000000|None

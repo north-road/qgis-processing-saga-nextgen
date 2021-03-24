@@ -1,0 +1,6 @@
+Polygon Centroids
+shapes_polygons
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|CENTROIDS|Centroids
+QgsProcessingParameterBoolean|METHOD|Centroids for each part|False
+QgsProcessingParameterBoolean|INSIDE|Force Inside|False

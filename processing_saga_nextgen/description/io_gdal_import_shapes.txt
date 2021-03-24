@@ -1,0 +1,5 @@
+Import Shapes
+io_gdal
+QgsProcessingParameterVectorDestination|SHAPES|Shapes
+QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|GEOM_TYPE|Geometry Type|[0] Automatic;[1] Point;[2] Point (2.5D);[3] Multi-Point;[4] Multi-Point (2.5D);[5] Line;[6] Line (2.5D);[7] Polyline;[8] Polyline (2.5D);[9] Polygon;[10] Polygon (2.5D);[11] Multi-Polygon;[12] Multi-Polygon (2.5D)|False|0

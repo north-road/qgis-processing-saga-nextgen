@@ -1,0 +1,7 @@
+Simple Filter for Multiple Grids
+toolchains_grid_filter
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterRasterDestination|FILTERED|Filtered Grids
+QgsProcessingParameterEnum|METHOD|Filter|[0] Smooth;[1] Sharpen;[2] Edge|False|0
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Kernel Radius|QgsProcessingParameterNumber.Integer|2|False|None|None

@@ -1,0 +1,8 @@
+Spatial Point Pattern Analysis
+statistics_points
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|WEIGHT|Weight|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|CENTRE|Mean Centre
+QgsProcessingParameterVectorDestination|STDDIST|Standard Distance
+QgsProcessingParameterNumber|STEP|Vertex Distance [Degree]|QgsProcessingParameterNumber.Double|5.000000|False|0.100000|20.000000
+QgsProcessingParameterVectorDestination|BBOX|Bounding Box

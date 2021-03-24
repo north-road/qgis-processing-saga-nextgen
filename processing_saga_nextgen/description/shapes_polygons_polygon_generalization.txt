@@ -1,0 +1,5 @@
+Polygon Generalization
+shapes_polygons
+QgsProcessingParameterFeatureSource|POLYGONS|Shapes|2|None|False
+QgsProcessingParameterVectorDestination|GENERALIZED|Shape Indices
+QgsProcessingParameterNumber|THRESHOLD|Threshold|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None

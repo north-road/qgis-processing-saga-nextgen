@@ -1,0 +1,7 @@
+Export Shapes to XYZ
+io_shapes
+QgsProcessingParameterFeatureSource|POINTS|Shapes|-1|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterBoolean|HEADER|Save Table Header|True
+QgsProcessingParameterEnum|SEPARATE|Separate Line/Polygon Points|[0] none;[1] *;[2] number of points|False|0
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

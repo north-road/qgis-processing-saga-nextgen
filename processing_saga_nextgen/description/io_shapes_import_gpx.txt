@@ -1,0 +1,5 @@
+Import GPX
+io_shapes
+QgsProcessingParameterVectorDestination|SHAPES|GPX Import
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|TIME|Time Stamp without date|True

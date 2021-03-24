@@ -1,0 +1,8 @@
+Split Shapes Layer
+shapes_tools
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterVectorDestination|CUTS|Tiles
+QgsProcessingParameterVectorDestination|EXTENT|Extent
+QgsProcessingParameterNumber|NX|Number of horizontal tiles|QgsProcessingParameterNumber.Integer|2|False|1|None
+QgsProcessingParameterNumber|NY|Number of vertical tiles|QgsProcessingParameterNumber.Integer|2|False|1|None
+QgsProcessingParameterEnum|METHOD|Method|[0] completely contained;[1] intersects;[2] center|False|0

@@ -1,0 +1,14 @@
+Superpixel Segmentation
+imagery_segmentation
+QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
+QgsProcessingParameterBoolean|NORMALIZE|Normalize|False
+QgsProcessingParameterVectorDestination|POLYGONS|Segments
+QgsProcessingParameterNumber|MAX_ITERATIONS|Maximum Iterations|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|REGULARIZATION|Regularization|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|SIZE|Region Size|QgsProcessingParameterNumber.Integer|10|False|1|None
+QgsProcessingParameterNumber|SIZE_MIN|Minimum Region Size|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterBoolean|SUPERPIXELS_DO|Create Superpixel Grids|False
+QgsProcessingParameterRasterDestination|SUPERPIXELS|Superpixels
+QgsProcessingParameterEnum|POSTPROCESSING|Post-Processing|[0] none;[1] unsupervised classification|False|0
+QgsProcessingParameterNumber|NCLUSTER|Number of Clusters|QgsProcessingParameterNumber.Integer|12|False|2|None
+QgsProcessingParameterBoolean|SPLIT_CLUSTERS|Split Clusters|True

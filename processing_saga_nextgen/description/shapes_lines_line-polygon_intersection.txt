@@ -1,0 +1,7 @@
+Line-Polygon Intersection
+shapes_lines
+QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|INTERSECT|Intersection
+QgsProcessingParameterVectorDestination|DIFFERENCE|Difference
+QgsProcessingParameterEnum|ATTRIBUTES|Attributes|[0] polygon;[1] line;[2] line and polygon|False|1

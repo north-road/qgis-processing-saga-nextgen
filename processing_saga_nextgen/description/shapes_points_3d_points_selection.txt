@@ -1,0 +1,7 @@
+3D Points Selection
+shapes_points
+QgsProcessingParameterRasterLayer|LOWER|Lower Surface|None|False
+QgsProcessingParameterRasterLayer|UPPER|Upper Surface|None|False
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|Z_FIELD|Z|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|COPY|Copy Selection

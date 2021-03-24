@@ -1,0 +1,7 @@
+Import DXF Files
+io_shapes_dxf
+QgsProcessingParameterVectorDestination|SHAPES|Shapes
+QgsProcessingParameterVectorDestination|TABLES|Tables
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|FILTER|Import Filter|[0] all entities;[1] only entities with layer definition;[2] only entities without layer definition|False|1
+QgsProcessingParameterNumber|DCIRCLE|Circle Point Distance [Degree]|QgsProcessingParameterNumber.Double|5.000000|False|0.010000|45.000000

@@ -1,0 +1,16 @@
+Quasi-Dynamic Flow Accumulation
+sim_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|FLOW_K|Manning-Strickler Coefficient|None|True
+QgsProcessingParameterNumber|FLOW_K_DEFAULT|Default|QgsProcessingParameterNumber.Double|20.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|FLOW_ACC|Flow Accumulation
+QgsProcessingParameterRasterDestination|FLOW|Flow Through
+QgsProcessingParameterRasterDestination|TIME_MEAN|Flow Travel Time
+QgsProcessingParameterRasterDestination|TIME_CONC|Flow Concentration
+QgsProcessingParameterRasterDestination|VELOCITY|Flow Velocity
+QgsProcessingParameterNumber|TIME|Time|QgsProcessingParameterNumber.Double|5.000000|False|0.001000|None
+QgsProcessingParameterEnum|ROUTING|Flow Routing|[0] D8;[1] MFD|False|1
+QgsProcessingParameterEnum|FLOW_DEPTH|Flow Depth|[0] constant;[1] dynamic|False|1
+QgsProcessingParameterNumber|FLOW_CONST|Constant Flow Depth|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterBoolean|RESET|Reset|True
+QgsProcessingParameterNumber|RAIN|Rain|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None

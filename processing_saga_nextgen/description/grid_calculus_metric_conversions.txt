@@ -1,0 +1,5 @@
+Metric Conversions
+grid_calculus
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|CONV|Converted Grid
+QgsProcessingParameterEnum|CONVERSION|Conversion|[0] radians to degree;[1] degree to radians;[2] Celsius to Fahrenheit;[3] Fahrenheit to Celsius|False|0

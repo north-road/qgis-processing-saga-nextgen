@@ -1,0 +1,8 @@
+Temperature Lapse Rates
+climate_tools
+QgsProcessingParameterMultipleLayers|TEMP|Atmospheric Lapse Rates|3|None|False
+QgsProcessingParameterMultipleLayers|TGROUND|Surface Temperature|3|None|False
+QgsProcessingParameterRasterDestination|LAPSE|Temperature Lapse Rate at Extreme
+QgsProcessingParameterRasterDestination|TEXTREME|Daily Extreme Temperature
+QgsProcessingParameterRasterDestination|TIME|Hour of Daily Extreme Temperature
+QgsProcessingParameterEnum|EXTREME|Temperature extreme|[0] minimum;[1] maximum|False|1

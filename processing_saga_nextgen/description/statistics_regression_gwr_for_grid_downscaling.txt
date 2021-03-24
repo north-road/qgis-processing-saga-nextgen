@@ -1,0 +1,16 @@
+GWR for Grid Downscaling
+statistics_regression
+QgsProcessingParameterMultipleLayers|PREDICTORS|Predictors|3|None|False
+QgsProcessingParameterRasterDestination|REGRESSION|Regression
+QgsProcessingParameterRasterDestination|REG_RESCORR|Regression with Residual Correction
+QgsProcessingParameterRasterLayer|DEPENDENT|Dependent Variable|None|False
+QgsProcessingParameterRasterDestination|QUALITY|Coefficient of Determination
+QgsProcessingParameterRasterDestination|RESIDUALS|Residuals
+QgsProcessingParameterRasterDestination|MODEL|Regression Parameters
+QgsProcessingParameterBoolean|LOGISTIC|Logistic Regression|False
+QgsProcessingParameterBoolean|MODEL_OUT|Output of Model Parameters|False
+QgsProcessingParameterEnum|SEARCH_RANGE|Search Range|[0] local;[1] global|False|0
+QgsProcessingParameterNumber|SEARCH_RADIUS|Search Distance [Cells]|QgsProcessingParameterNumber.Integer|10|False|1|None
+QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|3
+QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
+QgsProcessingParameterNumber|DW_BANDWIDTH|Bandwidth|QgsProcessingParameterNumber.Double|7.000000|False|0.000000|None

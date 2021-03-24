@@ -1,0 +1,8 @@
+Convert Lines to Points
+shapes_points
+QgsProcessingParameterFeatureSource|LINES|Lines|-1|None|False
+QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterBoolean|ADD|Insert Additional Points|False
+QgsProcessingParameterEnum|METHOD_INSERT|Insertion|[0] per line segment;[1] per line;[2] from line center|False|0
+QgsProcessingParameterNumber|DIST|Insertion Distance|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterBoolean|ADD_POINT_ORDER|Add Point Order|False

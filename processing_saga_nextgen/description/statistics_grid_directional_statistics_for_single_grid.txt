@@ -1,0 +1,22 @@
+Directional Statistics for Single Grid
+statistics_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean
+QgsProcessingParameterRasterDestination|DIFMEAN|Difference from Arithmetic Mean
+QgsProcessingParameterRasterDestination|MIN|Minimum
+QgsProcessingParameterRasterDestination|MAX|Maximum
+QgsProcessingParameterRasterDestination|RANGE|Range
+QgsProcessingParameterRasterDestination|VAR|Variance
+QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation
+QgsProcessingParameterRasterDestination|STDDEVLO|Mean less Standard Deviation
+QgsProcessingParameterRasterDestination|STDDEVHI|Mean plus Standard Deviation
+QgsProcessingParameterRasterDestination|DEVMEAN|Deviation from Arithmetic Mean
+QgsProcessingParameterRasterDestination|PERCENT|Percentile
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|True
+QgsProcessingParameterVectorDestination|POINTS_OUT|Directional Statistics for Points
+QgsProcessingParameterNumber|DIRECTION|Direction [Degree]|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|TOLERANCE|Tolerance [Degree]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|45.000000
+QgsProcessingParameterNumber|MAXDISTANCE|Maximum Distance [Cells]|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|3
+QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
+QgsProcessingParameterNumber|DW_BANDWIDTH|Bandwidth|QgsProcessingParameterNumber.Double|25.000000|False|0.000000|None

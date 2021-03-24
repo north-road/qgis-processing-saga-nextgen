@@ -1,0 +1,12 @@
+Focal PCA on a Grid
+statistics_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|BASE|Base Topographies
+QgsProcessingParameterRasterDestination|PCA|Principal Components
+QgsProcessingParameterVectorDestination|EIGEN|Eigen Vectors
+QgsProcessingParameterNumber|COMPONENTS|Number of Components|QgsProcessingParameterNumber.Integer|7|False|1|None
+QgsProcessingParameterBoolean|BASE_OUT|Output of Base Topographies|False
+QgsProcessingParameterBoolean|OVERWRITE|Overwrite Previous Results|True
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Kernel Radius|QgsProcessingParameterNumber.Integer|2|False|1|None
+QgsProcessingParameterEnum|METHOD|Method|[0] correlation matrix;[1] variance-covariance matrix;[2] sums-of-squares-and-cross-products matrix|False|1

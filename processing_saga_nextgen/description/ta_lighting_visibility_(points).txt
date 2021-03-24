@@ -1,0 +1,7 @@
+Visibility (points)
+ta_lighting
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterDestination|VISIBILITY|Visibility
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD_HEIGHT|Height|None|POINTS|-1|False|False
+QgsProcessingParameterEnum|METHOD|Unit|[0] Visibility;[1] Shade;[2] Distance;[3] Size|False|1

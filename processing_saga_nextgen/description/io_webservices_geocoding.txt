@@ -1,0 +1,9 @@
+Geocoding
+io_webservices
+QgsProcessingParameterVectorDestination|LOCATIONS|Locations
+QgsProcessingParameterFeatureSource|ADDRESSES|Address List|5|None|True
+QgsProcessingParameterField|FIELD|Address Field|None|ADDRESSES|-1|False|False
+QgsProcessingParameterString|ADDRESS|Single Address|Bundesstrasse 55, Hamburg, Germany
+QgsProcessingParameterEnum|PROVIDER|Service Provider|[0] Nominatim (OpenStreetMap);[1] The Data Science Toolkit;[2] Google;[3] Bing;[4] MapQuest|False|0
+QgsProcessingParameterString|API_KEY|API Key|
+QgsProcessingParameterBoolean|METADATA|Store Metadata|False

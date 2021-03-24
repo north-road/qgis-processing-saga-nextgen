@@ -1,0 +1,4 @@
+Import GStat Shapes
+io_shapes
+QgsProcessingParameterVectorDestination|SHAPES|Shapes
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

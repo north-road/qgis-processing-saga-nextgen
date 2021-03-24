@@ -1,0 +1,8 @@
+Trend Analysis
+statistics_regression
+QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
+QgsProcessingParameterField|FIELD_X|X Values|None|TABLE|-1|False|False
+QgsProcessingParameterField|FIELD_Y|Y Values|None|TABLE|-1|False|False
+QgsProcessingParameterString|FORMULA|Formula|m * x + b
+QgsProcessingParameterEnum|FORMULAS|Pre-defined Formulas|[0] a + b * x (linear);[1] a + b * x + c * x^2 (quadric);[2] a + b * x + c * x^2 + d * x^3 (cubic);[3] a + b * ln(x) (logarithmic);[4] a + b * x^c (power);[5] a + b / x;[6] a + b * (1 - exp(-x / c));[7] a + b * (1 - exp(-(x / c)^2))|False|0
+QgsProcessingParameterVectorDestination|TREND|Table (with Trend)

@@ -1,0 +1,27 @@
+SHALSTAB
+ta_slope_stability
+QgsProcessingParameterRasterLayer|A|Slope grid (rad)|None|False
+QgsProcessingParameterRasterLayer|B|Catchment area grid (m2)|None|False
+QgsProcessingParameterRasterLayer|Cmin|Min Density grid (g/cm3)|None|True
+QgsProcessingParameterRasterLayer|Cmax|Max Density grid (g/cm3)|None|True
+QgsProcessingParameterRasterLayer|Dmin|Min Hydraulic conductivity grid (m/hr) |None|True
+QgsProcessingParameterRasterLayer|Dmax|Max Hydraulic conductivity grid (m/hr) |None|True
+QgsProcessingParameterRasterLayer|Emin|Min Thickness grid (m)|None|True
+QgsProcessingParameterRasterLayer|Emax|Max Thickness grid (m)|None|True
+QgsProcessingParameterRasterLayer|Fmin|Min Friction angle grid (degree) |None|True
+QgsProcessingParameterRasterLayer|Fmax|Max Friction angle grid (degree) |None|True
+QgsProcessingParameterRasterLayer|Jmin|Min Bulk cohesion grid (MPa) |None|True
+QgsProcessingParameterRasterLayer|Jmax|Max Bulk cohesion grid (MPa) |None|True
+QgsProcessingParameterNumber|fCmin|Global minimum density (g/cm3)|QgsProcessingParameterNumber.Double|1.600000|False|None|None
+QgsProcessingParameterNumber|fCmax|Global maximum density (g/cm3)|QgsProcessingParameterNumber.Double|1.600000|False|None|None
+QgsProcessingParameterNumber|fDmin|Global minimum conductivity (m/hr)|QgsProcessingParameterNumber.Double|2.700000|False|None|None
+QgsProcessingParameterNumber|fDmax|Global maximum conductivity (m/hr)|QgsProcessingParameterNumber.Double|2.700000|False|None|None
+QgsProcessingParameterNumber|fEmin|Global minimum thickness (m)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|fEmax|Global maximum thickness (m)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|fFmin|Global minimum friction angle (degree)|QgsProcessingParameterNumber.Double|33.000000|False|None|None
+QgsProcessingParameterNumber|fFmax|Global maximum friction angle (degree)|QgsProcessingParameterNumber.Double|33.000000|False|None|None
+QgsProcessingParameterNumber|fJmin|Global minimum bulk cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fJmax|Global maximum bulk cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|fK|Parameter sampling runs|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterRasterDestination|G|CR values
+QgsProcessingParameterRasterDestination|H|CR classes

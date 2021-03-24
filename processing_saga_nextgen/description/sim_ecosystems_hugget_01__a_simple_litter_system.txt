@@ -1,0 +1,8 @@
+01: A Simple Litter System
+sim_ecosystems_hugget
+QgsProcessingParameterVectorDestination|TABLE|Results
+QgsProcessingParameterNumber|TIME_SPAN|Time Span|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_STEP|Time Interval [a]|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterNumber|C_INIT|Initial Litter Storage [g/m_]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|C_INPUT|Litterfall Rate [g/m_/a]|QgsProcessingParameterNumber.Double|240.000000|False|0.000000|None
+QgsProcessingParameterNumber|C_OUTPUT|Rate Constant for Litter Loss [1/a]|QgsProcessingParameterNumber.Double|0.400000|False|0.000000|None

@@ -1,0 +1,8 @@
+Daily Insolation over Latitude
+climate_tools
+QgsProcessingParameterVectorDestination|SOLARRAD|Solar Radiation
+QgsProcessingParameterNumber|START|Start [ka]|QgsProcessingParameterNumber.Double|-200.000000|False|None|None
+QgsProcessingParameterNumber|STOP|Stop [ka]|QgsProcessingParameterNumber.Double|2.000000|False|None|None
+QgsProcessingParameterNumber|STEP|Step [ka]|QgsProcessingParameterNumber.Double|1.000000|False|0.001000|None
+QgsProcessingParameterNumber|DLAT|Latitude Increment [Degree]|QgsProcessingParameterNumber.Integer|5|False|1|90
+QgsProcessingParameterNumber|DAY|Day of Year|QgsProcessingParameterNumber.Integer|181|False|0|366

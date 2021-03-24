@@ -1,0 +1,11 @@
+Change Grid Values - Flood Fill
+grid_tools
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|GRID_OUT|Changed Grid
+QgsProcessingParameterEnum|REPLACE|Value to be replaced|[0] value at mouse position;[1] fixed value|False|0
+QgsProcessingParameterNumber|REPLACE_VALUE|Fixed value to be replaced|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|TOLERANCE|Tolerance|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterBoolean|IGNORE_NODATA|Ignore No-Data|True
+QgsProcessingParameterBoolean|FILL_NODATA|Fill with No-Data|False
+QgsProcessingParameterNumber|FILL_VALUE|Fill Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None

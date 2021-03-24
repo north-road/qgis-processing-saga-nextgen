@@ -1,0 +1,9 @@
+Terrain Ruggedness Index (TRI)
+ta_morphometry
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|TRI|Terrain Ruggedness Index (TRI)
+QgsProcessingParameterEnum|MODE|Search Mode|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|RADIUS|Search Radius|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|0
+QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
+QgsProcessingParameterNumber|DW_BANDWIDTH|Bandwidth|QgsProcessingParameterNumber.Double|75.000000|False|0.000000|None

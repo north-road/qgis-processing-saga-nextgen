@@ -1,0 +1,6 @@
+Change Longitudinal Range for Grids
+pj_proj4
+QgsProcessingParameterMultipleLayers|INPUT|Input|3|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Output
+QgsProcessingParameterEnum|DIRECTION|Direction|[0] 0 - 360 >> -180 - 180;[1] -180 - 180 >> 0 - 360|False|0
+QgsProcessingParameterBoolean|PATCH|Patch Last Column|True

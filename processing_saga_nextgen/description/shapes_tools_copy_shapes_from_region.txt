@@ -1,0 +1,15 @@
+Copy Shapes from Region
+shapes_tools
+QgsProcessingParameterMultipleLayers|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterVectorDestination|CUT|Copy
+QgsProcessingParameterEnum|METHOD|Method|[0] completely contained;[1] intersects;[2] center|False|1
+QgsProcessingParameterEnum|EXTENT|Region|[0] user defined;[1] grid project;[2] shapes layer extent;[3] polygons|False|0
+QgsProcessingParameterNumber|AX|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|BX|Right|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|AY|Bottom|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|BY|Top|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|DX|Horizontal Range|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|DY|Vertical Range|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterFeatureSource|SHAPES_EXT|Shapes|-1|None|False
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterNumber|OVERLAP|Minimum Overlap|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|100.000000

@@ -1,0 +1,17 @@
+Latitude/Longitude Graticule
+pj_proj4
+QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
+QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
+QgsProcessingParameterFile|CRS_FILE|Well Known Text File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|CRS_EPSG|Authority Code|QgsProcessingParameterNumber.Integer|-1|False|None|None
+QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
+QgsProcessingParameterVectorDestination|GRATICULE|Graticule
+QgsProcessingParameterVectorDestination|COORDS|Frame Coordinates
+QgsProcessingParameterNumber|XMIN|Minimum|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|XMAX|Maximum|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|YMIN|Minimum|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|YMAX|Maximum|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterEnum|INTERVAL|Interval|[0] fixed interval;[1] fitted interval|False|0
+QgsProcessingParameterNumber|FIXED|Fixed Interval (Degree)|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|FITTED|Number of Intervals|QgsProcessingParameterNumber.Integer|10|False|1|None
+QgsProcessingParameterNumber|RESOLUTION|Minimum Resolution (Degree)|QgsProcessingParameterNumber.Double|0.500000|False|0.000000|None

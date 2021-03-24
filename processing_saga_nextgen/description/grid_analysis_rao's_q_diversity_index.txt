@@ -1,0 +1,9 @@
+Rao's Q Diversity Index
+grid_analysis
+QgsProcessingParameterMultipleLayers|VALUES|Values|3|None|False
+QgsProcessingParameterBoolean|NORMALIZE|Normalize|False
+QgsProcessingParameterRasterDestination|INDEX|Rao's Q
+QgsProcessingParameterEnum|DISTANCE|Distance|[0] Euclidian;[1] Manhatten;[2] Canberra;[3] Minkowski|False|0
+QgsProcessingParameterNumber|LAMBDA|Lambda|QgsProcessingParameterNumber.Double|1.000000|False|0.000100|None
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

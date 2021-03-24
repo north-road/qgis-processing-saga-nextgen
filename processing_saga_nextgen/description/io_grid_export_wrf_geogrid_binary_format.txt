@@ -1,0 +1,22 @@
+Export WRF Geogrid Binary Format
+io_grid
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterFile|FILE|Directory|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|DATATYPE|Data Type|[0] 1 byte unsigned;[1] 1 byte signed;[2] 2 byte unsigned;[3] 2 byte signed;[4] 4 byte unsigned;[5] 4 byte signed|False|0
+QgsProcessingParameterEnum|TYPE|Type|[0] categorical;[1] continuous|False|0
+QgsProcessingParameterNumber|NAME_DIGITS|Filename Digits|QgsProcessingParameterNumber.Integer|5|False|5|6
+QgsProcessingParameterNumber|MISSING|Missing Value|QgsProcessingParameterNumber.Double|-99999.000000|False|None|None
+QgsProcessingParameterNumber|SCALE|Scale Factor|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterString|UNITS|Units|
+QgsProcessingParameterString|DESCRIPTION|Description|
+QgsProcessingParameterString|MMINLU|Look Up Section|USGS
+QgsProcessingParameterNumber|TILE_BDR|Halo Width|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterEnum|PROJECTION|Projection|[0] lambert;[1] polar;[2] mercator;[3] regular_ll;[4] albers_nad83;[5] polar_wgs84|False|3
+QgsProcessingParameterNumber|SDTLON|Standard Longitude|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|TRUELAT1|True Latitude 1|QgsProcessingParameterNumber.Double|45.000000|False|None|None
+QgsProcessingParameterNumber|TRUELAT2|True Latitude 2|QgsProcessingParameterNumber.Double|35.000000|False|None|None
+QgsProcessingParameterNumber|ISWATER|Water|QgsProcessingParameterNumber.Integer|16|False|None|None
+QgsProcessingParameterNumber|ISLAKE|Lake|QgsProcessingParameterNumber.Integer|-1|False|None|None
+QgsProcessingParameterNumber|ISICE|Ice|QgsProcessingParameterNumber.Integer|24|False|None|None
+QgsProcessingParameterNumber|ISURBAN|Urban|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterNumber|ISOILWATER|Soil Water|QgsProcessingParameterNumber.Integer|14|False|None|None

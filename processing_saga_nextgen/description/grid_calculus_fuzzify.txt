@@ -1,0 +1,12 @@
+Fuzzify
+grid_calculus
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Fuzzified Grid
+QgsProcessingParameterNumber|INC_MIN|From|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|INC_MAX|To|QgsProcessingParameterNumber.Double|0.300000|False|None|None
+QgsProcessingParameterNumber|DEC_MIN|From|QgsProcessingParameterNumber.Double|0.700000|False|None|None
+QgsProcessingParameterNumber|DEC_MAX|To|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterEnum|METHOD|Method|[0] Increase;[1] Decrease;[2] Increase and Decrease|False|0
+QgsProcessingParameterEnum|TRANSITION|Transition|[0] linear;[1] sigmoidal;[2] j-shaped|False|0
+QgsProcessingParameterBoolean|INVERT|Invert|False
+QgsProcessingParameterBoolean|AUTOFIT|Adjust|True

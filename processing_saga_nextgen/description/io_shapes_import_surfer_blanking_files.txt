@@ -1,0 +1,6 @@
+Import Surfer Blanking Files
+io_shapes
+QgsProcessingParameterVectorDestination|SHAPES|Shapes
+QgsProcessingParameterVectorDestination|TABLE|Look up table (Points)
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|TYPE|Shape Type|[0] points;[1] lines;[2] polygons|False|1

@@ -1,0 +1,7 @@
+Import Text Tables
+toolchains_group_files
+QgsProcessingParameterVectorDestination|TABLES|Tables
+QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|HEADLINE|Headline|True
+QgsProcessingParameterEnum|SEPARATOR|Separator|[0] tabulator;[1] ;;[2] ,;[3] space;[4] other|False|0
+QgsProcessingParameterString|SEP_OTHER|Separator (other)|*

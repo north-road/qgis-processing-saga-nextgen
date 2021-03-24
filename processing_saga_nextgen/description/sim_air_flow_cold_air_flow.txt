@@ -1,0 +1,16 @@
+Cold Air Flow
+sim_air_flow
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|PRODUCTION|Production|None|True
+QgsProcessingParameterNumber|PRODUCTION_DEFAULT|Default|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|FRICTION|Surface Friction Coefficient|None|True
+QgsProcessingParameterNumber|FRICTION_DEFAULT|Default|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|AIR|Cold Air Height
+QgsProcessingParameterRasterDestination|VELOCITY|Velocity
+QgsProcessingParameterBoolean|RESET|Reset|True
+QgsProcessingParameterNumber|TIME_STOP|Simulation Time [h]|QgsProcessingParameterNumber.Double|6.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_UPDATE|Map Update Frequency [min]|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterEnum|EDGE|Edge|[0] closed;[1] open|False|1
+QgsProcessingParameterNumber|DELAY|Time Step Adjustment|QgsProcessingParameterNumber.Double|0.500000|False|0.010000|1.000000
+QgsProcessingParameterNumber|T_AIR|Surrounding Air Temperature|QgsProcessingParameterNumber.Double|15.000000|False|-273.150000|None
+QgsProcessingParameterNumber|T_AIR_COLD|Cold Air Temperature|QgsProcessingParameterNumber.Double|5.000000|False|-273.150000|None

@@ -1,0 +1,9 @@
+Vertical Distance to Channel Network
+ta_channels
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterLayer|CHANNELS|Channel Network|None|False
+QgsProcessingParameterRasterDestination|DISTANCE|Vertical Distance to Channel Network
+QgsProcessingParameterRasterDestination|BASELEVEL|Channel Network Base Level
+QgsProcessingParameterNumber|THRESHOLD|Tension Threshold|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterBoolean|NOUNDERGROUND|Keep Base Level below Surface|True

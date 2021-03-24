@@ -1,0 +1,19 @@
+02: Carbon Cycle Simulation for Terrestrial Biomass
+sim_ecosystems_hugget
+QgsProcessingParameterVectorDestination|TABLE|Results
+QgsProcessingParameterNumber|TIME_SPAN|Time Span|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_STEP|Time Interval [a]|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterNumber|PRIMPROD|Net Primary Production [Gt Carbon / a]|QgsProcessingParameterNumber.Double|27.800000|False|0.000000|None
+QgsProcessingParameterNumber|CHUMIFY|Humification Factor|QgsProcessingParameterNumber.Double|0.400000|False|0.000000|None
+QgsProcessingParameterNumber|CCARBON|Carbonization Factor|QgsProcessingParameterNumber.Double|0.050000|False|0.000000|None
+QgsProcessingParameterNumber|P_LEAV|Leaves|QgsProcessingParameterNumber.Double|0.300000|False|0.000000|None
+QgsProcessingParameterNumber|P_BRAN|Branches|QgsProcessingParameterNumber.Double|0.200000|False|0.000000|None
+QgsProcessingParameterNumber|P_STEM|Stems|QgsProcessingParameterNumber.Double|0.300000|False|0.000000|None
+QgsProcessingParameterNumber|P_ROOT|Roots|QgsProcessingParameterNumber.Double|0.200000|False|0.000000|None
+QgsProcessingParameterNumber|K_LEAV_LITT|Leaves to Litter|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|K_BRAN_LITT|Branches to Litter|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterNumber|K_STEM_LITT|Stems to Litter|QgsProcessingParameterNumber.Double|0.033000|False|0.000000|None
+QgsProcessingParameterNumber|K_ROOT_HUMU|Roots to Humus|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterNumber|K_LITT_HUMU|Litter to Humus|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|K_HUMU_COAL|Humus to Charcoal|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterNumber|K_COAL_ENVI|Charcoal to Environment|QgsProcessingParameterNumber.Double|0.002000|False|0.000000|None

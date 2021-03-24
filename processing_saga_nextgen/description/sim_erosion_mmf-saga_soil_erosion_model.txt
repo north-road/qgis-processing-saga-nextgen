@@ -1,0 +1,51 @@
+MMF-SAGA Soil Erosion Model
+sim_erosion
+QgsProcessingParameterRasterLayer|DTM|Digital Terrain Model|None|False
+QgsProcessingParameterRasterLayer|S|Slope|None|False
+QgsProcessingParameterRasterLayer|CHANNEL|Channel Network|None|True
+QgsProcessingParameterRasterLayer|PI|Permament Interception|None|False
+QgsProcessingParameterRasterLayer|CC|Canopy Cover|None|False
+QgsProcessingParameterRasterLayer|PH|Plant Height|None|False
+QgsProcessingParameterRasterLayer|EtEo|Ratio Evapotranspiration|None|False
+QgsProcessingParameterRasterLayer|GC|Ground cover|None|False
+QgsProcessingParameterRasterLayer|D|Diameter plant elements|None|False
+QgsProcessingParameterRasterLayer|NV|Number plant elements|None|False
+QgsProcessingParameterRasterLayer|MS|Soil moisture (at FC)|None|False
+QgsProcessingParameterRasterLayer|BD|Bulk density top layer|None|False
+QgsProcessingParameterRasterLayer|EHD|Effective hydrological depth|None|False
+QgsProcessingParameterRasterLayer|LP|Sat. lateral permeability|None|False
+QgsProcessingParameterRasterLayer|PER_C|Percentage clays|None|False
+QgsProcessingParameterRasterLayer|PER_Z|Percentage silt|None|False
+QgsProcessingParameterRasterLayer|PER_S|Percentage sand|None|False
+QgsProcessingParameterRasterLayer|ST|Percentage rock fragments|None|False
+QgsProcessingParameterRasterLayer|RFR|Surface roughness|None|True
+QgsProcessingParameterFeatureSource|TAB_METEO|Meteorological data|5|None|True
+QgsProcessingParameterFile|OUT_PATH|Output file path|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|INTERFLOW|Simulate Interflow|True
+QgsProcessingParameterNumber|T|Mean temperature|QgsProcessingParameterNumber.Double|18.000000|False|None|None
+QgsProcessingParameterNumber|TIMESPAN|Timespan (days)|QgsProcessingParameterNumber.Integer|30|False|1|365
+QgsProcessingParameterRasterDestination|IF|Interflow
+QgsProcessingParameterNumber|R|Rainfall|QgsProcessingParameterNumber.Double|200.000000|False|None|None
+QgsProcessingParameterNumber|I|Rainfall intensity|QgsProcessingParameterNumber.Double|20.000000|False|None|None
+QgsProcessingParameterNumber|Rn|Rainfall Duration|QgsProcessingParameterNumber.Double|20.000000|False|None|None
+QgsProcessingParameterEnum|KE_I_METHOD|Relationship KE - I|[0] North America east of Rocky Mountains (Wischmeier & Smith 1978);[1] North-western Europe (Marshall & Palmer);[2] Mediterranean-type climates (Zanchi & Torri 1980);[3] Western Mediterranean (Coutinho & Tomas 1995);[4] Tropical climates (Hudson 1965);[5] Eastern Asia (Onaga et al. 1998);[6] Southern hemisphere climates (Rosewell 1986);[7] Bogor, West-Java, Indonesia (McISaac 1990)|False|0
+QgsProcessingParameterNumber|FLOWD_VA|Flow Depth (actual flow velocity)|QgsProcessingParameterNumber.Double|0.005000|False|0.000000|None
+QgsProcessingParameterBoolean|CHANNELTRANSPORT|Route Soil along Channel Network|False
+QgsProcessingParameterRasterDestination|Q|Mean runoff
+QgsProcessingParameterRasterDestination|SL|Mean soil loss
+QgsProcessingParameterRasterDestination|Rf|Effective Rainfall
+QgsProcessingParameterRasterDestination|KE|Total Kinetic Energy
+QgsProcessingParameterRasterDestination|Rc|Soil moisture storage capacity
+QgsProcessingParameterRasterDestination|TCc|Transport Capacity Clay
+QgsProcessingParameterRasterDestination|TCz|Transport Capacity Silt
+QgsProcessingParameterRasterDestination|TCs|Transport Capacity Sand
+QgsProcessingParameterRasterDestination|Gc|Available Clay
+QgsProcessingParameterRasterDestination|Gz|Available Silt
+QgsProcessingParameterRasterDestination|Gs|Available Sand
+QgsProcessingParameterRasterDestination|SLc|Sediment Balance Clay
+QgsProcessingParameterRasterDestination|SLz|Sediment Balance Silt
+QgsProcessingParameterRasterDestination|SLs|Sediment Balance Sand
+QgsProcessingParameterRasterDestination|TCONDc|Transport Condition Clay
+QgsProcessingParameterRasterDestination|TCONDz|Transport Condition Silt
+QgsProcessingParameterRasterDestination|TCONDs|Transport Condition Sand
+QgsProcessingParameterRasterDestination|W_up|Upslope Flow Width

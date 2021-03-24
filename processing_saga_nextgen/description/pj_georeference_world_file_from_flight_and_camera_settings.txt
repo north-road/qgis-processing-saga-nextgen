@@ -1,0 +1,16 @@
+World File from Flight and Camera Settings
+pj_georeference
+QgsProcessingParameterVectorDestination|EXTENT|Extent
+QgsProcessingParameterFile|FILE|World File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|NX|Number of Columns|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|NY|Number of Rows|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|CFL|Focal Length [mm]|QgsProcessingParameterNumber.Double|80.000000|False|0.000000|None
+QgsProcessingParameterNumber|PXSIZE|CCD Physical Pixel Size [micron]|QgsProcessingParameterNumber.Double|5.200000|False|0.000000|None
+QgsProcessingParameterNumber|X|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Y|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Z|Z|QgsProcessingParameterNumber.Double|1000.000000|False|None|None
+QgsProcessingParameterNumber|OMEGA|Omega|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|PHI|Phi|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|KAPPA|Kappa|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|KAPPA_OFF|Offset|QgsProcessingParameterNumber.Double|90.000000|False|None|None
+QgsProcessingParameterEnum|ORIENTATION|Orientation|[0] BLUH;[1] PATB|False|0

@@ -1,0 +1,4 @@
+Crop to Data
+grid_tools
+QgsProcessingParameterMultipleLayers|INPUT|Grids|3|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Cropped Grids

@@ -1,0 +1,4 @@
+Copy Selection to New Shapes Layer
+shapes_tools
+QgsProcessingParameterFeatureSource|INPUT|Input|-1|None|False
+QgsProcessingParameterVectorDestination|OUTPUT|Output

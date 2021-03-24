@@ -1,0 +1,8 @@
+Change a Grid's No-Data Value [Bulk Processing]
+toolchains_grid_tools
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterBoolean|COPY|Create Copies|True
+QgsProcessingParameterRasterDestination|OUTPUT|Changed Grids
+QgsProcessingParameterEnum|TYPE|Type|[0] single value;[1] value range|False|0
+QgsProcessingParameterNumber|VALUE|No-Data Value|QgsProcessingParameterNumber.Double|-99999.000000|False|None|None
+QgsProcessingParameterBoolean|CHANGE|Change Values|False

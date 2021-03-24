@@ -1,0 +1,8 @@
+GPX to shapefile
+io_gps
+QgsProcessingParameterFile|BASEPATH|Gpx2shp path|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|FILE|GPX file|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|TRACKPOINTS|Convert track points|True
+QgsProcessingParameterBoolean|WAYPOINTS|Convert way points|True
+QgsProcessingParameterBoolean|ROUTES|Convert routes|True
+QgsProcessingParameterBoolean|ADD|Load shapefile|True

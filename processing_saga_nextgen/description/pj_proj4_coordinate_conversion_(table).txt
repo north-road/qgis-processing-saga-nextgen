@@ -1,0 +1,7 @@
+Coordinate Conversion (Table)
+pj_proj4
+QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
+QgsProcessingParameterField|SOURCE_X|X Coordinate Source|None|TABLE|-1|False|False
+QgsProcessingParameterField|SOURCE_Y|Y Coordinate Source|None|TABLE|-1|False|False
+QgsProcessingParameterField|TARGET_X|Projected X Coordinates|None|TABLE|-1|False|False
+QgsProcessingParameterField|TARGET_Y|Projected Y Coordinates|None|TABLE|-1|False|False

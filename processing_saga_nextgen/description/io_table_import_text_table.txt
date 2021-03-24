@@ -1,0 +1,8 @@
+Import Text Table
+io_table
+QgsProcessingParameterVectorDestination|TABLE|Table
+QgsProcessingParameterBoolean|HEADLINE|Headline|True
+QgsProcessingParameterEnum|SEPARATOR|Separator|[0] tabulator;[1] ;;[2] ,;[3] space;[4] other|False|0
+QgsProcessingParameterEnum|ENCODING|Encoding|[0] ANSI;[1] UTF-7;[2] UTF-8;[3] UTF-16 (Little Endian);[4] UTF-16 (Big Endian);[5] UTF-32 (Little Endian);[6] UTF-32 (Big Endian);[7] default|False|0
+QgsProcessingParameterString|SEP_OTHER|Separator (other)|*
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

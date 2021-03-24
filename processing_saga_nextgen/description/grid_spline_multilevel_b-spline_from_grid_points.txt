@@ -1,0 +1,11 @@
+Multilevel B-Spline from Grid Points
+grid_spline
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid
+QgsProcessingParameterEnum|METHOD|Refinement|[0] no;[1] yes|False|0
+QgsProcessingParameterNumber|EPSILON|Threshold Error|QgsProcessingParameterNumber.Double|0.000100|False|0.000000|None
+QgsProcessingParameterNumber|LEVEL_MAX|Maximum Level|QgsProcessingParameterNumber.Integer|11|False|1|14
+QgsProcessingParameterEnum|DATATYPE|Data Type|[0] same as input grid;[1] 4 byte floating point number|False|0

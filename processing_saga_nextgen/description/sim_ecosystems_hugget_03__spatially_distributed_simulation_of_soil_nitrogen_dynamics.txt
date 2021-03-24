@@ -1,0 +1,9 @@
+03: Spatially Distributed Simulation of Soil Nitrogen Dynamics
+sim_ecosystems_hugget
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|NSTORE|Soil Nitrogen
+QgsProcessingParameterNumber|TIME_SPAN|Time Span [a]|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_STEP|Time Interval [a]|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterBoolean|UPDATE|Update View|True
+QgsProcessingParameterNumber|NINIT|Initial Nitrogen Content [kg/ha]|QgsProcessingParameterNumber.Double|5000.000000|False|0.000000|None
+QgsProcessingParameterNumber|NRAIN|Nitrogen in Rainfall [kg/ha/a]|QgsProcessingParameterNumber.Double|16.000000|False|0.000000|None

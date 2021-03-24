@@ -1,0 +1,7 @@
+Convex Hull
+shapes_points
+QgsProcessingParameterFeatureSource|SHAPES|Points|-1|None|False
+QgsProcessingParameterVectorDestination|HULLS|Convex Hull
+QgsProcessingParameterVectorDestination|BOXES|Minimum Bounding Box
+QgsProcessingParameterEnum|POLYPOINTS|Hull Construction|[0] one hull for all shapes;[1] one hull per shape;[2] one hull per shape part|False|1
+QgsProcessingParameterBoolean|POLYGONCVX|Polygon Convexity|False

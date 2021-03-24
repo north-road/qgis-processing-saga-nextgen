@@ -1,0 +1,14 @@
+SAGA Wetness Index
+ta_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|WEIGHT|Weights|None|True
+QgsProcessingParameterRasterDestination|AREA|Catchment Area
+QgsProcessingParameterRasterDestination|SLOPE|Catchment Slope
+QgsProcessingParameterRasterDestination|AREA_MOD|Modified Catchment Area
+QgsProcessingParameterRasterDestination|TWI|Topographic Wetness Index
+QgsProcessingParameterNumber|SUCTION|Suction|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterEnum|AREA_TYPE|Type of Area|[0] total catchment area;[1] square root of catchment area;[2] specific catchment area|False|1
+QgsProcessingParameterEnum|SLOPE_TYPE|Type of Slope|[0] local slope;[1] catchment slope|False|1
+QgsProcessingParameterNumber|SLOPE_MIN|Minimum Slope|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|SLOPE_OFF|Offset Slope|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None
+QgsProcessingParameterNumber|SLOPE_WEIGHT|Slope Weighting|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

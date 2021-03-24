@@ -1,0 +1,15 @@
+SaLEM
+sim_landscape_evolution
+QgsProcessingParameterRasterLayer|SURFACE_T0|Initial Surface Elevation|None|False
+QgsProcessingParameterRasterLayer|REGOLITH_T0|Initial Regolith Thickness|None|True
+QgsProcessingParameterNumber|REGOLITH_T0_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|ALLOCHTHONE|Allochthone Input|None|True
+QgsProcessingParameterNumber|ALLOCHTHONE_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|SURFACE|Surface Elevation
+QgsProcessingParameterRasterDestination|REGOLITH|Regolith Thickness
+QgsProcessingParameterRasterDestination|DIFFERENCE|Difference
+QgsProcessingParameterNumber|TIME_START|Start [Years BP]|QgsProcessingParameterNumber.Integer|50000|False|None|None
+QgsProcessingParameterNumber|TIME_STOP|Stop [Years BP]|QgsProcessingParameterNumber.Integer|10000|False|None|None
+QgsProcessingParameterNumber|TIME_STEP|Step [Years]|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|DIFFUSIVE_KD|Diffusivity Coefficient Kd [m^2/a]|QgsProcessingParameterNumber.Double|0.010000|False|0.000000|None
+QgsProcessingParameterEnum|DIFFUSIVE_NEIGHBOURS|Neighbourhood|[0] Neumann;[1] Moore|False|1

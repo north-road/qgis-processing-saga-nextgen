@@ -1,0 +1,21 @@
+PhenIps (Table)
+climate_tools
+QgsProcessingParameterFeatureSource|WEATHER|Weather Data|5|None|False
+QgsProcessingParameterField|ATmean|Mean Temperature|None|WEATHER|-1|False|False
+QgsProcessingParameterField|ATmax|Maximum Temperature|None|WEATHER|-1|False|False
+QgsProcessingParameterField|SIrel|Solar Irradiation|None|WEATHER|-1|False|False
+QgsProcessingParameterVectorDestination|PHENOLOGY|Phenology
+QgsProcessingParameterVectorDestination|SUMMARY|Summary
+QgsProcessingParameterNumber|LATITUDE|Latitude|QgsProcessingParameterNumber.Double|50.000000|False|-90.000000|90.000000
+QgsProcessingParameterBoolean|LIMIT|Limit|True
+QgsProcessingParameterNumber|DToptimum|Developmental Optimum Temperature|QgsProcessingParameterNumber.Double|30.400000|False|None|None
+QgsProcessingParameterNumber|DTminimum|Developmental Minimum Temperature|QgsProcessingParameterNumber.Double|8.300000|False|None|None
+QgsProcessingParameterNumber|FAminimum|Minimum Temperature for Flight Activity|QgsProcessingParameterNumber.Double|16.500000|False|None|None
+QgsProcessingParameterNumber|DayLength|Minimum Day Length for Flight Activity|QgsProcessingParameterNumber.Double|14.500000|False|0.000000|24.000000
+QgsProcessingParameterNumber|DDminimum|Minimum Thermal Sum for Infestation|QgsProcessingParameterNumber.Double|140.000000|False|0.000000|None
+QgsProcessingParameterNumber|DDtotal|Thermal Sum for Total Development|QgsProcessingParameterNumber.Double|557.000000|False|0.000000|None
+QgsProcessingParameterNumber|Risk_DayMax|Day of Maximum Risk after Onset|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|None
+QgsProcessingParameterNumber|Risk_Decay|Decay of Risk after Maximum|QgsProcessingParameterNumber.Double|10.000000|False|1.000000|None
+QgsProcessingParameterString|YD_Begin|Begin of Parental Development|2021-04-01
+QgsProcessingParameterString|YD_End_Onset|End of Breeding|2021-08-31
+QgsProcessingParameterString|YD_End|End of Development|2021-10-31

@@ -1,0 +1,10 @@
+Import Sentinel-2 Scene
+imagery_tools
+QgsProcessingParameterFile|METAFILE|Metadata File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterRasterDestination|BANDS|Bands
+QgsProcessingParameterBoolean|MULTI2GRIDS|Multispectral Bands as Grid Collection|True
+QgsProcessingParameterBoolean|SKIP_TCI|Skip True Color Image|True
+QgsProcessingParameterBoolean|SKIP_60M|Skip Aerosol, Vapour, Cirrus|True
+QgsProcessingParameterEnum|REFLECTANCE|Reflectance Values|[0] original;[1] fraction|False|1
+QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates|False|0
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3

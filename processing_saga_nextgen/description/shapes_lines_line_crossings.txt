@@ -1,0 +1,6 @@
+Line Crossings
+shapes_lines
+QgsProcessingParameterFeatureSource|LINES_A|1st Lines Layer|1|None|False
+QgsProcessingParameterFeatureSource|LINES_B|2nd Lines Layer|1|None|False
+QgsProcessingParameterVectorDestination|CROSSINGS|Crossings
+QgsProcessingParameterEnum|ATTRIBUTES|Parent Attributes|[0] index;[1] attributes;[2] index and attributes|False|2

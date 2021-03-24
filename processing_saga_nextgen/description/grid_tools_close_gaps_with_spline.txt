@@ -1,0 +1,12 @@
+Close Gaps with Spline
+grid_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterLayer|MASK|Mask|None|True
+QgsProcessingParameterNumber|MAXGAPCELLS|Only Process Gaps with Less Cells|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterRasterDestination|CLOSED|Closed Gaps Grid
+QgsProcessingParameterNumber|MAXPOINTS|Maximum Points|QgsProcessingParameterNumber.Integer|1000|False|2|None
+QgsProcessingParameterNumber|LOCALPOINTS|Number of Points for Local Interpolation|QgsProcessingParameterNumber.Integer|20|False|2|None
+QgsProcessingParameterBoolean|EXTENDED|Extended Neighourhood|False
+QgsProcessingParameterEnum|NEIGHBOURS|Neighbourhood|[0] Neumann;[1] Moore|False|0
+QgsProcessingParameterNumber|RADIUS|Radius (Cells)|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterNumber|RELAXATION|Relaxation|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

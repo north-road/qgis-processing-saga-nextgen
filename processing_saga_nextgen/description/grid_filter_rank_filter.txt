@@ -1,0 +1,7 @@
+Rank Filter
+grid_filter
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid
+QgsProcessingParameterNumber|RANK|Rank|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|100.000000
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

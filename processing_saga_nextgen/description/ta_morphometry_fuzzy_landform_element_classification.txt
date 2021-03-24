@@ -1,0 +1,30 @@
+Fuzzy Landform Element Classification
+ta_morphometry
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterLayer|SLOPE|Slope|None|False
+QgsProcessingParameterRasterLayer|MINCURV|Minimum Curvature|None|False
+QgsProcessingParameterRasterLayer|MAXCURV|Maximum Curvature|None|False
+QgsProcessingParameterRasterLayer|PCURV|Profile Curvature|None|False
+QgsProcessingParameterRasterLayer|TCURV|Tangential Curvature|None|False
+QgsProcessingParameterRasterDestination|FORM|Landform
+QgsProcessingParameterRasterDestination|MEM|Maximum Membership
+QgsProcessingParameterRasterDestination|ENTROPY|Entropy
+QgsProcessingParameterRasterDestination|CI|Confusion Index
+QgsProcessingParameterRasterDestination|PLAIN|Plain
+QgsProcessingParameterRasterDestination|PIT|Pit
+QgsProcessingParameterRasterDestination|PEAK|Peak
+QgsProcessingParameterRasterDestination|RIDGE|Ridge
+QgsProcessingParameterRasterDestination|CHANNEL|Channel
+QgsProcessingParameterRasterDestination|SADDLE|Saddle
+QgsProcessingParameterRasterDestination|BSLOPE|Back Slope
+QgsProcessingParameterRasterDestination|FSLOPE|Foot Slope
+QgsProcessingParameterRasterDestination|SSLOPE|Shoulder Slope
+QgsProcessingParameterRasterDestination|HOLLOW|Hollow
+QgsProcessingParameterRasterDestination|FHOLLOW|Foot Hollow
+QgsProcessingParameterRasterDestination|SHOLLOW|Shoulder Hollow
+QgsProcessingParameterRasterDestination|SPUR|Spur
+QgsProcessingParameterRasterDestination|FSPUR|Foot Spur
+QgsProcessingParameterRasterDestination|SSPUR|Shoulder Spur
+QgsProcessingParameterEnum|INPUT|Input|[0] elevation;[1] slope and curvatures|False|0
+QgsProcessingParameterBoolean|MEMBERSHIP|Memberships|False
+QgsProcessingParameterEnum|SLOPETODEG|Slope Grid Units|[0] degree;[1] radians|False|0

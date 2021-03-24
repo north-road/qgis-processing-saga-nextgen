@@ -1,0 +1,3 @@
+Decision Tree
+imagery_classification
+QgsProcessingParameterRasterDestination|CLASSES|Decision Tree

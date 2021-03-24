@@ -1,0 +1,16 @@
+Import Raster
+io_gdal
+QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|MULTIPLE|Multiple Bands Output|[0] single grids;[1] grid collection;[2] automatic|False|2
+QgsProcessingParameterString|SELECTION|Select from Multiple Bands|
+QgsProcessingParameterBoolean|SELECT_SORT|Alphanumeric Sorting|True
+QgsProcessingParameterBoolean|TRANSFORM|Transformation|True
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|0
+QgsProcessingParameterEnum|EXTENT|Extent|[0] original;[1] user defined;[2] grid system;[3] shapes extent|False|0
+QgsProcessingParameterNumber|EXTENT_XMIN|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|EXTENT_XMAX|Right|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|EXTENT_YMIN|Bottom|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|EXTENT_YMAX|Top|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterFeatureSource|EXTENT_SHAPES|Shapes Extent|-1|None|False
+QgsProcessingParameterNumber|EXTENT_BUFFER|Buffer|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

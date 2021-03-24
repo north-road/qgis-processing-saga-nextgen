@@ -1,0 +1,24 @@
+Overland Flow
+sim_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|ROUGHNESS|Manning Roughness|None|True
+QgsProcessingParameterNumber|ROUGHNESS_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.030000|False|0.000000|None
+QgsProcessingParameterRasterLayer|INTER_MAX|Interception Capacity [mm]|None|True
+QgsProcessingParameterNumber|INTER_MAX_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|POND_MAX|Ponding Capacity [mm]|None|True
+QgsProcessingParameterNumber|POND_MAX_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|INFIL_MAX|Infiltration Capacity [mm/h]|None|True
+QgsProcessingParameterNumber|INFIL_MAX_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|INTERCEPT|Interception [mm]
+QgsProcessingParameterRasterDestination|PONDING|Ponding [mm]
+QgsProcessingParameterRasterDestination|INFILTRAT|Infiltration [mm]
+QgsProcessingParameterRasterDestination|FLOW|Flow [mm]
+QgsProcessingParameterRasterDestination|VELOCITY|Velocity [m/s]
+QgsProcessingParameterRasterLayer|PRECIP|Precipitation [mm/h]|None|True
+QgsProcessingParameterNumber|PRECIP_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|ET_POT|Potential Evapotranspiration [mm/h]|None|True
+QgsProcessingParameterNumber|ET_POT_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterBoolean|RESET|Reset|True
+QgsProcessingParameterNumber|TIME_STOP|Simulation Time [h]|QgsProcessingParameterNumber.Double|6.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_STEP|Time Step Adjustment|QgsProcessingParameterNumber.Double|0.500000|False|0.010000|1.000000
+QgsProcessingParameterNumber|TIME_UPDATE|Map Update Frequency [min]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

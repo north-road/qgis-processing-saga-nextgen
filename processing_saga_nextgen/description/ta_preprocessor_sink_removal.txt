@@ -1,0 +1,8 @@
+Sink Removal
+ta_preprocessor
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterRasterLayer|SINKROUTE|Sink Route|None|True
+QgsProcessingParameterRasterDestination|DEM_PREPROC|Preprocessed DEM
+QgsProcessingParameterEnum|METHOD|Method|[0] Deepen Drainage Routes;[1] Fill Sinks|False|1
+QgsProcessingParameterBoolean|THRESHOLD|Threshold|False
+QgsProcessingParameterNumber|THRSHEIGHT|Threshold Height|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None

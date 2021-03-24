@@ -1,0 +1,5 @@
+Edge Contamination
+ta_hydrology
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterDestination|CONTAMINATION|Edge Contamination
+QgsProcessingParameterEnum|METHOD|Method|[0] single flow direction;[1] multiple flow direction|False|0

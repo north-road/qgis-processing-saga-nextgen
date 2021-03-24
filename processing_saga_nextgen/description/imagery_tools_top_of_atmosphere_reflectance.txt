@@ -1,0 +1,56 @@
+Top of Atmosphere Reflectance
+imagery_tools
+QgsProcessingParameterRasterLayer|MSS01|Band 1|None|True
+QgsProcessingParameterRasterLayer|MSS02|Band 2|None|True
+QgsProcessingParameterRasterLayer|MSS03|Band 3|None|True
+QgsProcessingParameterRasterLayer|MSS04|Band 4|None|True
+QgsProcessingParameterRasterLayer|TM01|Band 1|None|True
+QgsProcessingParameterRasterLayer|TM02|Band 2|None|True
+QgsProcessingParameterRasterLayer|TM03|Band 3|None|True
+QgsProcessingParameterRasterLayer|TM04|Band 4|None|True
+QgsProcessingParameterRasterLayer|TM05|Band 5|None|True
+QgsProcessingParameterRasterLayer|TM07|Band 7|None|True
+QgsProcessingParameterRasterLayer|ETM01|Band 1|None|True
+QgsProcessingParameterRasterLayer|ETM02|Band 2|None|True
+QgsProcessingParameterRasterLayer|ETM03|Band 3|None|True
+QgsProcessingParameterRasterLayer|ETM04|Band 4|None|True
+QgsProcessingParameterRasterLayer|ETM05|Band 5|None|True
+QgsProcessingParameterRasterLayer|ETM07|Band 7|None|True
+QgsProcessingParameterRasterLayer|OLI01|Band 1|None|True
+QgsProcessingParameterRasterLayer|OLI02|Band 2|None|True
+QgsProcessingParameterRasterLayer|OLI03|Band 3|None|True
+QgsProcessingParameterRasterLayer|OLI04|Band 4|None|True
+QgsProcessingParameterRasterLayer|OLI05|Band 5|None|True
+QgsProcessingParameterRasterLayer|OLI06|Band 6|None|True
+QgsProcessingParameterRasterLayer|OLI07|Band 7|None|True
+QgsProcessingParameterRasterLayer|OLI09|Band 9|None|True
+QgsProcessingParameterRasterLayer|TM_T06|Band 6|None|True
+QgsProcessingParameterRasterLayer|ETM_T61|Band 61|None|True
+QgsProcessingParameterRasterLayer|ETM_T62|Band 62|None|True
+QgsProcessingParameterRasterLayer|TIRS10|Band 10|None|True
+QgsProcessingParameterRasterLayer|TIRS11|Band 11|None|True
+QgsProcessingParameterRasterLayer|PAN08|Band 8|None|True
+QgsProcessingParameterRasterDestination|SPECTRAL|Spectral
+QgsProcessingParameterRasterDestination|THERMAL|Thermal
+QgsProcessingParameterRasterDestination|PANBAND|Panchromatic
+QgsProcessingParameterFile|METAFILE|Metadata File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|SENSOR|Spacecraft Sensor|[0] Landsat-1 MSS;[1] Landsat-2 MSS;[2] Landsat-3 MSS;[3] Landsat-4 MSS;[4] Landsat-5 MSS;[5] Landsat-4 TM;[6] Landsat-5 TM;[7] Landsat-7 ETM+;[8] Landsat-8 OLI/TIRS|False|7
+QgsProcessingParameterString|DATE_ACQU|Image Acquisition Date|2001-01-01
+QgsProcessingParameterString|DATE_PROD|Image Creation Date|2001-01-01
+QgsProcessingParameterNumber|SUN_HGT|Suns's Height|QgsProcessingParameterNumber.Double|45.000000|False|0.000000|90.000000
+QgsProcessingParameterBoolean|GRIDS_OUT|Spectral Output as Grid Collection|True
+QgsProcessingParameterString|GRIDS_NAME|Name|Landsat Calibrated
+QgsProcessingParameterBoolean|AS_RAD|At-Sensor Radiance|False
+QgsProcessingParameterEnum|AC_METHOD|Atmospheric Correction|[0] uncorrected;[1] corrected;[2] dark object subtraction 1;[3] dark object subtraction 2;[4] dark object subtraction 2b;[5] dark object subtraction 3;[6] dark object subtraction 4|False|0
+QgsProcessingParameterNumber|AC_DO_CELLS|Minimum Number of Dark Object Cells|QgsProcessingParameterNumber.Integer|1000|False|0|None
+QgsProcessingParameterNumber|AC_RAYLEIGH|Rayleigh Scattering|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|AC_SUN_RAD|Solar Radiance|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|100.000000
+QgsProcessingParameterEnum|ETM_GAIN_10|Band 1|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_20|Band 2|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_30|Band 3|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_40|Band 4|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_50|Band 5|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_61|Band 61|[0] low;[1] high|False|0
+QgsProcessingParameterEnum|ETM_GAIN_62|Band 62|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_70|Band 7|[0] low;[1] high|False|1
+QgsProcessingParameterEnum|ETM_GAIN_80|Band 8|[0] low;[1] high|False|0

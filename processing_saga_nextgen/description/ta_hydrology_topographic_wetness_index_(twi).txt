@@ -1,0 +1,8 @@
+Topographic Wetness Index (TWI)
+ta_hydrology
+QgsProcessingParameterRasterLayer|SLOPE|Slope|None|False
+QgsProcessingParameterRasterLayer|AREA|Catchment Area|None|False
+QgsProcessingParameterRasterLayer|TRANS|Transmissivity|None|True
+QgsProcessingParameterRasterDestination|TWI|Topographic Wetness Index
+QgsProcessingParameterEnum|CONV|Area Conversion|[0] no conversion (areas already given as specific catchment area);[1] 1 / cell size (pseudo specific catchment area)|False|0
+QgsProcessingParameterEnum|METHOD|Method (TWI)|[0] Standard;[1] TOPMODEL|False|0

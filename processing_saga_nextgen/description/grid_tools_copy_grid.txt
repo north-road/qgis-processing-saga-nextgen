@@ -1,0 +1,4 @@
+Copy Grid
+grid_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|COPY|Copy

@@ -1,0 +1,9 @@
+Fragmentation Classes from Density and Connectivity
+grid_analysis
+QgsProcessingParameterRasterLayer|DENSITY|Density [Percent]|None|False
+QgsProcessingParameterRasterLayer|CONNECTIVITY|Connectivity [Percent]|None|False
+QgsProcessingParameterRasterDestination|FRAGMENTATION|Fragmentation
+QgsProcessingParameterBoolean|BORDER|Add Border|False
+QgsProcessingParameterNumber|WEIGHT|Connectivity Weighting|QgsProcessingParameterNumber.Double|1.100000|False|0.000000|None
+QgsProcessingParameterNumber|DENSITY_MIN|Minimum Density [Percent]|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|100.000000
+QgsProcessingParameterNumber|DENSITY_INT|Minimum Density for Interior Forest [Percent]|QgsProcessingParameterNumber.Double|99.000000|False|0.000000|100.000000

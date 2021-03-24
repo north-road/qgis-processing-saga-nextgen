@@ -1,0 +1,4 @@
+Remove Overlap from Virtual Point Cloud Tiles
+io_virtual
+QgsProcessingParameterFile|FILENAME|Tile Info File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|FILEPATH|Output Filepath|QgsProcessingParameterFile.File|None|False

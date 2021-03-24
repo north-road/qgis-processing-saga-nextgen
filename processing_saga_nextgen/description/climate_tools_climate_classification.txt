@@ -1,0 +1,6 @@
+Climate Classification
+climate_tools
+QgsProcessingParameterMultipleLayers|T|Temperature|3|None|False
+QgsProcessingParameterMultipleLayers|P|Precipitation|3|None|False
+QgsProcessingParameterRasterDestination|CLASSES|Climate Classification
+QgsProcessingParameterEnum|METHOD|Classification|[0] Koeppen-Geiger;[1] Koeppen-Geiger without As/Aw differentiation;[2] Koeppen-Geiger after Peel et al. (2007);[3] Wissmann (1939);[4] Thornthwaite (1931);[5] Troll-Paffen|False|1

@@ -1,0 +1,12 @@
+Polygon Categories to Grid
+grid_gridding
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterField|FIELD|Category|None|POLYGONS|-1|False|False
+QgsProcessingParameterEnum|METHOD|Method|[0] cell wise;[1] polygon wise|False|1
+QgsProcessingParameterEnum|MULTIPLE|Multiple Polygons|[0] minimum coverage;[1] maximum coverage|False|1
+QgsProcessingParameterVectorDestination|CLASSES|Classification
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|CATEGORY|Category
+QgsProcessingParameterRasterDestination|COVERAGE|Coverage

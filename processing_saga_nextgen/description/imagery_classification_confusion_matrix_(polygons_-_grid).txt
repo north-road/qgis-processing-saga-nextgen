@@ -1,0 +1,14 @@
+Confusion Matrix (Polygons / Grid)
+imagery_classification
+QgsProcessingParameterRasterLayer|GRID|Classification|None|False
+QgsProcessingParameterEnum|GRID_VALUES|Value Interpretation|[0] values are class identifiers;[1] use look-up table|False|1
+QgsProcessingParameterFeatureSource|GRID_LUT|Look-up Table|5|None|True
+QgsProcessingParameterField|GRID_LUT_MIN|Value|None|GRID_LUT|-1|False|False
+QgsProcessingParameterField|GRID_LUT_MAX|Value (Maximum)|None|GRID_LUT|-1|False|False
+QgsProcessingParameterField|GRID_LUT_NAM|Name|None|GRID_LUT|-1|False|False
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|-1|None|False
+QgsProcessingParameterField|FIELD|Classes|None|POLYGONS|-1|False|False
+QgsProcessingParameterVectorDestination|CONFUSION|Confusion Matrix
+QgsProcessingParameterVectorDestination|CLASSES|Class Values
+QgsProcessingParameterVectorDestination|SUMMARY|Summary
+QgsProcessingParameterBoolean|NO_CLASS|Unclassified|True

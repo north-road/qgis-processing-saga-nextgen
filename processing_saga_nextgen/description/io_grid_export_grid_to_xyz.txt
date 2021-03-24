@@ -1,0 +1,6 @@
+Export Grid to XYZ
+io_grid
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|HEADER|Write Header|True
+QgsProcessingParameterBoolean|NODATA|Write No-Data|False

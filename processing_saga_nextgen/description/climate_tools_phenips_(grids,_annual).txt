@@ -1,0 +1,32 @@
+PhenIps (Grids, Annual)
+climate_tools
+QgsProcessingParameterMultipleLayers|ATmean|Mean Temperature|3|None|False
+QgsProcessingParameterMultipleLayers|ATmax|Maximum Temperature|3|None|False
+QgsProcessingParameterMultipleLayers|SIrel|Solar Irradiation|3|None|False
+QgsProcessingParameterRasterDestination|GENERATIONS|Potential Number of Generations
+QgsProcessingParameterRasterDestination|ONSET|Onset Day of Infestation
+QgsProcessingParameterRasterDestination|ONSET_FILIAL_1|Onset Day, 1. Filial Generation
+QgsProcessingParameterRasterDestination|ONSET_SISTER_1|Onset Day, 1. Sister Generation
+QgsProcessingParameterRasterDestination|ONSET_FILIAL_2|Onset Day, 2. Filial Generation
+QgsProcessingParameterRasterDestination|ONSET_SISTER_2|Onset Day, 2. Sister Generation
+QgsProcessingParameterRasterDestination|ONSET_FILIAL_3|Onset Day, 3. Filial Generation
+QgsProcessingParameterRasterDestination|ONSET_SISTER_3|Onset Day, 3. Sister Generation
+QgsProcessingParameterRasterDestination|BTSUM_FILIAL_1|State, 1. Filial Generation
+QgsProcessingParameterRasterDestination|BTSUM_SISTER_1|State, 1. Sister Generation
+QgsProcessingParameterRasterDestination|BTSUM_FILIAL_2|State, 2. Filial Generation
+QgsProcessingParameterRasterDestination|BTSUM_SISTER_2|State, 2. Sister Generation
+QgsProcessingParameterRasterDestination|BTSUM_FILIAL_3|State, 3. Filial Generation
+QgsProcessingParameterRasterDestination|BTSUM_SISTER_3|State, 3. Sister Generation
+QgsProcessingParameterRasterLayer|LAT_GRID|Latitude|None|True
+QgsProcessingParameterNumber|LAT_CONST|Latitude|QgsProcessingParameterNumber.Double|50.000000|False|-90.000000|90.000000
+QgsProcessingParameterNumber|DToptimum|Developmental Optimum Temperature|QgsProcessingParameterNumber.Double|30.400000|False|None|None
+QgsProcessingParameterNumber|DTminimum|Developmental Minimum Temperature|QgsProcessingParameterNumber.Double|8.300000|False|None|None
+QgsProcessingParameterNumber|FAminimum|Minimum Temperature for Flight Activity|QgsProcessingParameterNumber.Double|16.500000|False|None|None
+QgsProcessingParameterNumber|DayLength|Minimum Day Length for Flight Activity|QgsProcessingParameterNumber.Double|14.500000|False|0.000000|24.000000
+QgsProcessingParameterNumber|DDminimum|Minimum Thermal Sum for Infestation|QgsProcessingParameterNumber.Double|140.000000|False|0.000000|None
+QgsProcessingParameterNumber|DDtotal|Thermal Sum for Total Development|QgsProcessingParameterNumber.Double|557.000000|False|0.000000|None
+QgsProcessingParameterNumber|Risk_DayMax|Day of Maximum Risk after Onset|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|None
+QgsProcessingParameterNumber|Risk_Decay|Decay of Risk after Maximum|QgsProcessingParameterNumber.Double|10.000000|False|1.000000|None
+QgsProcessingParameterString|YD_Begin|Begin of Parental Development|2021-04-01
+QgsProcessingParameterString|YD_End_Onset|End of Breeding|2021-08-31
+QgsProcessingParameterString|YD_End|End of Development|2021-10-31

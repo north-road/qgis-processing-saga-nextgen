@@ -1,0 +1,4 @@
+Grid System Extent
+shapes_grid
+QgsProcessingParameterVectorDestination|EXTENT|Extent
+QgsProcessingParameterEnum|BORDER|Border|[0] grid cells;[1] grid nodes|False|0

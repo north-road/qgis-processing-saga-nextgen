@@ -1,0 +1,13 @@
+Local Climate Zone Classification
+toolchains_imagery
+QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
+QgsProcessingParameterFile|GRIDDEFILE|grid definition for KML2shp conversion|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|FILE_TRAINING|Training Areas|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|RF_TREE_COUNT|Random Forest Tree Count|QgsProcessingParameterNumber.Integer|32|False|1|None
+QgsProcessingParameterEnum|CLASS_DEF_SRC|Class Definition|[0] built-in;[1] from file|False|0
+QgsProcessingParameterFile|CLASS_DEF_FILE|Class Definition File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterRasterDestination|LCZC|LCZC
+QgsProcessingParameterFile|LCZC_FILE|KMZ File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterRasterDestination|LCZC_FILTERED|LCZC (Filtered)
+QgsProcessingParameterFile|FILE_FILTERED_LCZC|KMZ File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|FILTER_RADIUS|Majority Filter Radius|QgsProcessingParameterNumber.Integer|3|False|1|None

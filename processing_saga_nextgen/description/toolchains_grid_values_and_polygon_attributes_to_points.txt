@@ -1,0 +1,6 @@
+Grid Values and Polygon Attributes to Points
+toolchains_toolchains
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterField|ATTRIBUTE|Attribute|None|POLYGONS|-1|False|False
+QgsProcessingParameterVectorDestination|POINTS|Points Table

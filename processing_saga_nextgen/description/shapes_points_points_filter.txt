@@ -1,0 +1,12 @@
+Points Filter
+shapes_points
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|FILTER|Filtered Points
+QgsProcessingParameterNumber|RADIUS|Radius|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|MINNUM|Minimum Number of Points|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterNumber|MAXNUM|Maximum Number of Points|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterBoolean|QUADRANTS|Quadrants|False
+QgsProcessingParameterEnum|METHOD|Filter Criterion|[0] keep maxima (with tolerance);[1] keep minima (with tolerance);[2] remove maxima (with tolerance);[3] remove minima (with tolerance);[4] remove below percentile;[5] remove above percentile|False|0
+QgsProcessingParameterNumber|TOLERANCE|Tolerance|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|PERCENT|Percentile|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|100.000000

@@ -1,0 +1,36 @@
+Gravitational Process Path Model
+sim_geomorphology
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterRasterLayer|RELEASE_AREAS|Release Areas|None|False
+QgsProcessingParameterRasterLayer|MATERIAL|Material|None|True
+QgsProcessingParameterRasterLayer|FRICTION_ANGLE_GRID|Friction Angle|None|True
+QgsProcessingParameterRasterLayer|SLOPE_IMPACT_GRID|Slope Impact Areas|None|True
+QgsProcessingParameterRasterLayer|FRICTION_MU_GRID|Friction Parameter Mu|None|True
+QgsProcessingParameterRasterLayer|FRICTION_MASS_TO_DRAG_GRID|Mass to Drag Ratio|None|True
+QgsProcessingParameterRasterDestination|PROCESS_AREA|Process Area
+QgsProcessingParameterRasterDestination|DEPOSITION|Deposition
+QgsProcessingParameterRasterDestination|MAX_VELOCITY|Maximum Velocity
+QgsProcessingParameterRasterDestination|STOP_POSITIONS|Stopping Positions
+QgsProcessingParameterEnum|PROCESS_PATH_MODEL|Model|[0] Maximum Slope;[1] Random Walk|False|1
+QgsProcessingParameterNumber|RW_SLOPE_THRES|Slope Threshold|QgsProcessingParameterNumber.Double|40.000000|False|0.001000|90.000000
+QgsProcessingParameterNumber|RW_EXPONENT|Exponent|QgsProcessingParameterNumber.Double|2.000000|False|1.000000|None
+QgsProcessingParameterNumber|RW_PERSISTENCE|Persistence Factor|QgsProcessingParameterNumber.Double|1.500000|False|1.000000|None
+QgsProcessingParameterNumber|GPP_ITERATIONS|Iterations|QgsProcessingParameterNumber.Integer|1000|False|1|None
+QgsProcessingParameterEnum|GPP_PROCESSING_ORDER|Processing Order|[0] RAs in Sequence;[1] RAs in Sequence per Iteration;[2] RAs in Parallel per Iteration|False|2
+QgsProcessingParameterNumber|GPP_SEED|Seed Value|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterEnum|FRICTION_MODEL|Model|[0] None;[1] Geometric Gradient (Heim 1932);[2] Fahrboeschung Principle (Heim 1932);[3] Shadow Angle (Evans & Hungr 1988);[4] 1-parameter friction model (Scheidegger 1975);[5] PCM Model (Perla et al. 1980)|False|0
+QgsProcessingParameterNumber|FRICTION_THRES_FREE_FALL|Threshold Angle Free Fall|QgsProcessingParameterNumber.Double|60.000000|False|0.000000|None
+QgsProcessingParameterEnum|FRICTION_METHOD_IMPACT|Method Impact|[0] Energy Reduction (Scheidegger 1975);[1] Preserved Component of Velocity (Kirkby & Statham 1975)|False|0
+QgsProcessingParameterNumber|FRICTION_IMPACT_REDUCTION|Reduction|QgsProcessingParameterNumber.Double|75.000000|False|0.000000|100.000000
+QgsProcessingParameterNumber|FRICTION_ANGLE|Friction Angle|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|90.000000
+QgsProcessingParameterNumber|FRICTION_MU|Mu|QgsProcessingParameterNumber.Double|0.250000|False|0.000000|None
+QgsProcessingParameterEnum|FRICTION_MODE_OF_MOTION|Mode of Motion|[0] Sliding;[1] Rolling|False|0
+QgsProcessingParameterNumber|FRICTION_MASS_TO_DRAG|Mass to Drag Ratio|QgsProcessingParameterNumber.Double|200.000000|False|0.000000|None
+QgsProcessingParameterNumber|FRICTION_INIT_VELOCITY|Initial Velocity|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterEnum|DEPOSITION_MODEL|Model|[0] None;[1] On Stop;[2] Slope & On Stop;[3] Velocity & On Stop;[4] min(Slope,Velocity) & On Stop|False|0
+QgsProcessingParameterNumber|DEPOSITION_INITIAL|Initial Deposition on Stop|QgsProcessingParameterNumber.Double|20.000000|False|0.000000|100.000000
+QgsProcessingParameterNumber|DEPOSITION_SLOPE_THRES|Slope Threshold|QgsProcessingParameterNumber.Double|20.000000|False|0.000000|90.000000
+QgsProcessingParameterNumber|DEPOSITION_VELOCITY_THRES|Velocity Threshold|QgsProcessingParameterNumber.Double|15.000000|False|0.000000|None
+QgsProcessingParameterNumber|DEPOSITION_MAX|Maximum Deposition along Path|QgsProcessingParameterNumber.Double|20.000000|False|0.000000|100.000000
+QgsProcessingParameterNumber|DEPOSITION_MIN_PATH|Minimum Path Length|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterNumber|SINK_MIN_SLOPE|Minimum Slope|QgsProcessingParameterNumber.Double|2.500000|False|0.000000|90.000000

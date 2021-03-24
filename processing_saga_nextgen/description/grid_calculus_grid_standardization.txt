@@ -1,0 +1,5 @@
+Grid Standardization
+grid_calculus
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Standardized Grid
+QgsProcessingParameterNumber|STRETCH|Stretch Factor|QgsProcessingParameterNumber.Double|1.000000|False|None|None

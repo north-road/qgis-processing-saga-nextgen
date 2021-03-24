@@ -1,0 +1,15 @@
+Object Based Image Segmentation
+toolchains_imagery
+QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
+QgsProcessingParameterBoolean|NORMALIZE|Normalize|False
+QgsProcessingParameterVectorDestination|OBJECTS|Segments
+QgsProcessingParameterNumber|SEEDS_BAND_WIDTH|Band Width for Seed Point Generation|QgsProcessingParameterNumber.Double|2.000000|False|None|None
+QgsProcessingParameterEnum|RGA_NEIGHBOUR|Neighbourhood|[0] 4 (Neumann);[1] 8 (Moore)|False|0
+QgsProcessingParameterEnum|RGA_METHOD|Distance|[0] feature space and position;[1] feature space|False|0
+QgsProcessingParameterNumber|RGA_SIG_1|Variance in Feature Space|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RGA_SIG_2|Variance in Position Space|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RGA_SIMILARITY|Similarity Threshold|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|MAJORITY_RADIUS|Generalization|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterEnum|POSTPROCESSING|Post-Processing|[0] none;[1] unsupervised classification|False|0
+QgsProcessingParameterNumber|NCLUSTER|Number of Clusters|QgsProcessingParameterNumber.Integer|12|False|None|None
+QgsProcessingParameterBoolean|SPLIT_CLUSTERS|Split Clusters|True

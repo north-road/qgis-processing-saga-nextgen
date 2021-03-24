@@ -1,0 +1,10 @@
+Import, Clip and Resample Grids
+io_grid
+QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterFile|FILES|Image Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|KEEP_TYPE|Preserve Data Type|False
+QgsProcessingParameterBoolean|NODATA|User Defined No-Data Value|False
+QgsProcessingParameterNumber|NODATA_VAL|No-Data Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterFeatureSource|CLIP|Region of Interest|-1|None|True
+QgsProcessingParameterBoolean|RESAMPLE|Resample|True
+QgsProcessingParameterNumber|CELLSIZE|Cell Size|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None

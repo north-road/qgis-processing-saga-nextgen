@@ -1,0 +1,7 @@
+Merge Layers
+shapes_tools
+QgsProcessingParameterMultipleLayers|INPUT|Layers|-1|None|False
+QgsProcessingParameterVectorDestination|MERGED|Merged Layer
+QgsProcessingParameterBoolean|SRCINFO|Add Source Information|True
+QgsProcessingParameterBoolean|MATCH|Match Fields by Name|True
+QgsProcessingParameterBoolean|DELETE|Delete|False

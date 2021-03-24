@@ -1,0 +1,7 @@
+Cell Balance
+ta_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|WEIGHTS|Weights|None|True
+QgsProcessingParameterNumber|WEIGHTS_DEFAULT|Default|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|BALANCE|Cell Balance
+QgsProcessingParameterEnum|METHOD|Method|[0] Deterministic 8;[1] Multiple Flow Direction|False|1

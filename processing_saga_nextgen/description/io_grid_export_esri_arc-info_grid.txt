@@ -1,0 +1,8 @@
+Export ESRI Arc/Info Grid
+io_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|FORMAT|Format|[0] binary;[1] ASCII|False|1
+QgsProcessingParameterEnum|GEOREF|Geo-Reference|[0] corner;[1] center|False|0
+QgsProcessingParameterNumber|PREC|ASCII Precision|QgsProcessingParameterNumber.Integer|4|False|-1|None
+QgsProcessingParameterEnum|DECSEP|ASCII Decimal Separator|[0] point (.);[1] comma (,)|False|0

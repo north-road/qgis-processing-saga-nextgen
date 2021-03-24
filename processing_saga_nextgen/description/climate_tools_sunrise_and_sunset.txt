@@ -1,0 +1,8 @@
+Sunrise and Sunset
+climate_tools
+QgsProcessingParameterRasterLayer|TARGET|Target System|None|False
+QgsProcessingParameterRasterDestination|SUNRISE|Sunrise
+QgsProcessingParameterRasterDestination|SUNSET|Sunset
+QgsProcessingParameterRasterDestination|LENGTH|Day Length
+QgsProcessingParameterString|DAY|Day of Month|2021-03-24
+QgsProcessingParameterEnum|TIME|Time|[0] local;[1] world|False|0

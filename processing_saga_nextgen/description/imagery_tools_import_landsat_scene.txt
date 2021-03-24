@@ -1,0 +1,14 @@
+Import Landsat Scene
+imagery_tools
+QgsProcessingParameterFile|METAFILE|Metadata File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterRasterDestination|BANDS|Bands
+QgsProcessingParameterVectorDestination|BAND_INFO|Band Info
+QgsProcessingParameterBoolean|MULTI2GRIDS|Multispectral Bands as Grid Collection|True
+QgsProcessingParameterBoolean|SKIP_PAN|Skip Panchromatic Band|True
+QgsProcessingParameterBoolean|SKIP_AEROSOL|Skip Aerosol Band|True
+QgsProcessingParameterBoolean|SKIP_CIRRUS|Skip Cirrus Band|True
+QgsProcessingParameterEnum|CALIBRATION|Radiometric Calibration|[0] none;[1] radiance;[2] reflectance|False|0
+QgsProcessingParameterEnum|DATA_TYPE|Output Data Type|[0] integers with scaling;[1] floating point numbers|False|0
+QgsProcessingParameterEnum|TEMP_UNIT|Temperature Unit|[0] Kelvin;[1] Celsius|False|0
+QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates|False|0
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3

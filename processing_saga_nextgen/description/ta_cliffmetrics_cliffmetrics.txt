@@ -1,0 +1,27 @@
+CliffMetrics
+ta_cliffmetrics
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|SEDIMENT_TOP|Sediment Top Elevation
+QgsProcessingParameterRasterDestination|RASTER_COAST|Coastline
+QgsProcessingParameterRasterDestination|RASTER_NORMAL|Normals
+QgsProcessingParameterFeatureSource|COAST_INITIAL|User Defined Coastline Points|0|None|True
+QgsProcessingParameterEnum|CoastSeaHandiness|Sea handiness|[0] right;[1] left|False|0
+QgsProcessingParameterEnum|StartEdgeUserCoastLine|Start edge coastline|[0] North;[1] East;[2] South;[3] West|False|0
+QgsProcessingParameterEnum|EndEdgeUserCoastLine|End edge coastline|[0] North;[1] East;[2] South;[3] West|False|0
+QgsProcessingParameterVectorDestination|COAST|Coastline
+QgsProcessingParameterVectorDestination|NORMALS|Coastline-Normal Profiles
+QgsProcessingParameterVectorDestination|CLIFF_TOP|Cliff Top Points
+QgsProcessingParameterVectorDestination|CLIFF_TOE|Cliff Toe Points
+QgsProcessingParameterVectorDestination|COAST_POINT|Coast Points
+QgsProcessingParameterVectorDestination|INVALID_NORMALS|Invalid Coastline-Normal Profiles
+QgsProcessingParameterVectorDestination|COAST_CURVATURE|Coastline Curvature
+QgsProcessingParameterVectorDestination|PROFILES|Profile Data
+QgsProcessingParameterNumber|StillWaterLevel|Still Water Level|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterEnum|CoastSmooth|Coastline Smoothing Algorithm|[0] none;[1] running mean;[2] Savitsky-Golay|False|1
+QgsProcessingParameterNumber|CoastSmoothWindow|Coastline Smoothing Window Size|QgsProcessingParameterNumber.Integer|30|False|1|None
+QgsProcessingParameterNumber|SavGolCoastPoly|Polynomial Order for Savitsky-Golay|QgsProcessingParameterNumber.Integer|4|False|1|6
+QgsProcessingParameterBoolean|ScaleRasterOutput|Scale Raster Output Values|True
+QgsProcessingParameterBoolean|RandomCoastEdgeSearch|Random Edge for Coastline Search|True
+QgsProcessingParameterNumber|CoastNormalLength|Length of Coastline Normals|QgsProcessingParameterNumber.Double|500.000000|False|0.010000|None
+QgsProcessingParameterNumber|EleTolerance|Vertical Tolerance|QgsProcessingParameterNumber.Double|0.500000|False|0.010000|None
+QgsProcessingParameterFile|OutPath|Main Output File Directory|QgsProcessingParameterFile.File|None|False

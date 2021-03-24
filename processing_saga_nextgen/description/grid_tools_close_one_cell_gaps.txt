@@ -1,0 +1,6 @@
+Close One Cell Gaps
+grid_tools
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|RESULT|Changed Grid
+QgsProcessingParameterEnum|MODE|Neighbourhood|[0] Neumann;[1] Moore|False|1
+QgsProcessingParameterEnum|METHOD|Value|[0] arithmetic mean;[1] median;[2] majority;[3] minority|False|0

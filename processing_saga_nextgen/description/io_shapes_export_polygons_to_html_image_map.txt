@@ -1,0 +1,8 @@
+Export Polygons to HTML Image Map
+io_shapes
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterField|LINK|Link|None|POLYGONS|-1|False|False
+QgsProcessingParameterField|TITLE|Title|None|POLYGONS|-1|False|False
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterString|LINK_PREFIX|Link Prefix|http://www.saga-gis.org/
+QgsProcessingParameterString|LINK_SUFFIX|Link Suffix|index.html

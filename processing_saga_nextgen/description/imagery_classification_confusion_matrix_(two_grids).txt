@@ -1,0 +1,19 @@
+Confusion Matrix (Two Grids)
+imagery_classification
+QgsProcessingParameterRasterLayer|ONE|Classification 1|None|False
+QgsProcessingParameterFeatureSource|ONE_LUT|Look-up Table|5|None|True
+QgsProcessingParameterField|ONE_LUT_MIN|Value|None|ONE_LUT|-1|False|False
+QgsProcessingParameterField|ONE_LUT_MAX|Value (Maximum)|None|ONE_LUT|-1|False|False
+QgsProcessingParameterField|ONE_LUT_NAM|Name|None|ONE_LUT|-1|False|False
+QgsProcessingParameterRasterLayer|TWO|Classification 2|None|False
+QgsProcessingParameterFeatureSource|TWO_LUT|Look-up Table|5|None|True
+QgsProcessingParameterField|TWO_LUT_MIN|Value|None|TWO_LUT|-1|False|False
+QgsProcessingParameterField|TWO_LUT_MAX|Value (Maximum)|None|TWO_LUT|-1|False|False
+QgsProcessingParameterField|TWO_LUT_NAM|Name|None|TWO_LUT|-1|False|False
+QgsProcessingParameterRasterDestination|COMBINED|Combined Classes
+QgsProcessingParameterBoolean|NOCHANGE|Report Unchanged Classes|True
+QgsProcessingParameterBoolean|NODATA|Include Unclassified Cells|True
+QgsProcessingParameterVectorDestination|CONFUSION|Confusion Matrix
+QgsProcessingParameterEnum|OUTPUT|Output as...|[0] cells;[1] percent;[2] area|False|0
+QgsProcessingParameterVectorDestination|CLASSES|Class Values
+QgsProcessingParameterVectorDestination|SUMMARY|Summary

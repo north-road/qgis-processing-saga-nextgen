@@ -1,0 +1,11 @@
+Tissot's Indicatrix
+pj_proj4
+QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
+QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
+QgsProcessingParameterFile|CRS_FILE|Well Known Text File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|CRS_EPSG|Authority Code|QgsProcessingParameterNumber.Integer|-1|False|None|None
+QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
+QgsProcessingParameterVectorDestination|TARGET|Indicatrix
+QgsProcessingParameterNumber|NY|Number in Latitudinal Direction|QgsProcessingParameterNumber.Integer|5|False|1|None
+QgsProcessingParameterNumber|NX|Number in Meridional Direction|QgsProcessingParameterNumber.Integer|11|False|1|None
+QgsProcessingParameterNumber|SCALE|Size|QgsProcessingParameterNumber.Double|25.000000|False|1.000000|None

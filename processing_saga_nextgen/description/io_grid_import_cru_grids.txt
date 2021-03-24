@@ -1,0 +1,5 @@
+Import CRU Grids
+io_grid
+QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|SHIFT|Shift|True

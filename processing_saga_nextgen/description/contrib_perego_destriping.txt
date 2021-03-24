@@ -1,0 +1,11 @@
+Destriping
+contrib_perego
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterLayer|MASK|Mask|None|True
+QgsProcessingParameterRasterDestination|RESULT3|Destriped Grid
+QgsProcessingParameterRasterDestination|RESULT1|Low-pass 1
+QgsProcessingParameterRasterDestination|RESULT2|Low-pass 2
+QgsProcessingParameterRasterDestination|STRIPES|Stripes
+QgsProcessingParameterNumber|ANG|Angle|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|R|Radius|QgsProcessingParameterNumber.Double|20.000000|False|1.000000|None
+QgsProcessingParameterNumber|D|Stripes Distance|QgsProcessingParameterNumber.Double|2.000000|False|2.000000|None

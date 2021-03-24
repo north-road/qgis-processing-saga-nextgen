@@ -1,0 +1,8 @@
+Import Text Table with Numbers only
+io_table
+QgsProcessingParameterVectorDestination|TABLES|Tables
+QgsProcessingParameterNumber|SKIP|Skip Leading Lines|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterBoolean|HEADLINE|Headline|False
+QgsProcessingParameterEnum|SEPARATOR|Separator|[0] tabulator;[1] ;;[2] ,;[3] space;[4] other|False|0
+QgsProcessingParameterString|SEP_OTHER|other|*
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

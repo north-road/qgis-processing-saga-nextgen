@@ -1,0 +1,11 @@
+Grid Calculator
+grid_calculus
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
+QgsProcessingParameterString|FORMULA|Formula|(g1 - g2) / (g1 + g2)
+QgsProcessingParameterString|NAME|Name|Calculation
+QgsProcessingParameterBoolean|FNAME|Take Formula|False
+QgsProcessingParameterBoolean|USE_NODATA|Use No-Data|False
+QgsProcessingParameterEnum|TYPE|Data Type|[0] bit;[1] unsigned 1 byte integer;[2] signed 1 byte integer;[3] unsigned 2 byte integer;[4] signed 2 byte integer;[5] unsigned 4 byte integer;[6] signed 4 byte integer;[7] 4 byte floating point number;[8] 8 byte floating point number|False|7
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|True
+QgsProcessingParameterMultipleLayers|XGRIDS|Grids from different Systems|3|None|True
+QgsProcessingParameterRasterDestination|RESULT|Result

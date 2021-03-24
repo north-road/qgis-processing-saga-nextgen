@@ -1,0 +1,6 @@
+Convert Vertex Type (2D/3D)
+shapes_tools
+QgsProcessingParameterFeatureSource|INPUT|Input|-1|None|False
+QgsProcessingParameterField|FIELD_Z|Z|None|INPUT|-1|False|False
+QgsProcessingParameterField|FIELD_M|M|None|INPUT|-1|False|False
+QgsProcessingParameterVectorDestination|OUTPUT|Output

@@ -1,0 +1,7 @@
+Function Plotter
+grid_calculus
+QgsProcessingParameterString|FORMULA|Formula|sin(x*x + y*y)
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|FUNCTION|Function

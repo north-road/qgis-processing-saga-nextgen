@@ -1,0 +1,23 @@
+TOPMODEL
+sim_hydrology
+QgsProcessingParameterRasterLayer|ATANB|Topographic Wetness Index|None|False
+QgsProcessingParameterRasterDestination|MOIST|Soil Moisture Deficit
+QgsProcessingParameterFeatureSource|WEATHER|Weather Records|5|None|False
+QgsProcessingParameterField|RECORD_P|Precipitation [m / dt]|None|WEATHER|-1|False|False
+QgsProcessingParameterField|RECORD_ET|Evapotranspiration [m / dt]|None|WEATHER|-1|False|False
+QgsProcessingParameterField|RECORD_DATE|Date/Time|None|WEATHER|-1|False|False
+QgsProcessingParameterVectorDestination|TABLE|Simulation Output
+QgsProcessingParameterNumber|DTIME|Time Step [h]|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|NCLASSES|Number of Classes|QgsProcessingParameterNumber.Integer|30|False|1|None
+QgsProcessingParameterNumber|P_QS0|Initial subsurface flow per unit area [m/h]|QgsProcessingParameterNumber.Double|0.000033|False|None|None
+QgsProcessingParameterNumber|P_LNTE|Areal average of ln(T0) = ln(Te) [ln(m^2/h)]|QgsProcessingParameterNumber.Double|5.000000|False|None|None
+QgsProcessingParameterNumber|P_MODEL|Model parameter [m]|QgsProcessingParameterNumber.Double|0.032000|False|None|None
+QgsProcessingParameterNumber|P_SR0|Initial root zone storage deficit [m]|QgsProcessingParameterNumber.Double|0.002000|False|None|None
+QgsProcessingParameterNumber|P_SRZMAX|Maximum root zone storage deficit [m]|QgsProcessingParameterNumber.Double|0.050000|False|None|None
+QgsProcessingParameterNumber|P_SUZ_TD|Unsaturated zone time delay per unit storage deficit [h]|QgsProcessingParameterNumber.Double|50.000000|False|None|None
+QgsProcessingParameterNumber|P_VCH|Main channel routing velocity [m/h]|QgsProcessingParameterNumber.Double|3600.000000|False|None|None
+QgsProcessingParameterNumber|P_VR|Internal subcatchment routing velocity [m/h]|QgsProcessingParameterNumber.Double|3600.000000|False|None|None
+QgsProcessingParameterNumber|P_K0|Surface hydraulic conductivity [m/h]|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|P_PSI|Wetting front suction [m]|QgsProcessingParameterNumber.Double|0.020000|False|None|None
+QgsProcessingParameterNumber|P_DTHETA|Water content change across the wetting front|QgsProcessingParameterNumber.Double|0.100000|False|None|None
+QgsProcessingParameterBoolean|BINF|Green-Ampt Infiltration|True

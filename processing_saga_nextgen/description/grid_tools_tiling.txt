@@ -1,0 +1,15 @@
+Tiling
+grid_tools
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|TILES|Tiles
+QgsProcessingParameterBoolean|TILES_SAVE|Save Tiles to Disk|False
+QgsProcessingParameterFile|TILES_PATH|Output Directory|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterString|TILES_NAME|Base Name|tile
+QgsProcessingParameterNumber|OVERLAP|Overlapping Cells|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterEnum|OVERLAP_SYM|Add Cells|[0] symmetric;[1] bottom / left;[2] top / right|False|0
+QgsProcessingParameterEnum|METHOD|Tile Size Definition|[0] number of grid cells per tile;[1] coordinates (offset, range, cell size, tile size)|False|0
+QgsProcessingParameterNumber|NX|Number of Column Cells|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|NY|Number of Row Cells|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|DCELL|Cell Size|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|DX|Tile Size (X)|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterNumber|DY|Tile Size (Y)|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None

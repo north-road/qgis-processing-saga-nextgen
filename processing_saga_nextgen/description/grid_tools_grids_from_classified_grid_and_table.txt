@@ -1,0 +1,6 @@
+Grids from classified grid and table
+grid_tools
+QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
+QgsProcessingParameterField|ID_FIELD|Attribute|None|TABLE|-1|False|False
+QgsProcessingParameterRasterLayer|CLASSES|Classes|None|False
+QgsProcessingParameterRasterDestination|GRIDS|Grids

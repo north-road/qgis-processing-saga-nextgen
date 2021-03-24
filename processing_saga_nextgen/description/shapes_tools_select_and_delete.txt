@@ -1,0 +1,8 @@
+Select and Delete
+toolchains_shapes_tools
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterField|ATTRIBUTE|Attribute|None|SHAPES|-1|False|False
+QgsProcessingParameterEnum|METHOD|Expression Type|[0] string expression;[1] numerical expression|False|0
+QgsProcessingParameterString|EXPRESSION|Expression|expression
+QgsProcessingParameterEnum|COMPARE|Select if...|[0] attribute is identical with search expression;[1] attribute contains search expression;[2] attribute is contained in search expression|False|1
+QgsProcessingParameterBoolean|CASE|Case Sensitive|False

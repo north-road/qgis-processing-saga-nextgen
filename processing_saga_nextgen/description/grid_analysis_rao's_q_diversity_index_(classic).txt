@@ -1,0 +1,7 @@
+Rao's Q Diversity Index (Classic)
+grid_analysis
+QgsProcessingParameterRasterLayer|VALUES|Values|None|False
+QgsProcessingParameterRasterDestination|COUNT|Number of Categories
+QgsProcessingParameterRasterDestination|INDEX|Rao's Q
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

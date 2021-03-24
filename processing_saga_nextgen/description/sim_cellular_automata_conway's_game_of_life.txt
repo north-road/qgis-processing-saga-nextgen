@@ -1,0 +1,8 @@
+Conway's Game of Life
+sim_cellular_automata
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterRasterDestination|LIFE|Life
+QgsProcessingParameterEnum|REFRESH|Refresh|[0] no refresh;[1] random;[2] virus 1;[3] virus 2|False|1
+QgsProcessingParameterNumber|FADECOLOR|Fade Color Count|QgsProcessingParameterNumber.Integer|64|False|3|255

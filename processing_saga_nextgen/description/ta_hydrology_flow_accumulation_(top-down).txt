@@ -1,0 +1,24 @@
+Flow Accumulation (Top-Down)
+ta_hydrology
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterLayer|SINKROUTE|Sink Routes|None|True
+QgsProcessingParameterRasterLayer|WEIGHTS|Weights|None|True
+QgsProcessingParameterRasterDestination|FLOW|Flow Accumulation
+QgsProcessingParameterRasterLayer|VAL_INPUT|Input for Mean over Catchment|None|True
+QgsProcessingParameterRasterDestination|VAL_MEAN|Mean over Catchment
+QgsProcessingParameterRasterLayer|ACCU_MATERIAL|Material for Accumulation|None|True
+QgsProcessingParameterRasterLayer|ACCU_TARGET|Accumulation Target|None|False
+QgsProcessingParameterRasterDestination|ACCU_TOTAL|Accumulated Material
+QgsProcessingParameterRasterDestination|ACCU_LEFT|Accumulated Material (Left Side)
+QgsProcessingParameterRasterDestination|ACCU_RIGHT|Accumulated Material (Right Side)
+QgsProcessingParameterNumber|STEP|Step|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterEnum|FLOW_UNIT|Flow Accumulation Unit|[0] number of cells;[1] cell area|False|1
+QgsProcessingParameterRasterDestination|FLOW_LENGTH|Flow Path Length
+QgsProcessingParameterRasterLayer|LINEAR_VAL|Linear Flow Threshold Grid|None|True
+QgsProcessingParameterRasterLayer|LINEAR_DIR|Channel Direction|None|True
+QgsProcessingParameterRasterDestination|WEIGHT_LOSS|Loss through Negative Weights
+QgsProcessingParameterEnum|METHOD|Method|[0] Deterministic 8;[1] Rho 8;[2] Braunschweiger Reliefmodell;[3] Deterministic Infinity;[4] Multiple Flow Direction;[5] Multiple Triangular Flow Directon;[6] Multiple Maximum Downslope Gradient Based Flow Directon|False|4
+QgsProcessingParameterBoolean|LINEAR_DO|Thresholded Linear Flow|False
+QgsProcessingParameterNumber|LINEAR_MIN|Linear Flow Threshold|QgsProcessingParameterNumber.Integer|500|False|0|None
+QgsProcessingParameterNumber|CONVERGENCE|Convergence|QgsProcessingParameterNumber.Double|1.100000|False|0.000000|None
+QgsProcessingParameterBoolean|NO_NEGATIVES|Prevent Negative Flow Accumulation|True

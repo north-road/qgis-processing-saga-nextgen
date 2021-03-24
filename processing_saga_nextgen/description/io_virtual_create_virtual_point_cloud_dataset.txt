@@ -1,0 +1,7 @@
+Create Virtual Point Cloud Dataset
+io_virtual
+QgsProcessingParameterFile|FILES|Input Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|INPUT_FILE_LIST|Input File List|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|FILENAME|Filename|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|METHOD_PATHS|File Paths|[0] absolute;[1] relative|False|1
+QgsProcessingParameterBoolean|USE_HEADER|Use Header File|False

@@ -1,0 +1,8 @@
+Local Minima and Maxima
+shapes_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterVectorDestination|MINIMA|Minima
+QgsProcessingParameterVectorDestination|MAXIMA|Maxima
+QgsProcessingParameterBoolean|IDENTITY|Identical Values|False
+QgsProcessingParameterBoolean|ABSOLUTE|Absolute|False
+QgsProcessingParameterBoolean|BOUNDARY|Boundary Cells|False

@@ -1,0 +1,6 @@
+Convert Lines to Polygons
+shapes_polygons
+QgsProcessingParameterVectorDestination|POLYGONS|Polygons
+QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
+QgsProcessingParameterBoolean|SINGLE|Create Single Multipart Polygon|False
+QgsProcessingParameterBoolean|MERGE|Merge Line Parts to One Polygon|False

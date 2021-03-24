@@ -1,0 +1,9 @@
+Principal Component Analysis
+statistics_grid
+QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
+QgsProcessingParameterRasterDestination|PCA|Principal Components
+QgsProcessingParameterFeatureSource|EIGEN_INPUT|Eigen Vectors|5|None|True
+QgsProcessingParameterVectorDestination|EIGEN|Eigen Vectors
+QgsProcessingParameterEnum|METHOD|Method|[0] correlation matrix;[1] variance-covariance matrix;[2] sums-of-squares-and-cross-products matrix|False|1
+QgsProcessingParameterNumber|COMPONENTS|Number of Components|QgsProcessingParameterNumber.Integer|3|False|0|None
+QgsProcessingParameterBoolean|OVERWRITE|Overwrite Previous Results|True

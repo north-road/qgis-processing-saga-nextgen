@@ -1,0 +1,13 @@
+Grid Classes Area for Polygons
+shapes_grid
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|RESULT|Result
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterEnum|PROCESS|Processing Order|[0] cell by cell;[1] polygon by polygon|False|1
+QgsProcessingParameterEnum|METHOD|Cell Area Intersection|[0] cell center;[1] cell area|False|0
+QgsProcessingParameterEnum|OUTPUT|Output Measurment|[0] total area;[1] percentage|False|0
+QgsProcessingParameterEnum|GRID_VALUES|Class Definition|[0] values are class identifiers;[1] use look-up table|False|0
+QgsProcessingParameterFeatureSource|GRID_LUT|Look-up Table|5|None|True
+QgsProcessingParameterField|GRID_LUT_MIN|Value|None|GRID_LUT|-1|False|False
+QgsProcessingParameterField|GRID_LUT_MAX|Value (Maximum)|None|GRID_LUT|-1|False|False
+QgsProcessingParameterField|GRID_LUT_NAM|Name|None|GRID_LUT|-1|False|False

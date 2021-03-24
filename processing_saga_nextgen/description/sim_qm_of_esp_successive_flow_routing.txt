@@ -1,0 +1,7 @@
+Successive Flow Routing
+sim_qm_of_esp
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterRasterDestination|FLOW|Flow
+QgsProcessingParameterNumber|ITERATIONS|Iterations|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|RUNOFF|Runoff|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|MANNING|Manning's Roughness|QgsProcessingParameterNumber.Double|0.200000|False|None|None

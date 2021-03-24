@@ -1,0 +1,6 @@
+Relief Segmentation
+toolchains_terrain_analysis
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterVectorDestination|OBJECTS|Objects
+QgsProcessingParameterNumber|BAND_WIDTH|Band Width|QgsProcessingParameterNumber.Double|2.000000|False|None|None
+QgsProcessingParameterNumber|NCLUSTER|Number of Clusters|QgsProcessingParameterNumber.Integer|10|False|None|None

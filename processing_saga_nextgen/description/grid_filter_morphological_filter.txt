@@ -1,0 +1,7 @@
+Morphological Filter
+grid_filter
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid
+QgsProcessingParameterEnum|METHOD|Method|[0] Dilation;[1] Erosion;[2] Opening;[3] Closing|False|0
+QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
+QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

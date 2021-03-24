@@ -1,0 +1,6 @@
+Terrain Clustering
+toolchains_terrain_analysis
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterDestination|CLUSTER|Clusters
+QgsProcessingParameterNumber|NCLUSTER|Number of Terrain Classes|QgsProcessingParameterNumber.Integer|5|False|None|None
+QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNumber.Integer|25|False|None|None

@@ -1,0 +1,19 @@
+Overland Flow (Kinematic Wave)
+sim_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|ROUGHNESS|Manning Roughness|None|True
+QgsProcessingParameterNumber|ROUGHNESS_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.030000|False|0.000000|None
+QgsProcessingParameterRasterDestination|FLOW|Runoff
+QgsProcessingParameterVectorDestination|GAUGES_FLOW|Flow at Gauges
+QgsProcessingParameterFeatureSource|GAUGES|Gauges|0|None|True
+QgsProcessingParameterNumber|TIME_SPAN|Simulation Time [h]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_STEP|Simulation Time Step [min]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|TIME_UPDATE|Map Update Frequency [min]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|EPSILON|Epsilon|QgsProcessingParameterNumber.Double|0.000100|False|0.000000|None
+QgsProcessingParameterEnum|ROUTING|Flow Routing|[0] Deterministic 8;[1] Multiple Flow Direction|False|1
+QgsProcessingParameterBoolean|DYNAMIC|Dynamic Water Surface|True
+QgsProcessingParameterBoolean|FLOW_RESET|Reset|True
+QgsProcessingParameterNumber|P_RATE|Precipitation [mm]|QgsProcessingParameterNumber.Double|10.000000|False|None|None
+QgsProcessingParameterEnum|P_DISTRIB|Precipitation|[0] Homogenous;[1] Above Elevation;[2] Left Half|False|0
+QgsProcessingParameterNumber|P_THRESHOLD|Above Elevation|QgsProcessingParameterNumber.Double|0.000000|False|None|None

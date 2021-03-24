@@ -1,0 +1,8 @@
+Export Text Table
+io_table
+QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
+QgsProcessingParameterBoolean|HEADLINE|Headline|True
+QgsProcessingParameterBoolean|STRQUOTA|Strings in Quota|True
+QgsProcessingParameterEnum|SEPARATOR|Separator|[0] tabulator;[1] ;;[2] ,;[3] space;[4] other|False|0
+QgsProcessingParameterString|SEP_OTHER|other|*
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

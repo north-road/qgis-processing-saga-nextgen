@@ -1,0 +1,11 @@
+Watershed Basins (Extended)
+ta_channels
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterRasterLayer|CHANNELS|Drainage Network|None|False
+QgsProcessingParameterRasterDestination|BASINS|Basins
+QgsProcessingParameterRasterDestination|SUBBASINS|Subbasins
+QgsProcessingParameterVectorDestination|V_BASINS|Basins
+QgsProcessingParameterVectorDestination|V_SUBBASINS|Subbasins
+QgsProcessingParameterVectorDestination|HEADS|River Heads
+QgsProcessingParameterVectorDestination|MOUTHS|River Mouths
+QgsProcessingParameterBoolean|DISTANCE|Flow Distances|False

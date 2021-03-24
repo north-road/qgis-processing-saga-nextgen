@@ -1,0 +1,10 @@
+Variogram (Dialog)
+statistics_kriging
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|ATTRIBUTE|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterVectorDestination|VARIOGRAM|Variogram
+QgsProcessingParameterBoolean|LOG|Logarithmic Transformation|False
+QgsProcessingParameterNumber|VAR_MAXDIST|Maximum Distance|QgsProcessingParameterNumber.Double|-1.000000|False|None|None
+QgsProcessingParameterNumber|VAR_NCLASSES|Lag Distance Classes|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|VAR_NSKIP|Skip|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterString|VAR_MODEL|Model|a + b * x

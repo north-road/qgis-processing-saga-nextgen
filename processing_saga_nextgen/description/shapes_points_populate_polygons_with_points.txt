@@ -1,0 +1,7 @@
+Populate Polygons with Points
+shapes_points
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterField|NUMFIELD|Number of Points|None|POLYGONS|-1|False|False
+QgsProcessingParameterNumber|NUMPOINTS|Number of Points|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNumber.Integer|30|False|1|None

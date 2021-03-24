@@ -1,0 +1,9 @@
+Travel Time Calculation
+toolchains_tta_tools
+QgsProcessingParameterFeatureSource|DESTINATIONS|Destination Points|-1|None|False
+QgsProcessingParameterRasterLayer|LANDCOVER|Land Cover|None|False
+QgsProcessingParameterFeatureSource|LANDCOVER_TO_TRAVELTIME|Travel Times|5|None|False
+QgsProcessingParameterField|FIELD_LANDCOVER|Land Cover ID|None|LANDCOVER_TO_TRAVELTIME|-1|False|False
+QgsProcessingParameterField|FIELD_TRAVELTIME|Travel Time|None|LANDCOVER_TO_TRAVELTIME|-1|False|False
+QgsProcessingParameterRasterDestination|TRAVELTIME_MINUTES|Travel Time
+QgsProcessingParameterFeatureSource|TRAVELTIME_LUT|Travel Time Zones Classification|5|None|True

@@ -1,0 +1,18 @@
+Flow Accumulation (Flow Tracing)
+ta_hydrology
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterLayer|SINKROUTE|Sink Routes|None|True
+QgsProcessingParameterRasterLayer|WEIGHTS|Weights|None|True
+QgsProcessingParameterRasterDestination|FLOW|Flow Accumulation
+QgsProcessingParameterRasterLayer|VAL_INPUT|Input for Mean over Catchment|None|True
+QgsProcessingParameterRasterDestination|VAL_MEAN|Mean over Catchment
+QgsProcessingParameterRasterLayer|ACCU_MATERIAL|Material for Accumulation|None|True
+QgsProcessingParameterRasterLayer|ACCU_TARGET|Accumulation Target|None|False
+QgsProcessingParameterRasterDestination|ACCU_TOTAL|Accumulated Material
+QgsProcessingParameterRasterDestination|ACCU_LEFT|Accumulated Material (Left Side)
+QgsProcessingParameterRasterDestination|ACCU_RIGHT|Accumulated Material (Right Side)
+QgsProcessingParameterNumber|STEP|Step|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterEnum|FLOW_UNIT|Flow Accumulation Unit|[0] number of cells;[1] cell area|False|1
+QgsProcessingParameterEnum|METHOD|m_Method|[0] Rho 8;[1] Kinematic Routing Algorithm;[2] DEMON|False|1
+QgsProcessingParameterBoolean|CORRECT|Flow Correction|True
+QgsProcessingParameterNumber|MINDQV|DEMON - Min. DQV|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000

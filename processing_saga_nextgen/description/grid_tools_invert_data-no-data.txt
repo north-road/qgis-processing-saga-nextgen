@@ -1,0 +1,5 @@
+Invert Data/No-Data
+grid_tools
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Result
+QgsProcessingParameterNumber|VALUE|Data Value|QgsProcessingParameterNumber.Double|1.000000|False|None|None

@@ -1,0 +1,4 @@
+Export True Color Bitmap
+io_grid
+QgsProcessingParameterRasterLayer|IMAGE|Image Grid|None|False
+QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

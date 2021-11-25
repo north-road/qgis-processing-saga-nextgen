@@ -52,8 +52,12 @@ from qgis.core import (Qgis,
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.algs.help import shortHelp
 from processing.tools.system import getTempFilename
-from processing.algs.saga.SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
-from processing.algs.saga.SagaParameters import Parameters
+if Qgis.QGIS_VERSION < '3.22':
+    from processing.algs.saga.SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
+    from processing.algs.saga.SagaParameters import Parameters
+else:
+    from sagaprovider.SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
+    from sagaprovider.SagaParameters import Parameters
 from processing_saga_nextgen.processing.utils import SagaUtils
 from processing_saga_nextgen.processing.SagaAlgorithmBase import SagaAlgorithmBase
 
@@ -366,7 +370,10 @@ class SagaAlgorithm(SagaAlgorithmBase):
     def preProcessInputs(self):
         name = self.name().replace('.', '_')
         try:
-            module = importlib.import_module('processing.algs.saga.ext.' + name)
+            if Qgis.QGIS_VERSION < '3.22':
+                module = importlib.import_module('processing.algs.saga.ext.' + name)
+            else:
+                module = importlib.import_module('sagaprovider.ext.' + name)
         except ImportError:
             return
         if hasattr(module, 'preProcessInputs'):
@@ -375,7 +382,11 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
     def editCommands(self, commands):
         try:
-            module = importlib.import_module('processing.algs.saga.ext.' + self.name())
+            if Qgis.QGIS_VERSION < '3.22':
+                module = importlib.import_module('processing.algs.saga.ext.' + self.name())
+            else:
+                module = importlib.import_module('sagaprovider.ext.' + self.name())
+
         except ImportError:
             return commands
         if hasattr(module, 'editCommands'):

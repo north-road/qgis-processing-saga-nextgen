@@ -17,7 +17,6 @@
 ***************************************************************************
 """
 
-
 __author__ = 'Victor Olaya'
 __date__ = 'August 2012'
 __copyright__ = '(C) 2012, Victor Olaya'
@@ -52,14 +51,10 @@ from qgis.core import (Qgis,
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.algs.help import shortHelp
 from processing.tools.system import getTempFilename
-if Qgis.QGIS_VERSION < '3.22':
-    from processing.algs.saga.SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
-    from processing.algs.saga.SagaParameters import Parameters
-else:
-    from sagaprovider.SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
-    from sagaprovider.SagaParameters import Parameters
-from processing_saga_nextgen.processing.utils import SagaUtils
-from processing_saga_nextgen.processing.SagaAlgorithmBase import SagaAlgorithmBase
+from .SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
+from .SagaParameters import Parameters
+from .utils import SagaUtils
+from .SagaAlgorithmBase import SagaAlgorithmBase
 
 pluginPath = os.path.normpath(os.path.join(
     os.path.split(os.path.dirname(__file__))[0], os.pardir))
@@ -68,7 +63,7 @@ sessionExportedLayers = {}
 
 
 class SagaAlgorithm(SagaAlgorithmBase):
-
+    
     OUTPUT_EXTENT = 'OUTPUT_EXTENT'
 
     def __init__(self, descriptionfile):
@@ -82,6 +77,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
         self._group = ''
         self._groupId = ''
         self.params = []
+        self.known_issues = False
         self.defineCharacteristicsFromFile()
 
     def createInstance(self):
@@ -112,9 +108,17 @@ class SagaAlgorithm(SagaAlgorithmBase):
     def svgIconPath(self):
         return QgsApplication.iconPath("providerSaga.svg")
 
+    def flags(self):
+        # TODO - maybe it's safe to background thread this?
+        f = super().flags() | QgsProcessingAlgorithm.FlagNoThreading
+        if self.known_issues:
+            f = f | QgsProcessingAlgorithm.FlagKnownIssues
+        return f
+
     def defineCharacteristicsFromFile(self):
         with open(self.description_file, encoding="utf-8") as lines:
             line = lines.readline().strip('\n').strip()
+
             self._name = line
             if '|' in self._name:
                 tokens = self._name.split('|')
@@ -134,6 +138,10 @@ class SagaAlgorithm(SagaAlgorithmBase):
             self._name = ''.join(c for c in self._name if c in validChars)
 
             line = lines.readline().strip('\n').strip()
+            if line == '##known_issues':
+                self.known_issues = True
+                line = lines.readline().strip('\n').strip()
+
             self.undecorated_group = line
             self._group = self.tr(decoratedGroupName(self.undecorated_group))
 
@@ -149,12 +157,12 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 elif line.startswith('AllowUnmatching'):
                     self.allow_nonmatching_grid_extents = True
                 else:
-                    pass # TODO
-                    #self.addOutput(getOutputFromString(line))
+                    pass  # TODO
+                    # self.addOutput(getOutputFromString(line))
                 line = lines.readline().strip('\n').strip()
 
     def processAlgorithm(self, parameters, context, feedback):
-        commands = list()
+        commands = []
         self.exportedLayers = {}
 
         self.preProcessInputs()
@@ -171,7 +179,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 if isinstance(parameters[param.name()], str):
                     if parameters[param.name()].lower().endswith('sdat'):
                         self.exportedLayers[param.name()] = parameters[param.name()][:-4] + 'sgrd'
-                    if parameters[param.name()].lower().endswith('sgrd'):
+                    elif parameters[param.name()].lower().endswith('sgrd'):
                         self.exportedLayers[param.name()] = parameters[param.name()]
                     else:
                         layer = self.parameterAsRasterLayer(parameters, param.name(), context)
@@ -216,7 +224,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     for i, layer in enumerate(layers):
                         if layer.source().lower().endswith('sdat'):
                             files.append(layer.source()[:-4] + 'sgrd')
-                        if layer.source().lower().endswith('sgrd'):
+                        elif layer.source().lower().endswith('sgrd'):
                             files.append(layer.source())
                         else:
                             exportCommand = self.exportRasterLayer(param.name(), layer)
@@ -227,9 +235,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     self.exportedLayers[param.name()] = files
                 else:
                     for layer in layers:
-                        temp_params = {}
-                        temp_params[param.name()] = layer
-
+                        temp_params = {param.name(): layer}
                         if not crs:
                             source = self.parameterAsSource(temp_params, param.name(), context)
                             if source is None:
@@ -253,7 +259,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
         command += ' ' + ' '.join(self.hardcoded_strings)
 
         for param in self.parameterDefinitions():
-            if not param.name() in parameters or parameters[param.name()] is None:
+            if param.name() not in parameters or parameters[param.name()] is None:
                 continue
             if param.isDestination():
                 continue
@@ -261,34 +267,35 @@ class SagaAlgorithm(SagaAlgorithmBase):
             if isinstance(param, (QgsProcessingParameterRasterLayer, QgsProcessingParameterFeatureSource)):
                 command += ' -{} "{}"'.format(param.name(), self.exportedLayers[param.name()])
             elif isinstance(param, QgsProcessingParameterMultipleLayers):
-                if parameters[param.name()]: # parameter may have been an empty list
+                if parameters[param.name()]:  # parameter may have been an empty list
                     command += ' -{} "{}"'.format(param.name(), ';'.join(self.exportedLayers[param.name()]))
             elif isinstance(param, QgsProcessingParameterBoolean):
-                if self.parameterAsBool(parameters, param.name(), context):
+                if self.parameterAsBoolean(parameters, param.name(), context):
                     command += ' -{} true'.format(param.name().strip())
                 else:
                     command += ' -{} false'.format(param.name().strip())
             elif isinstance(param, QgsProcessingParameterMatrix):
                 tempTableFile = getTempFilename('txt')
                 with open(tempTableFile, 'w') as f:
-                    f.write('\t'.join([col for col in param.headers()]) + '\n')
+                    f.write('\t'.join(param.headers()) + '\n')
                     values = self.parameterAsMatrix(parameters, param.name(), context)
                     for i in range(0, len(values), 3):
                         s = '{}\t{}\t{}\n'.format(values[i], values[i + 1], values[i + 2])
                         f.write(s)
                 command += ' -{} "{}"'.format(param.name(), tempTableFile)
             elif isinstance(param, QgsProcessingParameterExtent):
-                # 'We have to substract/add half cell size, since SAGA is
+                # 'We have to subtract/add half cell size, since SAGA is
                 # center based, not corner based
                 halfcell = self.getOutputCellsize(parameters, context) / 2
                 offset = [halfcell, -halfcell, halfcell, -halfcell]
                 rect = self.parameterAsExtent(parameters, param.name(), context)
 
-                values = []
-                values.append(rect.xMinimum())
-                values.append(rect.xMaximum())
-                values.append(rect.yMinimum())
-                values.append(rect.yMaximum())
+                values = [
+                    rect.xMinimum(),
+                    rect.xMaximum(),
+                    rect.yMinimum(),
+                    rect.yMaximum(),
+                ]
 
                 for i in range(4):
                     command += ' -{} {}'.format(param.name().split(' ')[i], float(values[i]) + offset[i])
@@ -306,7 +313,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
         output_layers = []
         output_files = {}
-        #If the user has entered an output file that has non-ascii chars, we use a different path with only ascii chars
+        # If the user has entered an output file that has non-ascii chars, we use a different path with only ascii chars
         output_files_nonascii = {}
         for out in self.destinationParameterDefinitions():
             filePath = self.parameterAsOutputLayer(parameters, out.name(), context)
@@ -321,7 +328,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
             output_files[out.name()] = filePath
             command += ' -{} "{}"'.format(out.name(), filePath)
-            commands.append(command)
+        commands.append(command)
 
         # special treatment for RGB algorithm
         # TODO: improve this and put this code somewhere else
@@ -335,8 +342,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
         # 3: Run SAGA
         commands = self.editCommands(commands)
         SagaUtils.createSagaBatchJobFileFromSagaCommands(commands)
-        loglines = []
-        loglines.append(self.tr('SAGA execution commands'))
+        loglines = [self.tr('SAGA execution commands')]
         for line in commands:
             feedback.pushCommandInfo(line)
             loglines.append(line)
@@ -347,7 +353,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
         if crs is not None:
             for out in output_layers:
                 prjFile = os.path.splitext(out)[0] + '.prj'
-                with open(prjFile, 'w') as f:
+                with open(prjFile, 'wt', encoding='utf-8') as f:
                     f.write(crs.toWkt())
 
         for old, new in output_files_nonascii.items():
@@ -370,10 +376,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
     def preProcessInputs(self):
         name = self.name().replace('.', '_')
         try:
-            if Qgis.QGIS_VERSION < '3.22':
-                module = importlib.import_module('processing.algs.saga.ext.' + name)
-            else:
-                module = importlib.import_module('sagaprovider.ext.' + name)
+            module = importlib.import_module('processing_saga_nextgen.ext.' + name)
         except ImportError:
             return
         if hasattr(module, 'preProcessInputs'):
@@ -382,11 +385,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
     def editCommands(self, commands):
         try:
-            if Qgis.QGIS_VERSION < '3.22':
-                module = importlib.import_module('processing.algs.saga.ext.' + self.name())
-            else:
-                module = importlib.import_module('sagaprovider.ext.' + self.name())
-
+            module = importlib.import_module('processing_saga_nextgen.ext.' + self.name())
         except ImportError:
             return commands
         if hasattr(module, 'editCommands'):

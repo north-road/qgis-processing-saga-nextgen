@@ -89,6 +89,9 @@ groups = {'grid_analysis': 'Raster analysis',
 
 
 def decoratedGroupName(name):
+    """
+    Decorates a group name
+    """
     return groups.get(name, name)
 
 
@@ -164,5 +167,8 @@ algorithms = {'Add Grid Values to Points': 'Add raster values to points',
 
 
 def decoratedAlgorithmName(name):
+    """
+    Decorates an algorithm name
+    """
     decorated = algorithms.get(name, name)
     return decorated[0].upper() + decorated[1:].lower()

@@ -44,6 +44,8 @@ class SagaImageOutputParam(QgsProcessingParameterRasterDestination):
     of sdat.
     """
 
+    # pylint: disable=missing-docstring
+
     def defaultFileExtension(self):
         return 'tif'
 
@@ -54,14 +56,8 @@ class SagaImageOutputParam(QgsProcessingParameterRasterDestination):
         copy = SagaImageOutputParam(self.name(), self.description())
         return copy
 
-    def defaultFileExtension(self):
-        return 'tif'
-
     def createFileFilter(self):
         return '{} (*.tif *.TIF)'.format(QCoreApplication.translate("SAGAAlgorithm", 'TIF files'))
-
-    def supportedOutputRasterLayerExtensions(self):
-        return ['tif']
 
     def isSupportedOutputValue(self, value, context):
         output_path = QgsProcessingParameters.parameterAsOutputLayer(self, value, context)
@@ -69,8 +65,13 @@ class SagaImageOutputParam(QgsProcessingParameterRasterDestination):
             return False, QCoreApplication.translate("SAGAAlgorithm", 'Output filename must use a .tif extension')
         return True, ''
 
+    # pylint: enable=missing-docstring
+
 
 class Parameters:
+    """
+    Parameter utilities
+    """
 
     @staticmethod
     def is_parameter_line(line):

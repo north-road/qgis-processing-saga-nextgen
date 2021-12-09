@@ -30,5 +30,8 @@ from processing.tests.TestData import table
 
 
 def editCommands(commands):
+    """
+    Returns the edit commands
+    """
     commands[-3] = commands[-3] + ' -STATS ' + table()
     return commands

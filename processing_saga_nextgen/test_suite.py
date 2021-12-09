@@ -9,13 +9,12 @@ Test Suite.
 
 """
 
-import sys
 import os
-import unittest
+import sys
 import tempfile
+import unittest
+
 from osgeo import gdal
-import qgis  # pylint: disable=unused-import
-from qgis.PyQt import Qt
 
 try:
     from pip import main as pipmain
@@ -41,7 +40,6 @@ def _run_tests(test_suite, package_name, with_coverage=False):
     print('########')
     print('%s tests has been discovered in %s' % (count, package_name))
     print('Python GDAL : %s' % gdal.VersionInfo('VERSION_NUM'))
-    print('QT : %s' % Qt.QT_VERSION)
     print('########')
     if with_coverage:
         cov = coverage.Coverage(
@@ -55,7 +53,7 @@ def _run_tests(test_suite, package_name, with_coverage=False):
     if with_coverage:
         cov.stop()
         cov.save()
-        report = tempfile.NamedTemporaryFile(delete=False)
+        report = tempfile.NamedTemporaryFile(delete=False)  # pylint:disable=consider-using-with
         cov.report(file=report)
         # Produce HTML reports in the `htmlcov` folder and open index.html
         # cov.html_report()

@@ -26,35 +26,39 @@ __copyright__ = '(C) 2012, Victor Olaya'
 __revision__ = '$Format:%H$'
 
 import os
+
+from processing.core.ProcessingConfig import ProcessingConfig, Setting
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import (Qgis,
                        QgsProcessingProvider,
                        QgsMessageLog)
-from processing.core.ProcessingConfig import ProcessingConfig, Setting
 
+from processing_saga_nextgen.gui.gui_utils import GuiUtils
+from processing_saga_nextgen.processing.utils import SagaUtils
 from .SagaAlgorithm import SagaAlgorithm
 from .SplitRGBBands import SplitRGBBands
-from processing_saga_nextgen.processing.utils import SagaUtils
-from processing_saga_nextgen.gui.gui_utils import GuiUtils
 
 REQUIRED_VERSION = '7.2.'
 
 
 class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
+    """
+    Processing provider for SAGA
+    """
 
     def __init__(self):
         super().__init__()
         self.algs = []
 
-    def load(self):
+    def load(self):  # pylint:disable=missing-docstring
         ProcessingConfig.settingIcons["SAGANG"] = self.icon()
         ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_IMPORT_EXPORT_OPTIMIZATION,
                                             self.tr('Enable SAGA Import/Export optimizations'), False))
         ProcessingConfig.addSetting(Setting("SAGANG",
-                                                SagaUtils.SAGA_FOLDER, self.tr('SAGA folder'),
-                                                '',
-                                                valuetype=Setting.FOLDER))
+                                            SagaUtils.SAGA_FOLDER, self.tr('SAGA folder'),
+                                            '',
+                                            valuetype=Setting.FOLDER))
         ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_LOG_COMMANDS,
                                             self.tr('Log execution commands'), True))
@@ -65,12 +69,12 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         self.refreshAlgorithms()
         return True
 
-    def unload(self):
+    def unload(self):  # pylint:disable=missing-docstring
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_CONSOLE)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_COMMANDS)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_FOLDER)
 
-    def loadAlgorithms(self):
+    def loadAlgorithms(self):  # pylint:disable=missing-docstring
         version = SagaUtils.getInstalledVersion(True)
         if version is None:
             QgsMessageLog.logMessage(
@@ -97,7 +101,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                     else:
                         QgsMessageLog.logMessage(self.tr('Could not open SAGA algorithm: {}'.format(descriptionFile)),
                                                  self.tr('Processing'), Qgis.Critical)
-                except Exception as e:
+                except Exception as e:  # pylint: disable=broad-except
                     QgsMessageLog.logMessage(
                         self.tr('Could not open SAGA algorithm: {}\n{}'.format(descriptionFile, str(e))),
                         self.tr('Processing'), Qgis.Critical)

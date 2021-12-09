@@ -31,6 +31,9 @@ import subprocess
 
 
 def getAlgParams(f):
+    """
+    Gets algorithm params
+    """
     params = []
     booleanparams = []
     numparams = []
@@ -66,6 +69,9 @@ def getAlgParams(f):
 
 
 def testDescriptionFile(f):
+    """
+    Tests description file
+    """
     usage = ""
     cmdname, group, params, booleanparams, numparams = getAlgParams(f)
     command = [r'd:\saga2.1.2\saga_cmd.exe', group, cmdname]
@@ -76,7 +82,7 @@ def testDescriptionFile(f):
         command.append(p)
         command.append("0")
     command.extend(booleanparams)
-    proc = subprocess.Popen(
+    proc = subprocess.Popen(  # pylint: disable=consider-using-with
         command,
         shell=True,
         stdout=subprocess.PIPE,

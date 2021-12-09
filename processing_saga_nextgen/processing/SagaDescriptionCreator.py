@@ -41,11 +41,11 @@ class SagaDescriptionCreator:
         """
         Creates library files
         """
-        with open('c:\\saga\\sagalibs.txt') as f:
+        with open('c:\\saga\\sagalibs.txt', encoding='utf-8') as f:
             for lib in f:
                 lib = lib.strip('\n')
                 command = ['c:\\saga\\saga_cmd.exe', lib]
-                with open('c:\\saga\\desc\\' + lib + '.sagalib', 'w') as f2:
+                with open('c:\\saga\\desc\\' + lib + '.sagalib', 'w', encoding='utf-8') as f2:
                     subprocess.Popen(  # pylint: disable=consider-using-with
                         command,
                         shell=True,
@@ -65,7 +65,7 @@ class SagaDescriptionCreator:
                 # fix_print_with_import
                 print(libFile)
                 algs = []
-                with open(os.path.join('c:\\saga\\desc', libFile)) as f:
+                with open(os.path.join('c:\\saga\\desc', libFile), encoding='utf-8') as f:
                     for line in f:
                         line = line.strip('\n').strip(' ')
                         digit = line.split('\t')[0]
@@ -86,7 +86,7 @@ class SagaDescriptionCreator:
             algs = self.map[lib]
             for alg in algs:
                 command = ['c:\\saga\\saga_cmd.exe', lib, alg]
-                with open('c:\\saga\\desc\\' + lib + '_' + alg + '.txt', 'w') as f:
+                with open('c:\\saga\\desc\\' + lib + '_' + alg + '.txt', 'w', encoding='utf-8') as f:
                     # fix_print_with_import
                     print(str(command))
                     subprocess.Popen(  # pylint: disable=consider-using-with

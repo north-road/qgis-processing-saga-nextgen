@@ -37,7 +37,7 @@ def getAlgParams(f):
     params = []
     booleanparams = []
     numparams = []
-    with open(f) as lines:
+    with open(f, encoding='utf-8') as lines:
         line = lines.readline().strip('\n').strip()
         name = line
         if '|' in name:

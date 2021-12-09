@@ -29,15 +29,24 @@ import subprocess
 import os
 
 
-class SagaDescriptionCreator(object):
+class SagaDescriptionCreator:
+    """
+    Creates SAGA description files
+    """
+
+    def __init__(self):
+        self.map = {}
 
     def createLibraryFiles(self):
+        """
+        Creates library files
+        """
         with open('c:\\saga\\sagalibs.txt') as f:
             for lib in f:
                 lib = lib.strip('\n')
                 command = ['c:\\saga\\saga_cmd.exe', lib]
                 with open('c:\\saga\\desc\\' + lib + '.sagalib', 'w') as f2:
-                    subprocess.Popen(
+                    subprocess.Popen(  # pylint: disable=consider-using-with
                         command,
                         shell=True,
                         stdout=f2,
@@ -47,6 +56,9 @@ class SagaDescriptionCreator(object):
                     )
 
     def createLibraryMap(self):
+        """
+        Creates library map
+        """
         self.map = {}
         for libFile in os.listdir('c:\\saga\\desc'):
             if libFile.endswith('sagalib'):
@@ -67,6 +79,9 @@ class SagaDescriptionCreator(object):
         print(str(self.map))
 
     def createDescriptionFiles(self):
+        """
+        Creates description files
+        """
         for lib in list(self.map.keys()):
             algs = self.map[lib]
             for alg in algs:
@@ -74,7 +89,7 @@ class SagaDescriptionCreator(object):
                 with open('c:\\saga\\desc\\' + lib + '_' + alg + '.txt', 'w') as f:
                     # fix_print_with_import
                     print(str(command))
-                    subprocess.Popen(
+                    subprocess.Popen(  # pylint: disable=consider-using-with
                         command,
                         shell=True,
                         stdout=f,
@@ -84,11 +99,17 @@ class SagaDescriptionCreator(object):
                     )
 
     def create(self):
+        """
+        Creates definitions
+        """
         self.createLibraryMap()
         self.createDescriptionFiles()
 
 
 def main():
+    """
+    Creates description files
+    """
 
     SagaDescriptionCreator().create()
 

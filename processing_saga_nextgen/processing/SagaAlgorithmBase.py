@@ -31,21 +31,23 @@ from qgis.PyQt.QtCore import QCoreApplication
 from qgis.PyQt.QtGui import QIcon
 from qgis.core import QgsProcessingAlgorithm
 
-
 pluginPath = os.path.normpath(os.path.join(
     os.path.split(os.path.dirname(__file__))[0], os.pardir))
 
 
 class SagaAlgorithmBase(QgsProcessingAlgorithm):
+    """
+    Base class for SAGA algorithms
+    """
 
-    def __init__(self):
-        super().__init__()
-
+    # pylint: disable=missing-docstring
     def icon(self):
         return QIcon(os.path.join(pluginPath, 'images', 'saga.png'))
 
-    def createInstance(self, config={}):
-        return self.__class__()
+    # pylint: enable=missing-docstring
 
     def tr(self, string):
+        """
+        Translates a string
+        """
         return QCoreApplication.translate("SAGAAlgorithm", string)

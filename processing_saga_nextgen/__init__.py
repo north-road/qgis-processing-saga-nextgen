@@ -19,5 +19,5 @@ def classFactory(iface):  # pylint: disable=invalid-name
     :type iface: QgsInterface
     """
     #
-    from .saga_nextgen_plugin import SagaNextGenProviderPlugin
+    from .saga_nextgen_plugin import SagaNextGenProviderPlugin  # pylint:disable=import-outside-toplevel
     return SagaNextGenProviderPlugin(iface)

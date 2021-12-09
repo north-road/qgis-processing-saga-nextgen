@@ -26,29 +26,37 @@ __copyright__ = '(C) 2012, Victor Olaya'
 __revision__ = '$Format:%H$'
 
 import os
+import platform
 import stat
 import subprocess
 import time
-import platform
 
+from processing.core.ProcessingConfig import ProcessingConfig
+from processing.tools.system import isWindows, isMac, userFolder
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import (Qgis,
                        QgsApplication,
                        QgsMessageLog)
-from processing.core.ProcessingConfig import ProcessingConfig
-from processing.tools.system import isWindows, isMac, userFolder
 
 
 class SagaUtils:
+    """
+    SAGA processing utilities
+    """
+
     SAGA_FOLDER = 'SAGA_FOLDER'
     SAGA_LOG_COMMANDS = 'SAGANG_LOG_COMMANDS'
     SAGA_LOG_CONSOLE = 'SAGANG_LOG_CONSOLE'
     SAGA_IMPORT_EXPORT_OPTIMIZATION = 'SAGANG_IMPORT_EXPORT_OPTIMIZATION'
 
+    _installed_version = None
     _installedVersionFound = False
 
     @staticmethod
     def sagaBatchJobFilename():
+        """
+        Returns the filename to use for batch files
+        """
         if isWindows():
             filename = 'saga_batch_job.bat'
         else:
@@ -60,6 +68,9 @@ class SagaUtils:
 
     @staticmethod
     def findSagaFolder():
+        """
+        Tries to find the SAGA folder
+        """
         folder = None
         if isMac() or platform.system() == 'FreeBSD':
             testfolder = os.path.join(QgsApplication.prefixPath(), 'bin')
@@ -84,6 +95,9 @@ class SagaUtils:
 
     @staticmethod
     def sagaPath():
+        """
+        Returns the path to SAGA
+        """
         folder = ProcessingConfig.getSetting(SagaUtils.SAGA_FOLDER)
         if folder and not os.path.isdir(folder):
             folder = None
@@ -97,11 +111,16 @@ class SagaUtils:
 
     @staticmethod
     def sagaDescriptionPath():
+        """
+        Returns the path to the description files
+        """
         return os.path.join(os.path.dirname(__file__), '..', 'description')
 
     @staticmethod
     def createSagaBatchJobFileFromSagaCommands(commands):
-
+        """
+        Creates a batch job file from a list of SAGA commands
+        """
         with open(SagaUtils.sagaBatchJobFilename(), 'w', encoding="utf8") as fout:
             if isWindows():
                 fout.write('set SAGA=' + SagaUtils.sagaPath() + '\n')
@@ -119,12 +138,13 @@ class SagaUtils:
 
     @staticmethod
     def getInstalledVersion(runSaga=False):
-        global _installedVersion
-
+        """
+        Gets the installed SAGA version
+        """
         maxRetries = 5
         retries = 0
         if SagaUtils._installedVersionFound and not runSaga:
-            return _installedVersion
+            return SagaUtils._installed_version
 
         if isWindows():
             commands = [os.path.join(SagaUtils.sagaPath(), "saga_cmd.exe"), "-v"]
@@ -150,19 +170,23 @@ class SagaUtils:
                     lines = proc.stdout.readlines()
                     for line in lines:
                         if line.startswith("SAGA Version:"):
-                            _installedVersion = line[len("SAGA Version:"):].strip().split(" ")[0]
+                            SagaUtils._installed_version = line[len("SAGA Version:"):].strip().split(" ")[0]
                             SagaUtils._installedVersionFound = True
-                            return _installedVersion
+                            return SagaUtils._installed_version
                     return None
                 except IOError:
                     retries += 1
-                except:
+                except:  # noqa  # pylint:disable=bare-except
                     return None
 
-        return _installedVersion
+        return SagaUtils._installed_version
 
     @staticmethod
     def executeSaga(feedback):
+        """
+        Executes the saga command
+        """
+
         if isWindows():
             command = ['cmd.exe', '/C ', SagaUtils.sagaBatchJobFilename()]
         else:
@@ -185,14 +209,16 @@ class SagaUtils:
                         s = ''.join([x for x in line if x.isdigit()])
                         try:
                             feedback.setProgress(int(s))
-                        except:
+                        except:  # noqa   # pylint:disable=bare-except
                             pass
                     else:
                         line = line.strip()
-                        if line != '/' and line != '-' and line != '\\' and line != '|':
-                            loglines.append(line)
-                            feedback.pushConsoleInfo(line)
-            except:
+                        if line in ('/', '-', '\\', '|'):
+                            continue
+
+                        loglines.append(line)
+                        feedback.pushConsoleInfo(line)
+            except:  # noqa  # pylint:disable=bare-except
                 pass
 
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_CONSOLE):

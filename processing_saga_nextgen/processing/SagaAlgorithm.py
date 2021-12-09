@@ -25,16 +25,19 @@ __copyright__ = '(C) 2012, Victor Olaya'
 
 __revision__ = '$Format:%H$'
 
+import importlib
 import os
 import shutil
-import importlib
+
+from processing.algs.help import shortHelp
+from processing.core.ProcessingConfig import ProcessingConfig
+from processing.tools.system import getTempFilename
 from qgis.core import (Qgis,
                        QgsApplication,
                        QgsProcessingUtils,
                        QgsProcessingException,
                        QgsMessageLog,
                        QgsProcessing,
-                       QgsProcessingAlgorithm,
                        QgsProcessingParameterRasterLayer,
                        QgsProcessingParameterFeatureSource,
                        QgsProcessingParameterBoolean,
@@ -48,13 +51,11 @@ from qgis.core import (Qgis,
                        QgsProcessingParameterExtent,
                        QgsProcessingParameterRasterDestination,
                        QgsProcessingParameterVectorDestination)
-from processing.core.ProcessingConfig import ProcessingConfig
-from processing.algs.help import shortHelp
-from processing.tools.system import getTempFilename
+
+from .SagaAlgorithmBase import SagaAlgorithmBase
 from .SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
 from .SagaParameters import Parameters
 from .utils import SagaUtils
-from .SagaAlgorithmBase import SagaAlgorithmBase
 
 pluginPath = os.path.normpath(os.path.join(
     os.path.split(os.path.dirname(__file__))[0], os.pardir))
@@ -63,11 +64,15 @@ sessionExportedLayers = {}
 
 
 class SagaAlgorithm(SagaAlgorithmBase):
-    
+    """
+    A SAGA algorithm
+    """
+
     OUTPUT_EXTENT = 'OUTPUT_EXTENT'
 
     def __init__(self, descriptionfile):
         super().__init__()
+        self.exportedLayers = {}
         self.hardcoded_strings = []
         self.allow_nonmatching_grid_extents = False
         self.description_file = descriptionfile
@@ -80,10 +85,12 @@ class SagaAlgorithm(SagaAlgorithmBase):
         self.known_issues = False
         self.defineCharacteristicsFromFile()
 
+    # pylint: disable=missing-docstring
+
     def createInstance(self):
         return SagaAlgorithm(self.description_file)
 
-    def initAlgorithm(self, config=None):
+    def initAlgorithm(self, config=None):  # pylint: disable=unused-argument
         for p in self.params:
             self.addParameter(p)
 
@@ -108,8 +115,12 @@ class SagaAlgorithm(SagaAlgorithmBase):
     def svgIconPath(self):
         return QgsApplication.iconPath("providerSaga.svg")
 
+    # pylint: enable=missing-docstring
 
     def defineCharacteristicsFromFile(self):
+        """
+        Defines algorithm parameters from file
+        """
         with open(self.description_file, encoding="utf-8") as lines:
             line = lines.readline().strip('\n').strip()
 
@@ -155,17 +166,16 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     # self.addOutput(getOutputFromString(line))
                 line = lines.readline().strip('\n').strip()
 
-    def processAlgorithm(self, parameters, context, feedback):
+    def processAlgorithm(self, parameters, context, feedback):  # pylint: disable=missing-docstring,too-many-statements,too-many-branches,too-many-locals
         commands = []
         self.exportedLayers = {}
 
         self.preProcessInputs()
-        extent = None
         crs = None
 
         # 1: Export rasters to sgrd and vectors to shp
         # Tables must be in dbf format. We check that.
-        for param in self.parameterDefinitions():
+        for param in self.parameterDefinitions():  # pylint:disable=too-many-nested-blocks
             if isinstance(param, QgsProcessingParameterRasterLayer):
                 if param.name() not in parameters or parameters[param.name()] is None:
                     continue
@@ -200,7 +210,8 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
                     crs = source.sourceCrs()
 
-                layer_path = self.parameterAsCompatibleSourceLayerPath(parameters, param.name(), context, ['shp'], 'shp', feedback=feedback)
+                layer_path = self.parameterAsCompatibleSourceLayerPath(parameters, param.name(), context, ['shp'],
+                                                                       'shp', feedback=feedback)
                 if layer_path:
                     self.exportedLayers[param.name()] = layer_path
                 else:
@@ -237,7 +248,8 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
                             crs = source.sourceCrs()
 
-                        layer_path = self.parameterAsCompatibleSourceLayerPath(temp_params, param.name(), context, ['shp'], 'shp',
+                        layer_path = self.parameterAsCompatibleSourceLayerPath(temp_params, param.name(), context,
+                                                                               ['shp'], 'shp',
                                                                                feedback=feedback)
                         if layer_path:
                             if param.name() in self.exportedLayers:
@@ -354,7 +366,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
             oldFolder = os.path.dirname(old)
             newFolder = os.path.dirname(new)
             newName = os.path.splitext(os.path.basename(new))[0]
-            files = [f for f in os.listdir(oldFolder)]
+            files = list(os.listdir(oldFolder))
             for f in files:
                 ext = os.path.splitext(f)[1]
                 newPath = os.path.join(newFolder, newName + ext)
@@ -368,6 +380,9 @@ class SagaAlgorithm(SagaAlgorithmBase):
         }
 
     def preProcessInputs(self):
+        """
+        Preprocesses inputs
+        """
         name = self.name().replace('.', '_')
         try:
             module = importlib.import_module('processing_saga_nextgen.ext.' + name)
@@ -378,6 +393,9 @@ class SagaAlgorithm(SagaAlgorithmBase):
             func(self)
 
     def editCommands(self, commands):
+        """
+        Generates edit commands
+        """
         try:
             module = importlib.import_module('processing_saga_nextgen.ext.' + self.name())
         except ImportError:
@@ -385,11 +403,12 @@ class SagaAlgorithm(SagaAlgorithmBase):
         if hasattr(module, 'editCommands'):
             func = getattr(module, 'editCommands')
             return func(commands)
-        else:
-            return commands
+
+        return commands
 
     def getOutputCellsize(self, parameters, context):
-        """Tries to guess the cell size of the output, searching for
+        """
+        Tries to guess the cell size of the output, searching for
         a parameter with an appropriate name for it.
         :param parameters:
         """
@@ -402,14 +421,17 @@ class SagaAlgorithm(SagaAlgorithmBase):
         return cellsize
 
     def exportRasterLayer(self, parameterName, layer):
-        global sessionExportedLayers
+        """
+        Exports a raster layer
+        """
+        global sessionExportedLayers  # pylint: disable=global-statement
         if layer.source() in sessionExportedLayers:
             exportedLayer = sessionExportedLayers[layer.source()]
             if os.path.exists(exportedLayer):
                 self.exportedLayers[parameterName] = exportedLayer
                 return None
-            else:
-                del sessionExportedLayers[layer.source()]
+
+            del sessionExportedLayers[layer.source()]
 
         if layer:
             filename = layer.name()
@@ -428,7 +450,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
         return 'io_gdal 0 -TRANSFORM 1 -RESAMPLING 3 -GRIDS "{}" -FILES "{}"'.format(destFilename, layer.source())
 
-    def checkParameterValues(self, parameters, context):
+    def checkParameterValues(self, parameters, context):  # pylint: disable=missing-docstring
         """
         We check that there are no multiband layers, which are not
         supported by SAGA, and that raster layers have the same grid extent
@@ -441,8 +463,8 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
             if isinstance(param, QgsProcessingParameterRasterLayer):
                 raster_layer_params.append(param.name())
-            elif (isinstance(param, QgsProcessingParameterMultipleLayers)
-                    and param.layerType() == QgsProcessing.TypeRaster):
+            elif isinstance(param,
+                            QgsProcessingParameterMultipleLayers) and param.layerType() == QgsProcessing.TypeRaster:
                 raster_layer_params.extend(param.name())
 
         for layer_param in raster_layer_params:
@@ -460,4 +482,4 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     extent2 = (layer.extent(), layer.height(), layer.width())
                     if extent != extent2:
                         return False, self.tr("Input layers do not have the same grid extent.")
-        return super(SagaAlgorithm, self).checkParameterValues(parameters, context)
+        return super().checkParameterValues(parameters, context)

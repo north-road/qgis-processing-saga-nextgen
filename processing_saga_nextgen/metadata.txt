@@ -38,7 +38,7 @@ homepage=https://github.com/north-road/qgis-processing-saga-nextgen
 category=Plugins
 icon=icon.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False

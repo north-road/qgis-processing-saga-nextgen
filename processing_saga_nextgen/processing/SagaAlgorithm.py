@@ -282,7 +282,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     command += ' -{} false'.format(param.name().strip())
             elif isinstance(param, QgsProcessingParameterMatrix):
                 tempTableFile = getTempFilename('txt')
-                with open(tempTableFile, 'w') as f:
+                with open(tempTableFile, 'w', encoding='utf-8') as f:
                     f.write('\t'.join(param.headers()) + '\n')
                     values = self.parameterAsMatrix(parameters, param.name(), context)
                     for i in range(0, len(values), 3):
@@ -424,7 +424,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
         """
         Exports a raster layer
         """
-        global sessionExportedLayers  # pylint: disable=global-statement
+        global sessionExportedLayers  # pylint: disable=global-statement,global-variable-not-assigned
         if layer.source() in sessionExportedLayers:
             exportedLayer = sessionExportedLayers[layer.source()]
             if os.path.exists(exportedLayer):

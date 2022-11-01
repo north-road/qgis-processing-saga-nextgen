@@ -1,5 +1,5 @@
 Flow Accumulation (One Step)
-toolchains_terrain_analysis
+terrain_analysis
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
 QgsProcessingParameterRasterDestination|TCA|Flow Accumulation
 QgsProcessingParameterRasterDestination|SCA|Specific Catchment Area

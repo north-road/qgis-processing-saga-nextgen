@@ -226,17 +226,18 @@ class SagaUtils:
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_CONSOLE):
             QgsMessageLog.logMessage('\n'.join(loglines), 'Processing', Qgis.Info)
 
+
 def makePathSafe(path):
     """Handle special characters on the path to the batch file for example: & < > ( ) @ ^ |.
     See: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd#remarks
     """
     return '"' + path.translate(str.maketrans({
-        "&":  r"^&",
-        "<":  r"^<",
-        ">":  r"^>",
-        "(":  r"^(",
-        ")":  r"^)",
-        "@":  r"^@",
-        "^":  r"^^",
-        "|":  r"^|",
+        "&": r"^&",
+        "<": r"^<",
+        ">": r"^>",
+        "(": r"^(",
+        ")": r"^)",
+        "@": r"^@",
+        "^": r"^^",
+        "|": r"^|",
     })) + '"'

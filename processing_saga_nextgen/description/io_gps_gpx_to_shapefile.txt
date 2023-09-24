@@ -1,4 +1,4 @@
-GPX to shapefile
+GPX to shapefile|0
 io_gps
 QgsProcessingParameterFile|BASEPATH|Gpx2shp path|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterFile|FILE|GPX file|QgsProcessingParameterFile.File|None|False

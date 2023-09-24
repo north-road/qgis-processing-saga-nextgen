@@ -1,5 +1,5 @@
-Import Simple Features from Well Known Text
+Import Simple Features from Well Known Text|19
 io_shapes
-QgsProcessingParameterVectorDestination|SHAPES|WKT Import
+QgsProcessingParameterVectorDestination|SHAPES|WKT Import|-1|None|True
 QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterString|WKT|WKT String|

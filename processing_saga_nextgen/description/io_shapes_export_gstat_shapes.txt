@@ -1,4 +1,4 @@
-Export GStat Shapes
+Export GStat Shapes|0
 io_shapes
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

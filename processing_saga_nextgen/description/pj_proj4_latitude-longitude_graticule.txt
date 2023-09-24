@@ -1,12 +1,12 @@
-Latitude/Longitude Graticule
+Latitude/Longitude Graticule|14
 pj_proj4
 QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
 QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
 QgsProcessingParameterFile|CRS_FILE|Well Known Text File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterNumber|CRS_EPSG|Authority Code|QgsProcessingParameterNumber.Integer|-1|False|None|None
 QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
-QgsProcessingParameterVectorDestination|GRATICULE|Graticule
-QgsProcessingParameterVectorDestination|COORDS|Frame Coordinates
+QgsProcessingParameterVectorDestination|GRATICULE|Graticule|1|None|False
+QgsProcessingParameterVectorDestination|COORDS|Frame Coordinates|0|None|True
 QgsProcessingParameterNumber|XMIN|Minimum|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|XMAX|Maximum|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|YMIN|Minimum|QgsProcessingParameterNumber.Double|0.000000|False|None|None

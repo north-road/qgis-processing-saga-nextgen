@@ -1,6 +1,6 @@
-Import NetCDF
+Import NetCDF|6
 io_gdal
-QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterRasterDestination|GRIDS|Grids|None|False
 QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterBoolean|SAVE_FILE|Save to File|False
 QgsProcessingParameterFile|SAVE_PATH|Save to Path|QgsProcessingParameterFile.File|None|False

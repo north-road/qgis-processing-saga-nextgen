@@ -1,4 +1,4 @@
-Coordinate Reference System Picker
+Coordinate Reference System Picker|15
 pj_proj4
 QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
 QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|

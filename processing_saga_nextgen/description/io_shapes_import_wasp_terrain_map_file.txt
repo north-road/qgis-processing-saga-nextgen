@@ -1,5 +1,5 @@
-Import WASP terrain map file
+Import WASP terrain map file|10
 io_shapes
-QgsProcessingParameterVectorDestination|SHAPES|Contour Lines
+QgsProcessingParameterVectorDestination|SHAPES|Contour Lines|1|None|False
 QgsProcessingParameterFile|FILE|File Name|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterEnum|METHOD|Input Specification|[0] elevation;[1] roughness;[2] elevation and roughness|False|0

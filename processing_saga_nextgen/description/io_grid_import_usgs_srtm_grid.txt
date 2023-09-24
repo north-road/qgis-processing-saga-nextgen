@@ -1,5 +1,5 @@
-Import USGS SRTM Grid
+Import USGS SRTM Grid|7
 io_grid
-QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterRasterDestination|GRIDS|Grids|None|True
 QgsProcessingParameterFile|FILE|Files|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterEnum|RESOLUTION|Resolution|[0] 1 arc-second;[1] 3 arc-second|False|1

@@ -1,4 +1,4 @@
-Create Tileshape from Virtual Point Cloud
+Create Tileshape from Virtual Point Cloud|2
 io_virtual
 QgsProcessingParameterFile|FILENAME|Filename|QgsProcessingParameterFile.File|None|False
-QgsProcessingParameterVectorDestination|TILE_SHP|Tileshape
+QgsProcessingParameterVectorDestination|TILE_SHP|Tileshape|2|None|False

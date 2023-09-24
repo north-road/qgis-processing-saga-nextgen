@@ -1,6 +1,9 @@
-Export Grid to XYZ
+Export Grid to XYZ|5
 io_grid
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
 QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterBoolean|HEADER|Write Header|True
 QgsProcessingParameterBoolean|NODATA|Write No-Data|False
+QgsProcessingParameterNumber|PREC|Floating Point Precision|QgsProcessingParameterNumber.Integer|2|False|-1|None
+QgsProcessingParameterEnum|SEPARATOR|Field Separator|[0] tabulator;[1] ;;[2] ,;[3] space;[4] other|False|0
+QgsProcessingParameterString|SEP_OTHER|other|*

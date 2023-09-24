@@ -1,4 +1,4 @@
-Coordinate Transformation (Grid List)
+Coordinate Transformation (Grid List)|3
 pj_proj4
 QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
 QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
@@ -13,6 +13,7 @@ QgsProcessingParameterBoolean|TARGET_AREA|Use Target Area Polygon|False
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
-QgsProcessingParameterRasterDestination|GRIDS|Target
-QgsProcessingParameterRasterDestination|OUT_X|X Coordinates
-QgsProcessingParameterRasterDestination|OUT_Y|Y Coordinates
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0
+QgsProcessingParameterRasterDestination|GRIDS|Target|None|True
+QgsProcessingParameterRasterDestination|OUT_X|X Coordinates|None|True
+QgsProcessingParameterRasterDestination|OUT_Y|Y Coordinates|None|True

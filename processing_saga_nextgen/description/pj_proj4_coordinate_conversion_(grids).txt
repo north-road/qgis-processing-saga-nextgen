@@ -1,6 +1,6 @@
-Coordinate Conversion (Grids)
+Coordinate Conversion (Grids)|30
 pj_proj4
 QgsProcessingParameterRasterLayer|SOURCE_X|X Coordinate Source|None|False
 QgsProcessingParameterRasterLayer|SOURCE_Y|Y Coordinate Source|None|False
-QgsProcessingParameterRasterDestination|TARGET_X|Projected X Coordinates
-QgsProcessingParameterRasterDestination|TARGET_Y|Projected Y Coordinates
+QgsProcessingParameterRasterDestination|TARGET_X|Projected X Coordinates|None|False
+QgsProcessingParameterRasterDestination|TARGET_Y|Projected Y Coordinates|None|False

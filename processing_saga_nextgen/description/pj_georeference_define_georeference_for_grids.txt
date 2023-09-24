@@ -1,7 +1,7 @@
-Define Georeference for Grids
+Define Georeference for Grids|5
 pj_georeference
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
-QgsProcessingParameterRasterDestination|REFERENCED|Referenced Grids
+QgsProcessingParameterRasterDestination|REFERENCED|Referenced Grids|None|False
 QgsProcessingParameterEnum|DEFINITION|Definition|[0] cellsize and lower left cell coordinates;[1] cellsize and upper left cell coordinates;[2] lower left cell coordinates and left to right range;[3] lower left cell coordinates and lower to upper range|False|0
 QgsProcessingParameterNumber|SIZE|Cellsize|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
 QgsProcessingParameterNumber|XMIN|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None

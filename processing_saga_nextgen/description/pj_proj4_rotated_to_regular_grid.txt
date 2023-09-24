@@ -1,0 +1,11 @@
+Rotated to Regular Grid|18
+pj_proj4
+QgsProcessingParameterMultipleLayers|SOURCE|Grids|3|None|False
+QgsProcessingParameterRasterDestination|TARGET|Grids|None|False
+QgsProcessingParameterVectorDestination|EXTENT|Extent|2|None|True
+QgsProcessingParameterNumber|ROT_POLE_LON|Longitude|QgsProcessingParameterNumber.Double|-162.000000|False|None|None
+QgsProcessingParameterNumber|ROT_POLE_LAT|Latitude|QgsProcessingParameterNumber.Double|39.250000|False|None|None
+Hardcoded|-TARGET_DEFINITION 0
+QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
+QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0

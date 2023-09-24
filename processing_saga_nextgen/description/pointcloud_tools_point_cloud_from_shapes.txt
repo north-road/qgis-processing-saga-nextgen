@@ -1,0 +1,6 @@
+Point Cloud from Shapes|3
+pointcloud_tools
+QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
+QgsProcessingParameterField|ZFIELD|Z Value|None|SHAPES|-1|False|False
+QgsProcessingParameterPointCloudDestination|POINTS|Points|None|False
+QgsProcessingParameterEnum|OUTPUT|Output|[0] only z;[1] all attributes|False|0

@@ -1,0 +1,5 @@
+Point Cloud from Grid Points|2
+pointcloud_tools
+QgsProcessingParameterRasterLayer|GRID|Z Value|None|False
+QgsProcessingParameterMultipleLayers|GRIDS|Additional Values|3|None|True
+QgsProcessingParameterPointCloudDestination|POINTS|Points|None|False

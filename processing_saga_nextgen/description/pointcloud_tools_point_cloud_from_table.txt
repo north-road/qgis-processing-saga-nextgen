@@ -1,0 +1,8 @@
+Point Cloud from Table|13
+pointcloud_tools
+QgsProcessingParameterFeatureSource|TAB_IN|Table|5|None|False
+QgsProcessingParameterField|FIELD_X|X|None|TAB_IN|-1|False|False
+QgsProcessingParameterField|FIELD_Y|Y|None|TAB_IN|-1|False|False
+QgsProcessingParameterField|FIELD_Z|Z|None|TAB_IN|-1|False|False
+QgsProcessingParameterString|FIELDS|Attributes|
+QgsProcessingParameterPointCloudDestination|PC_OUT|Point Cloud|None|False

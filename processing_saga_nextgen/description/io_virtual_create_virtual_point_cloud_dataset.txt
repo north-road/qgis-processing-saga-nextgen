@@ -1,4 +1,4 @@
-Create Virtual Point Cloud Dataset
+Create Virtual Point Cloud Dataset|0
 io_virtual
 QgsProcessingParameterFile|FILES|Input Files|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterFile|INPUT_FILE_LIST|Input File List|QgsProcessingParameterFile.File|None|False

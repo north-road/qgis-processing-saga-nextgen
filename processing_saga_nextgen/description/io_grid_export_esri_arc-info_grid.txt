@@ -1,4 +1,4 @@
-Export ESRI Arc/Info Grid
+Export ESRI Arc/Info Grid|0
 io_grid
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
 QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

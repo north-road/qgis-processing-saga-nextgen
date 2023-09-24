@@ -1,0 +1,8 @@
+Export Point Cloud to Text File|18
+io_shapes
+QgsProcessingParameterPointCloudLayer|POINTS|Point Cloud|None|False
+QgsProcessingParameterFile|FILE|Text File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|WRITE_HEADER|Write Header|False
+QgsProcessingParameterEnum|FIELDSEP|Field Separator|[0] tabulator;[1] space;[2] comma|False|0
+QgsProcessingParameterString|FIELDS|Fields|
+QgsProcessingParameterString|PRECISIONS|Precisions|

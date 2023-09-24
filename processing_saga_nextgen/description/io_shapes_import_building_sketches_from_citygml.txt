@@ -1,5 +1,5 @@
-Import Building Sketches from CityGML
+Import Building Sketches from CityGML|21
 io_shapes
-QgsProcessingParameterVectorDestination|BUILDINGS|Buildings
+QgsProcessingParameterVectorDestination|BUILDINGS|Buildings|2|None|False
 QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterBoolean|PARTS|Check for Building Parts|True

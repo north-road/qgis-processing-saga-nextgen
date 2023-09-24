@@ -1,7 +1,7 @@
-Import from Virtual Raster (VRT)
+Import from Virtual Raster (VRT)|13
 io_gdal
 QgsProcessingParameterFile|VRT_NAME|VRT Filename|QgsProcessingParameterFile.File|None|False
-QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterRasterDestination|GRIDS|Grids|None|False
 QgsProcessingParameterEnum|EXTENT|Extent|[0] user defined;[1] grid system;[2] shapes extent|False|0
 QgsProcessingParameterFeatureSource|SHAPES|Shapes Extent|-1|None|False
 QgsProcessingParameterNumber|XMIN|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None

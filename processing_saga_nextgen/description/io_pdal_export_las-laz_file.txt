@@ -1,0 +1,29 @@
+Export LAS/LAZ File|1
+io_pdal
+QgsProcessingParameterPointCloudLayer|POINTS|Point Cloud|None|False
+QgsProcessingParameterField|T|gps-time|None|POINTS|-1|False|False
+QgsProcessingParameterField|r|number of the return|None|POINTS|-1|False|False
+QgsProcessingParameterField|n|number of returns of given pulse|None|POINTS|-1|False|False
+QgsProcessingParameterField|i|intensity|None|POINTS|-1|False|False
+QgsProcessingParameterField|c|classification|None|POINTS|-1|False|False
+QgsProcessingParameterField|sCH|scanner channel|None|POINTS|-1|False|False
+QgsProcessingParameterField|R|red channel color|None|POINTS|-1|False|False
+QgsProcessingParameterField|G|green channel color|None|POINTS|-1|False|False
+QgsProcessingParameterField|B|blue channel color|None|POINTS|-1|False|False
+QgsProcessingParameterField|C|SAGA RGB color|None|POINTS|-1|False|False
+QgsProcessingParameterField|NIR|near infrared|None|POINTS|-1|False|False
+QgsProcessingParameterField|a|scan angle|None|POINTS|-1|False|False
+QgsProcessingParameterField|d|direction of scan flag|None|POINTS|-1|False|False
+QgsProcessingParameterField|e|edge of flight line flag|None|POINTS|-1|False|False
+QgsProcessingParameterField|u|user data|None|POINTS|-1|False|False
+QgsProcessingParameterField|p|point source ID|None|POINTS|-1|False|False
+QgsProcessingParameterFile|FILE|Output File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterEnum|FILE_FORMAT|File Format|[0] LAS 1.2;[1] LAS 1.4|False|1
+QgsProcessingParameterEnum|FORMAT|Point Data Record Format|[0] 0;[1] 1;[2] 2;[3] 3;[4] 6;[5] 7;[6] 8|False|3
+QgsProcessingParameterEnum|RGB_RANGE|Input R,G,B (and NIR) Value Range|[0] 16 bit;[1] 8 bit|False|1
+QgsProcessingParameterNumber|OFF_X|Offset X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|OFF_Y|Offset Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|OFF_Z|Offset Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|SCALE_X|Scale X|QgsProcessingParameterNumber.Double|0.001000|False|None|None
+QgsProcessingParameterNumber|SCALE_Y|Scale Y|QgsProcessingParameterNumber.Double|0.001000|False|None|None
+QgsProcessingParameterNumber|SCALE_Z|Scale Z|QgsProcessingParameterNumber.Double|0.001000|False|None|None

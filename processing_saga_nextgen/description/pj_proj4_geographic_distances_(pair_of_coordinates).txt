@@ -1,11 +1,11 @@
-Geographic Distances (Pair of Coordinates)
+Geographic Distances (Pair of Coordinates)|21
 pj_proj4
 QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
 QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
 QgsProcessingParameterFile|CRS_FILE|Well Known Text File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterNumber|CRS_EPSG|Authority Code|QgsProcessingParameterNumber.Integer|-1|False|None|None
 QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
-QgsProcessingParameterVectorDestination|DISTANCES|Geographic Distances
+QgsProcessingParameterVectorDestination|DISTANCES|Geographic Distances|1|None|False
 QgsProcessingParameterNumber|COORD_X1|X|QgsProcessingParameterNumber.Double|10.000000|False|None|None
 QgsProcessingParameterNumber|COORD_Y1|Y|QgsProcessingParameterNumber.Double|53.500000|False|None|None
 QgsProcessingParameterNumber|COORD_X2|X|QgsProcessingParameterNumber.Double|116.500000|False|None|None

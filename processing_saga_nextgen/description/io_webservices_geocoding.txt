@@ -1,6 +1,6 @@
-Geocoding
+Geocoding|0
 io_webservices
-QgsProcessingParameterVectorDestination|LOCATIONS|Locations
+QgsProcessingParameterVectorDestination|LOCATIONS|Locations|0|None|False
 QgsProcessingParameterFeatureSource|ADDRESSES|Address List|5|None|True
 QgsProcessingParameterField|FIELD|Address Field|None|ADDRESSES|-1|False|False
 QgsProcessingParameterString|ADDRESS|Single Address|Bundesstrasse 55, Hamburg, Germany

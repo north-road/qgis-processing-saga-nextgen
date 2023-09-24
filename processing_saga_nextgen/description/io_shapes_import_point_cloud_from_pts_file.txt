@@ -1,0 +1,5 @@
+Import Point Cloud from PTS File|23
+io_shapes
+QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterPointCloudDestination|POINTS|Points|None|False
+QgsProcessingParameterEnum|RGB|Import RGB Values as...|[0] separate values;[1] single rgb-coded integer value|False|1

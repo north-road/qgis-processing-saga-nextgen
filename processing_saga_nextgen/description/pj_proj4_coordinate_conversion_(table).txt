@@ -1,4 +1,4 @@
-Coordinate Conversion (Table)
+Coordinate Conversion (Table)|31
 pj_proj4
 QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
 QgsProcessingParameterField|SOURCE_X|X Coordinate Source|None|TABLE|-1|False|False

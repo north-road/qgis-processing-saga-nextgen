@@ -1,6 +1,6 @@
-Geographic Distances
+Geographic Distances|20
 pj_proj4
 QgsProcessingParameterFeatureSource|PLANAR|Segments|1|None|False
-QgsProcessingParameterVectorDestination|ORTHODROME|Great Elliptic
-QgsProcessingParameterVectorDestination|LOXODROME|Loxodrome
+QgsProcessingParameterVectorDestination|ORTHODROME|Great Elliptic|1|None|False
+QgsProcessingParameterVectorDestination|LOXODROME|Loxodrome|1|None|False
 QgsProcessingParameterNumber|EPSILON|Epsilon|QgsProcessingParameterNumber.Double|100.000000|False|1.000000|None

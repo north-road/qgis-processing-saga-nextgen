@@ -1,4 +1,4 @@
-Export Polygons to HTML Image Map
+Export Polygons to HTML Image Map|22
 io_shapes
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
 QgsProcessingParameterField|LINK|Link|None|POLYGONS|-1|False|False

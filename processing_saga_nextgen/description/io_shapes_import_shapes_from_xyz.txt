@@ -1,5 +1,5 @@
-Import Shapes from XYZ
+Import Shapes from XYZ|3
 io_shapes
-QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterVectorDestination|POINTS|Points|0|None|False
 QgsProcessingParameterBoolean|HEADLINE|File contains headline|True
 QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

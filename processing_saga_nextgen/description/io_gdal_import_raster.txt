@@ -1,10 +1,10 @@
-Import Raster
+Import Raster|0
 io_gdal
-QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterRasterDestination|GRIDS|Grids|None|False
 QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterEnum|MULTIPLE|Multiple Bands Output|[0] single grids;[1] grid collection;[2] automatic|False|2
+QgsProcessingParameterString|SUBSETS|Subsets|
 QgsProcessingParameterString|SELECTION|Select from Multiple Bands|
-QgsProcessingParameterBoolean|SELECT_SORT|Alphanumeric Sorting|True
 QgsProcessingParameterBoolean|TRANSFORM|Transformation|True
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|0
 QgsProcessingParameterEnum|EXTENT|Extent|[0] original;[1] user defined;[2] grid system;[3] shapes extent|False|0

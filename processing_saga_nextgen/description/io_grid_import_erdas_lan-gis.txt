@@ -1,4 +1,4 @@
-Import Erdas LAN/GIS
+Import Erdas LAN/GIS|11
 io_grid
-QgsProcessingParameterRasterDestination|GRIDS|Grids
+QgsProcessingParameterRasterDestination|GRIDS|Grids|None|True
 QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

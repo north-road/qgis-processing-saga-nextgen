@@ -1,4 +1,4 @@
-Import GStat Shapes
+Import GStat Shapes|1
 io_shapes
-QgsProcessingParameterVectorDestination|SHAPES|Shapes
+QgsProcessingParameterVectorDestination|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterFile|FILENAME|File|QgsProcessingParameterFile.File|None|False

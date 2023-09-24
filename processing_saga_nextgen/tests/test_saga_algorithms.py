@@ -1,31 +1,12 @@
-# -*- coding: utf-8 -*-
-
 """
-***************************************************************************
-    SagaAlgorithmsTests.py
-    ---------------------
-    Date                 : September 2017
-    Copyright            : (C) 2017 by Alexander Bruy
-    Email                : alexander dot bruy at gmail dot com
-***************************************************************************
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-*                                                                         *
-***************************************************************************
+Test running SAGA algorithms
 """
-
-__author__ = 'Alexander Bruy'
-__date__ = 'September 2017'
-__copyright__ = '(C) 2017, Alexander Bruy'
 
 import os
-import nose2
 import shutil
 import tempfile
 
+import nose2
 from qgis.core import (QgsProcessingParameterNumber,
                        QgsProcessingParameterDefinition,
                        QgsVectorLayer,
@@ -35,16 +16,20 @@ from qgis.core import (QgsProcessingParameterNumber,
                        QgsPointXY,
                        QgsProcessingContext,
                        QgsProject,
-                       QgsProcessingFeedback,
-                       QgsProcessingFeatureSourceDefinition)
+                       QgsProcessingFeedback)
 from qgis.testing import start_app, unittest
 
-from ..processing.provider import SagaNextGenAlgorithmProvider
-from ..processing.SagaParameters import Parameters, SagaImageOutputParam
 from .AlgorithmsTestBase import AlgorithmsTest
+from ..processing.SagaParameters import Parameters, SagaImageOutputParam
+from ..processing.provider import SagaNextGenAlgorithmProvider
 
 
 class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
+    """
+    Test running SAGA algorithms
+    """
+
+    # pylint: disable=missing-function-docstring
 
     @classmethod
     def setUpClass(cls):
@@ -69,23 +54,30 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         # Test determining whether a line is a parameter line
         self.assertFalse(Parameters.is_parameter_line(''))
         self.assertFalse(Parameters.is_parameter_line('xxxxxxxxx'))
-        self.assertTrue(Parameters.is_parameter_line('QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99'))
-        self.assertTrue(Parameters.is_parameter_line('*QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99'))
-        self.assertTrue(Parameters.is_parameter_line('SagaImageOutput|RGB|Output RGB'))
+        self.assertTrue(Parameters.is_parameter_line(
+            'QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99'))
+        self.assertTrue(Parameters.is_parameter_line(
+            '*QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99'))
+        self.assertTrue(
+            Parameters.is_parameter_line('SagaImageOutput|RGB|Output RGB'))
 
     def test_param_line(self):
         # Test creating a parameter from a description line
-        param = Parameters.create_parameter_from_line('QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99')
+        param = Parameters.create_parameter_from_line(
+            'QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99')
         self.assertIsInstance(param, QgsProcessingParameterNumber)
         self.assertEqual(param.name(), 'R_PERCTL_MIN')
         self.assertEqual(param.description(), 'Percentiles Range for RED max')
-        self.assertEqual(param.dataType(), QgsProcessingParameterNumber.Integer)
-        self.assertFalse(param.flags() & QgsProcessingParameterDefinition.FlagOptional)
+        self.assertEqual(param.dataType(),
+                         QgsProcessingParameterNumber.Integer)
+        self.assertFalse(
+            param.flags() & QgsProcessingParameterDefinition.FlagOptional)
         self.assertEqual(param.minimum(), 1)
         self.assertEqual(param.maximum(), 99)
 
         # Test SagaImageOutputParam line
-        param = Parameters.create_parameter_from_line('SagaImageOutput|RGB|Output RGB')
+        param = Parameters.create_parameter_from_line(
+            'SagaImageOutput|RGB|Output RGB')
         self.assertIsInstance(param, SagaImageOutputParam)
         self.assertEqual(param.name(), 'RGB')
         self.assertEqual(param.description(), 'Output RGB')
@@ -94,8 +86,9 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
 
     def test_non_ascii_output(self):
         # create a memory layer and add to project and context
-        layer = QgsVectorLayer("Point?crs=epsg:3857&field=fldtxt:string&field=fldint:integer",
-                               "testmem", "memory")
+        layer = QgsVectorLayer(
+            "Point?crs=epsg:3857&field=fldtxt:string&field=fldint:integer",
+            "testmem", "memory")
         self.assertTrue(layer.isValid())
         pr = layer.dataProvider()
         f = QgsFeature()
@@ -110,7 +103,8 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         context = QgsProcessingContext()
         context.setProject(QgsProject.instance())
 
-        alg = QgsApplication.processingRegistry().createAlgorithmById('sagang:fixeddistancebuffer')
+        alg = QgsApplication.processingRegistry().createAlgorithmById(
+            'sagang:fixeddistancebuffer')
         self.assertIsNotNone(alg)
 
         temp_file = os.path.join(self.temp_dir, 'non_ascii_ñññ.shp')
@@ -123,7 +117,7 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
                       'BUFFER': temp_file}
         feedback = QgsProcessingFeedback()
 
-        results, ok = alg.run(parameters, context, feedback)
+        _, ok = alg.run(parameters, context, feedback)
         self.assertTrue(ok)
         self.assertTrue(os.path.exists(temp_file))
 

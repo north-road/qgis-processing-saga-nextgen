@@ -1,5 +1,5 @@
-Mirror Grid
+Mirror Grid|35
 grid_tools
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|MIRROR|Mirror Grid
+QgsProcessingParameterRasterDestination|MIRROR|Mirror Grid|None|True
 QgsProcessingParameterEnum|METHOD|Method|[0] horizontally;[1] vertically;[2] both|False|0

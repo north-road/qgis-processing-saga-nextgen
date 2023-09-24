@@ -1,4 +1,4 @@
-Mosaicking
+Mosaicking|3
 grid_tools
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|True
 QgsProcessingParameterFile|FILE_LIST|Input File List|QgsProcessingParameterFile.File|None|False
@@ -12,4 +12,5 @@ QgsProcessingParameterEnum|MATCH|Match|[0] none;[1] match histogram of first gri
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
-QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0
+QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid|None|False

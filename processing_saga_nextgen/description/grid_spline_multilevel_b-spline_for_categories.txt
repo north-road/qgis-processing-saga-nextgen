@@ -1,9 +1,10 @@
-Multilevel B-Spline for Categories
+Multilevel B-Spline for Categories|7
 grid_spline
 QgsProcessingParameterFeatureSource|POINTS|Points|-1|None|False
 QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
-QgsProcessingParameterRasterDestination|CATEGORIES|Categories
-QgsProcessingParameterRasterDestination|PROPABILITY|Propability
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0
+QgsProcessingParameterRasterDestination|CATEGORIES|Categories|None|False
+QgsProcessingParameterRasterDestination|PROPABILITY|Propability|None|False

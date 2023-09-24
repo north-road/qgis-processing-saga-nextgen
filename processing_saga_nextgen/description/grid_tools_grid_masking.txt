@@ -1,10 +1,10 @@
-Grid Masking
+Grid Masking|24
 grid_tools
 QgsProcessingParameterBoolean|LIST|List Processing|False
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|MASKED|Masked Grid
+QgsProcessingParameterRasterDestination|MASKED|Masked Grid|None|True
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
 QgsProcessingParameterBoolean|GRIDS_CREATE|Create Copies|False
-QgsProcessingParameterRasterDestination|GRIDS_MASKED|Masked Grids
+QgsProcessingParameterRasterDestination|GRIDS_MASKED|Masked Grids|None|True
 QgsProcessingParameterRasterLayer|MASK|Mask|None|False
 QgsProcessingParameterEnum|NODATA|Mask Cells|[0] no-data cells;[1] data cells|False|0

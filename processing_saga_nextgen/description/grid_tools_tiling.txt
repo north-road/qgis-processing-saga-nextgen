@@ -1,7 +1,7 @@
-Tiling
+Tiling|27
 grid_tools
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|TILES|Tiles
+QgsProcessingParameterRasterDestination|TILES|Tiles|None|False
 QgsProcessingParameterBoolean|TILES_SAVE|Save Tiles to Disk|False
 QgsProcessingParameterFile|TILES_PATH|Output Directory|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterString|TILES_NAME|Base Name|tile

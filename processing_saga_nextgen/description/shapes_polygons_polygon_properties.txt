@@ -1,0 +1,12 @@
+Polygon Properties|2
+shapes_polygons
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|OUTPUT|Polygons with Property Attributes|2|None|True
+QgsProcessingParameterString|FIELDS|Copy Attributes|
+QgsProcessingParameterBoolean|BPARTS|Number of Parts|False
+QgsProcessingParameterBoolean|BPOINTS|Number of Vertices|False
+QgsProcessingParameterBoolean|BEXTENT|Extent|False
+QgsProcessingParameterBoolean|BCENTER|Centroid|False
+QgsProcessingParameterBoolean|BLENGTH|Perimeter|True
+QgsProcessingParameterBoolean|BAREA|Area|True
+QgsProcessingParameterNumber|SCALING|Scaling|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

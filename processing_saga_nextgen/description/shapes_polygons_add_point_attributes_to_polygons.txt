@@ -1,0 +1,7 @@
+Add Point Attributes to Polygons|20
+shapes_polygons
+QgsProcessingParameterFeatureSource|INPUT|Polygons|2|None|False
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterString|FIELDS|Attributes|
+QgsProcessingParameterVectorDestination|OUTPUT|Result|2|None|True
+QgsProcessingParameterBoolean|ADD_LOCATION_INFO|Add Location Info|False

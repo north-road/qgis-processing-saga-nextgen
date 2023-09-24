@@ -1,4 +1,4 @@
-Focal Mechanism (Beachball Plots)
+Focal Mechanism (Beachball Plots)|29
 shapes_tools
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
 QgsProcessingParameterField|STRIKE|Strike|None|POINTS|-1|False|False
@@ -6,6 +6,6 @@ QgsProcessingParameterField|DIP|Dip|None|POINTS|-1|False|False
 QgsProcessingParameterField|RAKE|Rake|None|POINTS|-1|False|False
 QgsProcessingParameterField|SIZE|Size|None|POINTS|-1|False|False
 QgsProcessingParameterNumber|SIZE_DEF|Default|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
-QgsProcessingParameterVectorDestination|PLOTS|Focal Mechanism Beachballs
+QgsProcessingParameterVectorDestination|PLOTS|Focal Mechanism Beachballs|2|None|False
 QgsProcessingParameterNumber|DARC|Arc Vertex Distance [Degree]|QgsProcessingParameterNumber.Double|5.000000|False|0.100000|10.000000
 QgsProcessingParameterEnum|STYLE|Style|[0] one;[1] two|False|0

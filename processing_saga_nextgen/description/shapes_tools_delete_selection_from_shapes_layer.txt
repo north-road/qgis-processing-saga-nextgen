@@ -1,3 +1,3 @@
-Delete Selection from Shapes Layer
+Delete Selection from Shapes Layer|7
 shapes_tools
 QgsProcessingParameterFeatureSource|INPUT|Input|-1|None|False

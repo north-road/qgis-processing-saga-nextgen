@@ -1,6 +1,6 @@
-Union
+Union|17
 shapes_polygons
 QgsProcessingParameterFeatureSource|A|Layer A|2|None|False
 QgsProcessingParameterFeatureSource|B|Layer B|2|None|False
-QgsProcessingParameterVectorDestination|RESULT|Union
+QgsProcessingParameterVectorDestination|RESULT|Union|2|None|False
 QgsProcessingParameterBoolean|SPLIT|Split Parts|True

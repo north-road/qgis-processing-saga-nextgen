@@ -1,5 +1,5 @@
-Polygon Generalization
+Polygon Generalization|23
 shapes_polygons
 QgsProcessingParameterFeatureSource|POLYGONS|Shapes|2|None|False
-QgsProcessingParameterVectorDestination|GENERALIZED|Shape Indices
+QgsProcessingParameterVectorDestination|GENERALIZED|Shape Indices|2|None|True
 QgsProcessingParameterNumber|THRESHOLD|Threshold|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None

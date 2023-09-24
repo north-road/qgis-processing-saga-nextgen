@@ -1,16 +1,17 @@
-Transform Shapes
+Transform Shapes|10
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|TRANSFORM|Transformed Shapes
-QgsProcessingParameterNumber|MOVEX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
-QgsProcessingParameterNumber|MOVEY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
-QgsProcessingParameterNumber|MOVEZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterVectorDestination|TRANSFORM|Transformed Shapes|-1|None|True
+QgsProcessingParameterNumber|MOVEX|dX|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|MOVEY|dY|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|MOVEZ|dZ|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|ANCHORX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|ANCHORY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|ANCHORZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
-QgsProcessingParameterNumber|SCALEX|X|QgsProcessingParameterNumber.Double|1.000000|False|None|None
-QgsProcessingParameterNumber|SCALEY|Y|QgsProcessingParameterNumber.Double|1.000000|False|None|None
-QgsProcessingParameterNumber|SCALEZ|Z|QgsProcessingParameterNumber.Double|1.000000|False|None|None
-QgsProcessingParameterNumber|ROTATEX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
-QgsProcessingParameterNumber|ROTATEY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
-QgsProcessingParameterNumber|ROTATEZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ROTATEX|Angle X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ROTATEY|Angle Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ROTATEZ|Angle Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|SCALEX|Scale Factor X|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|SCALEY|Scale Factor Y|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|SCALEZ|Scale Factor Z|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterEnum|REFLECTION_TYPE|Type of Reflection|[0] no reflection;[1] reflection relative to xz plane;[2] reflection relative to yz plane;[3] reflection relative to xy plane|False|0

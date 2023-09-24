@@ -1,8 +1,8 @@
-Polygon Shape Indices
+Polygon Shape Indices|7
 shapes_polygons
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|2|None|False
-QgsProcessingParameterVectorDestination|INDEX|Shape Indices
-QgsProcessingParameterVectorDestination|DMAX|Maximum Diameter
+QgsProcessingParameterVectorDestination|INDEX|Shape Indices|2|None|True
+QgsProcessingParameterVectorDestination|DMAX|Maximum Diameter|1|None|True
 QgsProcessingParameterBoolean|GYROS|Diameter of Gyration|False
 QgsProcessingParameterBoolean|FERET|Feret Diameters|False
 QgsProcessingParameterNumber|FERET_DIRS|Number of Directions|QgsProcessingParameterNumber.Integer|18|False|2|None

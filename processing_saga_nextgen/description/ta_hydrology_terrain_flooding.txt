@@ -1,0 +1,10 @@
+Terrain Flooding|32
+ta_hydrology
+QgsProcessingParameterRasterLayer|DEM|DEM|None|False
+QgsProcessingParameterFeatureSource|SEEDS|Seed Points|0|None|False
+QgsProcessingParameterField|WATER_LEVEL|Water Level|None|SEEDS|-1|False|False
+QgsProcessingParameterNumber|WATER_LEVEL_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.500000|False|None|None
+QgsProcessingParameterEnum|LEVEL_REFERENCE|Water Level Reference|[0] level is given relative to DEM;[1] level is given as absolute water height|False|0
+QgsProcessingParameterBoolean|CONSTANT_LEVEL|Constant Water Level|True
+QgsProcessingParameterRasterDestination|WATER_BODY|Water Body|None|False
+QgsProcessingParameterRasterDestination|DEM_FLOODED|Flooded DEM|None|True

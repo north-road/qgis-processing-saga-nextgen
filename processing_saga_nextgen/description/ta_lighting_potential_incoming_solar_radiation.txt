@@ -1,4 +1,4 @@
-Potential Incoming Solar Radiation
+Potential Incoming Solar Radiation|2
 ta_lighting
 QgsProcessingParameterRasterLayer|GRD_DEM|Elevation|None|False
 QgsProcessingParameterRasterLayer|GRD_SVF|Sky View Factor|None|True
@@ -6,27 +6,27 @@ QgsProcessingParameterRasterLayer|GRD_VAPOUR|Water Vapour Pressure [mbar]|None|T
 QgsProcessingParameterNumber|GRD_VAPOUR_DEFAULT|Default|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
 QgsProcessingParameterRasterLayer|GRD_LINKE|Linke Turbidity Coefficient|None|True
 QgsProcessingParameterNumber|GRD_LINKE_DEFAULT|Default|QgsProcessingParameterNumber.Double|3.000000|False|0.000000|None
-QgsProcessingParameterRasterDestination|GRD_DIRECT|Direct Insolation
-QgsProcessingParameterRasterDestination|GRD_DIFFUS|Diffuse Insolation
-QgsProcessingParameterRasterDestination|GRD_TOTAL|Total Insolation
-QgsProcessingParameterRasterDestination|GRD_RATIO|Direct to Diffuse Ratio
-QgsProcessingParameterRasterDestination|GRD_FLAT|Compare to Flat Terrain
-QgsProcessingParameterRasterDestination|GRD_DURATION|Duration of Insolation
-QgsProcessingParameterRasterDestination|GRD_SUNRISE|Sunrise
-QgsProcessingParameterRasterDestination|GRD_SUNSET|Sunset
-QgsProcessingParameterNumber|SOLARCONST|Solar Constant [W / m_]|QgsProcessingParameterNumber.Double|1367.000000|False|0.000000|None
+QgsProcessingParameterRasterDestination|GRD_DIRECT|Direct Insolation|None|False
+QgsProcessingParameterRasterDestination|GRD_DIFFUS|Diffuse Insolation|None|False
+QgsProcessingParameterRasterDestination|GRD_TOTAL|Total Insolation|None|True
+QgsProcessingParameterRasterDestination|GRD_RATIO|Direct to Diffuse Ratio|None|True
+QgsProcessingParameterRasterDestination|GRD_FLAT|Compare to Flat Terrain|None|True
+QgsProcessingParameterRasterDestination|GRD_DURATION|Duration of Insolation|None|True
+QgsProcessingParameterRasterDestination|GRD_SUNRISE|Sunrise|None|True
+QgsProcessingParameterRasterDestination|GRD_SUNSET|Sunset|None|True
+QgsProcessingParameterNumber|SOLARCONST|Solar Constant [W/m_]|QgsProcessingParameterNumber.Double|1367.000000|False|0.000000|None
 QgsProcessingParameterBoolean|LOCALSVF|Local Sky View Factor|True
-QgsProcessingParameterEnum|UNITS|Units|[0] kWh / m_;[1] kJ / m_;[2] J / cm_|False|0
+QgsProcessingParameterEnum|UNITS|Units|[0] [kWh/m_];[1] [kJ/m_];[2] [J/cm_]|False|0
 QgsProcessingParameterEnum|SHADOW|Shadow|[0] slim;[1] fat;[2] none|False|0
 QgsProcessingParameterEnum|LOCATION|Location|[0] constant latitude;[1] calculate from grid system|False|0
 QgsProcessingParameterNumber|LATITUDE|Latitude|QgsProcessingParameterNumber.Double|53.000000|False|-90.000000|90.000000
 QgsProcessingParameterEnum|PERIOD|Time Period|[0] moment;[1] day;[2] range of days|False|1
-QgsProcessingParameterString|DAY|Day|2021-03-24
-QgsProcessingParameterString|DAY_STOP|Last Day|2021-03-24
+QgsProcessingParameterString|DAY|Day|2023-09-07
+QgsProcessingParameterString|DAY_STOP|Last Day|2023-09-07
 QgsProcessingParameterNumber|DAYS_STEP|Resolution [d]|QgsProcessingParameterNumber.Integer|5|False|1|None
 QgsProcessingParameterNumber|MOMENT|Moment [h]|QgsProcessingParameterNumber.Double|12.000000|False|0.000000|24.000000
 QgsProcessingParameterNumber|HOUR_STEP|Resolution [h]|QgsProcessingParameterNumber.Double|0.500000|False|0.000000|24.000000
-QgsProcessingParameterEnum|METHOD|Atmospheric Effects|[0] Height of Atmosphere and Vapour Pressure;[1] Air Pressure, Water and Dust Content;[2] Lumped Atmospheric Transmittance;[3] Hofierka and Suri|False|2
+QgsProcessingParameterEnum|METHOD|Atmospheric Effects|[0] Height of Atmosphere and Vapour Pressure;[1] Air Pressure, Water and Dust Content;[2] Lumped Atmospheric Transmittance;[3] Hofierka and __ri|False|2
 QgsProcessingParameterNumber|ATMOSPHERE|Height of Atmosphere [m]|QgsProcessingParameterNumber.Double|12000.000000|False|0.000000|None
 QgsProcessingParameterNumber|PRESSURE|Barometric Pressure [mbar]|QgsProcessingParameterNumber.Double|1013.000000|False|0.000000|None
 QgsProcessingParameterNumber|WATER|Water Content [cm]|QgsProcessingParameterNumber.Double|1.680000|False|0.000000|None

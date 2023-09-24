@@ -1,9 +1,9 @@
-Multi-Band Variation
+Multi-Band Variation|9
 statistics_grid
 QgsProcessingParameterMultipleLayers|BANDS|Bands|3|None|False
-QgsProcessingParameterRasterDestination|MEAN|Mean Distance
-QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation
-QgsProcessingParameterRasterDestination|DIFF|Distance
+QgsProcessingParameterRasterDestination|MEAN|Mean Distance|None|False
+QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation|None|False
+QgsProcessingParameterRasterDestination|DIFF|Distance|None|False
 QgsProcessingParameterNumber|RADIUS|Radius [Cells]|QgsProcessingParameterNumber.Integer|1|False|1|None
 QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|0
 QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None

@@ -1,15 +1,15 @@
-Overland Flow Distance to Channel Network
+Overland Flow Distance to Channel Network|4
 ta_channels
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
 QgsProcessingParameterRasterLayer|CHANNELS|Channel Network|None|False
 QgsProcessingParameterRasterLayer|ROUTE|Preferred Routing|None|True
-QgsProcessingParameterRasterDestination|DISTANCE|Overland Flow Distance
-QgsProcessingParameterRasterDestination|DISTVERT|Vertical Overland Flow Distance
-QgsProcessingParameterRasterDestination|DISTHORZ|Horizontal Overland Flow Distance
-QgsProcessingParameterRasterDestination|TIME|Flow Travel Time
-QgsProcessingParameterRasterDestination|SDR|Sediment Yield Delivery Ratio
+QgsProcessingParameterRasterDestination|DISTANCE|Overland Flow Distance|None|False
+QgsProcessingParameterRasterDestination|DISTVERT|Vertical Overland Flow Distance|None|False
+QgsProcessingParameterRasterDestination|DISTHORZ|Horizontal Overland Flow Distance|None|False
+QgsProcessingParameterRasterDestination|TIME|Flow Travel Time|None|True
+QgsProcessingParameterRasterDestination|SDR|Sediment Yield Delivery Ratio|None|True
 QgsProcessingParameterRasterLayer|FIELDS|Fields|None|True
-QgsProcessingParameterRasterDestination|PASSES|Fields Visited
+QgsProcessingParameterRasterDestination|PASSES|Fields Visited|None|False
 QgsProcessingParameterEnum|METHOD|Flow Algorithm|[0] D8;[1] MFD|False|1
 QgsProcessingParameterBoolean|BOUNDARY|Boundary Cells|False
 QgsProcessingParameterNumber|FLOW_B|Beta|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

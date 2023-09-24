@@ -1,11 +1,12 @@
-Channel Network and Drainage Basins
+Channel Network and Drainage Basins|5
 ta_channels
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|DIRECTION|Flow Direction
-QgsProcessingParameterRasterDestination|CONNECTION|Flow Connectivity
-QgsProcessingParameterRasterDestination|ORDER|Strahler Order
-QgsProcessingParameterRasterDestination|BASIN|Drainage Basins
-QgsProcessingParameterVectorDestination|SEGMENTS|Channels
-QgsProcessingParameterVectorDestination|BASINS|Drainage Basins
-QgsProcessingParameterVectorDestination|NODES|Junctions
+QgsProcessingParameterRasterDestination|DIRECTION|Flow Direction|None|True
+QgsProcessingParameterRasterDestination|CONNECTION|Flow Connectivity|None|True
+QgsProcessingParameterRasterDestination|ORDER|Strahler Order|None|True
+QgsProcessingParameterRasterDestination|BASIN|Drainage Basins|None|True
+QgsProcessingParameterVectorDestination|SEGMENTS|Channels|1|None|False
+QgsProcessingParameterVectorDestination|BASINS|Drainage Basins|2|None|False
+QgsProcessingParameterVectorDestination|NODES|Junctions|0|None|True
 QgsProcessingParameterNumber|THRESHOLD|Threshold|QgsProcessingParameterNumber.Integer|5|False|1|None
+QgsProcessingParameterBoolean|SUBBASINS|Subbasins|True

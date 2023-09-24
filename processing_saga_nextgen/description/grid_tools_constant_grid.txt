@@ -1,4 +1,4 @@
-Constant Grid
+Constant Grid|4
 grid_tools
 QgsProcessingParameterString|NAME|Name|Constant Grid
 QgsProcessingParameterNumber|CONST|Constant Value|QgsProcessingParameterNumber.Double|1.000000|False|None|None
@@ -9,8 +9,8 @@ QgsProcessingParameterNumber|USER_XMIN|West|QgsProcessingParameterNumber.Double|
 QgsProcessingParameterNumber|USER_XMAX|East|QgsProcessingParameterNumber.Double|100.000000|False|None|None
 QgsProcessingParameterNumber|USER_YMIN|South|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|USER_YMAX|North|QgsProcessingParameterNumber.Double|100.000000|False|None|None
-QgsProcessingParameterNumber|USER_COLS|Columns|QgsProcessingParameterNumber.Integer|100|False|1|None
-QgsProcessingParameterNumber|USER_ROWS|Rows|QgsProcessingParameterNumber.Integer|100|False|1|None
+QgsProcessingParameterNumber|USER_COLS|Columns|QgsProcessingParameterNumber.Integer|101|False|1|None
+QgsProcessingParameterNumber|USER_ROWS|Rows|QgsProcessingParameterNumber.Integer|101|False|1|None
 QgsProcessingParameterEnum|USER_FITS|Fit|[0] nodes;[1] cells|False|0
 QgsProcessingParameterRasterLayer|TEMPLATE|Target System|None|True
-QgsProcessingParameterRasterDestination|OUT_GRID|Target Grid
+QgsProcessingParameterRasterDestination|OUT_GRID|Target Grid|None|False

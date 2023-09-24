@@ -1,12 +1,12 @@
-Soil Water Balance (Days)
+Soil Water Balance (Days)|24
 climate_tools
 QgsProcessingParameterMultipleLayers|TAVG|Mean Temperature|3|None|False
 QgsProcessingParameterMultipleLayers|TMIN|Minimum Temperature|3|None|False
 QgsProcessingParameterMultipleLayers|TMAX|Maximum Temperature|3|None|False
 QgsProcessingParameterMultipleLayers|PSUM|Precipitation|3|None|False
-QgsProcessingParameterRasterDestination|SNOW|Snow Depth
-QgsProcessingParameterRasterDestination|SW_0|Soil Water (Upper Layer)
-QgsProcessingParameterRasterDestination|SW_1|Soil Water (Lower Layer)
+QgsProcessingParameterRasterDestination|SNOW|Snow Depth|None|False
+QgsProcessingParameterRasterDestination|SW_0|Soil Water (Upper Layer)|None|False
+QgsProcessingParameterRasterDestination|SW_1|Soil Water (Lower Layer)|None|False
 QgsProcessingParameterRasterLayer|LAT_GRID|Latitude|None|True
 QgsProcessingParameterNumber|LAT_CONST|Default Latitude|QgsProcessingParameterNumber.Double|50.000000|False|-90.000000|90.000000
 QgsProcessingParameterRasterLayer|SWC|Soil Water Capacity of Profile|None|True
@@ -14,4 +14,4 @@ QgsProcessingParameterNumber|SWC_DEFAULT|Default|QgsProcessingParameterNumber.Do
 QgsProcessingParameterNumber|SWC_SURFACE|Top Soil Water Capacity|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|None
 QgsProcessingParameterNumber|SWT_RESIST|Transpiration Resistance|QgsProcessingParameterNumber.Double|0.500000|False|0.010000|None
 QgsProcessingParameterBoolean|RESET|Reset|True
-QgsProcessingParameterString|DAY|Start Day|2021-03-24
+QgsProcessingParameterString|DAY|Start Day|2023-09-07

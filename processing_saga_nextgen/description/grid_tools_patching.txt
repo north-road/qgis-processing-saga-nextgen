@@ -1,6 +1,6 @@
-Patching
+Patching|5
 grid_tools
 QgsProcessingParameterRasterLayer|ORIGINAL|Grid|None|False
-QgsProcessingParameterRasterDestination|COMPLETED|Patched Grid
+QgsProcessingParameterRasterDestination|COMPLETED|Patched Grid|None|True
 QgsProcessingParameterRasterLayer|ADDITIONAL|Patch Grid|None|False
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3

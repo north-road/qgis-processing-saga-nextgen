@@ -1,0 +1,8 @@
+Iterative Truncation|29
+grid_analysis
+QgsProcessingParameterRasterLayer|INPUT|Input|None|False
+QgsProcessingParameterRasterDestination|REMOVED|Removed Cells|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Output|None|True
+QgsProcessingParameterNumber|TARGET|Target Average|QgsProcessingParameterNumber.Double|100.000000|False|None|None
+QgsProcessingParameterEnum|METHOD|Method|[0] remove cell values;[1] replace cell values|False|0
+QgsProcessingParameterNumber|SUBSTITUTE|Substitute Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None

@@ -1,0 +1,8 @@
+Hough Circle Transformation|16
+imagery_opencv
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterVectorDestination|CIRCLES|Circles|2|None|False
+QgsProcessingParameterEnum|UNIT|Unit|[0] cells;[1] map units|False|0
+QgsProcessingParameterNumber|MIN_DIST|Minimum Distance|QgsProcessingParameterNumber.Double|3.000000|False|0.000000|None
+QgsProcessingParameterEnum|METHOD|Method|[0] Hough gradient;[1] Hough gradient (alternative)|False|0
+QgsProcessingParameterNumber|RESOLUTION|Accumulator Resolution|QgsProcessingParameterNumber.Double|3.000000|False|1.000000|None

@@ -188,7 +188,9 @@ class SagaUtils:
         """
 
         if isWindows():
-            command = ['cmd.exe', '/C ', SagaUtils.sagaBatchJobFilename()]
+            safeSagaBatchJobFilename = makePathSafe(SagaUtils.sagaBatchJobFilename())
+            command = ['cmd.exe', '/C ', safeSagaBatchJobFilename]
+            command = (' ').join(command)
         else:
             os.chmod(SagaUtils.sagaBatchJobFilename(), stat.S_IEXEC |
                      stat.S_IREAD | stat.S_IWRITE)
@@ -223,3 +225,19 @@ class SagaUtils:
 
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_CONSOLE):
             QgsMessageLog.logMessage('\n'.join(loglines), 'Processing', Qgis.Info)
+
+
+def makePathSafe(path):
+    """Handle special characters on the path to the batch file for example: & < > ( ) @ ^ |.
+    See: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd#remarks
+    """
+    return '"' + path.translate(str.maketrans({
+        "&": r"^&",
+        "<": r"^<",
+        ">": r"^>",
+        "(": r"^(",
+        ")": r"^)",
+        "@": r"^@",
+        "^": r"^^",
+        "|": r"^|",
+    })) + '"'

@@ -1,6 +1,6 @@
-Close Gaps
+Close Gaps|7
 grid_tools
 QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
 QgsProcessingParameterRasterLayer|MASK|Mask|None|True
-QgsProcessingParameterRasterDestination|RESULT|Changed Grid
+QgsProcessingParameterRasterDestination|RESULT|Changed Grid|None|True
 QgsProcessingParameterNumber|THRESHOLD|Tension Threshold|QgsProcessingParameterNumber.Double|0.100000|False|None|None

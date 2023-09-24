@@ -1,7 +1,8 @@
-Flow Width and Specific Catchment Area
+Flow Width and Specific Catchment Area|19
 ta_hydrology
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|WIDTH|Flow Width
+QgsProcessingParameterRasterDestination|WIDTH|Flow Width|None|False
 QgsProcessingParameterRasterLayer|TCA|Total Catchment Area (TCA)|None|True
-QgsProcessingParameterRasterDestination|SCA|Specific Catchment Area (SCA)
+QgsProcessingParameterRasterDestination|SCA|Specific Catchment Area (SCA)|None|False
+QgsProcessingParameterEnum|COORD_UNIT|Coordinate Unit|[0] meter;[1] feet|False|0
 QgsProcessingParameterEnum|METHOD|Method|[0] Deterministic 8;[1] Multiple Flow Direction (Quinn et al. 1991);[2] Aspect|False|2

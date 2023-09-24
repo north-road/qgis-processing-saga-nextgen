@@ -1,4 +1,4 @@
-Export Shapes to KML
+Export Shapes to KML|5
 io_gdal
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

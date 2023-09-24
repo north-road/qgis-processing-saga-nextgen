@@ -1,0 +1,19 @@
+Resection (Terrestrial)|0
+imagery_photogrammetry
+QgsProcessingParameterPointCloudLayer|POINTS|Measured Points (PC)|None|False
+QgsProcessingParameterNumber|F|Focal Length (mm)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|W|Pixel Width (um)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterBoolean|EST_OFFSETS|Estimate Principal Point Offsets?|False
+QgsProcessingParameterNumber|ppX|Principal Point Offset in X (pixels)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ppY|Principal Point Offset in Y (pixels)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterBoolean|GIVE_DISTORTIONS|Provide Radial Distortion Parameters?|False
+QgsProcessingParameterNumber|K1|K1|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|K2|K2|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|K3|K3|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Xc|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Yc|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Zc|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Xt|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Yt|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Zt|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterFile|OUTPUT FILE|Output Text File|QgsProcessingParameterFile.File|None|False

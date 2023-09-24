@@ -1,5 +1,5 @@
-Fuzzy Intersection (AND)
+Fuzzy Intersection (AND)|12
 grid_calculus
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
-QgsProcessingParameterRasterDestination|AND|Intersection
+QgsProcessingParameterRasterDestination|AND|Intersection|None|False
 QgsProcessingParameterEnum|TYPE|Operator Type|[0] min(a, b) (non-interactive);[1] a * b;[2] max(0, a + b - 1)|False|0

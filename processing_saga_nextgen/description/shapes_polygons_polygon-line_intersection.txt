@@ -1,5 +1,7 @@
-Polygon-Line Intersection
+Polygon-Line Intersection|8
 shapes_polygons
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
 QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
-QgsProcessingParameterVectorDestination|INTERSECT|Intersection
+QgsProcessingParameterVectorDestination|INTERSECT|Intersection|2|None|False
+QgsProcessingParameterBoolean|SPLIT_PARTS|Split Parts|True
+QgsProcessingParameterEnum|METHOD|Method|[0] all lines at once;[1] line-by-line|False|0

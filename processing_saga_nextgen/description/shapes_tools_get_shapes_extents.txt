@@ -1,5 +1,5 @@
-Get Shapes Extents
+Get Shapes Extents|19
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|EXTENTS|Extents
+QgsProcessingParameterVectorDestination|EXTENTS|Extents|2|None|False
 QgsProcessingParameterEnum|OUTPUT|Get Extent for ...|[0] all shapes;[1] each shape;[2] each shape's part|False|1

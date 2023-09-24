@@ -1,0 +1,8 @@
+Convert Line/Polygon Vertices to Points|5
+shapes_points
+QgsProcessingParameterFeatureSource|LINES|Lines|-1|None|False
+QgsProcessingParameterVectorDestination|POINTS|Points|0|None|False
+QgsProcessingParameterBoolean|ADD_POINT_ORDER|Add Point Order|False
+QgsProcessingParameterBoolean|ADD|Insert Additional Points|False
+QgsProcessingParameterEnum|METHOD_INSERT|Insertion|[0] per line segment;[1] per line;[2] from line center|False|0
+QgsProcessingParameterNumber|DIST|Insertion Distance|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

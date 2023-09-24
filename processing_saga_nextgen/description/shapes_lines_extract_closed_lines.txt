@@ -1,0 +1,6 @@
+Extract Closed Lines|10
+shapes_lines
+QgsProcessingParameterFeatureSource|LINES_IN|Lines|1|None|False
+QgsProcessingParameterVectorDestination|LINES_OUT|Closed Lines|1|None|False
+QgsProcessingParameterNumber|TOLERANCE|Tolerance|QgsProcessingParameterNumber.Double|0.001000|False|0.000000|None
+QgsProcessingParameterNumber|MAX_LENGTH|Maximum Length|QgsProcessingParameterNumber.Double|10000.000000|False|0.000000|None

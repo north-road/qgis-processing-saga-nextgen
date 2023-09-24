@@ -1,7 +1,7 @@
-Copy Shapes from Region
+Copy Shapes from Region|13
 shapes_tools
 QgsProcessingParameterMultipleLayers|SHAPES|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|CUT|Copy
+QgsProcessingParameterVectorDestination|CUT|Copy|-1|None|False
 QgsProcessingParameterEnum|METHOD|Method|[0] completely contained;[1] intersects;[2] center|False|1
 QgsProcessingParameterEnum|EXTENT|Region|[0] user defined;[1] grid project;[2] shapes layer extent;[3] polygons|False|0
 QgsProcessingParameterNumber|AX|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None

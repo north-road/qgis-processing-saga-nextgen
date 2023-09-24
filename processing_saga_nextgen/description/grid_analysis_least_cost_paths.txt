@@ -1,7 +1,7 @@
-Least Cost Paths
+Least Cost Paths|5
 grid_analysis
 QgsProcessingParameterFeatureSource|SOURCE|Source Point(s)|0|None|False
 QgsProcessingParameterRasterLayer|DEM|Accumulated Cost Surface|None|False
 QgsProcessingParameterMultipleLayers|VALUES|Values|3|None|True
-QgsProcessingParameterVectorDestination|POINTS|Profile Points
-QgsProcessingParameterVectorDestination|LINE|Profile Lines
+QgsProcessingParameterVectorDestination|POINTS|Profile Points|-1|None|False
+QgsProcessingParameterVectorDestination|LINE|Profile Lines|-1|None|False

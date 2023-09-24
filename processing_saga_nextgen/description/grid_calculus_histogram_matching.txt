@@ -1,7 +1,7 @@
-Histogram Matching
+Histogram Matching|21
 grid_calculus
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|MATCHED|Adjusted Grid
+QgsProcessingParameterRasterDestination|MATCHED|Adjusted Grid|None|True
 QgsProcessingParameterRasterLayer|REFERENCE|Reference Grid|None|False
 QgsProcessingParameterEnum|METHOD|Method|[0] standard deviation;[1] histogram|False|1
 QgsProcessingParameterNumber|NCLASSES|Histogramm Classes|QgsProcessingParameterNumber.Integer|100|False|100|None

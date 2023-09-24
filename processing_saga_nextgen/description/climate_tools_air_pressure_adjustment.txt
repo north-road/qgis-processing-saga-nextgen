@@ -1,4 +1,4 @@
-Air Pressure Adjustment
+Air Pressure Adjustment|27
 climate_tools
 QgsProcessingParameterRasterLayer|P|Air Pressure|None|True
 QgsProcessingParameterNumber|P_DEFAULT|Default|QgsProcessingParameterNumber.Double|1013.250000|False|None|None
@@ -9,4 +9,4 @@ QgsProcessingParameterNumber|T_DEFAULT|Default|QgsProcessingParameterNumber.Doub
 QgsProcessingParameterRasterLayer|L|Temperature Lapse Rate|None|True
 QgsProcessingParameterNumber|L_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.006500|False|None|None
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|P_ADJ|Adjusted Air Pressure
+QgsProcessingParameterRasterDestination|P_ADJ|Adjusted Air Pressure|None|False

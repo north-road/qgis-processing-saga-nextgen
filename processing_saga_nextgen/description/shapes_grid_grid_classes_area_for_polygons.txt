@@ -1,7 +1,7 @@
-Grid Classes Area for Polygons
+Grid Classes Area for Polygons|18
 shapes_grid
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
-QgsProcessingParameterVectorDestination|RESULT|Result
+QgsProcessingParameterVectorDestination|RESULT|Result|2|None|True
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
 QgsProcessingParameterEnum|PROCESS|Processing Order|[0] cell by cell;[1] polygon by polygon|False|1
 QgsProcessingParameterEnum|METHOD|Cell Area Intersection|[0] cell center;[1] cell area|False|0

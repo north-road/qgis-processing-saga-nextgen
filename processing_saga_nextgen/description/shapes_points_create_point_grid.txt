@@ -1,4 +1,4 @@
-Create Point Grid
+Create Point Grid|2
 shapes_points
-QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterVectorDestination|POINTS|Points|-1|None|False
 QgsProcessingParameterNumber|DIST|Distance|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

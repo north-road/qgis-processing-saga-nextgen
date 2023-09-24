@@ -1,4 +1,4 @@
-Polygons to Grid
+Polygons to Grid|9
 grid_gridding
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
 QgsProcessingParameterField|FIELD|Attribute|None|POLYGONS|-1|False|False
@@ -8,5 +8,6 @@ QgsProcessingParameterEnum|GRID_TYPE|Data Type|[0] 1 bit;[1] 1 byte unsigned int
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
-QgsProcessingParameterRasterDestination|GRID|Grid
-QgsProcessingParameterRasterDestination|COVERAGE|Coverage
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0
+QgsProcessingParameterRasterDestination|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|COVERAGE|Coverage|None|True

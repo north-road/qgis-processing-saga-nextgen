@@ -1,7 +1,12 @@
-Lapse Rate Based Temperature Downscaling (Bulk Processing)
-toolchains_climate_tools
+Lapse Rate Based Temperature Downscaling (Bulk Processing)|t_downscale_bulk
+climate_tools
 QgsProcessingParameterRasterLayer|LORES_DEM|Elevation|None|False
+QgsProcessingParameterRasterLayer|LORES_LAPSE|Lapse Rate|None|False
 QgsProcessingParameterMultipleLayers|LORES_T|Temperature|3|None|False
 QgsProcessingParameterRasterLayer|HIRES_DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|HIRES_T|Temperature
-QgsProcessingParameterNumber|LAPSE_RATE|Constant Lapse Rate|QgsProcessingParameterNumber.Double|0.600000|False|0.000000|None
+QgsProcessingParameterRasterDestination|HIRES_T|Temperature|None|False
+QgsProcessingParameterEnum|LAPSE_METHOD|Lapse Rate|[0] constant lapse rate;[1] constant lapse rate from regression;[2] varying lapse rate from grid|False|1
+QgsProcessingParameterNumber|CONST_LAPSE|Constant or Minimum Lapse Rate|QgsProcessingParameterNumber.Double|0.600000|False|0.000000|None
+QgsProcessingParameterEnum|REGRS_LAPSE|Regression|[0] elevation;[1] elevation and position;[2] elevation and position (2nd order polynom)|False|2
+QgsProcessingParameterBoolean|LIMIT_LAPSE|Limit Minimum Lapse Rate|False
+QgsProcessingParameterNumber|MINIM_LAPSE|Minimum Lapse Rate|QgsProcessingParameterNumber.Double|0.200000|False|0.000000|None

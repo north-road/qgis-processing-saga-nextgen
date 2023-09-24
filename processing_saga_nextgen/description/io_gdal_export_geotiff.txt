@@ -1,4 +1,4 @@
-Export GeoTIFF
+Export GeoTIFF|2
 io_gdal
 QgsProcessingParameterMultipleLayers|GRIDS|Grid(s)|3|None|False
 QgsProcessingParameterFile|FILE|File|QgsProcessingParameterFile.File|None|False

@@ -1,7 +1,7 @@
-Topographic Position Index (TPI)
+Topographic Position Index (TPI)|18
 ta_morphometry
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|TPI|Topographic Position Index
+QgsProcessingParameterRasterDestination|TPI|Topographic Position Index|None|False
 QgsProcessingParameterBoolean|STANDARD|Standardize|False
 QgsProcessingParameterNumber|RADIUS_MIN|Min Radius|QgsProcessingParameterNumber.Double|0.0|False|0.0|None
 QgsProcessingParameterNumber|RADIUS_MAX|Max Radius|QgsProcessingParameterNumber.Double|100.0|False|None|None

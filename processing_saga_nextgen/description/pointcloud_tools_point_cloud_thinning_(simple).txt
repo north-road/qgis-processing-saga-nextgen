@@ -1,0 +1,5 @@
+Point Cloud Thinning (Simple)|9
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|INPUT|Points|None|False
+QgsProcessingParameterPointCloudDestination|RESULT|Thinned Points|None|True
+QgsProcessingParameterNumber|PERCENT|Percent|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|100.000000

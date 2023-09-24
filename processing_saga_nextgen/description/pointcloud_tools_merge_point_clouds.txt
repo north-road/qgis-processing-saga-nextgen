@@ -1,0 +1,7 @@
+Merge Point Clouds|12
+pointcloud_tools
+QgsProcessingParameterMultipleLayers|PC_LAYERS|Point Clouds|8|None|False
+QgsProcessingParameterPointCloudDestination|PC_OUT|Merged Point Cloud|None|False
+QgsProcessingParameterBoolean|DEL_LAYERS|Delete Input|True
+QgsProcessingParameterBoolean|ADD_IDENTIFIER|Add Input Identifier|False
+QgsProcessingParameterNumber|START_VALUE|Start Value|QgsProcessingParameterNumber.Integer|1|False|None|None

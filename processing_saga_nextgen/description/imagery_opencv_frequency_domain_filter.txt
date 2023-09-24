@@ -1,0 +1,8 @@
+Frequency Domain Filter|14
+imagery_opencv
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|FILTERED|Filtered Grid|None|False
+QgsProcessingParameterEnum|FILTER|Filter|[0] range;[1] power of distance;[2] Hann window;[3] Gaussian|False|2
+QgsProcessingParameterBoolean|INVERSE|Inverse|False
+QgsProcessingParameterNumber|POWER|Power|QgsProcessingParameterNumber.Double|0.500000|False|None|None
+QgsProcessingParameterNumber|SCALE|Band Width|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None

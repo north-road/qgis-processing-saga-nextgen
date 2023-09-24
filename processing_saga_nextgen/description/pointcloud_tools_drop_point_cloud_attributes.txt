@@ -1,0 +1,5 @@
+Drop Point Cloud Attributes|7
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|INPUT|Input|None|False
+QgsProcessingParameterString|FIELDS|Attributes|
+QgsProcessingParameterPointCloudDestination|OUTPUT|Output|None|True

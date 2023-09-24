@@ -1,7 +1,7 @@
-Directional Grid Statistics
-toolchains_toolchains
+Directional Grid Statistics|grid_statistics_for_directions
+toolchains
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean
+QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean|None|False
 QgsProcessingParameterNumber|BEGIN|Start Direction|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|END|Stop Direction|QgsProcessingParameterNumber.Double|359.000000|False|None|None
 QgsProcessingParameterNumber|STEP|Directional Step|QgsProcessingParameterNumber.Double|45.000000|False|1.000000|None

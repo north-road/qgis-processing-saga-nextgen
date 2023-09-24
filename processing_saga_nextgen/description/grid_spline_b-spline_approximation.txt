@@ -1,9 +1,10 @@
-B-Spline Approximation
+B-Spline Approximation|3
 grid_spline
 QgsProcessingParameterFeatureSource|SHAPES|Points|-1|None|False
 QgsProcessingParameterField|FIELD|Attribute|None|SHAPES|-1|False|False
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
-QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0
+QgsProcessingParameterRasterDestination|TARGET_OUT_GRID|Target Grid|None|False
 QgsProcessingParameterNumber|LEVEL|Range|QgsProcessingParameterNumber.Double|1.000000|False|0.001000|None

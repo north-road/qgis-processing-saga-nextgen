@@ -1,6 +1,6 @@
-World File from Flight and Camera Settings
+World File from Flight and Camera Settings|6
 pj_georeference
-QgsProcessingParameterVectorDestination|EXTENT|Extent
+QgsProcessingParameterVectorDestination|EXTENT|Extent|2|None|True
 QgsProcessingParameterFile|FILE|World File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterNumber|NX|Number of Columns|QgsProcessingParameterNumber.Integer|100|False|1|None
 QgsProcessingParameterNumber|NY|Number of Rows|QgsProcessingParameterNumber.Integer|100|False|1|None

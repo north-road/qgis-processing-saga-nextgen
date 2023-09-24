@@ -1,8 +1,8 @@
-Categorical Coincidence
+Categorical Coincidence|14
 statistics_grid
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
-QgsProcessingParameterRasterDestination|CATEGORIES|Number of Categories
-QgsProcessingParameterRasterDestination|COINCIDENCE|Coincidence
-QgsProcessingParameterRasterDestination|MAJ_COUNT|Dominance of Majority
-QgsProcessingParameterRasterDestination|MAJ_VALUE|Value of Majority
+QgsProcessingParameterRasterDestination|CATEGORIES|Number of Categories|None|False
+QgsProcessingParameterRasterDestination|COINCIDENCE|Coincidence|None|False
+QgsProcessingParameterRasterDestination|MAJ_COUNT|Dominance of Majority|None|False
+QgsProcessingParameterRasterDestination|MAJ_VALUE|Value of Majority|None|False
 QgsProcessingParameterNumber|RADIUS|Radius [Cells]|QgsProcessingParameterNumber.Integer|0|False|0|None

@@ -1,0 +1,22 @@
+Colorisation (PC)|1
+imagery_photogrammetry
+QgsProcessingParameterRasterLayer|rgbImage|RGB Image|None|False
+QgsProcessingParameterPointCloudLayer|PC_IN|Points to be Colorised|None|False
+QgsProcessingParameterBoolean|GIVE_TIME|Provide Time stamp of Image?|False
+QgsProcessingParameterNumber|IMG_TIME|Time stamp of Image|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|TIME_DIFF|Time Difference between Image & Points|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|F|Focal Length (mm)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|W|Pixel Width (um)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ppX|Principal Point Offset in X (pixles)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ppY|Principal Point Offset in Y (pixels)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterBoolean|GIVE_DISTORTIONS|Provide Radial Distortion Parameters?|False
+QgsProcessingParameterNumber|K1|K1|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|K2|K2|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|K3|K3|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Xc|Projection Centre - X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Yc|Projection Centre - Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|Zc|Projection Centre - Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|omega|Omega|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|kappa|Kappa|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|alpha|Alpha|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterPointCloudDestination|PC_OUT|Colorised Point Cloud|None|False

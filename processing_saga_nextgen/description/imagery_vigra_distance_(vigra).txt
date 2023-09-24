@@ -1,0 +1,5 @@
+Distance (ViGrA)|3
+imagery_vigra
+QgsProcessingParameterRasterLayer|INPUT|Features|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Distance|None|False
+QgsProcessingParameterEnum|NORM|Type of distance calculation|[0] Chessboard;[1] Manhattan;[2] Euclidean|False|0

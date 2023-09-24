@@ -1,0 +1,4 @@
+Point Cloud to Shapes|5
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|POINTS|Points|None|False
+QgsProcessingParameterVectorDestination|SHAPES|Shapes|0|None|False

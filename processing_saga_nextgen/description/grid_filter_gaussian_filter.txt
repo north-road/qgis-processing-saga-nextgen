@@ -1,7 +1,6 @@
-Gaussian Filter
+Gaussian Filter|1
 grid_filter
 QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
-QgsProcessingParameterRasterDestination|RESULT|Filtered Grid
-QgsProcessingParameterNumber|SIGMA|Standard Deviation|QgsProcessingParameterNumber.Double|50.000000|False|0.000100|None
-QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
-QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid|None|True
+QgsProcessingParameterNumber|KERNEL_RADIUS|Kernel Radius|QgsProcessingParameterNumber.Integer|2|False|1|None
+QgsProcessingParameterNumber|SIGMA|Standard Deviation|QgsProcessingParameterNumber.Double|50.000000|False|1.000000|None

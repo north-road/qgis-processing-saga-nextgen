@@ -1,0 +1,24 @@
+Supervised Majority Choice Image Classification|imagery_classify_majority
+imagery
+QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
+QgsProcessingParameterBoolean|NORMALIZE|Normalize|False
+QgsProcessingParameterEnum|MODEL_TRAIN|Training|[0] training areas;[1] training samples|False|0
+QgsProcessingParameterFeatureSource|TRAIN_AREAS|Training Areas|-1|None|False
+QgsProcessingParameterField|TRAIN_CLASS|Class Identifier|None|TRAIN_AREAS|-1|False|False
+QgsProcessingParameterNumber|TRAIN_BUFFER|Buffer Size|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|None
+QgsProcessingParameterFeatureSource|TRAIN_SAMPLES|Training Samples|5|None|False
+QgsProcessingParameterRasterDestination|CLASSES|Majority Choice|None|False
+QgsProcessingParameterBoolean|UNAMBIGUOUS|Unambiguous|False
+QgsProcessingParameterRasterDestination|MAJORITY_COUNT|Majority Count|None|True
+QgsProcessingParameterRasterDestination|NUNIQUES|Classes Count|None|True
+QgsProcessingParameterBoolean|CLASSIFY_BOX|Parallel Epiped|True
+QgsProcessingParameterBoolean|CLASSIFY_MINDIST|Minimum Distance|True
+QgsProcessingParameterBoolean|CLASSIFY_MAHALONOBIS|Mahalonobis Distance|True
+QgsProcessingParameterBoolean|CLASSIFY_MAXLIKE|Maximum Likelihood|True
+QgsProcessingParameterBoolean|CLASSIFY_SAM|Spectral Angle Mapping|True
+QgsProcessingParameterBoolean|CLASSIFY_BAYES|Normal Bayes|True
+QgsProcessingParameterBoolean|CLASSIFY_DT|Decision Tree|True
+QgsProcessingParameterBoolean|CLASSIFY_RF|Random Forest|False
+QgsProcessingParameterBoolean|CLASSIFY_SVM|Support Vector Machine|True
+QgsProcessingParameterBoolean|CLASSIFY_KNN|K-Nearest Neighbours|False
+QgsProcessingParameterBoolean|CLASSIFY_ANN|Artificial Neural Network|False

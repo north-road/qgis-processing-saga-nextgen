@@ -1,4 +1,4 @@
-UTM Projection (Shapes List)
+UTM Projection (Shapes List)|25
 pj_proj4
 QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
 QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
@@ -6,7 +6,7 @@ QgsProcessingParameterFile|CRS_FILE|Well Known Text File|QgsProcessingParameterF
 QgsProcessingParameterNumber|CRS_EPSG|Authority Code|QgsProcessingParameterNumber.Integer|-1|False|None|None
 QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
 QgsProcessingParameterMultipleLayers|SOURCE|Source|-1|None|False
-QgsProcessingParameterVectorDestination|TARGET|Target
+QgsProcessingParameterVectorDestination|TARGET|Target|-1|None|True
 QgsProcessingParameterBoolean|TRANSFORM_Z|Z Transformation|True
 QgsProcessingParameterBoolean|PARALLEL|Parallel Processing|False
 QgsProcessingParameterBoolean|COPY|Copy|True

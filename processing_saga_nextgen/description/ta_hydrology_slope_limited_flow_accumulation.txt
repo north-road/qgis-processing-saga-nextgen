@@ -1,8 +1,8 @@
-Slope Limited Flow Accumulation
+Slope Limited Flow Accumulation|26
 ta_hydrology
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
 QgsProcessingParameterRasterLayer|WEIGHT|Weight|None|True
-QgsProcessingParameterRasterDestination|FLOW|Flow Accumulation
+QgsProcessingParameterRasterDestination|FLOW|Flow Accumulation|None|False
 QgsProcessingParameterNumber|SLOPE_MIN|Slope Minimum|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
 QgsProcessingParameterNumber|SLOPE_MAX|Slope Threshold|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|90.000000
 QgsProcessingParameterBoolean|B_FLOW|Use Flow Threshold|False

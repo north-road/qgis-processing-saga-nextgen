@@ -1,4 +1,4 @@
-Tasseled Cap Transformation
+Tasseled Cap Transformation|3
 imagery_tools
 QgsProcessingParameterRasterLayer|BLUE|Blue (TM 1)|None|False
 QgsProcessingParameterRasterLayer|GREEN|Green (TM 2)|None|False
@@ -6,6 +6,6 @@ QgsProcessingParameterRasterLayer|RED|Red (TM 3)|None|False
 QgsProcessingParameterRasterLayer|NIR|Near Infrared (TM 4)|None|False
 QgsProcessingParameterRasterLayer|MIR1|Mid Infrared (TM 5)|None|False
 QgsProcessingParameterRasterLayer|MIR2|Mid Infrared (TM 7)|None|False
-QgsProcessingParameterRasterDestination|BRIGHTNESS|Brightness
-QgsProcessingParameterRasterDestination|GREENNESS|Greenness
-QgsProcessingParameterRasterDestination|WETNESS|Wetness
+QgsProcessingParameterRasterDestination|BRIGHTNESS|Brightness|None|False
+QgsProcessingParameterRasterDestination|GREENNESS|Greenness|None|False
+QgsProcessingParameterRasterDestination|WETNESS|Wetness|None|False

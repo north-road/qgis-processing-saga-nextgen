@@ -1,14 +1,15 @@
-Automated Cloud Cover Assessment
+Automated Cloud Cover Assessment|9
 imagery_tools
 QgsProcessingParameterRasterLayer|BAND2|Green|None|False
 QgsProcessingParameterRasterLayer|BAND3|Red|None|False
 QgsProcessingParameterRasterLayer|BAND4|NIR|None|False
 QgsProcessingParameterRasterLayer|BAND5|SWIR|None|False
 QgsProcessingParameterRasterLayer|BAND6|Thermal|None|False
-QgsProcessingParameterRasterDestination|CLOUD|Cloud Cover
-QgsProcessingParameterBoolean|FILTER|Apply post-processing filter to remove small holes|True
-QgsProcessingParameterNumber|B56C|B56 Composite (step 6)|QgsProcessingParameterNumber.Double|225.000000|False|None|None
-QgsProcessingParameterNumber|B45R|B45 Ratio: Desert detection (step 10)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
-QgsProcessingParameterBoolean|CSIG|Always use cloud signature (step 14)|True
-QgsProcessingParameterBoolean|PASS2|Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds|True
-QgsProcessingParameterBoolean|SHADOW|Include a category for cloud shadows|True
+QgsProcessingParameterRasterDestination|CLOUD|Clouds|None|False
+QgsProcessingParameterNumber|B56C|SWIR/Thermal Threshold|QgsProcessingParameterNumber.Double|225.000000|False|None|None
+QgsProcessingParameterNumber|B45R|Desert Detection Threshold|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|HIST_N|Temperature Histogram|QgsProcessingParameterNumber.Integer|100|False|10|None
+QgsProcessingParameterBoolean|CSIG|Cloud Signature|True
+QgsProcessingParameterBoolean|PASS2|Cloud Differentiation|False
+QgsProcessingParameterBoolean|SHADOW|Shadows|True
+QgsProcessingParameterBoolean|FILTER|Filter|True

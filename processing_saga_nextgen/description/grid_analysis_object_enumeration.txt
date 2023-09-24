@@ -1,0 +1,9 @@
+Object Enumeration|30
+grid_analysis
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|OBJECTS|Objects|None|False
+QgsProcessingParameterVectorDestination|SUMMARY|Summary|5|None|False
+QgsProcessingParameterVectorDestination|EXTENTS|Extents|2|None|True
+QgsProcessingParameterEnum|NEIGHBOURHOOD|Neighbourhood|[0] Neumann;[1] Moore|False|0
+QgsProcessingParameterEnum|BOUNDARY_CELLS|Boundary Cells|[0] no data;[1] value|False|0
+QgsProcessingParameterNumber|BOUNDARY_VALUE|Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None

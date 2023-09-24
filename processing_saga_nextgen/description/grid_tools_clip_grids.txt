@@ -1,11 +1,12 @@
-Clip Grids
+Clip Grids|31
 grid_tools
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
-QgsProcessingParameterRasterDestination|CLIPPED|Clipped Grids
+QgsProcessingParameterRasterDestination|CLIPPED|Clipped Grids|None|False
 QgsProcessingParameterEnum|EXTENT|Extent|[0] user defined;[1] grid system;[2] shapes extent;[3] polygon|False|0
 QgsProcessingParameterFeatureSource|SHAPES|Shapes Extent|-1|None|False
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
 QgsProcessingParameterBoolean|INTERIOR|Interior|False
+QgsProcessingParameterBoolean|CROP|Crop|True
 QgsProcessingParameterNumber|XMIN|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|XMAX|Right|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|YMIN|Bottom|QgsProcessingParameterNumber.Double|0.000000|False|None|None

@@ -1,0 +1,8 @@
+Ground Classification|15
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|PC_IN|Point Cloud|None|False
+QgsProcessingParameterPointCloudDestination|PC_OUT|Point Cloud Classified|None|True
+QgsProcessingParameterNumber|RADIUS|Filter Radius|QgsProcessingParameterNumber.Double|2.500000|False|0.001000|None
+QgsProcessingParameterNumber|TERRAINSLOPE|Terrain Slope [%]|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|None
+QgsProcessingParameterEnum|FILTERMOD|Filter Modification|[0] none;[1] relax filter;[2] amplify filter|False|0
+QgsProcessingParameterNumber|STDDEV|Standard Deviation|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None

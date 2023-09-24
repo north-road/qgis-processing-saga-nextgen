@@ -1,4 +1,4 @@
-TOBIA
+TOBIA|1
 ta_slope_stability
 QgsProcessingParameterRasterLayer|A|Slope grid (rad)|None|False
 QgsProcessingParameterRasterLayer|B|Aspect grid (rad)|None|False
@@ -6,5 +6,5 @@ QgsProcessingParameterRasterLayer|C|Dip grid (degrees) |None|True
 QgsProcessingParameterRasterLayer|D|Dip direction grid (degrees) |None|True
 QgsProcessingParameterNumber|fB|Global structure dip (degrees)|QgsProcessingParameterNumber.Double|45.000000|False|None|None
 QgsProcessingParameterNumber|fC|Global structure dip direction (degrees)|QgsProcessingParameterNumber.Double|90.000000|False|None|None
-QgsProcessingParameterRasterDestination|E|TOBIA classes
-QgsProcessingParameterRasterDestination|F|TOBIA index
+QgsProcessingParameterRasterDestination|E|TOBIA classes|None|False
+QgsProcessingParameterRasterDestination|F|TOBIA index|None|True

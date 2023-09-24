@@ -1,0 +1,20 @@
+Import Point Cloud|0
+io_pdal
+QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|VARS|Import All Attributes|True
+QgsProcessingParameterBoolean|VAR_TIME|GPS-Time|False
+QgsProcessingParameterBoolean|VAR_INTENSITY|Intensity|False
+QgsProcessingParameterBoolean|VAR_SCANANGLE|Scan Angle|False
+QgsProcessingParameterBoolean|VAR_RETURN|Number of the Return|False
+QgsProcessingParameterBoolean|VAR_RETURNS|Number of Returns of Given Pulse|False
+QgsProcessingParameterBoolean|VAR_CLASSIFICATION|Classification|False
+QgsProcessingParameterBoolean|VAR_USERDATA|User Data|False
+QgsProcessingParameterBoolean|VAR_EDGE|Edge of Flight Line Flag|False
+QgsProcessingParameterBoolean|VAR_DIRECTION|Direction of Scan Flag|False
+QgsProcessingParameterBoolean|VAR_SOURCEID|Point Source ID|False
+QgsProcessingParameterBoolean|VAR_COLOR_RED|Red Channel Color|False
+QgsProcessingParameterBoolean|VAR_COLOR_GREEN|Green Channel Color|False
+QgsProcessingParameterBoolean|VAR_COLOR_BLUE|Blue Channel Color|False
+QgsProcessingParameterBoolean|VAR_COLOR|RGB-Coded Color|False
+QgsProcessingParameterEnum|RGB_RANGE|RGB Value Range|[0] 8 bit;[1] 16 bit|False|1
+QgsProcessingParameterPointCloudDestination|POINTS|Points|None|False

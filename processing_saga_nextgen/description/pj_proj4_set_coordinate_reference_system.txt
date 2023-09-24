@@ -1,4 +1,4 @@
-Set Coordinate Reference System
+Set Coordinate Reference System|0
 pj_proj4
 QgsProcessingParameterEnum|CRS_METHOD|Get CRS Definition from...|[0] Proj4 Parameters;[1] EPSG Code;[2] Well Known Text File|False|0
 QgsProcessingParameterString|CRS_PROJ4|Proj4 Parameters|
@@ -6,6 +6,6 @@ QgsProcessingParameterFile|CRS_FILE|Well Known Text File|QgsProcessingParameterF
 QgsProcessingParameterNumber|CRS_EPSG|Authority Code|QgsProcessingParameterNumber.Integer|-1|False|None|None
 QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|True
-QgsProcessingParameterRasterDestination|GRIDS_OUT|Grids
+QgsProcessingParameterRasterDestination|GRIDS_OUT|Grids|None|True
 QgsProcessingParameterMultipleLayers|SHAPES|Shapes|-1|None|True
-QgsProcessingParameterVectorDestination|SHAPES_OUT|Shapes
+QgsProcessingParameterVectorDestination|SHAPES_OUT|Shapes|-1|None|True

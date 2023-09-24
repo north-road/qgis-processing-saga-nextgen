@@ -1,6 +1,6 @@
-Monthly Global by Latitude
+Monthly Global by Latitude|5
 climate_tools
-QgsProcessingParameterVectorDestination|SOLARRAD|Solar Radiation
+QgsProcessingParameterVectorDestination|SOLARRAD|Solar Radiation|5|None|False
 QgsProcessingParameterFeatureSource|ALBEDO|Albedo|5|None|True
 QgsProcessingParameterField|FIELD|Field|None|ALBEDO|-1|False|False
 QgsProcessingParameterNumber|YEAR|Year [ka]|QgsProcessingParameterNumber.Double|2.000000|False|None|None

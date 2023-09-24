@@ -1,5 +1,5 @@
-Select Shapes from List
+Select Shapes from List|26
 shapes_tools
 QgsProcessingParameterMultipleLayers|SHAPESLIST|Shapes List|-1|None|False
-QgsProcessingParameterVectorDestination|SHAPES|Shapes
+QgsProcessingParameterVectorDestination|SHAPES|Shapes|-1|None|True
 QgsProcessingParameterNumber|INDEX|Index|QgsProcessingParameterNumber.Integer|0|False|0|None

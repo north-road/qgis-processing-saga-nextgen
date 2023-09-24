@@ -1,11 +1,11 @@
-Sky View Factor
+Sky View Factor|3
 ta_lighting
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|VISIBLE|Visible Sky
-QgsProcessingParameterRasterDestination|SVF|Sky View Factor
-QgsProcessingParameterRasterDestination|SIMPLE|Sky View Factor (Simplified)
-QgsProcessingParameterRasterDestination|TERRAIN|Terrain View Factor
-QgsProcessingParameterRasterDestination|DISTANCE|Average View Distance
+QgsProcessingParameterRasterDestination|VISIBLE|Visible Sky|None|False
+QgsProcessingParameterRasterDestination|SVF|Sky View Factor|None|False
+QgsProcessingParameterRasterDestination|SIMPLE|Sky View Factor (Simplified)|None|True
+QgsProcessingParameterRasterDestination|TERRAIN|Terrain View Factor|None|True
+QgsProcessingParameterRasterDestination|DISTANCE|Average View Distance|None|True
 QgsProcessingParameterNumber|RADIUS|Maximum Search Radius|QgsProcessingParameterNumber.Double|10000.000000|False|0.000000|None
 QgsProcessingParameterNumber|NDIRS|Number of Sectors|QgsProcessingParameterNumber.Integer|8|False|3|None
 QgsProcessingParameterEnum|METHOD|Method|[0] cell size;[1] multi scale|False|0

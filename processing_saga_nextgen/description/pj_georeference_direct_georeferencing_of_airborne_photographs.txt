@@ -1,8 +1,8 @@
-Direct Georeferencing of Airborne Photographs
+Direct Georeferencing of Airborne Photographs|4
 pj_georeference
 QgsProcessingParameterMultipleLayers|INPUT|Unreferenced Grids|3|None|False
-QgsProcessingParameterRasterDestination|OUTPUT|Referenced Grids
-QgsProcessingParameterVectorDestination|EXTENT|Extent
+QgsProcessingParameterRasterDestination|OUTPUT|Referenced Grids|None|False
+QgsProcessingParameterVectorDestination|EXTENT|Extent|2|None|True
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|True
 QgsProcessingParameterNumber|DEM_DEFAULT|Default|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|CFL|Focal Length [mm]|QgsProcessingParameterNumber.Double|80.000000|False|0.000000|None
@@ -21,3 +21,4 @@ QgsProcessingParameterEnum|DATA_TYPE|Data Storage Type|[0] 1 byte unsigned integ
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0

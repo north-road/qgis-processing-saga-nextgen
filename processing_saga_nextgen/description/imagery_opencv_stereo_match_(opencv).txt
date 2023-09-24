@@ -1,0 +1,20 @@
+Stereo Match (OpenCV)|4
+imagery_opencv
+QgsProcessingParameterRasterLayer|LEFT|Left Image|None|False
+QgsProcessingParameterRasterLayer|RIGHT|Right Image|None|False
+QgsProcessingParameterRasterDestination|DISPARITY|Disparity Image|None|False
+QgsProcessingParameterPointCloudDestination|POINTS|Points|None|True
+QgsProcessingParameterEnum|ALGORITHM|Algorithm|[0] Block Matching;[1] Modified Hirschmuller|False|0
+QgsProcessingParameterNumber|DISP_MIN|Minimum Disparity|QgsProcessingParameterNumber.Integer|0|False|0|None
+QgsProcessingParameterNumber|DISP_NUM|Number of Disparities|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterNumber|BLOCKSIZE|Block Size|QgsProcessingParameterNumber.Integer|4|False|0|None
+QgsProcessingParameterNumber|DIFF_MAX|Maximum Disparity Difference|QgsProcessingParameterNumber.Integer|1|False|-1|None
+QgsProcessingParameterNumber|UNIQUENESS|Uniqueness Ratio|QgsProcessingParameterNumber.Integer|15|False|0|None
+QgsProcessingParameterNumber|SPECKLE_SIZE|Speckle Window Size|QgsProcessingParameterNumber.Integer|100|False|0|None
+QgsProcessingParameterNumber|SPECKLE_RANGE|Speckle Range|QgsProcessingParameterNumber.Integer|2|False|0|None
+QgsProcessingParameterNumber|BM_TEXTURE|Texture Threshold|QgsProcessingParameterNumber.Integer|31|False|0|None
+QgsProcessingParameterNumber|BM_FILTER_CAP|Prefilter Truncation Value|QgsProcessingParameterNumber.Integer|31|False|0|None
+QgsProcessingParameterEnum|SGBM_MODE|Mode|[0] Semi-Global Block Matching;[1] HH;[2] SGBM 3 Way|False|0
+QgsProcessingParameterNumber|SGBM_P1|Disparity Smoothness Parameter 1|QgsProcessingParameterNumber.Integer|8|False|0|None
+QgsProcessingParameterNumber|SGBM_P2|Disparity Smoothness Parameter 2|QgsProcessingParameterNumber.Integer|32|False|0|None
+QgsProcessingParameterNumber|SGBM_FILTER_CAP|Prefilter Truncation Value|QgsProcessingParameterNumber.Integer|31|False|0|None

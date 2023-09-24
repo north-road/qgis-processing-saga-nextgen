@@ -1,7 +1,7 @@
-Fast Representativeness
+Fast Representativeness|0
 statistics_grid
 QgsProcessingParameterRasterLayer|INPUT|Input|None|False
-QgsProcessingParameterRasterDestination|RESULT|Output
-QgsProcessingParameterRasterDestination|RESULT_LOD|Output Lod
-QgsProcessingParameterRasterDestination|SEEDS|Output Seeds
+QgsProcessingParameterRasterDestination|RESULT|Output|None|False
+QgsProcessingParameterRasterDestination|RESULT_LOD|Output Lod|None|False
+QgsProcessingParameterRasterDestination|SEEDS|Output Seeds|None|False
 QgsProcessingParameterNumber|LOD|Level of Generalisation|QgsProcessingParameterNumber.Double|16.000000|False|None|None

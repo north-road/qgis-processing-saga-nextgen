@@ -1,4 +1,4 @@
-Create Raster Catalogue from Files
+Create Raster Catalogue from Files|7
 io_gdal
-QgsProcessingParameterVectorDestination|CATALOGUE|Raster Catalogue
+QgsProcessingParameterVectorDestination|CATALOGUE|Raster Catalogue|2|None|False
 QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False

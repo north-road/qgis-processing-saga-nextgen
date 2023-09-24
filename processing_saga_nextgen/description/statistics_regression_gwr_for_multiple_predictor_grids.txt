@@ -1,12 +1,12 @@
-GWR for Multiple Predictor Grids
+GWR for Multiple Predictor Grids|6
 statistics_regression
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
 QgsProcessingParameterField|DEPENDENT|Dependent Variable|None|POINTS|-1|False|False
-QgsProcessingParameterVectorDestination|RESIDUALS|Residuals
+QgsProcessingParameterVectorDestination|RESIDUALS|Residuals|0|None|True
 QgsProcessingParameterMultipleLayers|PREDICTORS|Predictors|3|None|False
-QgsProcessingParameterRasterDestination|REGRESSION|Regression
-QgsProcessingParameterRasterDestination|QUALITY|Coefficient of Determination
-QgsProcessingParameterRasterDestination|MODEL|Regression Parameters
+QgsProcessingParameterRasterDestination|REGRESSION|Regression|None|False
+QgsProcessingParameterRasterDestination|QUALITY|Coefficient of Determination|None|False
+QgsProcessingParameterRasterDestination|MODEL|Regression Parameters|None|True
 QgsProcessingParameterBoolean|LOGISTIC|Logistic Regression|False
 QgsProcessingParameterBoolean|MODEL_OUT|Output of Regression Parameters|False
 QgsProcessingParameterEnum|RESOLUTION|Model Resolution|[0] same as predictors;[1] user defined|False|1
@@ -19,4 +19,3 @@ QgsProcessingParameterNumber|SEARCH_RADIUS|Maximum Search Distance|QgsProcessing
 QgsProcessingParameterEnum|SEARCH_POINTS_ALL|Number of Points|[0] maximum number of nearest points;[1] all points within search distance|False|1
 QgsProcessingParameterNumber|SEARCH_POINTS_MIN|Minimum|QgsProcessingParameterNumber.Integer|16|False|1|None
 QgsProcessingParameterNumber|SEARCH_POINTS_MAX|Maximum|QgsProcessingParameterNumber.Integer|20|False|1|None
-QgsProcessingParameterEnum|SEARCH_DIRECTION|Direction|[0] all directions;[1] quadrants|False|0

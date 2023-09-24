@@ -1,6 +1,6 @@
-Proximity Grid
+Proximity Grid|26
 grid_tools
 QgsProcessingParameterRasterLayer|FEATURES|Features|None|False
-QgsProcessingParameterRasterDestination|DISTANCE|Distance
-QgsProcessingParameterRasterDestination|DIRECTION|Direction
-QgsProcessingParameterRasterDestination|ALLOCATION|Allocation
+QgsProcessingParameterRasterDestination|DISTANCE|Distance|None|False
+QgsProcessingParameterRasterDestination|DIRECTION|Direction|None|True
+QgsProcessingParameterRasterDestination|ALLOCATION|Allocation|None|True

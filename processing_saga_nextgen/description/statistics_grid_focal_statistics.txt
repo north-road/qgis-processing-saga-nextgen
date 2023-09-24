@@ -1,19 +1,19 @@
-Focal Statistics
+Focal Statistics|1
 statistics_grid
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|MEAN|Mean Value
-QgsProcessingParameterRasterDestination|MIN|Minimum Value
-QgsProcessingParameterRasterDestination|MAX|Maximum Value
-QgsProcessingParameterRasterDestination|RANGE|Value Range
-QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation
-QgsProcessingParameterRasterDestination|VARIANCE|Variance
-QgsProcessingParameterRasterDestination|SUM|Sum
-QgsProcessingParameterRasterDestination|DIFF|Difference from Mean Value
-QgsProcessingParameterRasterDestination|DEVMEAN|Deviation from Mean Value
-QgsProcessingParameterRasterDestination|PERCENT|Percentile
-QgsProcessingParameterRasterDestination|MEDIAN|Median
-QgsProcessingParameterRasterDestination|MINORITY|Minority
-QgsProcessingParameterRasterDestination|MAJORITY|Majority
+QgsProcessingParameterRasterDestination|MEAN|Mean Value|None|True
+QgsProcessingParameterRasterDestination|MIN|Minimum Value|None|True
+QgsProcessingParameterRasterDestination|MAX|Maximum Value|None|True
+QgsProcessingParameterRasterDestination|RANGE|Value Range|None|True
+QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|VARIANCE|Variance|None|True
+QgsProcessingParameterRasterDestination|SUM|Sum|None|True
+QgsProcessingParameterRasterDestination|DIFF|Difference from Mean Value|None|True
+QgsProcessingParameterRasterDestination|DEVMEAN|Deviation from Mean Value|None|True
+QgsProcessingParameterRasterDestination|PERCENT|Percentile|None|True
+QgsProcessingParameterRasterDestination|MEDIAN|Median|None|True
+QgsProcessingParameterRasterDestination|MINORITY|Minority|None|True
+QgsProcessingParameterRasterDestination|MAJORITY|Majority|None|True
 QgsProcessingParameterBoolean|BCENTER|Include Center Cell|True
 QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle;[2] Annulus;[3] Sector|False|1
 QgsProcessingParameterNumber|KERNEL_INNER|Inner Radius|QgsProcessingParameterNumber.Integer|0|False|0|None

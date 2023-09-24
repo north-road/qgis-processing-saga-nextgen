@@ -1,0 +1,6 @@
+CIT Index|31
+ta_hydrology
+QgsProcessingParameterRasterLayer|SLOPE|Slope|None|False
+QgsProcessingParameterRasterLayer|AREA|Catchment Area|None|False
+QgsProcessingParameterRasterDestination|CIT|CIT Index|None|False
+QgsProcessingParameterEnum|CONV|Area Conversion|[0] no conversion (areas already given as specific catchment area);[1] 1 / cell size (pseudo specific catchment area)|False|0

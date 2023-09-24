@@ -1,9 +1,13 @@
-Lapse Rate Based Temperature Downscaling
-toolchains_climate_tools
+Lapse Rate Based Temperature Downscaling|30
+climate_tools
 QgsProcessingParameterRasterLayer|LORES_DEM|Elevation|None|False
 QgsProcessingParameterRasterLayer|LORES_T|Temperature|None|False
-QgsProcessingParameterRasterLayer|LAPSE_RATES|Lapse Rates|None|True
-QgsProcessingParameterRasterDestination|LORES_SLT|Temperature at Sea Level
+QgsProcessingParameterRasterLayer|LORES_LAPSE|Lapse Rate|None|False
+QgsProcessingParameterRasterDestination|LORES_SLT|Sea Level Temperature|None|True
 QgsProcessingParameterRasterLayer|HIRES_DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|HIRES_T|Temperature
-QgsProcessingParameterNumber|LAPSE_RATE|Constant Lapse Rate|QgsProcessingParameterNumber.Double|0.600000|False|0.000000|None
+QgsProcessingParameterRasterDestination|HIRES_T|Temperature|None|False
+QgsProcessingParameterEnum|LAPSE_METHOD|Lapse Rate|[0] constant lapse rate;[1] constant lapse rate from regression;[2] varying lapse rate from grid|False|1
+QgsProcessingParameterVectorDestination|REGRS_SUMMARY|Regression Summary|5|None|True
+QgsProcessingParameterEnum|REGRS_LAPSE|Regression|[0] elevation;[1] elevation and position;[2] elevation and position (2nd order polynom)|False|2
+QgsProcessingParameterBoolean|LIMIT_LAPSE|Limit Minimum Lapse Rate|False
+QgsProcessingParameterNumber|CONST_LAPSE|Constant Lapse Rate|QgsProcessingParameterNumber.Double|0.600000|False|None|None

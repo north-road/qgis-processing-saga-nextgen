@@ -1,0 +1,4 @@
+Line Parts to Separate Lines|12
+shapes_lines
+QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
+QgsProcessingParameterVectorDestination|PARTS|Line Parts|1|None|False

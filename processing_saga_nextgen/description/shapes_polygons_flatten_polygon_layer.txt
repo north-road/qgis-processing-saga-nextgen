@@ -1,4 +1,4 @@
-Flatten Polygon Layer
+Flatten Polygon Layer|21
 shapes_polygons
 QgsProcessingParameterFeatureSource|INPUT|Input|2|None|False
-QgsProcessingParameterVectorDestination|OUTPUT|Output
+QgsProcessingParameterVectorDestination|OUTPUT|Output|2|None|True

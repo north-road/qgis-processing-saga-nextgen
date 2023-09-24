@@ -1,0 +1,7 @@
+Sharpening Filter|19
+grid_filter
+QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid|None|True
+QgsProcessingParameterEnum|METHOD|Method|[0] standard kernel 1;[1] standard kernel 2;[2] Standard kernel 3;[3] user defined kernel|False|3
+QgsProcessingParameterNumber|KERNEL_RADIUS|Kernel Radius|QgsProcessingParameterNumber.Integer|2|False|1|None
+QgsProcessingParameterNumber|SIGMA|Standard Deviation|QgsProcessingParameterNumber.Double|50.000000|False|1.000000|None

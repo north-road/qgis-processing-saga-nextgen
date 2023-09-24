@@ -1,4 +1,4 @@
-Export Atlas Boundary File
+Export Atlas Boundary File|7
 io_shapes
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterField|PNAME|Primary Name|None|SHAPES|-1|False|False

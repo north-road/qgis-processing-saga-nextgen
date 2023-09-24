@@ -1,0 +1,23 @@
+Cloud Shadow Detection|21
+imagery_tools
+QgsProcessingParameterRasterLayer|CLOUDS|Clouds|None|False
+QgsProcessingParameterRasterLayer|CAND_GRID_IN|Candidates|None|False
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|True
+QgsProcessingParameterRasterDestination|CLOUD_ID|Cloud Number|None|True
+QgsProcessingParameterRasterDestination|CAND_GRID_OUT|Candidates|None|True
+QgsProcessingParameterRasterDestination|SHADOWS|Shadows|None|False
+QgsProcessingParameterVectorDestination|CLOUD_INFO|Cloud Info|5|None|False
+QgsProcessingParameterRasterLayer|BAND_GREEN|Green|None|False
+QgsProcessingParameterRasterLayer|BAND_RED|Red|None|False
+QgsProcessingParameterRasterLayer|BAND_NIR|Near Infrared|None|False
+QgsProcessingParameterRasterLayer|BAND_SWIR|Shortwave Infrared|None|False
+QgsProcessingParameterRasterLayer|BAND_THERMAL|Thermal|None|True
+QgsProcessingParameterMultipleLayers|BANDS_BRIGHTNESS|Brightness Bands|3|None|False
+QgsProcessingParameterEnum|OUTPUT|Output|[0] visible shadow;[1] full shadow;[2] shadow and clouds|False|2
+QgsProcessingParameterNumber|CAND_GRID_VALUE|Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterEnum|THERMAL_UNIT|Unit|[0] Kelvin;[1] Celsius|False|0
+QgsProcessingParameterEnum|CANDIDATES|Candidates|[0] all cells of candidates grid that are not no-data;[1] all cells of candidates grid with a specified value;[2] average brightness threshold;[3] Irish;[4] Irish modified by Tizado|False|0
+QgsProcessingParameterNumber|BRIGHTNESS|Brightness Threshold|QgsProcessingParameterNumber.Double|0.050000|False|0.000000|1.000000
+QgsProcessingParameterEnum|PROCESSING|Processing|[0] all clouds at once;[1] cloud by cloud|False|0
+QgsProcessingParameterNumber|SUN_AZIMUTH|Azimuth|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|360.000000
+QgsProcessingParameterNumber|SUN_HEIGHT|Height|QgsProcessingParameterNumber.Double|45.000000|False|0.000000|90.000000

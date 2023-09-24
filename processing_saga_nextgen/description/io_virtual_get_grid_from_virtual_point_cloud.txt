@@ -1,7 +1,7 @@
-Get Grid from Virtual Point Cloud
+Get Grid from Virtual Point Cloud|4
 io_virtual
 QgsProcessingParameterFile|FILENAME|Filename|QgsProcessingParameterFile.File|None|False
-QgsProcessingParameterRasterDestination|GRID_OUT|Grid
+QgsProcessingParameterRasterDestination|GRID_OUT|Grid|None|True
 QgsProcessingParameterFile|FILEPATH|Optional Output Filepath|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterNumber|ATTR_FIELD_GRID|Attribute Field to Grid|QgsProcessingParameterNumber.Integer|3|False|3|None
 QgsProcessingParameterNumber|CELL_SIZE|Cellsize|QgsProcessingParameterNumber.Double|1.000000|False|0.001000|None

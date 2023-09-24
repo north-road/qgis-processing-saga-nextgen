@@ -1,0 +1,9 @@
+Watershed Image Segmentation|17
+imagery_opencv
+QgsProcessingParameterRasterLayer|BAND_1|Band 1|None|False
+QgsProcessingParameterRasterLayer|BAND_2|Band 2|None|True
+QgsProcessingParameterRasterLayer|BAND_3|Band 3|None|True
+QgsProcessingParameterRasterLayer|SEED_GRID|Seeds|None|False
+QgsProcessingParameterRasterDestination|SEGMENTS|Segments|None|True
+QgsProcessingParameterVectorDestination|POLYGONS|Polygons|2|None|True
+QgsProcessingParameterEnum|SEEDS|Get Seeds from...|[0] peaks;[1] pits;[2] grid|False|0

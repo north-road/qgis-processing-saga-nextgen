@@ -1,4 +1,4 @@
-Export Shapes to XYZ
+Export Shapes to XYZ|2
 io_shapes
 QgsProcessingParameterFeatureSource|POINTS|Shapes|-1|None|False
 QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False

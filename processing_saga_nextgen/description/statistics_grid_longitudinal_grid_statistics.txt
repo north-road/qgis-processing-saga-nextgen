@@ -1,4 +1,4 @@
-Longitudinal Grid Statistics
+Longitudinal Grid Statistics|11
 statistics_grid
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterVectorDestination|STATS|Latitudinal Statistics
+QgsProcessingParameterVectorDestination|STATS|Latitudinal Statistics|5|None|False

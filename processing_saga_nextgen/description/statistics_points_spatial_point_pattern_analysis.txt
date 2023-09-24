@@ -1,8 +1,8 @@
-Spatial Point Pattern Analysis
+Spatial Point Pattern Analysis|4
 statistics_points
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
 QgsProcessingParameterField|WEIGHT|Weight|None|POINTS|-1|False|False
-QgsProcessingParameterVectorDestination|CENTRE|Mean Centre
-QgsProcessingParameterVectorDestination|STDDIST|Standard Distance
+QgsProcessingParameterVectorDestination|CENTRE|Mean Centre|0|None|False
+QgsProcessingParameterVectorDestination|STDDIST|Standard Distance|2|None|False
 QgsProcessingParameterNumber|STEP|Vertex Distance [Degree]|QgsProcessingParameterNumber.Double|5.000000|False|0.100000|20.000000
-QgsProcessingParameterVectorDestination|BBOX|Bounding Box
+QgsProcessingParameterVectorDestination|BBOX|Bounding Box|2|None|False

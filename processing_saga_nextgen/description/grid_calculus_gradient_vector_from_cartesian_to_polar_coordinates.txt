@@ -1,9 +1,9 @@
-Gradient Vector from Cartesian to Polar Coordinates
+Gradient Vector from Cartesian to Polar Coordinates|15
 grid_calculus
 QgsProcessingParameterRasterLayer|DX|X Component|None|False
 QgsProcessingParameterRasterLayer|DY|Y Component|None|False
-QgsProcessingParameterRasterDestination|DIR|Direction
-QgsProcessingParameterRasterDestination|LEN|Length
+QgsProcessingParameterRasterDestination|DIR|Direction|None|False
+QgsProcessingParameterRasterDestination|LEN|Length|None|False
 QgsProcessingParameterEnum|UNITS|Polar Angle Units|[0] radians;[1] degree|False|0
 QgsProcessingParameterEnum|SYSTEM|Polar Coordinate System|[0] mathematical;[1] geographical;[2] user defined|False|1
 QgsProcessingParameterNumber|SYSTEM_ZERO|User defined Zero Direction|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|360.000000

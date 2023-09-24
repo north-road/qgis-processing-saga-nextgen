@@ -1,0 +1,16 @@
+Get Subset from Virtual Point Cloud|1
+io_virtual
+QgsProcessingParameterFile|FILENAME|Filename|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterPointCloudDestination|PC_OUT|Point Cloud|None|True
+QgsProcessingParameterFile|FILEPATH|Optional Output Filepath|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|COPY_ATTR|Copy existing Attributes|True
+QgsProcessingParameterString|ATTRIBUTE_LIST|Copy Attributes|1;2;3
+QgsProcessingParameterBoolean|CONSTRAIN_QUERY|Constrain Query|False
+QgsProcessingParameterNumber|ATTR_FIELD|Attribute Field|QgsProcessingParameterNumber.Integer|1|False|1|None
+QgsProcessingParameterFeatureSource|AOI_SHP|Shape|2|None|True
+QgsProcessingParameterField|FIELD_TILENAME|Tilename|None|AOI_SHP|-1|False|False
+QgsProcessingParameterRasterLayer|AOI_GRID|Grid|None|True
+QgsProcessingParameterBoolean|AOI_ADD_OVERLAP|Add Overlap|False
+QgsProcessingParameterNumber|OVERLAP|Overlap|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|None
+QgsProcessingParameterFile|FILENAME_TILE_INFO|Optional Tile Info Filename|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterBoolean|ONE_PC_PER_POLYGON|One Point Cloud per Polygon|False

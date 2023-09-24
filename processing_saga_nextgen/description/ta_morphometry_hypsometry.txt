@@ -1,7 +1,7 @@
-Hypsometry
+Hypsometry|5
 ta_morphometry
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
-QgsProcessingParameterVectorDestination|TABLE|Hypsometry
+QgsProcessingParameterVectorDestination|TABLE|Hypsometry|5|None|False
 QgsProcessingParameterNumber|COUNT|Number of Classes|QgsProcessingParameterNumber.Integer|100|False|1|None
 QgsProcessingParameterEnum|SORTING|Sort|[0] up;[1] down|False|1
 QgsProcessingParameterEnum|METHOD|Classification Constant|[0] height;[1] area|False|1

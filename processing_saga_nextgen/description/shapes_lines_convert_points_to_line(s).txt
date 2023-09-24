@@ -1,7 +1,8 @@
-Convert Points to Line(s)
+Convert Points to Line(s)|1
 shapes_lines
-QgsProcessingParameterVectorDestination|LINES|Lines
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterVectorDestination|LINES|Lines|1|None|False
 QgsProcessingParameterField|ORDER|Order by...|None|POINTS|-1|False|False
 QgsProcessingParameterField|SEPARATE|Separate by...|None|POINTS|-1|False|False
 QgsProcessingParameterField|ELEVATION|Elevation|None|POINTS|-1|False|False
+QgsProcessingParameterNumber|MAXDIST|Maximum Distance|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

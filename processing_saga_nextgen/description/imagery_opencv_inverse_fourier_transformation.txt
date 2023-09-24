@@ -1,0 +1,7 @@
+Inverse Fourier Transformation|13
+imagery_opencv
+QgsProcessingParameterRasterLayer|REAL|Real|None|False
+QgsProcessingParameterRasterLayer|IMAG|Imaginary|None|False
+QgsProcessingParameterRasterDestination|GRID|Grid|None|False
+QgsProcessingParameterBoolean|CENTERED|Centered|True
+QgsProcessingParameterBoolean|RESTORE|Restore|True

@@ -1,6 +1,6 @@
-Convergence Index
+Convergence Index|1
 ta_morphometry
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
-QgsProcessingParameterRasterDestination|RESULT|Convergence Index
+QgsProcessingParameterRasterDestination|RESULT|Convergence Index|None|False
 QgsProcessingParameterEnum|METHOD|Method|[0] Aspect;[1] Gradient|False|0
 QgsProcessingParameterEnum|NEIGHBOURS|Gradient Calculation|[0] 2 x 2;[1] 3 x 3|False|0

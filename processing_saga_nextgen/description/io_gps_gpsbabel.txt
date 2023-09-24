@@ -1,4 +1,4 @@
-GPSBabel
+GPSBabel|1
 io_gps
 QgsProcessingParameterFile|BASEPATH|GPSBabel path|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterFile|INPUT|Input file|QgsProcessingParameterFile.File|None|False

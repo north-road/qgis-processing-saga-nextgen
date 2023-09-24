@@ -1,4 +1,4 @@
-Convert Polygon/Line Vertices to Points
+Convert Polygon/Line Vertices to Points|6
 shapes_polygons
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterVectorDestination|POINTS|Points|0|None|False

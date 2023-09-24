@@ -1,8 +1,8 @@
-Import Landsat Scene
+Import Landsat Scene|14
 imagery_tools
 QgsProcessingParameterFile|METAFILE|Metadata File|QgsProcessingParameterFile.File|None|False
-QgsProcessingParameterRasterDestination|BANDS|Bands
-QgsProcessingParameterVectorDestination|BAND_INFO|Band Info
+QgsProcessingParameterRasterDestination|BANDS|Bands|None|False
+QgsProcessingParameterVectorDestination|BAND_INFO|Band Info|5|None|True
 QgsProcessingParameterBoolean|MULTI2GRIDS|Multispectral Bands as Grid Collection|True
 QgsProcessingParameterBoolean|SKIP_PAN|Skip Panchromatic Band|True
 QgsProcessingParameterBoolean|SKIP_AEROSOL|Skip Aerosol Band|True
@@ -10,5 +10,14 @@ QgsProcessingParameterBoolean|SKIP_CIRRUS|Skip Cirrus Band|True
 QgsProcessingParameterEnum|CALIBRATION|Radiometric Calibration|[0] none;[1] radiance;[2] reflectance|False|0
 QgsProcessingParameterEnum|DATA_TYPE|Output Data Type|[0] integers with scaling;[1] floating point numbers|False|0
 QgsProcessingParameterEnum|TEMP_UNIT|Temperature Unit|[0] Kelvin;[1] Celsius|False|0
-QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates|False|0
+QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates;[3] Different UTM Zone|False|0
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
+QgsProcessingParameterNumber|UTM_ZONE|Zone|QgsProcessingParameterNumber.Integer|32|False|1|60
+QgsProcessingParameterBoolean|UTM_SOUTH|South|False
+QgsProcessingParameterEnum|EXTENT|Extent|[0] original;[1] user defined;[2] grid system;[3] shapes extent|False|0
+QgsProcessingParameterNumber|EXTENT_XMIN|Left|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|EXTENT_XMAX|Right|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|EXTENT_YMIN|Bottom|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|EXTENT_YMAX|Top|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterFeatureSource|EXTENT_SHAPES|Shapes Extent|-1|None|False
+QgsProcessingParameterNumber|EXTENT_BUFFER|Buffer|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

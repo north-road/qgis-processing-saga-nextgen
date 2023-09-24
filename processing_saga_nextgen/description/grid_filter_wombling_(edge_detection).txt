@@ -1,4 +1,4 @@
-Wombling (Edge Detection)
+Wombling (Edge Detection)|16
 grid_filter
 QgsProcessingParameterNumber|TMAGNITUDE|Minimum Magnitude|QgsProcessingParameterNumber.Double|90.000000|False|0.000000|100.000000
 QgsProcessingParameterNumber|TDIRECTION|Maximum Angle|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|180.000000
@@ -6,7 +6,7 @@ QgsProcessingParameterNumber|TNEIGHBOUR|Minimum Neighbours|QgsProcessingParamete
 QgsProcessingParameterEnum|ALIGNMENT|Alignment|[0] between cells;[1] on cell|False|1
 QgsProcessingParameterEnum|NEIGHBOUR|Edge Connectivity|[0] Rooke's case;[1] Queen's case|False|1
 QgsProcessingParameterRasterLayer|FEATURE|Feature|None|False
-QgsProcessingParameterVectorDestination|EDGE_POINTS|Edge Points
-QgsProcessingParameterVectorDestination|EDGE_LINES|Edge Segments
+QgsProcessingParameterVectorDestination|EDGE_POINTS|Edge Points|0|None|True
+QgsProcessingParameterVectorDestination|EDGE_LINES|Edge Segments|1|None|True
 QgsProcessingParameterBoolean|GRADIENTS_OUT|Output of Gradients|False
-QgsProcessingParameterRasterDestination|GRADIENTS|Gradients
+QgsProcessingParameterRasterDestination|GRADIENTS|Gradients|None|True

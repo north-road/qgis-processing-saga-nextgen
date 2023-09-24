@@ -1,4 +1,4 @@
-Export Text Table
+Export Text Table|0
 io_table
 QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
 QgsProcessingParameterBoolean|HEADLINE|Headline|True

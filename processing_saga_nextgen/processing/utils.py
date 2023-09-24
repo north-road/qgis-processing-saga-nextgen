@@ -44,6 +44,8 @@ class SagaUtils:
     SAGA processing utilities
     """
 
+    REQUIRED_VERSION = '9.1.'
+
     SAGA_FOLDER = 'SAGA_FOLDER'
     SAGA_LOG_COMMANDS = 'SAGANG_LOG_COMMANDS'
     SAGA_LOG_CONSOLE = 'SAGANG_LOG_CONSOLE'

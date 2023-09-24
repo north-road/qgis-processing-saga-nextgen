@@ -167,6 +167,19 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 line = lines.readline().strip('\n').strip()
 
     def processAlgorithm(self, parameters, context, feedback):  # pylint: disable=missing-docstring,too-many-statements,too-many-branches,too-many-locals
+
+        version = SagaUtils.getInstalledVersion(True)
+        if version is None:
+            raise QgsProcessingException(
+                self.tr(
+                    'Problem with SAGA installation: SAGA was not found or is not correctly installed'))
+
+        if version < SagaUtils.REQUIRED_VERSION:
+            feedback.reportError(
+                self.tr(
+                    'Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={}).').format(
+                    version, SagaUtils.REQUIRED_VERSION))
+
         commands = []
         self.exportedLayers = {}
 

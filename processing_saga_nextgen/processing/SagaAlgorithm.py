@@ -29,7 +29,6 @@ import importlib
 import os
 import shutil
 
-from ..help import shortHelp
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.tools.system import getTempFilename
 from qgis.core import (Qgis,
@@ -56,6 +55,7 @@ from .SagaAlgorithmBase import SagaAlgorithmBase
 from .SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
 from .SagaParameters import Parameters
 from .utils import SagaUtils
+from ..help import shortHelp
 
 pluginPath = os.path.normpath(os.path.join(
     os.path.split(os.path.dirname(__file__))[0], os.pardir))

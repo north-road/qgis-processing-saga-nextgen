@@ -1,10 +1,10 @@
-Maximum Entropy Presence Prediction
+Maximum Entropy Presence Prediction|1
 imagery_maxent
 QgsProcessingParameterFeatureSource|PRESENCE|Presence Data|0|None|False
 QgsProcessingParameterMultipleLayers|FEATURES_NUM|Numerical Features|3|None|True
 QgsProcessingParameterMultipleLayers|FEATURES_CAT|Categorical Features|3|None|True
-QgsProcessingParameterRasterDestination|PREDICTION|Presence Prediction
-QgsProcessingParameterRasterDestination|PROBABILITY|Presence Probability
+QgsProcessingParameterRasterDestination|PREDICTION|Presence Prediction|None|False
+QgsProcessingParameterRasterDestination|PROBABILITY|Presence Probability|None|False
 QgsProcessingParameterNumber|BACKGROUND|Background Sample Density [Percent]|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|100.000000
 QgsProcessingParameterEnum|METHOD|Method|[0] Yoshimasa Tsuruoka;[1] Dekang Lin|False|0
 QgsProcessingParameterFile|YT_FILE_LOAD|Load from File...|QgsProcessingParameterFile.File|None|False

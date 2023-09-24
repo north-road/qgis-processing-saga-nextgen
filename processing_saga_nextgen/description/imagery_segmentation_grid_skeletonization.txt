@@ -1,9 +1,9 @@
-Grid Skeletonization
+Grid Skeletonization|1
 imagery_segmentation
 QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
-QgsProcessingParameterRasterDestination|RESULT|Skeleton
-QgsProcessingParameterVectorDestination|VECTOR|Skeleton
+QgsProcessingParameterRasterDestination|RESULT|Skeleton|None|False
+QgsProcessingParameterVectorDestination|VECTOR|Skeleton|1|None|True
 QgsProcessingParameterEnum|METHOD|Method|[0] Standard;[1] Hilditch's Algorithm;[2] Channel Skeleton|False|0
-QgsProcessingParameterEnum|INIT_METHOD|Initialisation|[0] Less than;[1] Greater than|False|1
-QgsProcessingParameterNumber|INIT_THRESHOLD|Threshold (Init.)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterEnum|INIT_METHOD|Initialisation|[0] less than;[1] greater than;[2] less than or equal;[3] greater than or equal|False|1
+QgsProcessingParameterNumber|INIT_THRESHOLD|Threshold|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|CONVERGENCE|Convergence|QgsProcessingParameterNumber.Integer|3|False|0|None

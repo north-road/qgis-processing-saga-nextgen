@@ -1,0 +1,5 @@
+Connected Component Labeling|5
+imagery_segmentation
+QgsProcessingParameterRasterLayer|INPUT|Input|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Output|None|False
+QgsProcessingParameterEnum|NEIGHBOUR|Neighbourhood|[0] 4 (von Neumann);[1] 8 (Moore)|False|1

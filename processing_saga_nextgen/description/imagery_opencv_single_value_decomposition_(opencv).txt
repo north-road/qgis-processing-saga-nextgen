@@ -1,0 +1,4 @@
+Single Value Decomposition (OpenCV)|2
+imagery_opencv
+QgsProcessingParameterRasterLayer|INPUT|Input|None|False
+QgsProcessingParameterRasterDestination|OUTPUT|Output|None|False

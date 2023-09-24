@@ -1,0 +1,22 @@
+Cloud Detection|20
+imagery_tools
+QgsProcessingParameterRasterDestination|CLOUDS|Clouds|None|False
+QgsProcessingParameterRasterLayer|BAND_BLUE|Blue|None|False
+QgsProcessingParameterRasterLayer|BAND_GREEN|Green|None|False
+QgsProcessingParameterRasterLayer|BAND_RED|Red|None|False
+QgsProcessingParameterRasterLayer|BAND_NIR|Near Infrared|None|False
+QgsProcessingParameterRasterLayer|BAND_SWIR1|Shortwave Infrared 1|None|False
+QgsProcessingParameterRasterLayer|BAND_SWIR2|Shortwave Infrared 2|None|False
+QgsProcessingParameterRasterLayer|BAND_THERMAL|Thermal|None|True
+QgsProcessingParameterRasterLayer|BAND_CIRRUS|Cirrus|None|True
+QgsProcessingParameterEnum|THERMAL_UNIT|Unit|[0] Kelvin;[1] Celsius|False|0
+QgsProcessingParameterEnum|ALGORITHM|Algorithm|[0] Fmask;[1] ACCA|False|0
+QgsProcessingParameterNumber|ACCA_B56C|SWIR/Thermal Threshold|QgsProcessingParameterNumber.Double|225.000000|False|None|None
+QgsProcessingParameterNumber|ACCA_B45R|Desert Detection Threshold|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|ACCA_HIST_N|Temperature Histogram|QgsProcessingParameterNumber.Integer|100|False|10|None
+QgsProcessingParameterBoolean|ACCA_CSIG|Cloud Signature|True
+QgsProcessingParameterBoolean|ACCA_PASS2|Cloud Differentiation|False
+QgsProcessingParameterBoolean|ACCA_SHADOW|Shadows|False
+QgsProcessingParameterBoolean|SHADOWS|Shadow Detection|False
+QgsProcessingParameterNumber|SUN_AZIMUTH|Sun's Azimuth|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|360.000000
+QgsProcessingParameterNumber|SUN_HEIGHT|Sun's Height|QgsProcessingParameterNumber.Double|45.000000|False|0.000000|90.000000

@@ -1,0 +1,6 @@
+Import Sentinel-3 OLCI Scene|16
+imagery_tools
+QgsProcessingParameterRasterDestination|BANDS|Bands|None|False
+QgsProcessingParameterFile|DIRECTORY|Directory|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|RESOLUTION|Target Resolution|QgsProcessingParameterNumber.Double|0.002778|False|0.001000|1.000000
+QgsProcessingParameterBoolean|COLLECTION|Bands as Grid Collection|True

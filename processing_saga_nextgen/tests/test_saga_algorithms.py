@@ -104,7 +104,7 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         context.setProject(QgsProject.instance())
 
         alg = QgsApplication.processingRegistry().createAlgorithmById(
-            'sagang:fixeddistancebuffer')
+            'sagang:shapesbuffer')
         self.assertIsNotNone(alg)
 
         temp_file = os.path.join(self.temp_dir, 'non_ascii_ñññ.shp')

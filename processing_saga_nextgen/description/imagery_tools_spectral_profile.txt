@@ -1,0 +1,8 @@
+Spectral Profile|17
+imagery_tools
+QgsProcessingParameterMultipleLayers|BANDS|Spectral Bands|3|None|False
+QgsProcessingParameterFeatureSource|LOCATION|Profile Location|0|None|False
+QgsProcessingParameterVectorDestination|PROFILE|Spectral Profile|5|None|False
+QgsProcessingParameterBoolean|SHOW|Show Diagram|False
+QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
+QgsProcessingParameterString|LENGTHS|Wave Lengths|0.485 0.56 0.66 0.83 1.65 2.215 11.45

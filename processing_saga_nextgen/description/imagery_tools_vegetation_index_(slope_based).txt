@@ -1,13 +1,13 @@
-Vegetation Index (Slope Based)
+Vegetation Index (Slope Based)|1
 imagery_tools
 QgsProcessingParameterRasterLayer|RED|Red Reflectance|None|False
 QgsProcessingParameterRasterLayer|NIR|Near Infrared Reflectance|None|False
-QgsProcessingParameterRasterDestination|DVI|Difference Vegetation Index
-QgsProcessingParameterRasterDestination|NDVI|Normalized Difference Vegetation Index
-QgsProcessingParameterRasterDestination|RVI|Ratio Vegetation Index
-QgsProcessingParameterRasterDestination|NRVI|Normalized Ratio Vegetation Index
-QgsProcessingParameterRasterDestination|TVI|Transformed Vegetation Index
-QgsProcessingParameterRasterDestination|CTVI|Corrected Transformed Vegetation Index
-QgsProcessingParameterRasterDestination|TTVI|Thiam's Transformed Vegetation Index
-QgsProcessingParameterRasterDestination|SAVI|Soil Adjusted Vegetation Index
+QgsProcessingParameterRasterDestination|DVI|Difference Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|NDVI|Normalized Difference Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|RVI|Ratio Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|NRVI|Normalized Ratio Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|TVI|Transformed Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|CTVI|Corrected Transformed Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|TTVI|Thiam's Transformed Vegetation Index|None|True
+QgsProcessingParameterRasterDestination|SAVI|Soil Adjusted Vegetation Index|None|True
 QgsProcessingParameterNumber|SOIL|Soil Adjustment Factor|QgsProcessingParameterNumber.Double|0.500000|False|0.000000|1.000000

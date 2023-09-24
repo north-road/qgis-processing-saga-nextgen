@@ -1,0 +1,9 @@
+Canny Edge Detection|15
+imagery_opencv
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|EDGES|Edges|None|True
+QgsProcessingParameterVectorDestination|EDGE_LINES|Edge Lines|1|None|True
+QgsProcessingParameterNumber|THRESHOLD|Threshold|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RATIO|Ratio|QgsProcessingParameterNumber.Double|3.000000|False|1.000000|None
+QgsProcessingParameterNumber|KERNEL_SIZE|Kernel Size|QgsProcessingParameterNumber.Integer|1|False|1|3
+QgsProcessingParameterBoolean|L2GRADIENT|L2 Gradient|False

@@ -1,0 +1,18 @@
+Logistic Regression Classification|12
+imagery_opencv
+QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
+QgsProcessingParameterBoolean|NORMALIZE|Normalize|False
+QgsProcessingParameterRasterDestination|CLASSES|Classification|None|False
+QgsProcessingParameterVectorDestination|CLASSES_LUT|Look-up Table|5|None|True
+QgsProcessingParameterEnum|MODEL_TRAIN|Training|[0] training areas;[1] training samples;[2] load from file|False|0
+QgsProcessingParameterFeatureSource|TRAIN_SAMPLES|Training Samples|5|None|False
+QgsProcessingParameterFeatureSource|TRAIN_AREAS|Training Areas|-1|None|False
+QgsProcessingParameterField|TRAIN_CLASS|Class Identifier|None|TRAIN_AREAS|-1|False|False
+QgsProcessingParameterNumber|TRAIN_BUFFER|Buffer Size|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterFile|MODEL_LOAD|Load Model|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterFile|MODEL_SAVE|Save Model|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterNumber|LOGR_LEARNING_RATE|Learning Rate|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|LOGR_ITERATIONS|Number of Iterations|QgsProcessingParameterNumber.Integer|300|False|1|None
+QgsProcessingParameterEnum|LOGR_REGULARIZATION|Regularization|[0] disabled;[1] L1 norm;[2] L2 norm|False|0
+QgsProcessingParameterEnum|LOGR_TRAIN_METHOD|Training Method|[0] Batch Gradient Descent;[1] Mini-Batch Gradient Descent|False|0
+QgsProcessingParameterNumber|LOGR_MINIBATCH_SIZE|Mini-Batch Size|QgsProcessingParameterNumber.Integer|1|False|1|None

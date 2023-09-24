@@ -1,4 +1,4 @@
-Top of Atmosphere Reflectance
+Top of Atmosphere Reflectance|8
 imagery_tools
 QgsProcessingParameterRasterLayer|MSS01|Band 1|None|True
 QgsProcessingParameterRasterLayer|MSS02|Band 2|None|True
@@ -30,9 +30,9 @@ QgsProcessingParameterRasterLayer|ETM_T62|Band 62|None|True
 QgsProcessingParameterRasterLayer|TIRS10|Band 10|None|True
 QgsProcessingParameterRasterLayer|TIRS11|Band 11|None|True
 QgsProcessingParameterRasterLayer|PAN08|Band 8|None|True
-QgsProcessingParameterRasterDestination|SPECTRAL|Spectral
-QgsProcessingParameterRasterDestination|THERMAL|Thermal
-QgsProcessingParameterRasterDestination|PANBAND|Panchromatic
+QgsProcessingParameterRasterDestination|SPECTRAL|Spectral|None|False
+QgsProcessingParameterRasterDestination|THERMAL|Thermal|None|False
+QgsProcessingParameterRasterDestination|PANBAND|Panchromatic|None|False
 QgsProcessingParameterFile|METAFILE|Metadata File|QgsProcessingParameterFile.File|None|False
 QgsProcessingParameterEnum|SENSOR|Spacecraft Sensor|[0] Landsat-1 MSS;[1] Landsat-2 MSS;[2] Landsat-3 MSS;[3] Landsat-4 MSS;[4] Landsat-5 MSS;[5] Landsat-4 TM;[6] Landsat-5 TM;[7] Landsat-7 ETM+;[8] Landsat-8 OLI/TIRS|False|7
 QgsProcessingParameterString|DATE_ACQU|Image Acquisition Date|2001-01-01

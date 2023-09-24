@@ -1,7 +1,7 @@
-Landsat Import with Options
+Landsat Import with Options|10
 imagery_tools
 QgsProcessingParameterFile|FILES|Files|QgsProcessingParameterFile.File|None|False
-QgsProcessingParameterRasterDestination|BANDS|Bands
+QgsProcessingParameterRasterDestination|BANDS|Bands|None|False
 QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates|False|0
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
 QgsProcessingParameterBoolean|SHOW_RGB|Show a Composite|True

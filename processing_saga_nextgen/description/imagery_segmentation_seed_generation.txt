@@ -1,9 +1,9 @@
-Seed Generation
+Seed Generation|2
 imagery_segmentation
 QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
-QgsProcessingParameterRasterDestination|VARIANCE|Variance
-QgsProcessingParameterRasterDestination|SEED_GRID|Seeds Grid
-QgsProcessingParameterVectorDestination|SEED_POINTS|Seed Points
+QgsProcessingParameterRasterDestination|VARIANCE|Variance|None|False
+QgsProcessingParameterRasterDestination|SEED_GRID|Seeds Grid|None|True
+QgsProcessingParameterVectorDestination|SEED_POINTS|Seed Points|0|None|True
 QgsProcessingParameterEnum|SEED_TYPE|Seed Type|[0] minima of variance;[1] maxima of variance|False|0
 QgsProcessingParameterEnum|METHOD|Method|[0] band width smoothing;[1] band width search|False|0
 QgsProcessingParameterNumber|BAND_WIDTH|Bandwidth (Cells)|QgsProcessingParameterNumber.Double|10.000000|False|1.000000|None

@@ -1,11 +1,11 @@
-Universal Image Quality Index
+Universal Image Quality Index|13
 imagery_tools
 QgsProcessingParameterRasterLayer|GRID_A|First Grid|None|False
 QgsProcessingParameterRasterLayer|GRID_B|Second Grid|None|False
-QgsProcessingParameterRasterDestination|QUALITY|Universal Image Quality Index
-QgsProcessingParameterRasterDestination|CORRELATION|Correlation
-QgsProcessingParameterRasterDestination|LUMINANCE|Luminance
-QgsProcessingParameterRasterDestination|CONTRAST|Contrast
+QgsProcessingParameterRasterDestination|QUALITY|Universal Image Quality Index|None|False
+QgsProcessingParameterRasterDestination|CORRELATION|Correlation|None|True
+QgsProcessingParameterRasterDestination|LUMINANCE|Luminance|None|True
+QgsProcessingParameterRasterDestination|CONTRAST|Contrast|None|True
 QgsProcessingParameterNumber|K1|k1|QgsProcessingParameterNumber.Double|0.010000|False|0.000000|1.000000
 QgsProcessingParameterNumber|K2|k2|QgsProcessingParameterNumber.Double|0.030000|False|0.000000|1.000000
 QgsProcessingParameterNumber|L|L|QgsProcessingParameterNumber.Integer|255|False|1|None

@@ -1,8 +1,8 @@
-SVM Classification
+SVM Classification|0
 imagery_svm
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
-QgsProcessingParameterRasterDestination|CLASSES|Classification
-QgsProcessingParameterVectorDestination|CLASSES_LUT|Look-up Table
+QgsProcessingParameterRasterDestination|CLASSES|Classification|None|False
+QgsProcessingParameterVectorDestination|CLASSES_LUT|Look-up Table|5|None|True
 QgsProcessingParameterEnum|SCALING|Scaling|[0] none;[1] normalize (0-1);[2] standardize|False|2
 QgsProcessingParameterBoolean|MESSAGE|Verbose Messages|False
 QgsProcessingParameterEnum|MODEL_SRC|Model Source|[0] create from training areas;[1] restore from file|False|0

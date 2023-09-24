@@ -1,5 +1,5 @@
-Grid Cell Index
+Grid Cell Index|21
 grid_tools
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|INDEX|Index
+QgsProcessingParameterRasterDestination|INDEX|Index|None|False
 QgsProcessingParameterEnum|ORDER|Sorting Order|[0] ascending;[1] descending|False|0

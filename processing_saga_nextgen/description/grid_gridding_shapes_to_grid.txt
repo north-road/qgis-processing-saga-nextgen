@@ -1,4 +1,4 @@
-Shapes to Grid
+Shapes to Grid|0
 grid_gridding
 QgsProcessingParameterFeatureSource|INPUT|Shapes|-1|None|False
 QgsProcessingParameterField|FIELD|Attribute|None|INPUT|-1|False|False
@@ -10,5 +10,6 @@ QgsProcessingParameterEnum|GRID_TYPE|Data Type|[0] 1 bit;[1] 1 byte unsigned int
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None
-QgsProcessingParameterRasterDestination|GRID|Grid
-QgsProcessingParameterRasterDestination|COUNT|Number of Values
+QgsProcessingParameterEnum|TARGET_USER_FITS|Fit|[0] nodes;[1] cells|False|0
+QgsProcessingParameterRasterDestination|GRID|Grid|None|False
+QgsProcessingParameterRasterDestination|COUNT|Number of Values|None|True

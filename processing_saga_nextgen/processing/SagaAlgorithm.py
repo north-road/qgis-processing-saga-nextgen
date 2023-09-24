@@ -29,7 +29,7 @@ import importlib
 import os
 import shutil
 
-from processing.algs.help import shortHelp
+from ..help import shortHelp
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.tools.system import getTempFilename
 from qgis.core import (Qgis,

@@ -188,15 +188,18 @@ class SagaUtils:
         """
 
         if isWindows():
-            safeSagaBatchJobFilename = makePathSafe(SagaUtils.sagaBatchJobFilename())
+            safeSagaBatchJobFilename = SagaUtils.make_path_safe(
+                SagaUtils.sagaBatchJobFilename())
             command = ['cmd.exe', '/C ', safeSagaBatchJobFilename]
-            command = (' ').join(command)
+            command = ' '.join(command)
         else:
             os.chmod(SagaUtils.sagaBatchJobFilename(), stat.S_IEXEC |
                      stat.S_IREAD | stat.S_IWRITE)
             command = ["'" + SagaUtils.sagaBatchJobFilename() + "'"]
-        loglines = []
-        loglines.append(QCoreApplication.translate('SagaUtils', 'SAGA execution console output'))
+        loglines = [
+            QCoreApplication.translate('SagaUtils',
+                                               'SAGA execution console output')
+        ]
         with subprocess.Popen(
                 command,
                 shell=True,
@@ -226,18 +229,19 @@ class SagaUtils:
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_CONSOLE):
             QgsMessageLog.logMessage('\n'.join(loglines), 'Processing', Qgis.Info)
 
-
-def makePathSafe(path):
-    """Handle special characters on the path to the batch file for example: & < > ( ) @ ^ |.
-    See: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd#remarks
-    """
-    return '"' + path.translate(str.maketrans({
-        "&": r"^&",
-        "<": r"^<",
-        ">": r"^>",
-        "(": r"^(",
-        ")": r"^)",
-        "@": r"^@",
-        "^": r"^^",
-        "|": r"^|",
-    })) + '"'
+    @staticmethod
+    def make_path_safe(path: str) -> str:
+        """
+        Handle special characters on the path to the batch file for example: & < > ( ) @ ^ |.
+        See: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd#remarks
+        """
+        return '"' + path.translate(str.maketrans({
+            "&": r"^&",
+            "<": r"^<",
+            ">": r"^>",
+            "(": r"^(",
+            ")": r"^)",
+            "@": r"^@",
+            "^": r"^^",
+            "|": r"^|",
+        })) + '"'

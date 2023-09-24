@@ -1,0 +1,16 @@
+Transform Point Cloud|8
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|IN|Input|None|False
+QgsProcessingParameterPointCloudDestination|OUT|Output|None|False
+QgsProcessingParameterNumber|DX|dX|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|DY|dY|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|DZ|dZ|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANGLEX|Angle X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANGLEY|Angle Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANGLEZ|Angle Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|SCALEX|Scale Factor X|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|SCALEY|Scale Factor Y|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|SCALEZ|Scale Factor Z|QgsProcessingParameterNumber.Double|1.000000|False|None|None
+QgsProcessingParameterNumber|ANCHORX|X|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANCHORY|Y|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ANCHORZ|Z|QgsProcessingParameterNumber.Double|0.000000|False|None|None

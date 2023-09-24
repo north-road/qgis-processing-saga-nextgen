@@ -1,0 +1,8 @@
+Point Cloud Attribute Calculator|10
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|PC_IN|Point Cloud|None|False
+QgsProcessingParameterPointCloudDestination|PC_OUT|Result|None|True
+QgsProcessingParameterString|FORMULA|Formula|f1+f2
+QgsProcessingParameterString|NAME|Output Field Name|Calculation
+QgsProcessingParameterEnum|TYPE|Field data type|[0] 1 bit;[1] 1 byte unsigned integer;[2] 1 byte signed integer;[3] 2 byte unsigned integer;[4] 2 byte signed integer;[5] 4 byte unsigned integer;[6] 4 byte signed integer;[7] 4 byte floating point;[8] 8 byte floating point|False|7
+QgsProcessingParameterBoolean|USE_NODATA|Use NoData|False

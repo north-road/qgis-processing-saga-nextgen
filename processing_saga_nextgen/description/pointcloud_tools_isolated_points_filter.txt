@@ -1,0 +1,7 @@
+Isolated Points Filter|16
+pointcloud_tools
+QgsProcessingParameterPointCloudLayer|PC_IN|Points|None|False
+QgsProcessingParameterPointCloudDestination|PC_OUT|Filtered Points|None|True
+QgsProcessingParameterNumber|RADIUS|Filter Radius|QgsProcessingParameterNumber.Double|1.500000|False|0.001000|None
+QgsProcessingParameterNumber|MAX_POINTS|Maximum Number of Points|QgsProcessingParameterNumber.Integer|1|False|1|255
+QgsProcessingParameterEnum|METHOD|Method|[0] remove points;[1] tag points|False|0

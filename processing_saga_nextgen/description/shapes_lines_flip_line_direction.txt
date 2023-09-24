@@ -1,0 +1,4 @@
+Flip Line Direction|13
+shapes_lines
+QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
+QgsProcessingParameterVectorDestination|FLIPPED|Flipped Lines|1|None|True

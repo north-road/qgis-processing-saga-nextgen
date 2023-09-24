@@ -1,7 +1,7 @@
-Split Lines at Points
+Split Lines at Points|8
 shapes_lines
 QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
 QgsProcessingParameterFeatureSource|SPLIT|Split Features|0|None|False
-QgsProcessingParameterVectorDestination|INTERSECT|Intersection
+QgsProcessingParameterVectorDestination|INTERSECT|Intersection|1|None|False
 QgsProcessingParameterEnum|OUTPUT|Output|[0] polylines;[1] separate lines|False|1
 QgsProcessingParameterNumber|EPSILON|Epsilon|QgsProcessingParameterNumber.Double|0.000000|False|None|None

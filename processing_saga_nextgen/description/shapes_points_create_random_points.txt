@@ -1,6 +1,6 @@
-Create Random Points
+Create Random Points|21
 shapes_points
-QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterVectorDestination|POINTS|Points|0|None|False
 QgsProcessingParameterEnum|EXTENT|Target Area|[0] user defined;[1] grid system;[2] shapes extent;[3] polygons|False|0
 QgsProcessingParameterFeatureSource|SHAPES|Shapes Extent|-1|None|False
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False

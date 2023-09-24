@@ -1,7 +1,7 @@
-Snap Points to Polygons
+Snap Points to Polygons|22
 shapes_points
 QgsProcessingParameterFeatureSource|INPUT|Points|0|None|False
 QgsProcessingParameterFeatureSource|SNAP|Snap Features|2|None|False
-QgsProcessingParameterVectorDestination|OUTPUT|Result
-QgsProcessingParameterVectorDestination|MOVES|Moves
+QgsProcessingParameterVectorDestination|OUTPUT|Result|0|None|True
+QgsProcessingParameterVectorDestination|MOVES|Moves|1|None|True
 QgsProcessingParameterNumber|DISTANCE|Search Distance|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

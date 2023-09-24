@@ -1,0 +1,9 @@
+Point Thinning|14
+shapes_points
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|FIELD|Attribute|None|POINTS|-1|False|False
+QgsProcessingParameterBoolean|OUTPUT_PC|Output to Point Cloud|False
+QgsProcessingParameterVectorDestination|THINNED|Thinned Points|0|None|False
+QgsProcessingParameterPointCloudDestination|THINNED_PC|Thinned Points|None|False
+QgsProcessingParameterNumber|RESOLUTION|Resolution|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterEnum|METHOD|Method|[0] quadtree;[1] raster|False|1

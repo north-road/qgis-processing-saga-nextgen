@@ -1,7 +1,7 @@
-Line Properties
+Line Properties|2
 shapes_lines
 QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
-QgsProcessingParameterVectorDestination|OUTPUT|Lines with Property Attributes
+QgsProcessingParameterVectorDestination|OUTPUT|Lines with Property Attributes|1|None|True
 QgsProcessingParameterBoolean|BPARTS|Number of Parts|False
 QgsProcessingParameterBoolean|BPOINTS|Number of Vertices|False
 QgsProcessingParameterBoolean|BLENGTH|Length|True

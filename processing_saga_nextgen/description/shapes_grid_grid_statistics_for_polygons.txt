@@ -1,11 +1,11 @@
-Grid Statistics for Polygons
+Grid Statistics for Polygons|2
 shapes_grid
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
 QgsProcessingParameterEnum|NAMING|Field Naming|[0] grid number;[1] grid name|False|1
 QgsProcessingParameterEnum|METHOD|Method|[0] simple and fast;[1] polygon wise (cell centers);[2] polygon wise (cell area);[3] polygon wise (cell area weighted)|False|0
 QgsProcessingParameterBoolean|PARALLELIZED|Use Multiple Cores|False
-QgsProcessingParameterVectorDestination|RESULT|Statistics
+QgsProcessingParameterVectorDestination|RESULT|Statistics|2|None|True
 QgsProcessingParameterBoolean|COUNT|Number of Cells|True
 QgsProcessingParameterBoolean|MIN|Minimum|True
 QgsProcessingParameterBoolean|MAX|Maximum|True

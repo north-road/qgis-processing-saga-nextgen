@@ -1,6 +1,6 @@
-Convert Table to Points
+Convert Table to Points|0
 shapes_points
-QgsProcessingParameterVectorDestination|POINTS|Points
+QgsProcessingParameterVectorDestination|POINTS|Points|0|None|False
 QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
 QgsProcessingParameterField|X|X|None|TABLE|-1|False|False
 QgsProcessingParameterField|Y|Y|None|TABLE|-1|False|False

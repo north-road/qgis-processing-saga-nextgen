@@ -1,6 +1,6 @@
-Separate points by direction
+Separate points by direction|9
 shapes_points
-QgsProcessingParameterVectorDestination|OUTPUT|Ouput
+QgsProcessingParameterVectorDestination|OUTPUT|Ouput|-1|None|False
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
-QgsProcessingParameterNumber|DIRECTIONS|Number of Directions|QgsProcessingParameterNumber.Double|4.000000|False|2.000000|None
+QgsProcessingParameterNumber|DIRECTIONS|Number of Directions|QgsProcessingParameterNumber.Integer|4|False|2|None
 QgsProcessingParameterNumber|TOLERANCE|Tolerance (Degree)|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|None

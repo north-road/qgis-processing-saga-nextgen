@@ -38,8 +38,6 @@ from processing_saga_nextgen.processing.utils import SagaUtils
 from .SagaAlgorithm import SagaAlgorithm
 from .SplitRGBBands import SplitRGBBands
 
-REQUIRED_VERSION = '7.2.'
-
 
 class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
     """
@@ -82,13 +80,12 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                 self.tr('Processing'), Qgis.Critical)
             return
 
-        if version < REQUIRED_VERSION:
+        if version < SagaUtils.REQUIRED_VERSION:
             QgsMessageLog.logMessage(
                 self.tr('Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={}).').format(
-                    version, REQUIRED_VERSION),
+                    version, SagaUtils.REQUIRED_VERSION),
                 self.tr('Processing'),
                 Qgis.Critical)
-            return
 
         self.algs = []
         folder = SagaUtils.sagaDescriptionPath()

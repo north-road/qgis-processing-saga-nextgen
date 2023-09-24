@@ -1,16 +1,10 @@
-GWR for Multiple Predictor Grids|6
+GWR for Multiple Predictors (Shapes)|7
 statistics_regression
-QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterFeatureSource|POINTS|Shapes|-1|None|False
 QgsProcessingParameterField|DEPENDENT|Dependent Variable|None|POINTS|-1|False|False
-QgsProcessingParameterVectorDestination|RESIDUALS|Residuals|0|None|True
-QgsProcessingParameterMultipleLayers|PREDICTORS|Predictors|3|None|False
-QgsProcessingParameterRasterDestination|REGRESSION|Regression|None|False
-QgsProcessingParameterRasterDestination|QUALITY|Coefficient of Determination|None|False
-QgsProcessingParameterRasterDestination|MODEL|Regression Parameters|None|True
+QgsProcessingParameterString|PREDICTORS|Predictors|
+QgsProcessingParameterVectorDestination|REGRESSION|Regression|-1|None|False
 QgsProcessingParameterBoolean|LOGISTIC|Logistic Regression|False
-QgsProcessingParameterBoolean|MODEL_OUT|Output of Regression Parameters|False
-QgsProcessingParameterEnum|RESOLUTION|Model Resolution|[0] same as predictors;[1] user defined|False|1
-QgsProcessingParameterNumber|RESOLUTION_VAL|Resolution|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
 QgsProcessingParameterEnum|DW_WEIGHTING|Weighting Function|[0] no distance weighting;[1] inverse distance to a power;[2] exponential;[3] gaussian|False|3
 QgsProcessingParameterNumber|DW_IDW_POWER|Power|QgsProcessingParameterNumber.Double|2.000000|False|0.000000|None
 QgsProcessingParameterNumber|DW_BANDWIDTH|Bandwidth|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

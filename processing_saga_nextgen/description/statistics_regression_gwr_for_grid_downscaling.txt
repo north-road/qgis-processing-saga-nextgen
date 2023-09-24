@@ -1,12 +1,12 @@
-GWR for Grid Downscaling
+GWR for Grid Downscaling|14
 statistics_regression
 QgsProcessingParameterMultipleLayers|PREDICTORS|Predictors|3|None|False
-QgsProcessingParameterRasterDestination|REGRESSION|Regression
-QgsProcessingParameterRasterDestination|REG_RESCORR|Regression with Residual Correction
+QgsProcessingParameterRasterDestination|REGRESSION|Regression|None|False
+QgsProcessingParameterRasterDestination|REG_RESCORR|Regression with Residual Correction|None|True
 QgsProcessingParameterRasterLayer|DEPENDENT|Dependent Variable|None|False
-QgsProcessingParameterRasterDestination|QUALITY|Coefficient of Determination
-QgsProcessingParameterRasterDestination|RESIDUALS|Residuals
-QgsProcessingParameterRasterDestination|MODEL|Regression Parameters
+QgsProcessingParameterRasterDestination|QUALITY|Coefficient of Determination|None|False
+QgsProcessingParameterRasterDestination|RESIDUALS|Residuals|None|False
+QgsProcessingParameterRasterDestination|MODEL|Regression Parameters|None|True
 QgsProcessingParameterBoolean|LOGISTIC|Logistic Regression|False
 QgsProcessingParameterBoolean|MODEL_OUT|Output of Model Parameters|False
 QgsProcessingParameterEnum|SEARCH_RANGE|Search Range|[0] local;[1] global|False|0

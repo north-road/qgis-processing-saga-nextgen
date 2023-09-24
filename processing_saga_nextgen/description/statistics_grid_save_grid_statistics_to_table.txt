@@ -1,7 +1,7 @@
-Save Grid Statistics to Table
+Save Grid Statistics to Table|13
 statistics_grid
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
-QgsProcessingParameterVectorDestination|STATS|Statistics for Grids
+QgsProcessingParameterVectorDestination|STATS|Statistics for Grids|5|None|False
 QgsProcessingParameterBoolean|DATA_CELLS|Number of Data Cells|False
 QgsProcessingParameterBoolean|NODATA_CELLS|Number of No-Data Cells|False
 QgsProcessingParameterBoolean|CELLSIZE|Cellsize|False

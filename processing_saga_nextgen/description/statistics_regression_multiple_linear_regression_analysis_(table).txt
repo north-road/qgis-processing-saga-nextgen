@@ -1,7 +1,7 @@
-Multiple Linear Regression Analysis (Shapes)|13
+Multiple Linear Regression Analysis (Table)|12
 statistics_regression
-QgsProcessingParameterFeatureSource|TABLE|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|RESULTS|Results|-1|None|True
+QgsProcessingParameterFeatureSource|TABLE|Table|5|None|False
+QgsProcessingParameterVectorDestination|RESULTS|Results|5|None|True
 QgsProcessingParameterField|DEPENDENT|Dependent Variable|None|TABLE|-1|False|False
 QgsProcessingParameterVectorDestination|INFO_COEFF|Details: Coefficients|5|None|True
 QgsProcessingParameterVectorDestination|INFO_MODEL|Details: Model|5|None|True

@@ -1,8 +1,8 @@
-Valley Depth
+Valley Depth|7
 ta_channels
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
-QgsProcessingParameterRasterDestination|VALLEY_DEPTH|Valley Depth
-QgsProcessingParameterRasterDestination|RIDGE_LEVEL|Ridge Level
+QgsProcessingParameterRasterDestination|VALLEY_DEPTH|Valley Depth|None|False
+QgsProcessingParameterRasterDestination|RIDGE_LEVEL|Ridge Level|None|True
 QgsProcessingParameterNumber|THRESHOLD|Tension Threshold|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
 QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNumber.Integer|0|False|0|None
 QgsProcessingParameterBoolean|NOUNDERGROUND|Keep Ridge Level above Surface|True

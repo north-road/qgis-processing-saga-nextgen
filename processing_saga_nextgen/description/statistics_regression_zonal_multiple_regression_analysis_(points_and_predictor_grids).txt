@@ -1,11 +1,11 @@
-Zonal Multiple Regression Analysis (Points and Predictor Grids)
+Zonal Multiple Regression Analysis (Points and Predictor Grids)|15
 statistics_regression
 QgsProcessingParameterMultipleLayers|PREDICTORS|Predictors|3|None|False
 QgsProcessingParameterFeatureSource|ZONES|Zones|2|None|False
 QgsProcessingParameterFeatureSource|POINTS|Points|-1|None|False
 QgsProcessingParameterField|ATTRIBUTE|Dependent Variable|None|POINTS|-1|False|False
-QgsProcessingParameterVectorDestination|RESIDUALS|Residuals
-QgsProcessingParameterRasterDestination|REGRESSION|Regression
+QgsProcessingParameterVectorDestination|RESIDUALS|Residuals|0|None|True
+QgsProcessingParameterRasterDestination|REGRESSION|Regression|None|False
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
 QgsProcessingParameterBoolean|COORD_X|Include X Coordinate|False
 QgsProcessingParameterBoolean|COORD_Y|Include Y Coordinate|False

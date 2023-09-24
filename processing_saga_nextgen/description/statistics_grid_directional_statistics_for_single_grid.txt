@@ -1,19 +1,19 @@
-Directional Statistics for Single Grid
+Directional Statistics for Single Grid|6
 statistics_grid
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean
-QgsProcessingParameterRasterDestination|DIFMEAN|Difference from Arithmetic Mean
-QgsProcessingParameterRasterDestination|MIN|Minimum
-QgsProcessingParameterRasterDestination|MAX|Maximum
-QgsProcessingParameterRasterDestination|RANGE|Range
-QgsProcessingParameterRasterDestination|VAR|Variance
-QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation
-QgsProcessingParameterRasterDestination|STDDEVLO|Mean less Standard Deviation
-QgsProcessingParameterRasterDestination|STDDEVHI|Mean plus Standard Deviation
-QgsProcessingParameterRasterDestination|DEVMEAN|Deviation from Arithmetic Mean
-QgsProcessingParameterRasterDestination|PERCENT|Percentile
+QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean|None|True
+QgsProcessingParameterRasterDestination|DIFMEAN|Difference from Arithmetic Mean|None|True
+QgsProcessingParameterRasterDestination|MIN|Minimum|None|True
+QgsProcessingParameterRasterDestination|MAX|Maximum|None|True
+QgsProcessingParameterRasterDestination|RANGE|Range|None|True
+QgsProcessingParameterRasterDestination|VAR|Variance|None|True
+QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|STDDEVLO|Mean less Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|STDDEVHI|Mean plus Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|DEVMEAN|Deviation from Arithmetic Mean|None|True
+QgsProcessingParameterRasterDestination|PERCENT|Percentile|None|True
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|True
-QgsProcessingParameterVectorDestination|POINTS_OUT|Directional Statistics for Points
+QgsProcessingParameterVectorDestination|POINTS_OUT|Directional Statistics for Points|0|None|True
 QgsProcessingParameterNumber|DIRECTION|Direction [Degree]|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|TOLERANCE|Tolerance [Degree]|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|45.000000
 QgsProcessingParameterNumber|MAXDISTANCE|Maximum Distance [Cells]|QgsProcessingParameterNumber.Integer|0|False|0|None

@@ -1,7 +1,7 @@
-Geomorphons
+Geomorphons|8
 ta_lighting
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|GEOMORPHONS|Geomorphons
+QgsProcessingParameterRasterDestination|GEOMORPHONS|Geomorphons|None|False
 QgsProcessingParameterNumber|THRESHOLD|Threshold Angle|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
 QgsProcessingParameterNumber|RADIUS|Radial Limit|QgsProcessingParameterNumber.Double|10000.000000|False|0.000000|None
 QgsProcessingParameterEnum|METHOD|Method|[0] multi scale;[1] line tracing|False|1

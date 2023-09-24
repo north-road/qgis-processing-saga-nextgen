@@ -1,18 +1,18 @@
-Flow Accumulation (Flow Tracing)
+Flow Accumulation (Flow Tracing)|2
 ta_hydrology
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
 QgsProcessingParameterRasterLayer|SINKROUTE|Sink Routes|None|True
 QgsProcessingParameterRasterLayer|WEIGHTS|Weights|None|True
-QgsProcessingParameterRasterDestination|FLOW|Flow Accumulation
+QgsProcessingParameterRasterDestination|FLOW|Flow Accumulation|None|False
 QgsProcessingParameterRasterLayer|VAL_INPUT|Input for Mean over Catchment|None|True
-QgsProcessingParameterRasterDestination|VAL_MEAN|Mean over Catchment
+QgsProcessingParameterRasterDestination|VAL_MEAN|Mean over Catchment|None|False
 QgsProcessingParameterRasterLayer|ACCU_MATERIAL|Material for Accumulation|None|True
 QgsProcessingParameterRasterLayer|ACCU_TARGET|Accumulation Target|None|False
-QgsProcessingParameterRasterDestination|ACCU_TOTAL|Accumulated Material
-QgsProcessingParameterRasterDestination|ACCU_LEFT|Accumulated Material (Left Side)
-QgsProcessingParameterRasterDestination|ACCU_RIGHT|Accumulated Material (Right Side)
+QgsProcessingParameterRasterDestination|ACCU_TOTAL|Accumulated Material|None|True
+QgsProcessingParameterRasterDestination|ACCU_LEFT|Accumulated Material (Left Side)|None|True
+QgsProcessingParameterRasterDestination|ACCU_RIGHT|Accumulated Material (Right Side)|None|True
 QgsProcessingParameterNumber|STEP|Step|QgsProcessingParameterNumber.Integer|1|False|1|None
 QgsProcessingParameterEnum|FLOW_UNIT|Flow Accumulation Unit|[0] number of cells;[1] cell area|False|1
-QgsProcessingParameterEnum|METHOD|m_Method|[0] Rho 8;[1] Kinematic Routing Algorithm;[2] DEMON|False|1
+QgsProcessingParameterEnum|METHOD|Method|[0] Rho 8;[1] Kinematic Routing Algorithm;[2] DEMON|False|1
 QgsProcessingParameterBoolean|CORRECT|Flow Correction|True
-QgsProcessingParameterNumber|MINDQV|DEMON - Min. DQV|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000
+QgsProcessingParameterNumber|MINDQV|Minimum DQV|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|1.000000

@@ -1,12 +1,12 @@
-Isochrones Variable Speed
+Isochrones Variable Speed|30
 ta_hydrology
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
 QgsProcessingParameterRasterLayer|SLOPE|Slope|None|False
 QgsProcessingParameterRasterLayer|FLOWACC|Catchment Area|None|False
 QgsProcessingParameterRasterLayer|CN|Curve Number|None|True
 QgsProcessingParameterRasterLayer|MANNING|Manning's N|None|True
-QgsProcessingParameterRasterDestination|TIME|Time Out(h)
-QgsProcessingParameterRasterDestination|SPEED|Speed (m/s)
+QgsProcessingParameterRasterDestination|TIME|Time Out(h)|None|False
+QgsProcessingParameterRasterDestination|SPEED|Speed (m/s)|None|False
 QgsProcessingParameterNumber|AVGMANNING|Avg. Manning's N|QgsProcessingParameterNumber.Double|0.150000|False|None|None
 QgsProcessingParameterNumber|AVGCN|Avg. Curve Number|QgsProcessingParameterNumber.Double|75.000000|False|None|None
 QgsProcessingParameterNumber|THRSMIXED|Mixed Flow Threshold (ha)|QgsProcessingParameterNumber.Double|18.000000|False|None|None

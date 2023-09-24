@@ -1,17 +1,17 @@
-Statistics for Grids
+Statistics for Grids|4
 statistics_grid
 QgsProcessingParameterMultipleLayers|GRIDS|Values|3|None|False
 QgsProcessingParameterMultipleLayers|WEIGHTS|Weights|3|None|True
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|0
-QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean
-QgsProcessingParameterRasterDestination|MIN|Minimum
-QgsProcessingParameterRasterDestination|MAX|Maximum
-QgsProcessingParameterRasterDestination|RANGE|Range
-QgsProcessingParameterRasterDestination|SUM|Sum
-QgsProcessingParameterRasterDestination|SUM2|Sum2
-QgsProcessingParameterRasterDestination|VAR|Variance
-QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation
-QgsProcessingParameterRasterDestination|STDDEVLO|Mean less Standard Deviation
-QgsProcessingParameterRasterDestination|STDDEVHI|Mean plus Standard Deviation
-QgsProcessingParameterRasterDestination|PCTL|Percentile
+QgsProcessingParameterRasterDestination|MEAN|Arithmetic Mean|None|True
+QgsProcessingParameterRasterDestination|MIN|Minimum|None|True
+QgsProcessingParameterRasterDestination|MAX|Maximum|None|True
+QgsProcessingParameterRasterDestination|RANGE|Range|None|True
+QgsProcessingParameterRasterDestination|SUM|Sum|None|True
+QgsProcessingParameterRasterDestination|SUM2|Sum2|None|True
+QgsProcessingParameterRasterDestination|VAR|Variance|None|True
+QgsProcessingParameterRasterDestination|STDDEV|Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|STDDEVLO|Mean less Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|STDDEVHI|Mean plus Standard Deviation|None|True
+QgsProcessingParameterRasterDestination|PCTL|Percentile|None|True
 QgsProcessingParameterNumber|PCTL_VAL|Percentile|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|100.000000

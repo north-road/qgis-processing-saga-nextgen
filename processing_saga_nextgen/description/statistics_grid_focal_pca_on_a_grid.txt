@@ -1,9 +1,9 @@
-Focal PCA on a Grid
+Focal PCA on a Grid|15
 statistics_grid
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterRasterDestination|BASE|Base Topographies
-QgsProcessingParameterRasterDestination|PCA|Principal Components
-QgsProcessingParameterVectorDestination|EIGEN|Eigen Vectors
+QgsProcessingParameterRasterDestination|BASE|Base Topographies|None|True
+QgsProcessingParameterRasterDestination|PCA|Principal Components|None|False
+QgsProcessingParameterVectorDestination|EIGEN|Eigen Vectors|5|None|True
 QgsProcessingParameterNumber|COMPONENTS|Number of Components|QgsProcessingParameterNumber.Integer|7|False|1|None
 QgsProcessingParameterBoolean|BASE_OUT|Output of Base Topographies|False
 QgsProcessingParameterBoolean|OVERWRITE|Overwrite Previous Results|True

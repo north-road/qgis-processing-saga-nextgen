@@ -1,0 +1,9 @@
+Coastal Profile Crossings|1
+ta_cliffmetrics
+QgsProcessingParameterFeatureSource|LINES_SeaSide|SeaSide Profile Lines Layer|1|None|False
+QgsProcessingParameterFeatureSource|LINES_LandSide|LandSide Profile Lines Layer|1|None|False
+QgsProcessingParameterFeatureSource|LINES_Coast|Coast Lines Layer|1|None|False
+QgsProcessingParameterVectorDestination|CROSSINGS_SEASIDE|Crossings at Sea Side|0|None|False
+QgsProcessingParameterVectorDestination|CROSSINGS_LANDSIDE|Crossings at Land Side|0|None|False
+QgsProcessingParameterEnum|ATTRIBUTES|Parent Attributes|[0] index;[1] attributes;[2] index and attributes|False|0
+QgsProcessingParameterVectorDestination|DISTANCES|Distances to profile start point|0|None|False

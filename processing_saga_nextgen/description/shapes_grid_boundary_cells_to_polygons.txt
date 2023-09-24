@@ -1,0 +1,6 @@
+Boundary Cells to Polygons|19
+shapes_grid
+QgsProcessingParameterRasterLayer|GRID|Grid|None|False
+QgsProcessingParameterVectorDestination|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterEnum|BOUNDARY_CELLS|Boundary Cells|[0] no data;[1] value|False|0
+QgsProcessingParameterNumber|BOUNDARY_VALUE|Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None

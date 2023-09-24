@@ -1,12 +1,12 @@
-Contour Lines from Grid
+Contour Lines from Grid|5
 shapes_grid
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
-QgsProcessingParameterVectorDestination|CONTOUR|Contour
-QgsProcessingParameterVectorDestination|POLYGONS|Polygons
+QgsProcessingParameterVectorDestination|CONTOUR|Contour|1|None|False
 QgsProcessingParameterEnum|VERTEX|Vertex Type|[0] x, y;[1] x, y, z|False|0
-QgsProcessingParameterNumber|SCALE|Interpolation Scale|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
 QgsProcessingParameterBoolean|LINE_PARTS|Split Parts|True
+QgsProcessingParameterVectorDestination|POLYGONS|Polygons|2|None|True
 QgsProcessingParameterBoolean|POLY_PARTS|Split Polygon Parts|False
-QgsProcessingParameterNumber|ZMIN|Minimum Contour Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None
-QgsProcessingParameterNumber|ZMAX|Maximum Contour Value|QgsProcessingParameterNumber.Double|10000.000000|False|None|None
-QgsProcessingParameterNumber|ZSTEP|Equidistance|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterNumber|SCALE|Interpolation Scale|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|ZSTEP|Contour Interval|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterNumber|ZMIN|Base Contour Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None
+QgsProcessingParameterNumber|ZMAX|Maximum Contour Value|QgsProcessingParameterNumber.Double|1000.000000|False|None|None

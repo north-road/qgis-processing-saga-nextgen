@@ -1,0 +1,9 @@
+Split Lines|11
+shapes_lines
+QgsProcessingParameterFeatureSource|INPUT|Input Lines|1|None|False
+QgsProcessingParameterVectorDestination|OUTPUT|Output Lines|1|None|False
+QgsProcessingParameterEnum|DISTRIBUTION|Distribution|[0] By Length;[1] By Number|False|0
+QgsProcessingParameterNumber|LENGTH|Length|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|None
+QgsProcessingParameterEnum|CAPS_LENGTH|Caps|[0] Start Full Length;[1] Start Remaining Length;[2] Even Ends|False|0
+QgsProcessingParameterNumber|NUMBER|Number Of Splits|QgsProcessingParameterNumber.Integer|5|False|0|None
+QgsProcessingParameterEnum|CAPS_NUMBER|Caps|[0] Full Segment;[1] Half Segment|False|0

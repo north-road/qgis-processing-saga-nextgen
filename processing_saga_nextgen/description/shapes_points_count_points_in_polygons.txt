@@ -1,4 +1,4 @@
-Count Points in Polygons
+Count Points in Polygons|1
 shapes_points
 QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False

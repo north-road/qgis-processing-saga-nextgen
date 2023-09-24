@@ -1,0 +1,16 @@
+Line Dissolve|5
+shapes_lines
+QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
+QgsProcessingParameterVectorDestination|DISSOLVED|Dissolved Lines|1|None|False
+QgsProcessingParameterString|FIELDS|Dissolve Field(s)|
+QgsProcessingParameterString|STATISTICS|Statistics Field(s)|
+QgsProcessingParameterBoolean|STAT_SUM|Sum|False
+QgsProcessingParameterBoolean|STAT_AVG|Mean|True
+QgsProcessingParameterBoolean|STAT_MIN|Minimum|False
+QgsProcessingParameterBoolean|STAT_MAX|Maximum|False
+QgsProcessingParameterBoolean|STAT_RNG|Range|False
+QgsProcessingParameterBoolean|STAT_DEV|Deviation|False
+QgsProcessingParameterBoolean|STAT_VAR|Variance|False
+QgsProcessingParameterBoolean|STAT_LST|Listing|False
+QgsProcessingParameterBoolean|STAT_NUM|Count|False
+QgsProcessingParameterEnum|STAT_NAMING|Field Naming|[0] variable type + original name;[1] original name + variable type;[2] original name;[3] variable type|False|0

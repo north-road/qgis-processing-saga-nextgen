@@ -1,6 +1,6 @@
-Split Lines with Lines
+Split Lines with Lines|6
 shapes_lines
 QgsProcessingParameterFeatureSource|LINES|Lines|1|None|False
 QgsProcessingParameterFeatureSource|SPLIT|Split Features|1|None|False
-QgsProcessingParameterVectorDestination|INTERSECT|Intersection
+QgsProcessingParameterVectorDestination|INTERSECT|Intersection|1|None|False
 QgsProcessingParameterEnum|OUTPUT|Output|[0] polylines;[1] separate lines|False|1

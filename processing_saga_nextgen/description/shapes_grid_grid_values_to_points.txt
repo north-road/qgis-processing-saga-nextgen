@@ -1,7 +1,9 @@
-Grid Values to Points
+Grid Values to Points|3
 shapes_grid
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|True
-QgsProcessingParameterVectorDestination|SHAPES|Shapes
-QgsProcessingParameterBoolean|NODATA|Exclude NoData Cells|True
+QgsProcessingParameterField|ATTRIBUTE|Attribute|None|POLYGONS|-1|False|False
+QgsProcessingParameterVectorDestination|POINTS|Points|0|None|False
+QgsProcessingParameterVectorDestination|CELLS|Points|2|None|False
+QgsProcessingParameterEnum|NODATA|No-Data Cells|[0] include all cells;[1] include cell if at least one grid provides data;[2] exclude cell if at least one grid does not provide data|False|0
 QgsProcessingParameterEnum|TYPE|Type|[0] nodes;[1] cells|False|0

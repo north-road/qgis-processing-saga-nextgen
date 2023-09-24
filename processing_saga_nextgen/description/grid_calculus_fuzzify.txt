@@ -1,7 +1,7 @@
-Fuzzify
+Fuzzify|11
 grid_calculus
 QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
-QgsProcessingParameterRasterDestination|OUTPUT|Fuzzified Grid
+QgsProcessingParameterRasterDestination|OUTPUT|Fuzzified Grid|None|False
 QgsProcessingParameterNumber|INC_MIN|From|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|INC_MAX|To|QgsProcessingParameterNumber.Double|0.300000|False|None|None
 QgsProcessingParameterNumber|DEC_MIN|From|QgsProcessingParameterNumber.Double|0.700000|False|None|None

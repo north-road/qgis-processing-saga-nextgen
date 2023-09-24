@@ -1,12 +1,12 @@
-Pattern Analysis
+Pattern Analysis|8
 grid_analysis
 QgsProcessingParameterRasterLayer|INPUT|Input Grid|None|False
-QgsProcessingParameterRasterDestination|NDC|Number of Classes
-QgsProcessingParameterRasterDestination|RELATIVE|Relative Richness
-QgsProcessingParameterRasterDestination|FRAGMENTATION|Fragmentation
-QgsProcessingParameterRasterDestination|CVN|Center vs. Neighbours
-QgsProcessingParameterRasterDestination|DIVERSITY|Diversity
-QgsProcessingParameterRasterDestination|DOMINANCE|Dominance
+QgsProcessingParameterRasterDestination|NDC|Number of Classes|None|False
+QgsProcessingParameterRasterDestination|RELATIVE|Relative Richness|None|True
+QgsProcessingParameterRasterDestination|FRAGMENTATION|Fragmentation|None|True
+QgsProcessingParameterRasterDestination|CVN|Center vs. Neighbours|None|False
+QgsProcessingParameterRasterDestination|DIVERSITY|Diversity|None|False
+QgsProcessingParameterRasterDestination|DOMINANCE|Dominance|None|False
 QgsProcessingParameterNumber|MAXNUMCLASS|Max. Number of Classes|QgsProcessingParameterNumber.Integer|10|False|None|None
 QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
 QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

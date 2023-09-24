@@ -1,4 +1,4 @@
-Grid Volume
+Grid Volume|2
 grid_calculus
 QgsProcessingParameterRasterLayer|GRID|Grid|None|False
 QgsProcessingParameterEnum|METHOD|Method|[0] Count Only Above Base Level;[1] Count Only Below Base Level;[2] Subtract Volumes Below Base Level;[3] Add Volumes Below Base Level|False|0

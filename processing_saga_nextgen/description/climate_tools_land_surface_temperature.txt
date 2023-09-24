@@ -1,4 +1,4 @@
-Land Surface Temperature
+Land Surface Temperature|28
 climate_tools
 QgsProcessingParameterRasterLayer|IRRADIANCE|Global Irradiance|None|True
 QgsProcessingParameterNumber|IRRADIANCE_DEFAULT|Default|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|None
@@ -14,6 +14,6 @@ QgsProcessingParameterRasterLayer|T_SKY|Radiant Sky Temperature|None|True
 QgsProcessingParameterNumber|T_SKY_DEFAULT|Default|QgsProcessingParameterNumber.Double|280.000000|False|0.000000|None
 QgsProcessingParameterRasterLayer|T_INITIAL|Initial Temperature Estimation|None|True
 QgsProcessingParameterNumber|T_INITIAL_DEFAULT|Default|QgsProcessingParameterNumber.Double|300.000000|False|0.000000|None
-QgsProcessingParameterRasterDestination|LST|Land Surface Temperature
+QgsProcessingParameterRasterDestination|LST|Land Surface Temperature|None|False
 QgsProcessingParameterEnum|UNIT|Unit|[0] Kelvin;[1] Celsius|False|0
 QgsProcessingParameterNumber|ITERATIONS|Iterations|QgsProcessingParameterNumber.Integer|10|False|1|None

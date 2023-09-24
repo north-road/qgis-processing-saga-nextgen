@@ -1,7 +1,7 @@
-Simpson Index
+Simpson Index|23
 grid_analysis
 QgsProcessingParameterRasterLayer|CATEGORIES|Categories|None|False
-QgsProcessingParameterRasterDestination|COUNT|Number of Categories
-QgsProcessingParameterRasterDestination|INDEX|Simpson Index
+QgsProcessingParameterRasterDestination|COUNT|Number of Categories|None|True
+QgsProcessingParameterRasterDestination|INDEX|Simpson Index|None|False
 QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1
 QgsProcessingParameterNumber|KERNEL_RADIUS|Radius|QgsProcessingParameterNumber.Integer|2|False|0|None

@@ -1,7 +1,8 @@
-Wind Shelter Index
+Wind Shelter Index|29
 ta_morphometry
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
-QgsProcessingParameterRasterDestination|SHELTER|Wind Shelter Index
+QgsProcessingParameterRasterDestination|SHELTER|Wind Shelter Index|None|False
+QgsProcessingParameterEnum|UNIT|Unit|[0] degree;[1] radians|False|0
 QgsProcessingParameterNumber|DIRECTION|Wind Direction|QgsProcessingParameterNumber.Double|135.000000|False|None|None
 QgsProcessingParameterNumber|TOLERANCE|Tolerance|QgsProcessingParameterNumber.Double|5.000000|False|0.000000|90.000000
 QgsProcessingParameterNumber|DISTANCE|Distance|QgsProcessingParameterNumber.Double|5.000000|False|1.000000|None

@@ -1,6 +1,6 @@
-Flat Detection
+Flat Detection|0
 ta_preprocessor
 QgsProcessingParameterRasterLayer|DEM|DEM|None|False
-QgsProcessingParameterRasterDestination|NOFLATS|No Flats
-QgsProcessingParameterRasterDestination|FLATS|Flat Areas
+QgsProcessingParameterRasterDestination|NOFLATS|No Flats|None|True
+QgsProcessingParameterRasterDestination|FLATS|Flat Areas|None|True
 QgsProcessingParameterEnum|FLAT_OUTPUT|Flat Area Values|[0] elevation;[1] enumeration|False|0

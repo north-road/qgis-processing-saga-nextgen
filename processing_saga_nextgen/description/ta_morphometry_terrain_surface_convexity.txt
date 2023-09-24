@@ -1,7 +1,7 @@
-Terrain Surface Convexity
+Terrain Surface Convexity|21
 ta_morphometry
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|CONVEXITY|Convexity
+QgsProcessingParameterRasterDestination|CONVEXITY|Convexity|None|False
 QgsProcessingParameterEnum|KERNEL|Laplacian Filter Kernel|[0] conventional four-neighbourhood;[1] conventional eight-neihbourhood;[2] eight-neihbourhood (distance based weighting)|False|0
 QgsProcessingParameterEnum|TYPE|Type|[0] convexity;[1] concavity|False|0
 QgsProcessingParameterNumber|EPSILON|Flat Area Threshold|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None

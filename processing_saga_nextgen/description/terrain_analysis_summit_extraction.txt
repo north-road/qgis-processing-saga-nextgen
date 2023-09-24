@@ -1,7 +1,7 @@
-Summit Extraction
-toolchains_terrain_analysis
+Summit Extraction|ta_summits
+terrain_analysis
 QgsProcessingParameterRasterLayer|SURFACE|Surface|None|False
-QgsProcessingParameterVectorDestination|SUMMITS|Summits
+QgsProcessingParameterVectorDestination|SUMMITS|Summits|0|None|False
 QgsProcessingParameterEnum|METHOD|Trend Surface|[0] Resampling Filter;[1] Topographic Position Index (TPI)|False|0
 QgsProcessingParameterNumber|SCALE_FILTER|Scale|QgsProcessingParameterNumber.Double|10.000000|False|1.000000|None
 QgsProcessingParameterNumber|SCALE_TPI|Scale|QgsProcessingParameterNumber.Double|300.000000|False|1.000000|None

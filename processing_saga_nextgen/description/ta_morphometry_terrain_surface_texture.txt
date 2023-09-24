@@ -1,7 +1,7 @@
-Terrain Surface Texture
+Terrain Surface Texture|20
 ta_morphometry
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|TEXTURE|Texture
+QgsProcessingParameterRasterDestination|TEXTURE|Texture|None|False
 QgsProcessingParameterNumber|EPSILON|Flat Area Threshold|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
 QgsProcessingParameterNumber|SCALE|Scale (Cells)|QgsProcessingParameterNumber.Integer|10|False|1|None
 QgsProcessingParameterEnum|METHOD|Method|[0] counting cells;[1] resampling|False|1

@@ -1,4 +1,4 @@
-Terrain Surface Classification (Iwahashi and Pike)
+Terrain Surface Classification (Iwahashi and Pike)|22
 ta_morphometry
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
 QgsProcessingParameterRasterLayer|SLOPE|Slope|None|True
@@ -6,7 +6,7 @@ QgsProcessingParameterRasterLayer|CONVEXITY|Convexity|None|True
 QgsProcessingParameterBoolean|CONV_RECALC|Recalculate|False
 QgsProcessingParameterRasterLayer|TEXTURE|Texture|None|True
 QgsProcessingParameterBoolean|TEXT_RECALC|Recalculate|False
-QgsProcessingParameterRasterDestination|LANDFORMS|Landforms
+QgsProcessingParameterRasterDestination|LANDFORMS|Landforms|None|False
 QgsProcessingParameterEnum|TYPE|Number of Classes|[0] 8;[1] 12;[2] 16|False|2
 QgsProcessingParameterNumber|CONV_SCALE|Scale (Cells)|QgsProcessingParameterNumber.Integer|10|False|1|None
 QgsProcessingParameterEnum|CONV_KERNEL|Laplacian Filter Kernel|[0] four-neighbourhood;[1] eight-neihbourhood;[2] eight-neihbourhood (distance based weighting)|False|0

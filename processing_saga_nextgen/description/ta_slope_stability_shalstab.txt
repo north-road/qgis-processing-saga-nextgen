@@ -1,4 +1,4 @@
-SHALSTAB
+SHALSTAB|2
 ta_slope_stability
 QgsProcessingParameterRasterLayer|A|Slope grid (rad)|None|False
 QgsProcessingParameterRasterLayer|B|Catchment area grid (m2)|None|False
@@ -23,5 +23,5 @@ QgsProcessingParameterNumber|fFmax|Global maximum friction angle (degree)|QgsPro
 QgsProcessingParameterNumber|fJmin|Global minimum bulk cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|fJmax|Global maximum bulk cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|fK|Parameter sampling runs|QgsProcessingParameterNumber.Integer|1|False|None|None
-QgsProcessingParameterRasterDestination|G|CR values
-QgsProcessingParameterRasterDestination|H|CR classes
+QgsProcessingParameterRasterDestination|G|CR values|None|False
+QgsProcessingParameterRasterDestination|H|CR classes|None|True

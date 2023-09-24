@@ -1,7 +1,7 @@
-Convergence Index (Search Radius)
+Convergence Index (Search Radius)|2
 ta_morphometry
 QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
-QgsProcessingParameterRasterDestination|CONVERGENCE|Convergence Index
+QgsProcessingParameterRasterDestination|CONVERGENCE|Convergence Index|None|False
 QgsProcessingParameterBoolean|SLOPE|Gradient|False
 QgsProcessingParameterEnum|DIFFERENCE|Difference|[0] direction to the center cell;[1] center cell's aspect direction|False|0
 QgsProcessingParameterNumber|RADIUS|Radius [Cells]|QgsProcessingParameterNumber.Double|10.000000|False|1.000000|None

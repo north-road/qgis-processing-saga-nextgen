@@ -1,4 +1,4 @@
-SAFETYFACTOR
+SAFETYFACTOR|0
 ta_slope_stability
 QgsProcessingParameterRasterLayer|A|Slope grid (rad)|None|False
 QgsProcessingParameterRasterLayer|Bmin|Min thickness grid (m) |None|True
@@ -22,5 +22,5 @@ QgsProcessingParameterNumber|fEmax|Max global density (g/cm3)|QgsProcessingParam
 QgsProcessingParameterNumber|fFmin|Min global cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|fFmax|Max global cohesion (MPa)|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|fI|Parameter sampling runs|QgsProcessingParameterNumber.Integer|1|False|None|None
-QgsProcessingParameterRasterDestination|G|FS values
-QgsProcessingParameterRasterDestination|H|FS classes
+QgsProcessingParameterRasterDestination|G|FS values|None|False
+QgsProcessingParameterRasterDestination|H|FS classes|None|True

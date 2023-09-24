@@ -1,4 +1,4 @@
-WETNESS
+WETNESS|3
 ta_slope_stability
 QgsProcessingParameterRasterLayer|DEM|DEM|None|False
 QgsProcessingParameterRasterLayer|Cmin|Min hydraulic conductivity grid (m/hr) |None|True
@@ -14,7 +14,7 @@ QgsProcessingParameterNumber|fDmax|Max global groundwater recharge (m/hr)|QgsPro
 QgsProcessingParameterNumber|fEmin|Min global material depth (m)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
 QgsProcessingParameterNumber|fEmax|Max global material depth (m)|QgsProcessingParameterNumber.Double|1.000000|False|None|None
 QgsProcessingParameterNumber|fH|Parameter sampling runs|QgsProcessingParameterNumber.Integer|1|False|None|None
-QgsProcessingParameterRasterDestination|F|WI values
-QgsProcessingParameterRasterDestination|G|WI classes
+QgsProcessingParameterRasterDestination|F|WI values|None|False
+QgsProcessingParameterRasterDestination|G|WI classes|None|True
 QgsProcessingParameterEnum|METHOD|Catchment Area Calculation|[0] Deterministic 8;[1] Rho 8;[2] Braunschweiger Reliefmodell;[3] Deterministic Infinity;[4] Multiple Flow Direction;[5] Multiple Triangular Flow Directon|False|4
 QgsProcessingParameterBoolean|PREPROC|Preprocessing|False

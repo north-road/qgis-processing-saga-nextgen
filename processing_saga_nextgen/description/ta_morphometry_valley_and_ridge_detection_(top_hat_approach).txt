@@ -1,11 +1,11 @@
-Valley and Ridge Detection (Top Hat Approach)
+Valley and Ridge Detection (Top Hat Approach)|24
 ta_morphometry
 QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
-QgsProcessingParameterRasterDestination|VALLEY|Valley Depth
-QgsProcessingParameterRasterDestination|HILL|Hill Height
-QgsProcessingParameterRasterDestination|VALLEY_IDX|Valley Index
-QgsProcessingParameterRasterDestination|HILL_IDX|Hill Index
-QgsProcessingParameterRasterDestination|SLOPE_IDX|Hillslope Index
+QgsProcessingParameterRasterDestination|VALLEY|Valley Depth|None|True
+QgsProcessingParameterRasterDestination|HILL|Hill Height|None|True
+QgsProcessingParameterRasterDestination|VALLEY_IDX|Valley Index|None|False
+QgsProcessingParameterRasterDestination|HILL_IDX|Hill Index|None|False
+QgsProcessingParameterRasterDestination|SLOPE_IDX|Hillslope Index|None|True
 QgsProcessingParameterNumber|RADIUS_VALLEY|Valley Radius|QgsProcessingParameterNumber.Double|1000.000000|False|0.000000|None
 QgsProcessingParameterNumber|RADIUS_HILL|Hill Radius|QgsProcessingParameterNumber.Double|1000.000000|False|0.000000|None
 QgsProcessingParameterNumber|THRESHOLD|Elevation Threshold|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None

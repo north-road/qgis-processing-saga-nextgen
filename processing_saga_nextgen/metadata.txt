@@ -8,13 +8,13 @@
 
 [general]
 name=Processing Saga NextGen Provider
-qgisMinimumVersion=3.4
-description=A Processing provider for SAGA 7.2
-version=0.0.7
+qgisMinimumVersion=3.22
+description=A Processing provider for SAGA 9.1
+version=1.0.0
 author=North Road
 email=nyall@north-road.com
 
-about=Processing provider for SAGA 7.2. Requires manual installation of SAGA 7.2 binaries.
+about=Processing provider for SAGA 9.1. Requires manual installation of SAGA 9.1 binaries.
 
 tracker=https://github.com/north-road/qgis-processing-saga-nextgen/issues
 repository=https://github.com/north-road/qgis-processing-saga-nextgen
@@ -23,7 +23,8 @@ repository=https://github.com/north-road/qgis-processing-saga-nextgen
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=0.0.7 Fix compatibility with QGIS 3.22
+changelog=1.0.0 Target SAGA 9.1+. Allow running with older SAGA, but show warnings.
+    0.0.7 Fix compatibility with QGIS 3.22
     0.0.6 Synchronise description files with newer Windows installer versions
     0.0.5 Fix exception when loading on Macos
     0.0.4 Be more forgiving for different SAGA versions... because hey, this whole plugin is "use at your own risk!"

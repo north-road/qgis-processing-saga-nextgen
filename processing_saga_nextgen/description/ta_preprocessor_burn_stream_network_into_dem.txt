@@ -1,7 +1,7 @@
-Burn Stream Network into DEM
+Burn Stream Network into DEM|6
 ta_preprocessor
 QgsProcessingParameterRasterLayer|DEM|DEM|None|False
-QgsProcessingParameterRasterDestination|BURN|Processed DEM
+QgsProcessingParameterRasterDestination|BURN|Processed DEM|None|True
 QgsProcessingParameterRasterLayer|STREAM|Streams|None|False
 QgsProcessingParameterRasterLayer|FLOWDIR|Flow Direction|None|False
 QgsProcessingParameterEnum|METHOD|Method|[0] simply decrease cell's value by epsilon;[1] lower cell's value to neighbours minimum value minus epsilon;[2] trace stream network downstream|False|0

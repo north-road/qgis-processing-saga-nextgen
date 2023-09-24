@@ -1,5 +1,5 @@
-Fill Sinks XXL (Wang & Liu)
+Fill Sinks XXL (Wang & Liu)|5
 ta_preprocessor
 QgsProcessingParameterRasterLayer|ELEV|DEM|None|False
-QgsProcessingParameterRasterDestination|FILLED|Filled DEM
+QgsProcessingParameterRasterDestination|FILLED|Filled DEM|None|False
 QgsProcessingParameterNumber|MINSLOPE|Minimum Slope [Degree]|QgsProcessingParameterNumber.Double|0.100000|False|0.000000|None

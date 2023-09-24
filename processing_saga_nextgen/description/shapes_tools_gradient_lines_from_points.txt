@@ -1,0 +1,11 @@
+Gradient Lines from Points|30
+shapes_tools
+QgsProcessingParameterFeatureSource|POINTS|Points|0|None|False
+QgsProcessingParameterField|DIRECTION|Direction|None|POINTS|-1|False|False
+QgsProcessingParameterField|LENGTH|Length|None|POINTS|-1|False|False
+QgsProcessingParameterField|X_COMP|X-Component|None|POINTS|-1|False|False
+QgsProcessingParameterField|Y_COMP|Y-Component|None|POINTS|-1|False|False
+QgsProcessingParameterEnum|DEFINITION|Gradient Definition|[0] direction and length;[1] directional components|False|0
+QgsProcessingParameterNumber|SCALING|Length Scaling Factor|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterVectorDestination|GRADIENTS|Gradient|1|None|False
+QgsProcessingParameterVectorDestination|TARGETS|Target Points|0|None|True

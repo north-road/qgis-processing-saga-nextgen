@@ -1,4 +1,4 @@
-Copy Shapes
+Copy Shapes|28
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|COPY|Copy
+QgsProcessingParameterVectorDestination|COPY|Copy|-1|None|False

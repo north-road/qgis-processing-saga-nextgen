@@ -1,5 +1,5 @@
-Polygons to Edges and Nodes
+Polygons to Edges and Nodes|9
 shapes_polygons
 QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
-QgsProcessingParameterVectorDestination|EDGES|Edges
-QgsProcessingParameterVectorDestination|NODES|Nodes
+QgsProcessingParameterVectorDestination|EDGES|Edges|1|None|False
+QgsProcessingParameterVectorDestination|NODES|Nodes|0|None|False

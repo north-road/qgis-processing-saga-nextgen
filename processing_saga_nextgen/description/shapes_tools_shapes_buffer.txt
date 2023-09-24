@@ -1,7 +1,7 @@
-Shapes Buffer
+Shapes Buffer|18
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
-QgsProcessingParameterVectorDestination|BUFFER|Buffer
+QgsProcessingParameterVectorDestination|BUFFER|Buffer|2|None|False
 QgsProcessingParameterField|DIST_FIELD|Buffer Distance|None|SHAPES|-1|False|False
 QgsProcessingParameterNumber|DIST_FIELD_DEFAULT|Default|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
 QgsProcessingParameterNumber|DIST_SCALE|Scaling Factor for Attribute Value|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None

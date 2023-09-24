@@ -1,5 +1,5 @@
-Select and Delete
-toolchains_shapes_tools
+Select and Delete|shapes:select+delete
+shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterField|ATTRIBUTE|Attribute|None|SHAPES|-1|False|False
 QgsProcessingParameterEnum|METHOD|Expression Type|[0] string expression;[1] numerical expression|False|0

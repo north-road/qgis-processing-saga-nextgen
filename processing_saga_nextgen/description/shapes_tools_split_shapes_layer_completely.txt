@@ -1,6 +1,6 @@
-Split Shapes Layer Completely
+Split Shapes Layer Completely|9
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Input|-1|None|False
 QgsProcessingParameterField|FIELD|Attribute|None|SHAPES|-1|False|False
-QgsProcessingParameterVectorDestination|LIST|Output
+QgsProcessingParameterVectorDestination|LIST|Output|-1|None|False
 QgsProcessingParameterEnum|NAMING|Name by...|[0] number of order;[1] attribute|False|0

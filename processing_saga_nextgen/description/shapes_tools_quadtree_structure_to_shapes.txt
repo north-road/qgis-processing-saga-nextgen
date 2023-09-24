@@ -1,7 +1,7 @@
-QuadTree Structure to Shapes
+QuadTree Structure to Shapes|20
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterField|ATTRIBUTE|Attribute|None|SHAPES|-1|False|False
-QgsProcessingParameterVectorDestination|POLYGONS|Polygons
-QgsProcessingParameterVectorDestination|LINES|Lines
-QgsProcessingParameterVectorDestination|POINTS|Duplicated Points
+QgsProcessingParameterVectorDestination|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|LINES|Lines|1|None|False
+QgsProcessingParameterVectorDestination|POINTS|Duplicated Points|0|None|True

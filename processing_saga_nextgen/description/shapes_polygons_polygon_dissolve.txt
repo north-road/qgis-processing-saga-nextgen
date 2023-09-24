@@ -1,0 +1,19 @@
+Polygon Dissolve|5
+shapes_polygons
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|DISSOLVED|Dissolved Polygons|2|None|False
+QgsProcessingParameterString|FIELDS|Dissolve Field(s)|
+QgsProcessingParameterString|STATISTICS|Statistics Field(s)|
+QgsProcessingParameterBoolean|STAT_SUM|Sum|False
+QgsProcessingParameterBoolean|STAT_AVG|Mean|True
+QgsProcessingParameterBoolean|STAT_MIN|Minimum|False
+QgsProcessingParameterBoolean|STAT_MAX|Maximum|False
+QgsProcessingParameterBoolean|STAT_RNG|Range|False
+QgsProcessingParameterBoolean|STAT_DEV|Deviation|False
+QgsProcessingParameterBoolean|STAT_VAR|Variance|False
+QgsProcessingParameterBoolean|STAT_LST|Listing|False
+QgsProcessingParameterBoolean|STAT_NUM|Count|False
+QgsProcessingParameterEnum|STAT_NAMING|Field Naming|[0] variable type + original name;[1] original name + variable type;[2] original name;[3] variable type|False|0
+QgsProcessingParameterBoolean|BND_KEEP|Keep Boundaries|False
+QgsProcessingParameterNumber|MIN_AREA|Minimum Area|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterBoolean|SPLIT_DISTINCT|Split Distinct Polygons|False

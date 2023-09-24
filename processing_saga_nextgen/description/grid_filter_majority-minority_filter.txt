@@ -1,7 +1,7 @@
-Majority/Minority Filter
+Majority/Minority Filter|6
 grid_filter
 QgsProcessingParameterRasterLayer|INPUT|Grid|None|False
-QgsProcessingParameterRasterDestination|RESULT|Filtered Grid
+QgsProcessingParameterRasterDestination|RESULT|Filtered Grid|None|True
 QgsProcessingParameterEnum|TYPE|Type|[0] Majority;[1] Minority|False|0
 QgsProcessingParameterNumber|THRESHOLD|Threshold|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|100.000000
 QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1

@@ -1,7 +1,7 @@
-Evapotranspiration (Table)
+Evapotranspiration (Table)|6
 climate_tools
 QgsProcessingParameterFeatureSource|TABLE|Data|5|None|False
-QgsProcessingParameterVectorDestination|RESULT|Evapotranspiration
+QgsProcessingParameterVectorDestination|RESULT|Results|5|None|True
 QgsProcessingParameterField|T|Mean Temperature|None|TABLE|-1|False|False
 QgsProcessingParameterField|T_MIN|Minimum Temperature|None|TABLE|-1|False|False
 QgsProcessingParameterField|T_MAX|Maximum Temperature|None|TABLE|-1|False|False

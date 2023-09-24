@@ -1,10 +1,10 @@
-Frost Change Frequency
+Frost Change Frequency|14
 climate_tools
 QgsProcessingParameterMultipleLayers|TMIN|Minimum Temperature|3|None|False
 QgsProcessingParameterMultipleLayers|TMAX|Maximum Temperature|3|None|False
-QgsProcessingParameterRasterDestination|FREQUENCY|Frost Change Frequency
-QgsProcessingParameterRasterDestination|DT_MEAN|Mean Temperature Span
-QgsProcessingParameterRasterDestination|DT_MAX|Maximum Temperature Span
-QgsProcessingParameterRasterDestination|DT_STDV|Standard Deviation of Temperature Span
-QgsProcessingParameterRasterDestination|TMIN_MEAN|Mean Minimum Temperature
-QgsProcessingParameterRasterDestination|TMIN_MIN|Minimum Temperature
+QgsProcessingParameterRasterDestination|FREQUENCY|Frost Change Frequency|None|False
+QgsProcessingParameterRasterDestination|DT_MEAN|Mean Temperature Span|None|True
+QgsProcessingParameterRasterDestination|DT_MAX|Maximum Temperature Span|None|True
+QgsProcessingParameterRasterDestination|DT_STDV|Standard Deviation of Temperature Span|None|True
+QgsProcessingParameterRasterDestination|TMIN_MEAN|Mean Minimum Temperature|None|True
+QgsProcessingParameterRasterDestination|TMIN_MIN|Minimum Temperature|None|True

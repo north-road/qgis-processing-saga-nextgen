@@ -1,10 +1,10 @@
-Fragmentation (Standard)
+Fragmentation (Standard)|15
 grid_analysis
 QgsProcessingParameterRasterLayer|CLASSES|Classification|None|False
-QgsProcessingParameterRasterDestination|DENSITY|Density [Percent]
-QgsProcessingParameterRasterDestination|CONNECTIVITY|Connectivity [Percent]
-QgsProcessingParameterRasterDestination|FRAGMENTATION|Fragmentation
-QgsProcessingParameterVectorDestination|FRAGSTATS|Summary
+QgsProcessingParameterRasterDestination|DENSITY|Density [Percent]|None|False
+QgsProcessingParameterRasterDestination|CONNECTIVITY|Connectivity [Percent]|None|False
+QgsProcessingParameterRasterDestination|FRAGMENTATION|Fragmentation|None|False
+QgsProcessingParameterVectorDestination|FRAGSTATS|Summary|5|None|True
 QgsProcessingParameterNumber|CLASS|Class Identifier|QgsProcessingParameterNumber.Integer|1|False|None|None
 QgsProcessingParameterEnum|AGGREGATION|Level Aggregation|[0] average;[1] multiplicative|False|0
 QgsProcessingParameterBoolean|BORDER|Add Border|False

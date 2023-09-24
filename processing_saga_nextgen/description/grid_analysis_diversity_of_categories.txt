@@ -1,10 +1,10 @@
-Diversity of Categories
+Diversity of Categories|21
 grid_analysis
 QgsProcessingParameterRasterLayer|CATEGORIES|Categories|None|False
-QgsProcessingParameterRasterDestination|COUNT|Number of Categories
-QgsProcessingParameterRasterDestination|DIVERSITY|Diversity
-QgsProcessingParameterRasterDestination|CONNECTIVITY|Connectivity
-QgsProcessingParameterRasterDestination|CONNECTEDAVG|Averaged Connectivity
+QgsProcessingParameterRasterDestination|COUNT|Number of Categories|None|False
+QgsProcessingParameterRasterDestination|DIVERSITY|Diversity|None|False
+QgsProcessingParameterRasterDestination|CONNECTIVITY|Connectivity|None|False
+QgsProcessingParameterRasterDestination|CONNECTEDAVG|Averaged Connectivity|None|False
 QgsProcessingParameterEnum|NB_CASE|Connectivity Neighbourhood|[0] Rook's case;[1] Queen's case|False|1
 QgsProcessingParameterEnum|NORMALIZE|Normalize|[0] no;[1] by number of cells;[2] by area size|False|0
 QgsProcessingParameterEnum|KERNEL_TYPE|Kernel Type|[0] Square;[1] Circle|False|1

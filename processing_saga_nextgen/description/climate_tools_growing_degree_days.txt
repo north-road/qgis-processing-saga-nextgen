@@ -1,10 +1,10 @@
-Growing Degree Days
+Growing Degree Days|18
 climate_tools
 QgsProcessingParameterMultipleLayers|TMEAN|Mean Monthly Temperatures|3|None|False
 QgsProcessingParameterNumber|TBASE|Base Temperature|QgsProcessingParameterNumber.Double|10.000000|False|None|None
-QgsProcessingParameterRasterDestination|NGDD|Number of Days above Base Temperature
-QgsProcessingParameterRasterDestination|TSUM|Growing Degree Days
-QgsProcessingParameterRasterDestination|FIRST|First Growing Degree Day
-QgsProcessingParameterRasterDestination|LAST|Last Growing Degree Day
-QgsProcessingParameterRasterDestination|TARGET|Degree Sum Target Day
+QgsProcessingParameterRasterDestination|NGDD|Number of Days above Base Temperature|None|False
+QgsProcessingParameterRasterDestination|TSUM|Growing Degree Days|None|False
+QgsProcessingParameterRasterDestination|FIRST|First Growing Degree Day|None|True
+QgsProcessingParameterRasterDestination|LAST|Last Growing Degree Day|None|True
+QgsProcessingParameterRasterDestination|TARGET|Degree Sum Target Day|None|True
 QgsProcessingParameterNumber|TTARGET|Degree Sum|QgsProcessingParameterNumber.Double|100.000000|False|None|None

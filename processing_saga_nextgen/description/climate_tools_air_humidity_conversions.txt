@@ -1,0 +1,23 @@
+Air Humidity Conversions|29
+climate_tools
+QgsProcessingParameterRasterLayer|T|Temperature|None|True
+QgsProcessingParameterNumber|T_DEFAULT|Default|QgsProcessingParameterNumber.Double|25.000000|False|-273.150000|None
+QgsProcessingParameterRasterLayer|P|Air Pressure|None|True
+QgsProcessingParameterNumber|P_DEFAULT|Default|QgsProcessingParameterNumber.Double|1013.250000|False|0.000000|None
+QgsProcessingParameterRasterLayer|IN_VP|Vapor Pressure|None|True
+QgsProcessingParameterNumber|IN_VP_DEFAULT|Default|QgsProcessingParameterNumber.Double|15.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|IN_SH|Specific Humidity|None|True
+QgsProcessingParameterNumber|IN_SH_DEFAULT|Default|QgsProcessingParameterNumber.Double|10.000000|False|0.000000|None
+QgsProcessingParameterRasterLayer|IN_RH|Relative Humidity|None|True
+QgsProcessingParameterNumber|IN_RH_DEFAULT|Default|QgsProcessingParameterNumber.Double|50.000000|False|0.000000|100.000000
+QgsProcessingParameterRasterLayer|IN_DP|Dew Point|None|True
+QgsProcessingParameterNumber|IN_DP_DEFAULT|Default|QgsProcessingParameterNumber.Double|14.000000|False|-273.150000|None
+QgsProcessingParameterRasterDestination|OUT_VPSAT|Saturation Pressure|None|True
+QgsProcessingParameterRasterDestination|OUT_VP|Vapor Pressure|None|True
+QgsProcessingParameterRasterDestination|OUT_VPDIF|Vapor Pressure Deficit|None|True
+QgsProcessingParameterRasterDestination|OUT_RH|Relative Humidity|None|True
+QgsProcessingParameterRasterDestination|OUT_SH|Specific Humidity|None|True
+QgsProcessingParameterRasterDestination|OUT_DP|Dew Point|None|True
+QgsProcessingParameterRasterDestination|OUT_DPDIF|Dew Point Difference|None|True
+QgsProcessingParameterEnum|CONVERSION|Conversion from...|[0] Vapor Pressure;[1] Specific Humidity;[2] Relative Humidity;[3] Dew Point|False|0
+QgsProcessingParameterEnum|VPSAT_METHOD|Saturation Pressure|[0] Magnus;[1] Lowe & Ficke|False|0

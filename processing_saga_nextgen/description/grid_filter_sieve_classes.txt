@@ -1,7 +1,7 @@
-Sieve Classes
+Sieve Classes|15
 grid_filter
 QgsProcessingParameterRasterLayer|INPUT|Classes|None|False
-QgsProcessingParameterRasterDestination|OUTPUT|Sieved Classes
+QgsProcessingParameterRasterDestination|OUTPUT|Sieved Classes|None|True
 QgsProcessingParameterEnum|MODE|Neighbourhood|[0] Neumann;[1] Moore|False|0
 QgsProcessingParameterNumber|THRESHOLD|Minimum Threshold|QgsProcessingParameterNumber.Integer|4|False|2|None
 QgsProcessingParameterEnum|ALL|Class Selection|[0] single class;[1] all classes|False|1

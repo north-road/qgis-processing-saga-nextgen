@@ -7,6 +7,8 @@ QgsProcessingParameterBoolean|LINE_PARTS|Split Parts|True
 QgsProcessingParameterVectorDestination|POLYGONS|Polygons|2|None|True
 QgsProcessingParameterBoolean|POLY_PARTS|Split Polygon Parts|False
 QgsProcessingParameterNumber|SCALE|Interpolation Scale|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
-QgsProcessingParameterNumber|ZSTEP|Contour Interval|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterEnum|INTERVALS|Interval Definition|[0] single value;[1] equal intervals;[2] from list|False|1
 QgsProcessingParameterNumber|ZMIN|Base Contour Value|QgsProcessingParameterNumber.Double|0.000000|False|None|None
 QgsProcessingParameterNumber|ZMAX|Maximum Contour Value|QgsProcessingParameterNumber.Double|1000.000000|False|None|None
+QgsProcessingParameterNumber|ZSTEP|Contour Interval|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterString|ZLIST|Contour Values|0, 10, 20, 50, 100, 200, 500, 1000

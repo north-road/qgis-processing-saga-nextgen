@@ -1,5 +1,8 @@
 Polygon Generalization|23
 shapes_polygons
 QgsProcessingParameterFeatureSource|POLYGONS|Shapes|2|None|False
-QgsProcessingParameterVectorDestination|GENERALIZED|Shape Indices|2|None|True
-QgsProcessingParameterNumber|THRESHOLD|Threshold|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterVectorDestination|GENERALIZED|Generalized Shapes|2|None|True
+QgsProcessingParameterNumber|THRESHOLD|Area Threshold|QgsProcessingParameterNumber.Double|100.000000|False|0.000000|None
+QgsProcessingParameterEnum|JOIN_TO|Join to Neighbour with ...|[0] largest area;[1] largest shared edge length|False|0
+QgsProcessingParameterBoolean|VERTICES|Check Vertices|False
+QgsProcessingParameterNumber|EPSILON|Tolerance|QgsProcessingParameterNumber.Double|0.000010|False|0.000000|None

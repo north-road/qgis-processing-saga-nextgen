@@ -8,7 +8,7 @@ QgsProcessingParameterString|CRS_EPSG_AUTH|Authority|EPSG
 QgsProcessingParameterMultipleLayers|SOURCE|Source|3|None|False
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
 QgsProcessingParameterBoolean|BYTEWISE|Bytewise Interpolation|False
-QgsProcessingParameterBoolean|KEEP_TYPE|Preserve Data Type|False
+QgsProcessingParameterEnum|DATA_TYPE|Data Type|[0] unsigned 1 byte integer;[1] signed 1 byte integer;[2] unsigned 2 byte integer;[3] signed 2 byte integer;[4] unsigned 4 byte integer;[5] signed 4 byte integer;[6] unsigned 8 byte integer;[7] signed 8 byte integer;[8] 4 byte floating point number;[9] 8 byte floating point number;[10] Preserve|False|10
 QgsProcessingParameterBoolean|TARGET_AREA|Use Target Area Polygon|False
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True

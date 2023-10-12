@@ -14,4 +14,4 @@ QgsProcessingParameterNumber|SWC_DEFAULT|Default|QgsProcessingParameterNumber.Do
 QgsProcessingParameterNumber|SWC_SURFACE|Top Soil Water Capacity|QgsProcessingParameterNumber.Double|30.000000|False|0.000000|None
 QgsProcessingParameterNumber|SWT_RESIST|Transpiration Resistance|QgsProcessingParameterNumber.Double|0.500000|False|0.010000|None
 QgsProcessingParameterBoolean|RESET|Reset|True
-QgsProcessingParameterString|DAY|Start Day|2023-09-07
+QgsProcessingParameterString|DAY|Start Day|2023-10-13

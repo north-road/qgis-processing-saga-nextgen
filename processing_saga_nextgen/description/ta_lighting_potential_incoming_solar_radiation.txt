@@ -17,12 +17,12 @@ QgsProcessingParameterRasterDestination|GRD_SUNSET|Sunset|None|True
 QgsProcessingParameterNumber|SOLARCONST|Solar Constant [W/m_]|QgsProcessingParameterNumber.Double|1367.000000|False|0.000000|None
 QgsProcessingParameterBoolean|LOCALSVF|Local Sky View Factor|True
 QgsProcessingParameterEnum|UNITS|Units|[0] [kWh/m_];[1] [kJ/m_];[2] [J/cm_]|False|0
-QgsProcessingParameterEnum|SHADOW|Shadow|[0] slim;[1] fat;[2] none|False|0
+QgsProcessingParameterEnum|SHADOW|Shadow|[0] slim;[1] fat;[2] none|False|1
 QgsProcessingParameterEnum|LOCATION|Location|[0] constant latitude;[1] calculate from grid system|False|0
 QgsProcessingParameterNumber|LATITUDE|Latitude|QgsProcessingParameterNumber.Double|53.000000|False|-90.000000|90.000000
 QgsProcessingParameterEnum|PERIOD|Time Period|[0] moment;[1] day;[2] range of days|False|1
-QgsProcessingParameterString|DAY|Day|2023-09-07
-QgsProcessingParameterString|DAY_STOP|Last Day|2023-09-07
+QgsProcessingParameterString|DAY|Day|2023-10-13
+QgsProcessingParameterString|DAY_STOP|Last Day|2023-10-13
 QgsProcessingParameterNumber|DAYS_STEP|Resolution [d]|QgsProcessingParameterNumber.Integer|5|False|1|None
 QgsProcessingParameterNumber|MOMENT|Moment [h]|QgsProcessingParameterNumber.Double|12.000000|False|0.000000|24.000000
 QgsProcessingParameterNumber|HOUR_STEP|Resolution [h]|QgsProcessingParameterNumber.Double|0.500000|False|0.000000|24.000000

@@ -1,0 +1,7 @@
+Contour Lines from Points|points_to_contour
+shapes_points
+QgsProcessingParameterFeatureSource|SHAPES|Points|-1|None|False
+QgsProcessingParameterVectorDestination|CONTOUR|Contour Lines|-1|None|False
+QgsProcessingParameterField|ATTRIBUTE|Attribute|None|SHAPES|-1|False|False
+QgsProcessingParameterNumber|CELL_SIZE|Precision|QgsProcessingParameterNumber.Double|10.000000|False|None|None
+QgsProcessingParameterNumber|ZSTEP|Equidistance|QgsProcessingParameterNumber.Double|10.000000|False|None|None

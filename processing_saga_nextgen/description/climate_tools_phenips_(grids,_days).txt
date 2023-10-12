@@ -33,4 +33,4 @@ QgsProcessingParameterString|YD_End|End of Development|2023-10-31
 QgsProcessingParameterRasterDestination|ATSUM_EFF|Air Temperature Sum|None|False
 QgsProcessingParameterRasterDestination|RISK|Risk|None|False
 QgsProcessingParameterBoolean|RESET|Reset|True
-QgsProcessingParameterString|DAY|Start Day|2023-09-07
+QgsProcessingParameterString|DAY|Start Day|2023-10-13

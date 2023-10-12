@@ -17,7 +17,7 @@ QgsProcessingParameterNumber|KAPPA_OFF|Offset|QgsProcessingParameterNumber.Doubl
 QgsProcessingParameterEnum|ORIENTATION|Orientation|[0] BLUH;[1] PATB|False|0
 QgsProcessingParameterEnum|ROW_ORDER|Row Order|[0] top down;[1] bottom up|False|0
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
-QgsProcessingParameterEnum|DATA_TYPE|Data Storage Type|[0] 1 byte unsigned integer;[1] 1 byte signed integer;[2] 2 byte unsigned integer;[3] 2 byte signed integer;[4] 4 byte unsigned integer;[5] 4 byte signed integer;[6] 4 byte floating point;[7] 8 byte floating point;[8] same as original|False|8
+QgsProcessingParameterEnum|DATA_TYPE|Data Type|[0] unsigned 1 byte integer;[1] signed 1 byte integer;[2] unsigned 2 byte integer;[3] signed 2 byte integer;[4] unsigned 4 byte integer;[5] signed 4 byte integer;[6] unsigned 8 byte integer;[7] signed 8 byte integer;[8] 4 byte floating point number;[9] 8 byte floating point number;[10] same as original|False|10
 Hardcoded|-TARGET_DEFINITION 0
 QgsProcessingParameterExtent|TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX|Output extent|None|True
 QgsProcessingParameterNumber|TARGET_USER_SIZE|Cellsize|QgsProcessingParameterNumber.Double|100.0|False|None|None

@@ -1,0 +1,5 @@
+Remove Boundary Polygons|remove_from_boundary
+shapes_polygons
+QgsProcessingParameterFeatureSource|POLYGONS|Polygons|2|None|False
+QgsProcessingParameterVectorDestination|RESULT|Result|2|None|True
+QgsProcessingParameterEnum|METHOD|Method|[0] Extent;[1] Polygon Boundary|False|0

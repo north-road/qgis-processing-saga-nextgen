@@ -1,15 +1,16 @@
 Import Sentinel-2 Scene|15
 imagery_tools
 QgsProcessingParameterFile|METAFILE|Metadata File|QgsProcessingParameterFile.File|None|False
-QgsProcessingParameterRasterDestination|BANDS|Bands|None|False
-QgsProcessingParameterBoolean|MULTI2GRIDS|Multispectral Bands as Grid Collection|True
+QgsProcessingParameterRasterDestination|BANDS|Spectral Bands|None|False
+QgsProcessingParameterRasterDestination|BANDS_AUX|Auxiliary Bands|None|False
+QgsProcessingParameterBoolean|MULTI2GRIDS|Spectral Bands as Grid Collection|True
 QgsProcessingParameterBoolean|LOAD_60M|Aerosol, Vapour, Cirrus|False
 QgsProcessingParameterBoolean|LOAD_AOT|Aerosol Optical Thickness|False
 QgsProcessingParameterBoolean|LOAD_WVP|Water Vapour|False
 QgsProcessingParameterBoolean|LOAD_SCL|Scene Classification|False
-QgsProcessingParameterEnum|REFLECTANCE|Reflectance Values|[0] original;[1] fraction|False|1
+QgsProcessingParameterEnum|REFLECTANCE|Reflectance Values|[0] digital numbers;[1] fraction|False|1
 QgsProcessingParameterEnum|RESOLUTION|Resolution|[0] original;[1] 10m;[2] 20m|False|0
-QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates;[3] Different UTM Zone|False|0
+QgsProcessingParameterEnum|PROJECTION|Coordinate System|[0] UTM North;[1] UTM South;[2] Geographic Coordinates;[3] Different UTM Zone;[4] original|False|4
 QgsProcessingParameterEnum|RESAMPLING|Resampling|[0] Nearest Neighbour;[1] Bilinear Interpolation;[2] Bicubic Spline Interpolation;[3] B-Spline Interpolation|False|3
 QgsProcessingParameterNumber|UTM_ZONE|Zone|QgsProcessingParameterNumber.Integer|32|False|1|60
 QgsProcessingParameterBoolean|UTM_SOUTH|South|False

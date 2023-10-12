@@ -9,4 +9,3 @@ QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNu
 QgsProcessingParameterBoolean|NORMALISE|Normalise|False
 QgsProcessingParameterEnum|INITIALIZE|Start Partition|[0] random;[1] periodical;[2] keep values|False|0
 QgsProcessingParameterBoolean|OLDVERSION|Old Version|False
-QgsProcessingParameterBoolean|UPDATEVIEW|Update View|True

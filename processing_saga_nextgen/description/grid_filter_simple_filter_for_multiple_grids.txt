@@ -1,4 +1,4 @@
-Simple Filter for Multiple Grids|grid_list_simple_filter
+Simple Filter for Multiple Grids|simple_filter_bulk
 grid_filter
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
 QgsProcessingParameterRasterDestination|FILTERED|Filtered Grids|None|False

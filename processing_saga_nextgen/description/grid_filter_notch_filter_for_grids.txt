@@ -1,4 +1,4 @@
-Notch Filter for Grids|grid_notch_filter
+Notch Filter for Grids|notch_filter
 grid_filter
 QgsProcessingParameterRasterLayer|INPUT_GRID|Input Grid|None|False
 QgsProcessingParameterRasterDestination|LOWPASS_UPPER|Lowpass Upper|None|False

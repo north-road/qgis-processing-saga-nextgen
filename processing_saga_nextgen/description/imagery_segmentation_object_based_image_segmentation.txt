@@ -1,0 +1,17 @@
+Object Based Image Segmentation|obia
+imagery_segmentation
+QgsProcessingParameterMultipleLayers|FEATURES|Features|3|None|False
+QgsProcessingParameterBoolean|NORMALIZE|Normalize|False
+QgsProcessingParameterVectorDestination|OBJECTS|Segments|-1|None|False
+QgsProcessingParameterNumber|SEEDS_BAND_WIDTH|Band Width for Seed Point Generation|QgsProcessingParameterNumber.Double|2.000000|False|None|None
+QgsProcessingParameterEnum|RGA_NEIGHBOUR|Neighbourhood|[0] 4 (Neumann);[1] 8 (Moore)|False|0
+QgsProcessingParameterEnum|RGA_METHOD|Distance|[0] feature space and position;[1] feature space|False|1
+QgsProcessingParameterNumber|RGA_SIG_1|Variance in Feature Space|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RGA_SIG_2|Variance in Position Space|QgsProcessingParameterNumber.Double|1.000000|False|0.000000|None
+QgsProcessingParameterNumber|RGA_SIMILARITY|Similarity Threshold|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|None
+QgsProcessingParameterNumber|MAJORITY_RADIUS|Generalization|QgsProcessingParameterNumber.Integer|1|False|None|None
+QgsProcessingParameterEnum|CLASSIFICATION|Classification|[0] none;[1] cluster analysis;[2] supervised classification|False|0
+QgsProcessingParameterEnum|SPLIT_POLYGONS|Split Distinct Polygon Parts|[0] no;[1] yes|False|1
+QgsProcessingParameterNumber|NCLUSTER|Number of Clusters|QgsProcessingParameterNumber.Integer|10|False|None|None
+QgsProcessingParameterEnum|CLASSIFIER|Method|[0] Binary Encoding;[1] Parallelepiped;[2] Minimum Distance;[3] Mahalanobis Distance;[4] Maximum Likelihood;[5] Spectral Angle Mapping|False|2
+QgsProcessingParameterFeatureSource|SAMPLES|Training Samples|5|None|False

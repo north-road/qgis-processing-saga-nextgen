@@ -1,4 +1,4 @@
-Select and Delete|shapes:select+delete
+Select and Delete|select_and_delete
 shapes_tools
 QgsProcessingParameterFeatureSource|SHAPES|Shapes|-1|None|False
 QgsProcessingParameterField|ATTRIBUTE|Attribute|None|SHAPES|-1|False|False

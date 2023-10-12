@@ -1,0 +1,4 @@
+Create Raster Catalogue from Virtual Raster (VRT)|14
+io_gdal
+QgsProcessingParameterFile|VRT_FILE|VRT File|QgsProcessingParameterFile.File|None|False
+QgsProcessingParameterVectorDestination|CATALOGUE|Raster Catalogue|2|None|False

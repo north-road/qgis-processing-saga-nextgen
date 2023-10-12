@@ -4,5 +4,5 @@ QgsProcessingParameterRasterLayer|TARGET|Target System|None|False
 QgsProcessingParameterRasterDestination|SUNRISE|Sunrise|None|False
 QgsProcessingParameterRasterDestination|SUNSET|Sunset|None|False
 QgsProcessingParameterRasterDestination|LENGTH|Day Length|None|False
-QgsProcessingParameterString|DAY|Day of Month|2023-09-07
+QgsProcessingParameterString|DAY|Day of Month|2023-10-13
 QgsProcessingParameterEnum|TIME|Time|[0] local;[1] world|False|0

@@ -4,5 +4,6 @@ QgsProcessingParameterPointCloudLayer|PC_IN|Point Cloud|None|False
 QgsProcessingParameterPointCloudDestination|PC_OUT|Result|None|True
 QgsProcessingParameterString|FORMULA|Formula|f1+f2
 QgsProcessingParameterString|NAME|Output Field Name|Calculation
-QgsProcessingParameterEnum|TYPE|Field data type|[0] 1 bit;[1] 1 byte unsigned integer;[2] 1 byte signed integer;[3] 2 byte unsigned integer;[4] 2 byte signed integer;[5] 4 byte unsigned integer;[6] 4 byte signed integer;[7] 4 byte floating point;[8] 8 byte floating point|False|7
+QgsProcessingParameterBoolean|FNAME|Take Formula|False
+QgsProcessingParameterEnum|TYPE|Data Type|[0] bit;[1] unsigned 1 byte integer;[2] signed 1 byte integer;[3] unsigned 2 byte integer;[4] signed 2 byte integer;[5] unsigned 4 byte integer;[6] signed 4 byte integer;[7] unsigned 8 byte integer;[8] signed 8 byte integer;[9] 4 byte floating point number;[10] 8 byte floating point number|False|9
 QgsProcessingParameterBoolean|USE_NODATA|Use NoData|False

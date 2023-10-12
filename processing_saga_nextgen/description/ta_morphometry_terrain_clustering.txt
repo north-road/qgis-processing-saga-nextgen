@@ -1,0 +1,6 @@
+Terrain Clustering|clustering
+ta_morphometry
+QgsProcessingParameterRasterLayer|ELEVATION|Elevation|None|False
+QgsProcessingParameterRasterDestination|CLUSTER|Clusters|None|False
+QgsProcessingParameterNumber|NCLUSTER|Number of Terrain Classes|QgsProcessingParameterNumber.Integer|5|False|None|None
+QgsProcessingParameterNumber|MAXITER|Maximum Iterations|QgsProcessingParameterNumber.Integer|25|False|None|None

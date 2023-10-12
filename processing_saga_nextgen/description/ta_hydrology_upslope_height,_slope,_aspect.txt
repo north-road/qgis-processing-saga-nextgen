@@ -1,0 +1,7 @@
+Upslope Height, Slope, Aspect|upslope_height
+ta_hydrology
+QgsProcessingParameterRasterLayer|DEM|Elevation|None|False
+QgsProcessingParameterRasterDestination|HEIGHT|Upslope Height|None|False
+QgsProcessingParameterRasterDestination|SLOPE|Slope|None|False
+QgsProcessingParameterRasterDestination|ASPECT|Aspect|None|False
+QgsProcessingParameterEnum|FLOW_METHOD|Flow Distribution|[0] Deterministic 8;[1] Rho 8;[2] Braunschweiger Reliefmodell;[3] Deterministic Infinity;[4] Multiple Flow Direction;[5] Multiple Triangular Flow Direction;[6] Multiple Maximum Downslope Gradient Based Flow Direction|False|4

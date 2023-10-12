@@ -1,4 +1,4 @@
-Change a Grid's No-Data Value [Bulk Processing]|grid_tools_bulk_no-data_change
+Change a Grid's No-Data Value [Bulk Processing]|bulk_nodata_change
 grid_tools
 QgsProcessingParameterMultipleLayers|GRIDS|Grids|3|None|False
 QgsProcessingParameterBoolean|COPY|Create Copies|True

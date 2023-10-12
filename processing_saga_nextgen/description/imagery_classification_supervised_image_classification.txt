@@ -3,8 +3,8 @@ imagery_classification
 QgsProcessingParameterMultipleLayers|GRIDS|Features|3|None|False
 QgsProcessingParameterBoolean|NORMALISE|Normalize|False
 QgsProcessingParameterRasterDestination|CLASSES|Classification|None|False
-QgsProcessingParameterVectorDestination|CLASSES_LUT|Look-up Table|5|None|True
 QgsProcessingParameterRasterDestination|QUALITY|Quality|None|True
+QgsProcessingParameterVectorDestination|CLASSES_LUT|Look-up Table|5|None|True
 QgsProcessingParameterEnum|TRAIN_WITH|Training|[0] training areas;[1] training samples;[2] load from file|False|0
 QgsProcessingParameterFeatureSource|TRAINING|Training Areas|-1|None|False
 QgsProcessingParameterField|TRAINING_CLASS|Class Identifier|None|TRAINING|-1|False|False
@@ -17,9 +17,3 @@ QgsProcessingParameterNumber|THRESHOLD_DIST|Distance Threshold|QgsProcessingPara
 QgsProcessingParameterNumber|THRESHOLD_ANGLE|Spectral Angle Threshold (Degree)|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|90.000000
 QgsProcessingParameterNumber|THRESHOLD_PROB|Probability Threshold|QgsProcessingParameterNumber.Double|0.000000|False|0.000000|100.000000
 QgsProcessingParameterEnum|RELATIVE_PROB|Probability Reference|[0] absolute;[1] relative|False|1
-QgsProcessingParameterBoolean|WTA_0|Binary Encoding|False
-QgsProcessingParameterBoolean|WTA_1|Parallelepiped|False
-QgsProcessingParameterBoolean|WTA_2|Minimum Distance|False
-QgsProcessingParameterBoolean|WTA_3|Mahalanobis Distance|False
-QgsProcessingParameterBoolean|WTA_4|Maximum Likelihood|False
-QgsProcessingParameterBoolean|WTA_5|Spectral Angle Mapping|False

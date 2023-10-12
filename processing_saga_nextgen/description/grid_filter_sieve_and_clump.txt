@@ -1,4 +1,4 @@
-Sieve and Clump|SieveAndClump
+Sieve and Clump|sieve_and_clump
 grid_filter
 QgsProcessingParameterRasterLayer|CLASSES|Classes|None|False
 QgsProcessingParameterRasterDestination|FILTERED|Sieve and Clump|None|False

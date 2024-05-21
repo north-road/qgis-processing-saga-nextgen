@@ -14,6 +14,8 @@ version=1.0.0
 author=North Road
 email=nyall@north-road.com
 
+supportsQt6=yes
+
 about=Processing provider for SAGA 9.1. Requires manual installation of SAGA 9.1 binaries.
 
 tracker=https://github.com/north-road/qgis-processing-saga-nextgen/issues

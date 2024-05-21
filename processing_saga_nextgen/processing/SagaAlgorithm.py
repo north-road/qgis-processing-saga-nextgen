@@ -237,7 +237,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 layers = self.parameterAsLayerList(parameters, param.name(), context)
                 if layers is None or len(layers) == 0:
                     continue
-                if param.layerType() == QgsProcessing.TypeRaster:
+                if param.layerType() == QgsProcessing.SourceType.TypeRaster:
                     files = []
                     for i, layer in enumerate(layers):
                         if layer.source().lower().endswith('sdat'):
@@ -319,7 +319,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 for i in range(4):
                     command += ' -{} {}'.format(param.name().split(' ')[i], float(values[i]) + offset[i])
             elif isinstance(param, QgsProcessingParameterNumber):
-                if param.dataType() == QgsProcessingParameterNumber.Integer:
+                if param.dataType() == QgsProcessingParameterNumber.Type.Integer:
                     command += ' -{} {}'.format(param.name(), self.parameterAsInt(parameters, param.name(), context))
                 else:
                     command += ' -{} {}'.format(param.name(), self.parameterAsDouble(parameters, param.name(), context))
@@ -366,7 +366,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
             feedback.pushCommandInfo(line)
             loglines.append(line)
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_COMMANDS):
-            QgsMessageLog.logMessage('\n'.join(loglines), self.tr('Processing'), Qgis.Info)
+            QgsMessageLog.logMessage('\n'.join(loglines), self.tr('Processing'), Qgis.MessageLevel.Info)
         SagaUtils.executeSaga(feedback)
 
         if crs is not None:
@@ -477,7 +477,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
             if isinstance(param, QgsProcessingParameterRasterLayer):
                 raster_layer_params.append(param.name())
             elif isinstance(param,
-                            QgsProcessingParameterMultipleLayers) and param.layerType() == QgsProcessing.TypeRaster:
+                            QgsProcessingParameterMultipleLayers) and param.layerType() == QgsProcessing.SourceType.TypeRaster:
                 raster_layer_params.extend(param.name())
 
         for layer_param in raster_layer_params:

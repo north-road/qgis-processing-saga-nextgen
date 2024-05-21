@@ -123,7 +123,7 @@ class AlgorithmsTest:
 
         if 'skipInvalid' in defs and defs['skipInvalid']:
             context.setInvalidGeometryCheck(
-                QgsFeatureRequest.GeometrySkipInvalid)
+                QgsFeatureRequest.InvalidGeometryCheck.GeometrySkipInvalid)
 
         feedback = QgsProcessingFeedback()
 

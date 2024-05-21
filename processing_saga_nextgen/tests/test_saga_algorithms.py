@@ -69,9 +69,9 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         self.assertEqual(param.name(), 'R_PERCTL_MIN')
         self.assertEqual(param.description(), 'Percentiles Range for RED max')
         self.assertEqual(param.dataType(),
-                         QgsProcessingParameterNumber.Integer)
+                         QgsProcessingParameterNumber.Type.Integer)
         self.assertFalse(
-            param.flags() & QgsProcessingParameterDefinition.FlagOptional)
+            param.flags() & QgsProcessingParameterDefinition.Flag.FlagOptional)
         self.assertEqual(param.minimum(), 1)
         self.assertEqual(param.maximum(), 99)
 

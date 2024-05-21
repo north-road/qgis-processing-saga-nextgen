@@ -54,7 +54,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         if version is None:
             QgsMessageLog.logMessage(
                 self.tr('Problem with SAGA installation: SAGA was not found or is not correctly installed'),
-                self.tr('Processing'), Qgis.Critical)
+                self.tr('Processing'), Qgis.MessageLevel.Critical)
             return
 
         if version < SagaUtils.REQUIRED_VERSION:
@@ -62,7 +62,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                 self.tr('Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={}).').format(
                     version, SagaUtils.REQUIRED_VERSION),
                 self.tr('Processing'),
-                Qgis.Critical)
+                Qgis.MessageLevel.Critical)
 
         self.algs = []
         folder = SagaUtils.sagaDescriptionPath()
@@ -74,11 +74,11 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                         self.algs.append(alg)
                     else:
                         QgsMessageLog.logMessage(self.tr('Could not open SAGA algorithm: {}'.format(descriptionFile)),
-                                                 self.tr('Processing'), Qgis.Critical)
+                                                 self.tr('Processing'), Qgis.MessageLevel.Critical)
                 except Exception as e:  # pylint: disable=broad-except
                     QgsMessageLog.logMessage(
                         self.tr('Could not open SAGA algorithm: {}\n{}'.format(descriptionFile, str(e))),
-                        self.tr('Processing'), Qgis.Critical)
+                        self.tr('Processing'), Qgis.MessageLevel.Critical)
 
         self.algs.append(SplitRGBBands())
         for a in self.algs:

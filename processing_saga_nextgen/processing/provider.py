@@ -40,6 +40,11 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         ProcessingConfig.addSetting(Setting("SAGANG",
                                             SagaUtils.SAGA_LOG_CONSOLE,
                                             self.tr('Log console output'), True))
+        ProcessingConfig.addSetting(Setting("SAGANG",
+                                            SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH,
+                                            self.tr('Intermediate output path'),
+                                            '',
+                                            valuetype=Setting.FOLDER))       
         ProcessingConfig.readSettings()
         self.refreshAlgorithms()
         return True
@@ -48,6 +53,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_CONSOLE)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_COMMANDS)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_FOLDER)
+        ProcessingConfig.removeSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
 
     def loadAlgorithms(self):  # pylint:disable=missing-docstring
         version = SagaUtils.getInstalledVersion(True)

@@ -1,3 +1,7 @@
+"""
+Algorithm and group name formatting utilities
+"""
+
 groups = {
     "ta_slope_stability": "Terrain Analysis",
     "pointcloud_tools": "Features",
@@ -51,7 +55,10 @@ groups = {
 }
 
 
-def decoratedGroupName(name):
+def decoratedGroupName(name: str) -> str:
+    """
+    Returns a nice user-friendly group name instead of a raw SAGA group name
+    """
     return groups.get(name, name)
 
 
@@ -616,5 +623,8 @@ algorithms = {
 }
 
 
-def decoratedAlgorithmName(name):
+def decoratedAlgorithmName(name: str) -> str:
+    """
+    Returns a nice user friendly algorithm name instead of the raw SAGA name
+    """
     return algorithms.get(name, name)

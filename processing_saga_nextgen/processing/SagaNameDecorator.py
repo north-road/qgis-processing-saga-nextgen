@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 groups = {
     "ta_slope_stability": "Terrain Analysis",
     "pointcloud_tools": "Features",

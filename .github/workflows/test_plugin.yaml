@@ -25,7 +25,7 @@ jobs:
 
     strategy:
       matrix:
-        docker_tags: [3.34, 3.40, 3.42]
+        docker_tags: ["3.34", "3.40", "3.42"]
 
     steps:
 

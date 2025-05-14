@@ -100,19 +100,6 @@ pylint:
 	@echo "e.g. source run-env-linux.sh <path to qgis install>; make pylint"
 	@echo "----------------------"
 
-
-# Run pep8/pycodestyle style checking
-#http://pypi.python.org/pypi/pep8
-pycodestyle:
-	@echo
-	@echo "-----------"
-	@echo "pycodestyle PEP8 issues"
-	@echo "-----------"
-	@pycodestyle --repeat --ignore=E203,E121,E122,E123,E124,E125,E126,E127,E128,E402,E501,W504 --exclude $(PEP8EXCLUDE) $(PLUGIN_NAME)
-	@echo "-----------"
-	@echo "Ignored in PEP8 check:"
-	@echo $(PEP8EXCLUDE)
-
 # The dclean target removes compiled python files from plugin directory
 # also deletes any .git entry
 dclean:

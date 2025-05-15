@@ -62,7 +62,7 @@ class AlgorithmsTest:
                         idx, len(algorithm_tests["tests"]), algtest["name"]
                     )
                 )
-                yield self.check_algorithm, algtest["name"], algtest
+                self.check_algorithm(algtest["name"], algtest)
 
     def check_algorithm(self, name, defs):
         """
@@ -96,6 +96,7 @@ class AlgorithmsTest:
 
         print('Running alg: "{}"'.format(defs["algorithm"]))
         alg = QgsApplication.processingRegistry().createAlgorithmById(defs["algorithm"])
+        self.assertIsNotNone(alg, 'Could not find algorithm "{}"'.format(defs["algorithm"]))
 
         parameters = {}
         if isinstance(params, list):
@@ -215,7 +216,7 @@ class AlgorithmsTest:
         if param["type"] == "rasterhash":
             outdir = tempfile.mkdtemp()
             self.cleanup_paths.append(outdir)
-            if self.test_definition_file().lower().startswith("saga"):
+            if self.definition_file().lower().startswith("saga"):
                 basename = "raster.sdat"
             else:
                 basename = "raster.tif"

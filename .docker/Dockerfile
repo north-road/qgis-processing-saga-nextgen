@@ -11,7 +11,7 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv --system-site-packages $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-COPY ./requirements.txt /tmp/
+COPY ./REQUIREMENTS_TESTING.txt /tmp/
 RUN pip3 install -r /tmp/REQUIREMENTS_TESTING.txt
 
 WORKDIR /

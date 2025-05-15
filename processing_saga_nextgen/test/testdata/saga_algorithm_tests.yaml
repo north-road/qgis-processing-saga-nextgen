@@ -1,6 +1,6 @@
 tests:
 
-  - algorithm: saga:invertgrid
+  - algorithm: sagang:invertraster
     name: Raster tools - Invert grid
     params:
       GRID:
@@ -11,9 +11,10 @@ tests:
         hash:
         - 8e3947b878a00f70ce837fba962f6be6d3f0c8eae2d614099b015f1e
         - 5c37dab356adbd59ceb03d0e77802b43ce0ebaf930885375a5e14872
+        - 86fd4ba62406706eabbf3fe5b80ccfd4a785553a5dd6884b87671847
         type: rasterhash
 
-  - algorithm: saga:fixeddistancebuffer
+  - algorithm: sagang:featuresbuffer
     name: Vector general - Fixed distance buffer (polygon)
     params:
       DARC: 5.0
@@ -29,7 +30,7 @@ tests:
         name: expected/buffer_polys.shp
         type: vector
 
-  - algorithm: saga:addrastervaluestopoints
+  - algorithm: sagang:addrastervaluestopoints
     name: Simple add raster values to points
     params:
       GRIDS:
@@ -50,7 +51,7 @@ tests:
             demtif:
               precision: -1
 
-  - algorithm: saga:addrastervaluestofeatures
+  - algorithm: sagang:addrastervaluestofeatures
     name: Add raster values to shapes
     params:
       GRIDS:
@@ -71,7 +72,7 @@ tests:
             demtif:
               precision: 0
 
-  - algorithm: saga:mergevectorlayers
+  - algorithm: sagang:mergevectorlayers
     name: Merge vector layers
     params:
       INPUT:
@@ -89,7 +90,7 @@ tests:
         type: vector
 
 # Broken on some SAGA versions
-#  - algorithm: saga:reclassifyvaluessimple
+#  - algorithm: sagang:reclassifyvaluessimple
 #    name: Reclassify values (simple)
 #    params:
 #      GRID_IN:
@@ -111,7 +112,7 @@ tests:
 #        hash: 57437ebf7eb3667c5aa390598120967b0a2cd5d85751185bb445d1f8
 #        type: rasterhash
 
-  - algorithm: saga:rastercalculator
+  - algorithm: sagang:rastercalculator
     name: Raster calculator, 1 input
     params:
       FORMULA: a*10
@@ -131,7 +132,7 @@ tests:
         - dbc59273f8c53a3a3d9cd57d3d3aa782905205b5b95acdf4097ecdf9
         type: rasterhash
 
-  - algorithm: saga:rastercalculator
+  - algorithm: sagang:rastercalculator
     name: Raster calculator, 2 inputs
     params:
       FORMULA: a*10+b
@@ -153,7 +154,7 @@ tests:
         - 95619f06b421e0a61e083f5d3e32597958e0135a3a64ef2d6ac8ca6c
         type: rasterhash
 
-  - algorithm: saga:rastercalculator
+  - algorithm: sagang:rastercalculator
     name: Raster calculator, 3 inputs
     params:
       FORMULA: a*10+b-c
@@ -175,7 +176,7 @@ tests:
         hash: a11f159696f5726eedaa16e872fd2582cf8a88c8c1d84d72560e4647
         type: rasterhash
 
-  - algorithm: saga:simplekriging
+  - algorithm: sagang:simplekriging
     name: Simple kriging
     params:
       BLOCK: true
@@ -206,7 +207,7 @@ tests:
         hash: 4f0378da7f0ff16326b6c404a202b004b66dbffcda38f42544a11490
         type: rasterhash
 
-  - algorithm: saga:ordinarykriging
+  - algorithm: sagang:ordinarykriging
     name: Ordinary Kriging
     params:
       BLOCK: true
@@ -237,7 +238,7 @@ tests:
         hash: ec7b708609178533ac2b89cd575140415ef93c70396fa630d1c15b67
         type: rasterhash
 
-  - algorithm: saga:universalkriging
+  - algorithm: sagang:universalkriging
     name: Universal Kriging
     params:
       BLOCK: true
@@ -268,7 +269,7 @@ tests:
         hash: ec7b708609178533ac2b89cd575140415ef93c70396fa630d1c15b67
         type: rasterhash
 
-  - algorithm: saga:polygonupdate
+  - algorithm: sagang:polygonupdate
     name: Polygon update
     params:
       A:
@@ -284,7 +285,7 @@ tests:
         type: vector
         compare: false # results are not stable across different SAGA versions
 
-  - algorithm: saga:polygonunion
+  - algorithm: sagang:polygonunion
     name: Polygon union
     params:
       A:
@@ -300,7 +301,7 @@ tests:
         type: vector
         compare: false # results are not stable across different SAGA versions
 
-  - algorithm: saga:polygonidentity
+  - algorithm: sagang:polygonidentity
     name: Polygon identity
     params:
       A:
@@ -316,7 +317,7 @@ tests:
         type: vector
         compare: false # results are not stable across different SAGA versions
 
-  - algorithm: saga:difference
+  - algorithm: sagang:difference
     name: Polygon difference
     params:
       A:
@@ -333,7 +334,7 @@ tests:
         compare: false # results are not stable across different SAGA versions
 
   # Note - SAGA results are wrong here, so really we are just testing that the algorithm runs. Use the native one instead!
-  - algorithm: saga:symmetricaldifference
+  - algorithm: sagang:symmetricaldifference
     name: Polygon symmetrical difference
     params:
       A:
@@ -349,7 +350,7 @@ tests:
         type: vector
         compare: false # results are not stable across different SAGA versions
 
-  - algorithm: saga:intersect
+  - algorithm: sagang:intersect
     name: Polygon intersect
     params:
       A:
@@ -364,7 +365,7 @@ tests:
         name: expected/polygon_intersect.shp
         type: vector
 
-  - algorithm: saga:polygonselfintersection  #spellok
+  - algorithm: sagang:polygonselfintersection  #spellok
     name: Polygon self intersection
     params:
       POLYGONS:
@@ -378,7 +379,7 @@ tests:
           geometry:
             topo_equal_check: True
 
-  - algorithm: saga:crossprofiles
+  - algorithm: sagang:crossprofiles
     name: Cross profiles
     params:
       DEM:
@@ -396,7 +397,7 @@ tests:
         type: vector
         compare: false # too much variation between saga versions
 
-  - algorithm: saga:snappointstolines
+  - algorithm: sagang:snappointstolines
     name: Snap points to lines
     params:
       DISTANCE: 0.9
@@ -414,7 +415,7 @@ tests:
         name: expected/snap_points_to_lines_result.shp
         type: vector
 
-  - algorithm: saga:snappointstopoints
+  - algorithm: sagang:snappointstopoints
     name: Snap points to points
     params:
       DISTANCE: 0.5
@@ -432,7 +433,7 @@ tests:
         name: expected/snap_points_to_points_result.shp
         type: vector
 
-  - algorithm: saga:interpolatecubicspline
+  - algorithm: sagang:interpolatecubicspline
     name: Cubic spline
     params:
       FIELD: fid
@@ -450,8 +451,8 @@ tests:
         hash: f4ac677152697773262aa1e5f69146a475139014ace77149966ec045
         type: rasterhash
 
-  - algorithm: saga:watershedsegmentation
-    name: Test (saga:watershedsegmentation)
+  - algorithm: sagang:watershedsegmentation
+    name: Test (sagang:watershedsegmentation)
     params:
       'BBORDERS': true
       DOWN: 0
@@ -479,7 +480,7 @@ tests:
         type: rasterhash
 
 # Broken on newer SAGA versions
-#  - algorithm: saga:multilevelbsplineinterpolation
+#  - algorithm: sagang:multilevelbsplineinterpolation
 #    name: Multilevel B Spline Interpolation
 #    params:
 #      EPSILON: 0.0001
@@ -496,7 +497,7 @@ tests:
 #        type: rasterhash
 
 # Broken on newer SAGA versions
-#  - algorithm: saga:multilevelbsplineinterpolationfromraster
+#  - algorithm: sagang:multilevelbsplineinterpolationfromraster
 #    name: Multilevel B Spline Interpolation from Raster
 #    params:
 #      DATATYPE: 0
@@ -514,7 +515,7 @@ tests:
 #        hash: 6f81c858fc7575eaff6258b6e75bf4427d0568d5134837523b730929
 #        type: rasterhash
 
-  - algorithm: saga:pointdistances
+  - algorithm: sagang:pointdistances
     name: Point distances
     params:
       FORMAT: 1
@@ -528,7 +529,7 @@ tests:
         name: expected/point_distances.dbf
         type: vector
 
-  - algorithm: saga:patching
+  - algorithm: sagang:patching
     name: Patching
     params:
       ADDITIONAL:
@@ -545,7 +546,7 @@ tests:
         - 7e78dbfe516c25ba76f2443b2670dab8943376f76dacec9669254535
         type: rasterhash
 
-  - algorithm: saga:rgbcomposite
+  - algorithm: sagang:rgbcomposite
     name: RGB Composite
     params:
       B_GRID:
@@ -582,7 +583,7 @@ tests:
         - 9caba3703fd59f99466c0bf37054826d328d1349cfe03f171655adf6
         type: rasterhash
 
-  - algorithm: saga:zonalrasterstatistics
+  - algorithm: sagang:zonalrasterstatistics
     name: Zonal grid statistics
     params:
       ZONES:
@@ -594,7 +595,7 @@ tests:
         type: vector
         compare: false # results are not stable across different SAGA versions
 
-  - algorithm: saga:resampling
+  - algorithm: sagang:resampling
     name: Resample down
     params:
       INPUT:
@@ -612,7 +613,7 @@ tests:
         - 746dddd24daf093807e1a89dd2fa8b2ffe165a97f64388b26de99db4
         type: rasterhash
 
-  - algorithm: saga:resampling
+  - algorithm: sagang:resampling
     name: Resample up
     params:
       INPUT:
@@ -630,7 +631,7 @@ tests:
         - c3e15725bcee7b4df8a3da0b275291f73eff246873f5e8b2ef407d89
         type: rasterhash
 
-  - algorithm: saga:resamplingfilter
+  - algorithm: sagang:resamplingfilter
     name: Resampling filter
     params:
       GRID:
@@ -649,7 +650,7 @@ tests:
         - 0523c524a29f1944aa3f0e40347f33be70741313068773b8a99beeb2
         type: rasterhash
 
-  - algorithm: saga:fillsinks
+  - algorithm: sagang:fillsinks
     name: Fill sinks (Planchon/Darboux)
     params:
       DEM:
@@ -663,7 +664,7 @@ tests:
         - b91a5d26e540f6804210a1e3800c49ff123936784c658174bbce5642
         type: rasterhash
 
-  - algorithm: saga:fillsinksqmofesp
+  - algorithm: sagang:fillsinksqmofesp
     name: Fill sinks (QM of ESP)
     params:
       DEM:
@@ -682,7 +683,7 @@ tests:
         - eb32907cb99e313fb7adedf42bd34634b5c3eaee842d1839322f1bc2
         type: rasterhash
 
-  - algorithm: saga:fillsinkswangliu
+  - algorithm: sagang:fillsinkswangliu
     name: Fill sinks Wang & Liu
     params:
       ELEV:
@@ -706,7 +707,7 @@ tests:
         - 43f9766cca38f3331cb13ba1f7dc51e8d866da23904845d0d5dd0552
         type: rasterhash
 
-  - algorithm: saga:fillsinksxxlwangliu
+  - algorithm: sagang:fillsinksxxlwangliu
     name: Fill Sinks Wang & Lui XXL
     params:
       ELEV:
@@ -720,7 +721,7 @@ tests:
         - b91a5d26e540f6804210a1e3800c49ff123936784c658174bbce5642
         type: rasterhash
 
-  - algorithm: saga:svmclassification
+  - algorithm: sagang:svmclassification
     name: SVM Classification
     params:
       CACHE_SIZE: 100.0
@@ -761,7 +762,7 @@ tests:
         - 1c4b3628bb3c0f3484c85ee80f06bd7cf9ef8d59be46446b87383ed3
         type: rasterhash
 
-  - algorithm: saga:multipleregressionanalysispointsandpredictorgrids
+  - algorithm: sagang:multipleregressionanalysispointsandpredictorgrids
     name: Multi regression points predictor grids
     params:
       ATTRIBUTE: rvalue_1

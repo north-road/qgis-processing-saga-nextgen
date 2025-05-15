@@ -68,26 +68,6 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         ProcessingConfig.removeSetting(SagaUtils.SAGA_FOLDER)
 
     def loadAlgorithms(self):  # pylint:disable=missing-docstring
-        version = SagaUtils.getInstalledVersion(True)
-        if version is None:
-            QgsMessageLog.logMessage(
-                self.tr(
-                    "Problem with SAGA installation: SAGA was not found or is not correctly installed"
-                ),
-                self.tr("Processing"),
-                Qgis.MessageLevel.Critical,
-            )
-            return
-
-        if version < SagaUtils.REQUIRED_VERSION:
-            QgsMessageLog.logMessage(
-                self.tr(
-                    "Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={})."
-                ).format(version, SagaUtils.REQUIRED_VERSION),
-                self.tr("Processing"),
-                Qgis.MessageLevel.Critical,
-            )
-
         self.algs = []
         folder = SagaUtils.sagaDescriptionPath()
         for descriptionFile in os.listdir(folder):

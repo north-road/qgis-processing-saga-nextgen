@@ -2,6 +2,7 @@ ARG QGIS_TEST_VERSION=latest
 FROM  qgis/qgis:${QGIS_TEST_VERSION}
 
 RUN apt-get update && \
+    apt-get install -y saga && \
     rm -rf /var/lib/apt/lists/*
 
 # Useful only in 3.22 and 3.28: drop when not need anymore

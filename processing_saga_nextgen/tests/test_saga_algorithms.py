@@ -6,7 +6,6 @@ import os
 import shutil
 import tempfile
 
-import nose2
 from qgis.core import (
     QgsProcessingParameterNumber,
     QgsProcessingParameterDefinition,
@@ -142,4 +141,4 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
 
 
 if __name__ == "__main__":
-    nose2.main()
+    unittest.main()

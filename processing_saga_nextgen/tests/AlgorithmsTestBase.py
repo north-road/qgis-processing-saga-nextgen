@@ -10,7 +10,6 @@ import shutil
 import tempfile
 from copy import deepcopy
 
-import nose2
 import yaml
 from numpy import nan_to_num
 from osgeo import gdal
@@ -461,4 +460,4 @@ class GenericAlgorithmsTest(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    nose2.main()
+    unittest.main()

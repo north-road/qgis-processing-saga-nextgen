@@ -112,7 +112,7 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         context.setProject(QgsProject.instance())
 
         alg = QgsApplication.processingRegistry().createAlgorithmById(
-            "sagang:shapesbuffer"
+            "sagang:featuresbuffer"
         )
         self.assertIsNotNone(alg)
 

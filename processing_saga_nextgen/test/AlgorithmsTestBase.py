@@ -96,7 +96,9 @@ class AlgorithmsTest:
 
         print('Running alg: "{}"'.format(defs["algorithm"]))
         alg = QgsApplication.processingRegistry().createAlgorithmById(defs["algorithm"])
-        self.assertIsNotNone(alg, 'Could not find algorithm "{}"'.format(defs["algorithm"]))
+        self.assertIsNotNone(
+            alg, 'Could not find algorithm "{}"'.format(defs["algorithm"])
+        )
 
         parameters = {}
         if isinstance(params, list):

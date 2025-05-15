@@ -48,7 +48,7 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         for path in cls.cleanup_paths:
             shutil.rmtree(path)
 
-    def test_definition_file(self):
+    def definition_file(self):
         return "saga_algorithm_tests.yaml"
 
     def test_is_parameter_line(self):

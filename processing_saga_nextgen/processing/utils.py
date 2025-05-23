@@ -53,7 +53,6 @@ class SagaUtils:
             filename = "saga_batch_job.bat"
         else:
             filename = 'saga_batch_job.sh'
-        
         if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH) != "":
             # explicit output path was set in provider options
             intermediateDir=ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
@@ -61,7 +60,6 @@ class SagaUtils:
         else:
             # default output to userFolder()
             batchfile = os.path.join(userFolder(), filename)
-            
         return batchfile
 
     @staticmethod

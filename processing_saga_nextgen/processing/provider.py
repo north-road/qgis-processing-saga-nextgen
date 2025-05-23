@@ -70,7 +70,6 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
             )
         )
 
-        
         ProcessingConfig.readSettings()
         self.refreshAlgorithms()
         return True

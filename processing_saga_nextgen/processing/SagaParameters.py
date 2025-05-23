@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 ***************************************************************************
     SagaParameters.py
@@ -17,21 +15,10 @@
 ***************************************************************************
 """
 
-__author__ = 'Nyall Dawson'
-__date__ = 'December 2018'
-__copyright__ = '(C) 2018, Nyall Dawson'
-
-# This will get replaced with a git SHA1 when you do a git archive
-
-__revision__ = '$Format:%H$'
-
 import pathlib
 
 from qgis.PyQt.QtCore import QCoreApplication
-from qgis.core import (
-    QgsProcessingParameterRasterDestination,
-    QgsProcessingParameters
-)
+from qgis.core import QgsProcessingParameterRasterDestination, QgsProcessingParameters
 from processing.core.parameters import getParameterFromString
 
 
@@ -47,23 +34,29 @@ class SagaImageOutputParam(QgsProcessingParameterRasterDestination):
     # pylint: disable=missing-docstring
 
     def defaultFileExtension(self):
-        return 'tif'
+        return "tif"
 
     def supportedOutputRasterLayerExtensions(self):
-        return ['tif']
+        return ["tif"]
 
     def clone(self):
         copy = SagaImageOutputParam(self.name(), self.description())
         return copy
 
     def createFileFilter(self):
-        return '{} (*.tif *.TIF)'.format(QCoreApplication.translate("SAGAAlgorithm", 'TIF files'))
+        return "{} (*.tif *.TIF)".format(
+            QCoreApplication.translate("SAGAAlgorithm", "TIF files")
+        )
 
     def isSupportedOutputValue(self, value, context):
-        output_path = QgsProcessingParameters.parameterAsOutputLayer(self, value, context)
-        if pathlib.Path(output_path).suffix.lower() != '.tif':
-            return False, QCoreApplication.translate("SAGAAlgorithm", 'Output filename must use a .tif extension')
-        return True, ''
+        output_path = QgsProcessingParameters.parameterAsOutputLayer(
+            self, value, context
+        )
+        if pathlib.Path(output_path).suffix.lower() != ".tif":
+            return False, QCoreApplication.translate(
+                "SAGAAlgorithm", "Output filename must use a .tif extension"
+            )
+        return True, ""
 
     # pylint: enable=missing-docstring
 
@@ -78,21 +71,28 @@ class Parameters:
         """
         Returns true if the given line corresponds to a SAGA parameter definition
         """
-        return line.startswith('SagaImageOutput') or line.startswith('QgsProcessingParameter') or line.startswith('Parameter') or line.startswith('*QgsProcessingParameter')
+        return (
+            line.startswith("SagaImageOutput")
+            or line.startswith("QgsProcessingParameter")
+            or line.startswith("Parameter")
+            or line.startswith("*QgsProcessingParameter")
+        )
 
     @staticmethod
     def create_parameter_from_line(line):
         """
         Creates a parameter from a definition line.
         """
-        if not line.startswith('SagaImageOutput'):
+        if not line.startswith("SagaImageOutput"):
             return getParameterFromString(line, "SAGAAlgorithm")
         tokens = line.split("|")
         params = [t if str(t) != str(None) else None for t in tokens[1:]]
         if len(params) > 3:
-            params[3] = params[3].lower() == 'true'
+            params[3] = params[3].lower() == "true"
         if len(params) > 4:
-            params[4] = params[4].lower() == 'true'
+            params[4] = params[4].lower() == "true"
         param = SagaImageOutputParam(*params)
-        param.setDescription(QCoreApplication.translate("SAGAAlgorithm", param.description()))
+        param.setDescription(
+            QCoreApplication.translate("SAGAAlgorithm", param.description())
+        )
         return param

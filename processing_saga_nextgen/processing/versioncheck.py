@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 ***************************************************************************
     versioncheck.py
@@ -17,15 +15,6 @@
 ***************************************************************************
 """
 
-__author__ = 'Victor Olaya'
-__date__ = 'December 2014'
-__copyright__ = '(C) 2014, Victor Olaya'
-
-# This will get replaced with a git SHA1 when you do a git archive
-
-__revision__ = '$Format:%H$'
-
-
 import os
 import subprocess
 
@@ -37,24 +26,24 @@ def getAlgParams(f):
     params = []
     booleanparams = []
     numparams = []
-    with open(f, encoding='utf-8') as lines:
-        line = lines.readline().strip('\n').strip()
+    with open(f, encoding="utf-8") as lines:
+        line = lines.readline().strip("\n").strip()
         name = line
-        if '|' in name:
-            tokens = name.split('|')
+        if "|" in name:
+            tokens = name.split("|")
             cmdname = tokens[1]
         else:
             cmdname = name
-        line = lines.readline().strip('\n').strip()
+        line = lines.readline().strip("\n").strip()
         group = line
-        line = lines.readline().strip('\n').strip()
-        while line != '':
-            if line.startswith('Hardcoded'):
+        line = lines.readline().strip("\n").strip()
+        while line != "":
+            if line.startswith("Hardcoded"):
                 pass
-            elif line.startswith('AllowUnmatching'):
+            elif line.startswith("AllowUnmatching"):
                 pass
-            elif line.startswith('Extent'):
-                extentParamNames = line[6:].strip().split(' ')
+            elif line.startswith("Extent"):
+                extentParamNames = line[6:].strip().split(" ")
                 params.extend(["-" + p for p in extentParamNames])
             else:
                 tokens = line.split("|")
@@ -64,7 +53,7 @@ def getAlgParams(f):
                     numparams.append("-" + tokens[1].strip())
                 else:
                     params.append("-" + tokens[1])
-            line = lines.readline().strip('\n').strip()
+            line = lines.readline().strip("\n").strip()
     return cmdname, group, params, booleanparams, numparams
 
 
@@ -74,7 +63,7 @@ def testDescriptionFile(f):
     """
     usage = ""
     cmdname, group, params, booleanparams, numparams = getAlgParams(f)
-    command = [r'd:\saga2.1.2\saga_cmd.exe', group, cmdname]
+    command = [r"d:\saga2.1.2\saga_cmd.exe", group, cmdname]
     for p in params:
         command.append(p)
         command.append("dummy")
@@ -91,7 +80,7 @@ def testDescriptionFile(f):
         universal_newlines=True,
     ).stdout
     lines = []
-    for line in iter(proc.readline, ''):
+    for line in iter(proc.readline, ""):
         lines.append(line)
         if "Usage" in line:
             usage = line
@@ -114,8 +103,8 @@ def testDescriptionFile(f):
         print()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     folder = os.path.join(os.path.dirname(__file__), "description")
     for descriptionFile in os.listdir(folder):
-        if descriptionFile.endswith('txt'):
+        if descriptionFile.endswith("txt"):
             testDescriptionFile(os.path.join(folder, descriptionFile))

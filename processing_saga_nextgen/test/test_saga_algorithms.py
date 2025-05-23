@@ -6,17 +6,18 @@ import os
 import shutil
 import tempfile
 
-import nose2
-from qgis.core import (QgsProcessingParameterNumber,
-                       QgsProcessingParameterDefinition,
-                       QgsVectorLayer,
-                       QgsApplication,
-                       QgsFeature,
-                       QgsGeometry,
-                       QgsPointXY,
-                       QgsProcessingContext,
-                       QgsProject,
-                       QgsProcessingFeedback)
+from qgis.core import (
+    QgsProcessingParameterNumber,
+    QgsProcessingParameterDefinition,
+    QgsVectorLayer,
+    QgsApplication,
+    QgsFeature,
+    QgsGeometry,
+    QgsPointXY,
+    QgsProcessingContext,
+    QgsProject,
+    QgsProcessingFeedback,
+)
 from qgis.testing import start_app, unittest
 
 from .AlgorithmsTestBase import AlgorithmsTest
@@ -47,48 +48,55 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         for path in cls.cleanup_paths:
             shutil.rmtree(path)
 
-    def test_definition_file(self):
-        return 'saga_algorithm_tests.yaml'
+    def definition_file(self):
+        return "saga_algorithm_tests.yaml"
 
     def test_is_parameter_line(self):
         # Test determining whether a line is a parameter line
-        self.assertFalse(Parameters.is_parameter_line(''))
-        self.assertFalse(Parameters.is_parameter_line('xxxxxxxxx'))
-        self.assertTrue(Parameters.is_parameter_line(
-            'QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99'))
-        self.assertTrue(Parameters.is_parameter_line(
-            '*QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99'))
+        self.assertFalse(Parameters.is_parameter_line(""))
+        self.assertFalse(Parameters.is_parameter_line("xxxxxxxxx"))
         self.assertTrue(
-            Parameters.is_parameter_line('SagaImageOutput|RGB|Output RGB'))
+            Parameters.is_parameter_line(
+                "QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99"
+            )
+        )
+        self.assertTrue(
+            Parameters.is_parameter_line(
+                "*QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99"
+            )
+        )
+        self.assertTrue(Parameters.is_parameter_line("SagaImageOutput|RGB|Output RGB"))
 
     def test_param_line(self):
         # Test creating a parameter from a description line
         param = Parameters.create_parameter_from_line(
-            'QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99')
+            "QgsProcessingParameterNumber|R_PERCTL_MIN|Percentiles Range for RED max|QgsProcessingParameterNumber.Integer|1|False|1|99"
+        )
         self.assertIsInstance(param, QgsProcessingParameterNumber)
-        self.assertEqual(param.name(), 'R_PERCTL_MIN')
-        self.assertEqual(param.description(), 'Percentiles Range for RED max')
-        self.assertEqual(param.dataType(),
-                         QgsProcessingParameterNumber.Type.Integer)
+        self.assertEqual(param.name(), "R_PERCTL_MIN")
+        self.assertEqual(param.description(), "Percentiles Range for RED max")
+        self.assertEqual(param.dataType(), QgsProcessingParameterNumber.Type.Integer)
         self.assertFalse(
-            param.flags() & QgsProcessingParameterDefinition.Flag.FlagOptional)
+            param.flags() & QgsProcessingParameterDefinition.Flag.FlagOptional
+        )
         self.assertEqual(param.minimum(), 1)
         self.assertEqual(param.maximum(), 99)
 
         # Test SagaImageOutputParam line
-        param = Parameters.create_parameter_from_line(
-            'SagaImageOutput|RGB|Output RGB')
+        param = Parameters.create_parameter_from_line("SagaImageOutput|RGB|Output RGB")
         self.assertIsInstance(param, SagaImageOutputParam)
-        self.assertEqual(param.name(), 'RGB')
-        self.assertEqual(param.description(), 'Output RGB')
-        self.assertEqual(param.defaultFileExtension(), 'tif')
-        self.assertEqual(param.supportedOutputRasterLayerExtensions(), ['tif'])
+        self.assertEqual(param.name(), "RGB")
+        self.assertEqual(param.description(), "Output RGB")
+        self.assertEqual(param.defaultFileExtension(), "tif")
+        self.assertEqual(param.supportedOutputRasterLayerExtensions(), ["tif"])
 
     def test_non_ascii_output(self):
         # create a memory layer and add to project and context
         layer = QgsVectorLayer(
             "Point?crs=epsg:3857&field=fldtxt:string&field=fldint:integer",
-            "testmem", "memory")
+            "testmem",
+            "memory",
+        )
         self.assertTrue(layer.isValid())
         pr = layer.dataProvider()
         f = QgsFeature()
@@ -104,17 +112,20 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         context.setProject(QgsProject.instance())
 
         alg = QgsApplication.processingRegistry().createAlgorithmById(
-            'sagang:shapesbuffer')
+            "sagang:featuresbuffer"
+        )
         self.assertIsNotNone(alg)
 
-        temp_file = os.path.join(self.temp_dir, 'non_ascii_ñññ.shp')
-        parameters = {'SHAPES': 'testmem',
-                      'DIST_FIELD_DEFAULT': 5,
-                      'NZONES': 1,
-                      'DARC': 5,
-                      'DISSOLVE': False,
-                      'POLY_INNER': False,
-                      'BUFFER': temp_file}
+        temp_file = os.path.join(self.temp_dir, "non_ascii_ñññ.shp")
+        parameters = {
+            "SHAPES": "testmem",
+            "DIST_FIELD_DEFAULT": 5,
+            "NZONES": 1,
+            "DARC": 5,
+            "DISSOLVE": False,
+            "POLY_INNER": False,
+            "BUFFER": temp_file,
+        }
         feedback = QgsProcessingFeedback()
 
         _, ok = alg.run(parameters, context, feedback)
@@ -122,12 +133,12 @@ class TestSagaAlgorithms(unittest.TestCase, AlgorithmsTest):
         self.assertTrue(os.path.exists(temp_file))
 
         # make sure that layer has correct features
-        res = QgsVectorLayer(temp_file, 'res')
+        res = QgsVectorLayer(temp_file, "res")
         self.assertTrue(res.isValid())
         self.assertEqual(res.featureCount(), 2)
 
         QgsProject.instance().removeMapLayer(layer)
 
 
-if __name__ == '__main__':
-    nose2.main()
+if __name__ == "__main__":
+    unittest.main()

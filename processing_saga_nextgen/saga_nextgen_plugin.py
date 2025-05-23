@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """QGIS Processing R Provider
 
 .. note:: This program is free software; you can redistribute it and/or modify
@@ -7,19 +6,13 @@ the Free Software Foundation; either version 2 of the License, or
 (at your option) any later version.
 """
 
-__author__ = '(C) 2018 by Nyall Dawson'
-__date__ = '20/10/2018'
-__copyright__ = 'Copyright 2018, North Road'
-# This will get replaced with a git SHA1 when you do a git archive
-__revision__ = '$Format:%H$'
-
 import os
-from qgis.PyQt.QtCore import (QTranslator,
-                              QCoreApplication)
+from qgis.PyQt.QtCore import QTranslator, QCoreApplication
 from qgis.core import QgsApplication
 from qgis.gui import QgisInterface
 from processing_saga_nextgen.processing.provider import SagaNextGenAlgorithmProvider
-VERSION = '0.0.4'
+
+VERSION = "0.0.4"
 
 
 class SagaNextGenProviderPlugin:
@@ -40,10 +33,7 @@ class SagaNextGenProviderPlugin:
         self.plugin_dir = os.path.dirname(__file__)
         # initialize locale
         locale = QgsApplication.locale()
-        locale_path = os.path.join(
-            self.plugin_dir,
-            'i18n',
-            '{}.qm'.format(locale))
+        locale_path = os.path.join(self.plugin_dir, "i18n", "{}.qm".format(locale))
 
         if os.path.exists(locale_path):
             self.translator = QTranslator()
@@ -65,7 +55,7 @@ class SagaNextGenProviderPlugin:
         :rtype: QString
         """
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
-        return QCoreApplication.translate('SagaNextGenProvider', message)
+        return QCoreApplication.translate("SagaNextGenProvider", message)
 
     def initProcessing(self):
         """Create the Processing provider"""

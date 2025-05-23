@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 ***************************************************************************
     utils.py
@@ -17,14 +15,6 @@
 ***************************************************************************
 """
 
-__author__ = 'Victor Olaya'
-__date__ = 'August 2012'
-__copyright__ = '(C) 2012, Victor Olaya'
-
-# This will get replaced with a git SHA1 when you do a git archive
-
-__revision__ = '$Format:%H$'
-
 import os
 import platform
 import stat
@@ -34,9 +24,7 @@ import time
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.tools.system import isWindows, isMac, userFolder
 from qgis.PyQt.QtCore import QCoreApplication
-from qgis.core import (Qgis,
-                       QgsApplication,
-                       QgsMessageLog)
+from qgis.core import Qgis, QgsApplication, QgsMessageLog
 
 
 class SagaUtils:
@@ -44,13 +32,14 @@ class SagaUtils:
     SAGA processing utilities
     """
 
-    REQUIRED_VERSION = '9.2.'
+    REQUIRED_VERSION = "9.2."
 
-    SAGA_FOLDER = 'SAGA_FOLDER'
-    SAGA_LOG_COMMANDS = 'SAGANG_LOG_COMMANDS'
-    SAGA_LOG_CONSOLE = 'SAGANG_LOG_CONSOLE'
-    SAGA_IMPORT_EXPORT_OPTIMIZATION = 'SAGANG_IMPORT_EXPORT_OPTIMIZATION'
-    SAGA_INTERMEDIATE_OUTPUT_PATH = 'SAGA_INTERMEDIATE_OUTPUT_PATH'
+
+    SAGA_FOLDER = "SAGA_FOLDER"
+    SAGA_LOG_COMMANDS = "SAGANG_LOG_COMMANDS"
+    SAGA_LOG_CONSOLE = "SAGANG_LOG_CONSOLE"
+    SAGA_IMPORT_EXPORT_OPTIMIZATION = "SAGANG_IMPORT_EXPORT_OPTIMIZATION"
+    SAGA_INTERMEDIATE_OUTPUT_PATH = "SAGA_INTERMEDIATE_OUTPUT_PATH"
 
     _installed_version = None
     _installedVersionFound = False
@@ -61,11 +50,11 @@ class SagaUtils:
         Returns the full pathname to use for batch files
         """
         if isWindows():
-            filename = 'saga_batch_job.bat'
+            filename = "saga_batch_job.bat"
         else:
             filename = 'saga_batch_job.sh'
         
-        if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH) != '':
+        if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH) != "":
             # explicit output path was set in provider options
             intermediateDir=ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
             batchfile = os.path.join(intermediateDir, filename)
@@ -81,22 +70,26 @@ class SagaUtils:
         Tries to find the SAGA folder
         """
         folder = None
-        if isMac() or platform.system() == 'FreeBSD':
-            testfolder = os.path.join(QgsApplication.prefixPath(), 'bin')
-            if os.path.exists(os.path.join(testfolder, 'saga_cmd')):
+        if isMac() or platform.system() == "FreeBSD":
+            testfolder = os.path.join(QgsApplication.prefixPath(), "bin")
+            if os.path.exists(os.path.join(testfolder, "saga_cmd")):
                 folder = testfolder
             else:
-                testfolder = '/usr/local/bin'
-                if os.path.exists(os.path.join(testfolder, 'saga_cmd')):
+                testfolder = "/usr/local/bin"
+                if os.path.exists(os.path.join(testfolder, "saga_cmd")):
                     folder = testfolder
         elif isWindows():
             folders = []
-            folders.append(os.path.join(os.path.dirname(QgsApplication.prefixPath()), 'saga'))
+            folders.append(
+                os.path.join(os.path.dirname(QgsApplication.prefixPath()), "saga")
+            )
             if "OSGEO4W_ROOT" in os.environ:
-                folders.append(os.path.join(str(os.environ['OSGEO4W_ROOT']), "apps", "saga"))
+                folders.append(
+                    os.path.join(str(os.environ["OSGEO4W_ROOT"]), "apps", "saga")
+                )
 
             for testfolder in folders:
-                if os.path.exists(os.path.join(testfolder, 'saga_cmd.exe')):
+                if os.path.exists(os.path.join(testfolder, "saga_cmd.exe")):
                     folder = testfolder
                     break
 
@@ -110,40 +103,51 @@ class SagaUtils:
         folder = ProcessingConfig.getSetting(SagaUtils.SAGA_FOLDER)
         if folder and not os.path.isdir(folder):
             folder = None
-            QgsMessageLog.logMessage('Specified SAGA folder does not exist. Will try to find built-in binaries.',
-                                     'Processing', Qgis.MessageLevel.Warning)
+            QgsMessageLog.logMessage(
+                "Specified SAGA folder does not exist. Will try to find built-in binaries.",
+                "Processing",
+                Qgis.MessageLevel.Warning,
+            )
 
         if not folder:
             folder = SagaUtils.findSagaFolder()
 
-        return folder or ''
+        return folder or ""
 
     @staticmethod
     def sagaDescriptionPath():
         """
         Returns the path to the description files
         """
-        return os.path.join(os.path.dirname(__file__), '..', 'description')
+        return os.path.join(os.path.dirname(__file__), "..", "description")
 
     @staticmethod
     def createSagaBatchJobFileFromSagaCommands(commands):
         """
         Creates a batch job file from a list of SAGA commands
         """
-        with open(SagaUtils.sagaBatchJobFilename(), 'w', encoding="utf8") as fout:
+        with open(SagaUtils.sagaBatchJobFilename(), "w", encoding="utf8") as fout:
             if isWindows():
-                fout.write('set SAGA=' + SagaUtils.sagaPath() + '\n')
-                fout.write('set SAGA_MLB=' + os.path.join(SagaUtils.sagaPath(), 'modules') + '\n')
-                fout.write('PATH=%PATH%;%SAGA%;%SAGA_MLB%\n')
-            elif isMac() or platform.system() == 'FreeBSD':
-                fout.write('export SAGA_MLB=' + os.path.join(SagaUtils.sagaPath(), '../lib/saga') + '\n')
-                fout.write('export PATH=' + SagaUtils.sagaPath() + ':$PATH\n')
+                fout.write("set SAGA=" + SagaUtils.sagaPath() + "\n")
+                fout.write(
+                    "set SAGA_MLB="
+                    + os.path.join(SagaUtils.sagaPath(), "modules")
+                    + "\n"
+                )
+                fout.write("PATH=%PATH%;%SAGA%;%SAGA_MLB%\n")
+            elif isMac() or platform.system() == "FreeBSD":
+                fout.write(
+                    "export SAGA_MLB="
+                    + os.path.join(SagaUtils.sagaPath(), "../lib/saga")
+                    + "\n"
+                )
+                fout.write("export PATH=" + SagaUtils.sagaPath() + ":$PATH\n")
             else:
                 pass
             for command in commands:
-                fout.write('saga_cmd ' + command + '\n')
+                fout.write("saga_cmd " + command + "\n")
 
-            fout.write('exit')
+            fout.write("exit")
 
     @staticmethod
     def getInstalledVersion(runSaga=False):
@@ -157,7 +161,7 @@ class SagaUtils:
 
         if isWindows():
             commands = [os.path.join(SagaUtils.sagaPath(), "saga_cmd.exe"), "-v"]
-        elif isMac() or platform.system() == 'FreeBSD':
+        elif isMac() or platform.system() == "FreeBSD":
             commands = [os.path.join(SagaUtils.sagaPath(), "saga_cmd -v")]
         else:
             # for Linux use just one string instead of separated parameters as the list
@@ -166,20 +170,24 @@ class SagaUtils:
             commands = ["saga_cmd -v"]
         while retries < maxRetries:
             with subprocess.Popen(
-                    commands,
-                    shell=True,
-                    stdout=subprocess.PIPE,
-                    stdin=subprocess.DEVNULL,
-                    stderr=subprocess.STDOUT,
-                    universal_newlines=True,
+                commands,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stdin=subprocess.DEVNULL,
+                stderr=subprocess.STDOUT,
+                universal_newlines=True,
             ) as proc:
-                if isMac() or platform.system() == 'FreeBSD':  # This trick avoids having an uninterrupted system call exception if SAGA is not installed
+                if (
+                    isMac() or platform.system() == "FreeBSD"
+                ):  # This trick avoids having an uninterrupted system call exception if SAGA is not installed
                     time.sleep(1)
                 try:
                     lines = proc.stdout.readlines()
                     for line in lines:
                         if line.startswith("SAGA Version:"):
-                            SagaUtils._installed_version = line[len("SAGA Version:"):].strip().split(" ")[0]
+                            SagaUtils._installed_version = (
+                                line[len("SAGA Version:") :].strip().split(" ")[0]
+                            )
                             SagaUtils._installedVersionFound = True
                             return SagaUtils._installed_version
                     return None
@@ -198,36 +206,38 @@ class SagaUtils:
 
         if isWindows():
             safeSagaBatchJobFilename = SagaUtils.make_path_safe(
-                SagaUtils.sagaBatchJobFilename())
-            command = ['cmd.exe', '/C ', safeSagaBatchJobFilename]
-            command = ' '.join(command)
+                SagaUtils.sagaBatchJobFilename()
+            )
+            command = ["cmd.exe", "/C ", safeSagaBatchJobFilename]
+            command = " ".join(command)
         else:
-            os.chmod(SagaUtils.sagaBatchJobFilename(), stat.S_IEXEC |
-                     stat.S_IREAD | stat.S_IWRITE)
+            os.chmod(
+                SagaUtils.sagaBatchJobFilename(),
+                stat.S_IEXEC | stat.S_IREAD | stat.S_IWRITE,
+            )
             command = ["'" + SagaUtils.sagaBatchJobFilename() + "'"]
         loglines = [
-            QCoreApplication.translate('SagaUtils',
-                                               'SAGA execution console output')
+            QCoreApplication.translate("SagaUtils", "SAGA execution console output")
         ]
         with subprocess.Popen(
-                command,
-                shell=True,
-                stdout=subprocess.PIPE,
-                stdin=subprocess.DEVNULL,
-                stderr=subprocess.STDOUT,
-                universal_newlines=True,
+            command,
+            shell=True,
+            stdout=subprocess.PIPE,
+            stdin=subprocess.DEVNULL,
+            stderr=subprocess.STDOUT,
+            universal_newlines=True,
         ) as proc:
             try:
-                for line in iter(proc.stdout.readline, ''):
-                    if '%' in line:
-                        s = ''.join([x for x in line if x.isdigit()])
+                for line in iter(proc.stdout.readline, ""):
+                    if "%" in line:
+                        s = "".join([x for x in line if x.isdigit()])
                         try:
                             feedback.setProgress(int(s))
                         except:  # noqa   # pylint:disable=bare-except
                             pass
                     else:
                         line = line.strip()
-                        if line in ('/', '-', '\\', '|'):
+                        if line in ("/", "-", "\\", "|"):
                             continue
 
                         loglines.append(line)
@@ -236,7 +246,9 @@ class SagaUtils:
                 pass
 
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_CONSOLE):
-            QgsMessageLog.logMessage('\n'.join(loglines), 'Processing', Qgis.MessageLevel.Info)
+            QgsMessageLog.logMessage(
+                "\n".join(loglines), "Processing", Qgis.MessageLevel.Info
+            )
 
     @staticmethod
     def make_path_safe(path: str) -> str:
@@ -244,13 +256,21 @@ class SagaUtils:
         Handle special characters on the path to the batch file for example: & < > ( ) @ ^ |.
         See: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd#remarks
         """
-        return '"' + path.translate(str.maketrans({
-            "&": r"^&",
-            "<": r"^<",
-            ">": r"^>",
-            "(": r"^(",
-            ")": r"^)",
-            "@": r"^@",
-            "^": r"^^",
-            "|": r"^|",
-        })) + '"'
+        return (
+            '"'
+            + path.translate(
+                str.maketrans(
+                    {
+                        "&": r"^&",
+                        "<": r"^<",
+                        ">": r"^>",
+                        "(": r"^(",
+                        ")": r"^)",
+                        "@": r"^@",
+                        "^": r"^^",
+                        "|": r"^|",
+                    }
+                )
+            )
+            + '"'
+        )

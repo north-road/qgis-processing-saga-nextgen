@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 ***************************************************************************
     SplitRGBBands.py
@@ -17,25 +15,20 @@
 ***************************************************************************
 """
 
-__author__ = 'Victor Olaya'
-__date__ = 'August 2012'
-__copyright__ = '(C) 2012, Victor Olaya'
-
-# This will get replaced with a git SHA1 when you do a git archive
-
-__revision__ = '$Format:%H$'
-
 import os
 
 from processing.tools.system import getTempFilename
-from qgis.core import (QgsProcessingParameterRasterLayer,
-                       QgsProcessingParameterRasterDestination)
+from qgis.core import (
+    QgsProcessingParameterRasterLayer,
+    QgsProcessingParameterRasterDestination,
+)
 
 from processing_saga_nextgen.processing.utils import SagaUtils
 from .SagaAlgorithmBase import SagaAlgorithmBase
 
-pluginPath = os.path.normpath(os.path.join(
-    os.path.split(os.path.dirname(__file__))[0], os.pardir))
+pluginPath = os.path.normpath(
+    os.path.join(os.path.split(os.path.dirname(__file__))[0], os.pardir)
+)
 
 
 class SplitRGBBands(SagaAlgorithmBase):
@@ -43,41 +36,54 @@ class SplitRGBBands(SagaAlgorithmBase):
     Split RGB Bands algorithm
     """
 
-    INPUT = 'INPUT'
-    R = 'R'
-    G = 'G'
-    B = 'B'
+    INPUT = "INPUT"
+    R = "R"
+    G = "G"
+    B = "B"
 
     # pylint:disable=missing-function-docstring
 
     def initAlgorithm(self, config=None):  # pylint: disable=unused-argument
-        self.addParameter(QgsProcessingParameterRasterLayer(self.INPUT, self.tr('Input layer')))
+        self.addParameter(
+            QgsProcessingParameterRasterLayer(self.INPUT, self.tr("Input layer"))
+        )
 
-        self.addParameter(QgsProcessingParameterRasterDestination(self.R, self.tr('Output R band layer')))
-        self.addParameter(QgsProcessingParameterRasterDestination(self.G, self.tr('Output G band layer')))
-        self.addParameter(QgsProcessingParameterRasterDestination(self.B, self.tr('Output B band layer')))
+        self.addParameter(
+            QgsProcessingParameterRasterDestination(
+                self.R, self.tr("Output R band layer")
+            )
+        )
+        self.addParameter(
+            QgsProcessingParameterRasterDestination(
+                self.G, self.tr("Output G band layer")
+            )
+        )
+        self.addParameter(
+            QgsProcessingParameterRasterDestination(
+                self.B, self.tr("Output B band layer")
+            )
+        )
 
     def name(self):
-        return 'splitrgbbands'
+        return "splitrgbbands"
 
     def displayName(self):
-        return self.tr('Split RGB bands')
+        return self.tr("Split RGB bands")
 
     def group(self):
-        return self.tr('Raster tools')
+        return self.tr("Raster tools")
 
     def groupId(self):
-        return 'rastertools'
+        return "rastertools"
 
     def processAlgorithm(self, parameters, context, feedback):  # pylint:disable=too-many-locals
         # TODO: check correct num of bands
         inLayer = self.parameterAsRasterLayer(parameters, self.INPUT, context)
         input_file = inLayer.source()
-        temp = getTempFilename(None).replace('.', '')
+        temp = getTempFilename(None).replace(".", "")
         basename = os.path.basename(temp)
-        validChars = \
-            'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-        safeBasename = ''.join(c for c in basename if c in validChars)
+        validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        safeBasename = "".join(c for c in basename if c in validChars)
         temp = os.path.join(os.path.dirname(temp), safeBasename)
 
         r = self.parameterAsOutputLayer(parameters, self.R, context)
@@ -87,14 +93,19 @@ class SplitRGBBands(SagaAlgorithmBase):
         commands = []
         trailing = ""
         lib = ""
-        commands.append('%sio_gdal 0 -GRIDS "%s" -FILES "%s"' % (lib, temp, input_file)
-                        )
-        commands.append('%sio_gdal 1 -GRIDS "%s_%s1.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"' % (lib, temp, trailing, r)
-                        )
-        commands.append('%sio_gdal 1 -GRIDS "%s_%s2.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"' % (lib, temp, trailing, g)
-                        )
-        commands.append('%sio_gdal 1 -GRIDS "%s_%s3.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"' % (lib, temp, trailing, b)
-                        )
+        commands.append('%sio_gdal 0 -GRIDS "%s" -FILES "%s"' % (lib, temp, input_file))
+        commands.append(
+            '%sio_gdal 1 -GRIDS "%s_%s1.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"'
+            % (lib, temp, trailing, r)
+        )
+        commands.append(
+            '%sio_gdal 1 -GRIDS "%s_%s2.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"'
+            % (lib, temp, trailing, g)
+        )
+        commands.append(
+            '%sio_gdal 1 -GRIDS "%s_%s3.sgrd" -FORMAT 1 -TYPE 0 -FILE "%s"'
+            % (lib, temp, trailing, b)
+        )
 
         SagaUtils.createSagaBatchJobFileFromSagaCommands(commands)
         SagaUtils.executeSaga(feedback)

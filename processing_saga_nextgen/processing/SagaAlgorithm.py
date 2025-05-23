@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 ***************************************************************************
     SagaAlgorithm.py
@@ -17,39 +15,33 @@
 ***************************************************************************
 """
 
-__author__ = 'Victor Olaya'
-__date__ = 'August 2012'
-__copyright__ = '(C) 2012, Victor Olaya'
-
-# This will get replaced with a git SHA1 when you do a git archive
-
-__revision__ = '$Format:%H$'
-
 import importlib
 import os
 import shutil
 
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.tools.system import getTempFilename
-from qgis.core import (Qgis,
-                       QgsApplication,
-                       QgsProcessingUtils,
-                       QgsProcessingException,
-                       QgsMessageLog,
-                       QgsProcessing,
-                       QgsProcessingParameterRasterLayer,
-                       QgsProcessingParameterFeatureSource,
-                       QgsProcessingParameterBoolean,
-                       QgsProcessingParameterNumber,
-                       QgsProcessingParameterEnum,
-                       QgsProcessingParameterMultipleLayers,
-                       QgsProcessingParameterMatrix,
-                       QgsProcessingParameterString,
-                       QgsProcessingParameterField,
-                       QgsProcessingParameterFile,
-                       QgsProcessingParameterExtent,
-                       QgsProcessingParameterRasterDestination,
-                       QgsProcessingParameterVectorDestination)
+from qgis.core import (
+    Qgis,
+    QgsApplication,
+    QgsProcessingUtils,
+    QgsProcessingException,
+    QgsMessageLog,
+    QgsProcessing,
+    QgsProcessingParameterRasterLayer,
+    QgsProcessingParameterFeatureSource,
+    QgsProcessingParameterBoolean,
+    QgsProcessingParameterNumber,
+    QgsProcessingParameterEnum,
+    QgsProcessingParameterMultipleLayers,
+    QgsProcessingParameterMatrix,
+    QgsProcessingParameterString,
+    QgsProcessingParameterField,
+    QgsProcessingParameterFile,
+    QgsProcessingParameterExtent,
+    QgsProcessingParameterRasterDestination,
+    QgsProcessingParameterVectorDestination,
+)
 
 from .SagaAlgorithmBase import SagaAlgorithmBase
 from .SagaNameDecorator import decoratedAlgorithmName, decoratedGroupName
@@ -57,8 +49,9 @@ from .SagaParameters import Parameters
 from .utils import SagaUtils
 from ..help import shortHelp
 
-pluginPath = os.path.normpath(os.path.join(
-    os.path.split(os.path.dirname(__file__))[0], os.pardir))
+pluginPath = os.path.normpath(
+    os.path.join(os.path.split(os.path.dirname(__file__))[0], os.pardir)
+)
 
 sessionExportedLayers = {}
 
@@ -68,7 +61,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
     A SAGA algorithm
     """
 
-    OUTPUT_EXTENT = 'OUTPUT_EXTENT'
+    OUTPUT_EXTENT = "OUTPUT_EXTENT"
 
     def __init__(self, descriptionfile):
         super().__init__()
@@ -77,10 +70,10 @@ class SagaAlgorithm(SagaAlgorithmBase):
         self.allow_nonmatching_grid_extents = False
         self.description_file = descriptionfile
         self.undecorated_group = None
-        self._name = ''
-        self._display_name = ''
-        self._group = ''
-        self._groupId = ''
+        self._name = ""
+        self._display_name = ""
+        self._group = ""
+        self._groupId = ""
         self.params = []
         self.known_issues = False
         self.defineCharacteristicsFromFile()
@@ -122,11 +115,11 @@ class SagaAlgorithm(SagaAlgorithmBase):
         Defines algorithm parameters from file
         """
         with open(self.description_file, encoding="utf-8") as lines:
-            line = lines.readline().strip('\n').strip()
+            line = lines.readline().strip("\n").strip()
 
             self._name = line
-            if '|' in self._name:
-                tokens = self._name.split('|')
+            if "|" in self._name:
+                tokens = self._name.split("|")
                 self._name = tokens[0]
                 # cmdname is the name of the algorithm in SAGA, that is, the name to use to call it in the console
                 self.cmdname = tokens[1]
@@ -138,47 +131,52 @@ class SagaAlgorithm(SagaAlgorithmBase):
             self._display_name = self.tr(str(self._name))
 
             self._name = self._name.lower()
-            validChars = \
-                'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:'
-            self._name = ''.join(c for c in self._name if c in validChars)
+            validChars = (
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:"
+            )
+            self._name = "".join(c for c in self._name if c in validChars)
 
-            line = lines.readline().strip('\n').strip()
-            if line == '##known_issues':
+            line = lines.readline().strip("\n").strip()
+            if line == "##known_issues":
                 self.known_issues = True
-                line = lines.readline().strip('\n').strip()
+                line = lines.readline().strip("\n").strip()
 
             self.undecorated_group = line
             self._group = self.tr(decoratedGroupName(self.undecorated_group))
 
-            validChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:'
+            validChars = (
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:"
+            )
             grpName = decoratedGroupName(self.undecorated_group).lower()
-            self._groupId = ''.join(c for c in grpName if c in validChars)
-            line = lines.readline().strip('\n').strip()
-            while line != '':
-                if line.startswith('Hardcoded'):
-                    self.hardcoded_strings.append(line[len('Hardcoded|'):])
+            self._groupId = "".join(c for c in grpName if c in validChars)
+            line = lines.readline().strip("\n").strip()
+            while line != "":
+                if line.startswith("Hardcoded"):
+                    self.hardcoded_strings.append(line[len("Hardcoded|") :])
                 elif Parameters.is_parameter_line(line):
                     self.params.append(Parameters.create_parameter_from_line(line))
-                elif line.startswith('AllowUnmatching'):
+                elif line.startswith("AllowUnmatching"):
                     self.allow_nonmatching_grid_extents = True
                 else:
                     pass  # TODO
                     # self.addOutput(getOutputFromString(line))
-                line = lines.readline().strip('\n').strip()
+                line = lines.readline().strip("\n").strip()
 
     def processAlgorithm(self, parameters, context, feedback):  # pylint: disable=missing-docstring,too-many-statements,too-many-branches,too-many-locals
-
         version = SagaUtils.getInstalledVersion(True)
         if version is None:
             raise QgsProcessingException(
                 self.tr(
-                    'Problem with SAGA installation: SAGA was not found or is not correctly installed'))
+                    "Problem with SAGA installation: SAGA was not found or is not correctly installed"
+                )
+            )
 
         if version < SagaUtils.REQUIRED_VERSION:
             feedback.reportError(
                 self.tr(
-                    'Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={}).').format(
-                    version, SagaUtils.REQUIRED_VERSION))
+                    "Problem with SAGA installation: unsupported SAGA version (found: {}, required: >={})."
+                ).format(version, SagaUtils.REQUIRED_VERSION)
+            )
 
         commands = []
         self.exportedLayers = {}
@@ -194,22 +192,32 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     continue
 
                 if isinstance(parameters[param.name()], str):
-                    if parameters[param.name()].lower().endswith('sdat'):
-                        self.exportedLayers[param.name()] = parameters[param.name()][:-4] + 'sgrd'
-                    elif parameters[param.name()].lower().endswith('sgrd'):
+                    if parameters[param.name()].lower().endswith("sdat"):
+                        self.exportedLayers[param.name()] = (
+                            parameters[param.name()][:-4] + "sgrd"
+                        )
+                    elif parameters[param.name()].lower().endswith("sgrd"):
                         self.exportedLayers[param.name()] = parameters[param.name()]
                     else:
-                        layer = self.parameterAsRasterLayer(parameters, param.name(), context)
+                        layer = self.parameterAsRasterLayer(
+                            parameters, param.name(), context
+                        )
                         exportCommand = self.exportRasterLayer(param.name(), layer)
                         if exportCommand is not None:
                             commands.append(exportCommand)
                 else:
-                    if parameters[param.name()].source().lower().endswith('sdat'):
-                        self.exportedLayers[param.name()] = parameters[param.name()].source()[:-4] + 'sgrd'
-                    if parameters[param.name()].source().lower().endswith('sgrd'):
-                        self.exportedLayers[param.name()] = parameters[param.name()].source()
+                    if parameters[param.name()].source().lower().endswith("sdat"):
+                        self.exportedLayers[param.name()] = (
+                            parameters[param.name()].source()[:-4] + "sgrd"
+                        )
+                    if parameters[param.name()].source().lower().endswith("sgrd"):
+                        self.exportedLayers[param.name()] = parameters[
+                            param.name()
+                        ].source()
                     else:
-                        exportCommand = self.exportRasterLayer(param.name(), parameters[param.name()])
+                        exportCommand = self.exportRasterLayer(
+                            param.name(), parameters[param.name()]
+                        )
                         if exportCommand is not None:
                             commands.append(exportCommand)
             elif isinstance(param, QgsProcessingParameterFeatureSource):
@@ -219,17 +227,19 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 if not crs:
                     source = self.parameterAsSource(parameters, param.name(), context)
                     if source is None:
-                        raise QgsProcessingException(self.invalidSourceError(parameters, param.name()))
+                        raise QgsProcessingException(
+                            self.invalidSourceError(parameters, param.name())
+                        )
 
                     crs = source.sourceCrs()
 
-                layer_path = self.parameterAsCompatibleSourceLayerPath(parameters, param.name(), context, ['shp'],
-                                                                       'shp', feedback=feedback)
+                layer_path = self.parameterAsCompatibleSourceLayerPath(
+                    parameters, param.name(), context, ["shp"], "shp", feedback=feedback
+                )
                 if layer_path:
                     self.exportedLayers[param.name()] = layer_path
                 else:
-                    raise QgsProcessingException(
-                        self.tr('Unsupported file format'))
+                    raise QgsProcessingException(self.tr("Unsupported file format"))
             elif isinstance(param, QgsProcessingParameterMultipleLayers):
                 if param.name() not in parameters or parameters[param.name()] is None:
                     continue
@@ -240,9 +250,9 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 if param.layerType() == QgsProcessing.SourceType.TypeRaster:
                     files = []
                     for i, layer in enumerate(layers):
-                        if layer.source().lower().endswith('sdat'):
-                            files.append(layer.source()[:-4] + 'sgrd')
-                        elif layer.source().lower().endswith('sgrd'):
+                        if layer.source().lower().endswith("sdat"):
+                            files.append(layer.source()[:-4] + "sgrd")
+                        elif layer.source().lower().endswith("sgrd"):
                             files.append(layer.source())
                         else:
                             exportCommand = self.exportRasterLayer(param.name(), layer)
@@ -255,15 +265,24 @@ class SagaAlgorithm(SagaAlgorithmBase):
                     for layer in layers:
                         temp_params = {param.name(): layer}
                         if not crs:
-                            source = self.parameterAsSource(temp_params, param.name(), context)
+                            source = self.parameterAsSource(
+                                temp_params, param.name(), context
+                            )
                             if source is None:
-                                raise QgsProcessingException(self.invalidSourceError(parameters, param.name()))
+                                raise QgsProcessingException(
+                                    self.invalidSourceError(parameters, param.name())
+                                )
 
                             crs = source.sourceCrs()
 
-                        layer_path = self.parameterAsCompatibleSourceLayerPath(temp_params, param.name(), context,
-                                                                               ['shp'], 'shp',
-                                                                               feedback=feedback)
+                        layer_path = self.parameterAsCompatibleSourceLayerPath(
+                            temp_params,
+                            param.name(),
+                            context,
+                            ["shp"],
+                            "shp",
+                            feedback=feedback,
+                        )
                         if layer_path:
                             if param.name() in self.exportedLayers:
                                 self.exportedLayers[param.name()].append(layer_path)
@@ -271,11 +290,12 @@ class SagaAlgorithm(SagaAlgorithmBase):
                                 self.exportedLayers[param.name()] = [layer_path]
                         else:
                             raise QgsProcessingException(
-                                self.tr('Unsupported file format'))
+                                self.tr("Unsupported file format")
+                            )
 
         # 2: Set parameters and outputs
         command = self.undecorated_group + ' "' + self.cmdname + '"'
-        command += ' ' + ' '.join(self.hardcoded_strings)
+        command += " " + " ".join(self.hardcoded_strings)
 
         for param in self.parameterDefinitions():
             if param.name() not in parameters or parameters[param.name()] is None:
@@ -283,23 +303,35 @@ class SagaAlgorithm(SagaAlgorithmBase):
             if param.isDestination():
                 continue
 
-            if isinstance(param, (QgsProcessingParameterRasterLayer, QgsProcessingParameterFeatureSource)):
-                command += ' -{} "{}"'.format(param.name(), self.exportedLayers[param.name()])
+            if isinstance(
+                param,
+                (
+                    QgsProcessingParameterRasterLayer,
+                    QgsProcessingParameterFeatureSource,
+                ),
+            ):
+                command += ' -{} "{}"'.format(
+                    param.name(), self.exportedLayers[param.name()]
+                )
             elif isinstance(param, QgsProcessingParameterMultipleLayers):
                 if parameters[param.name()]:  # parameter may have been an empty list
-                    command += ' -{} "{}"'.format(param.name(), ';'.join(self.exportedLayers[param.name()]))
+                    command += ' -{} "{}"'.format(
+                        param.name(), ";".join(self.exportedLayers[param.name()])
+                    )
             elif isinstance(param, QgsProcessingParameterBoolean):
                 if self.parameterAsBoolean(parameters, param.name(), context):
-                    command += ' -{} true'.format(param.name().strip())
+                    command += " -{} true".format(param.name().strip())
                 else:
-                    command += ' -{} false'.format(param.name().strip())
+                    command += " -{} false".format(param.name().strip())
             elif isinstance(param, QgsProcessingParameterMatrix):
-                tempTableFile = getTempFilename('txt')
-                with open(tempTableFile, 'w', encoding='utf-8') as f:
-                    f.write('\t'.join(param.headers()) + '\n')
+                tempTableFile = getTempFilename("txt")
+                with open(tempTableFile, "w", encoding="utf-8") as f:
+                    f.write("\t".join(param.headers()) + "\n")
                     values = self.parameterAsMatrix(parameters, param.name(), context)
                     for i in range(0, len(values), 3):
-                        s = '{}\t{}\t{}\n'.format(values[i], values[i + 1], values[i + 2])
+                        s = "{}\t{}\t{}\n".format(
+                            values[i], values[i + 1], values[i + 2]
+                        )
                         f.write(s)
                 command += ' -{} "{}"'.format(param.name(), tempTableFile)
             elif isinstance(param, QgsProcessingParameterExtent):
@@ -317,18 +349,39 @@ class SagaAlgorithm(SagaAlgorithmBase):
                 ]
 
                 for i in range(4):
-                    command += ' -{} {}'.format(param.name().split(' ')[i], float(values[i]) + offset[i])
+                    command += " -{} {}".format(
+                        param.name().split(" ")[i], float(values[i]) + offset[i]
+                    )
             elif isinstance(param, QgsProcessingParameterNumber):
                 if param.dataType() == QgsProcessingParameterNumber.Type.Integer:
-                    command += ' -{} {}'.format(param.name(), self.parameterAsInt(parameters, param.name(), context))
+                    command += " -{} {}".format(
+                        param.name(),
+                        self.parameterAsInt(parameters, param.name(), context),
+                    )
                 else:
-                    command += ' -{} {}'.format(param.name(), self.parameterAsDouble(parameters, param.name(), context))
+                    command += " -{} {}".format(
+                        param.name(),
+                        self.parameterAsDouble(parameters, param.name(), context),
+                    )
             elif isinstance(param, QgsProcessingParameterEnum):
-                command += ' -{} {}'.format(param.name(), self.parameterAsEnum(parameters, param.name(), context))
-            elif isinstance(param, (QgsProcessingParameterString, QgsProcessingParameterFile)):
-                command += ' -{} "{}"'.format(param.name(), self.parameterAsFile(parameters, param.name(), context))
-            elif isinstance(param, (QgsProcessingParameterString, QgsProcessingParameterField)):
-                command += ' -{} "{}"'.format(param.name(), self.parameterAsString(parameters, param.name(), context))
+                command += " -{} {}".format(
+                    param.name(),
+                    self.parameterAsEnum(parameters, param.name(), context),
+                )
+            elif isinstance(
+                param, (QgsProcessingParameterString, QgsProcessingParameterFile)
+            ):
+                command += ' -{} "{}"'.format(
+                    param.name(),
+                    self.parameterAsFile(parameters, param.name(), context),
+                )
+            elif isinstance(
+                param, (QgsProcessingParameterString, QgsProcessingParameterField)
+            ):
+                command += ' -{} "{}"'.format(
+                    param.name(),
+                    self.parameterAsString(parameters, param.name(), context),
+                )
 
         output_layers = []
         output_files = {}
@@ -336,13 +389,21 @@ class SagaAlgorithm(SagaAlgorithmBase):
         output_files_nonascii = {}
         for out in self.destinationParameterDefinitions():
             filePath = self.parameterAsOutputLayer(parameters, out.name(), context)
-            if isinstance(out, (QgsProcessingParameterRasterDestination, QgsProcessingParameterVectorDestination)):
+            if isinstance(
+                out,
+                (
+                    QgsProcessingParameterRasterDestination,
+                    QgsProcessingParameterVectorDestination,
+                ),
+            ):
                 output_layers.append(filePath)
                 try:
-                    filePath.encode('ascii')
+                    filePath.encode("ascii")
                 except UnicodeEncodeError:
                     nonAsciiFilePath = filePath
-                    filePath = QgsProcessingUtils.generateTempFilename(out.name() + os.path.splitext(filePath)[1])
+                    filePath = QgsProcessingUtils.generateTempFilename(
+                        out.name() + os.path.splitext(filePath)[1]
+                    )
                     output_files_nonascii[filePath] = nonAsciiFilePath
 
             output_files[out.name()] = filePath
@@ -351,28 +412,36 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
         # special treatment for RGB algorithm
         # TODO: improve this and put this code somewhere else
-        if self.cmdname == 'RGB Composite':
+        if self.cmdname == "RGB Composite":
             for out in self.destinationParameterDefinitions():
                 if isinstance(out, QgsProcessingParameterRasterDestination):
-                    filename = self.parameterAsOutputLayer(parameters, out.name(), context)
-                    filename2 = os.path.splitext(filename)[0] + '.sgrd'
-                    commands.append('io_grid_image 0 -COLOURING 4 -GRID:"{}" -FILE:"{}"'.format(filename2, filename))
+                    filename = self.parameterAsOutputLayer(
+                        parameters, out.name(), context
+                    )
+                    filename2 = os.path.splitext(filename)[0] + ".sgrd"
+                    commands.append(
+                        'io_grid_image 0 -COLOURING 4 -GRID:"{}" -FILE:"{}"'.format(
+                            filename2, filename
+                        )
+                    )
 
         # 3: Run SAGA
         commands = self.editCommands(commands)
         SagaUtils.createSagaBatchJobFileFromSagaCommands(commands)
-        loglines = [self.tr('SAGA execution commands')]
+        loglines = [self.tr("SAGA execution commands")]
         for line in commands:
             feedback.pushCommandInfo(line)
             loglines.append(line)
         if ProcessingConfig.getSetting(SagaUtils.SAGA_LOG_COMMANDS):
-            QgsMessageLog.logMessage('\n'.join(loglines), self.tr('Processing'), Qgis.MessageLevel.Info)
+            QgsMessageLog.logMessage(
+                "\n".join(loglines), self.tr("Processing"), Qgis.MessageLevel.Info
+            )
         SagaUtils.executeSaga(feedback)
 
         if crs is not None:
             for out in output_layers:
-                prjFile = os.path.splitext(out)[0] + '.prj'
-                with open(prjFile, 'wt', encoding='utf-8') as f:
+                prjFile = os.path.splitext(out)[0] + ".prj"
+                with open(prjFile, "wt", encoding="utf-8") as f:
                     f.write(crs.toWkt())
 
         for old, new in output_files_nonascii.items():
@@ -396,13 +465,13 @@ class SagaAlgorithm(SagaAlgorithmBase):
         """
         Preprocesses inputs
         """
-        name = self.name().replace('.', '_')
+        name = self.name().replace(".", "_")
         try:
-            module = importlib.import_module('processing_saga_nextgen.ext.' + name)
+            module = importlib.import_module("processing_saga_nextgen.ext." + name)
         except ImportError:
             return
-        if hasattr(module, 'preProcessInputs'):
-            func = getattr(module, 'preProcessInputs')
+        if hasattr(module, "preProcessInputs"):
+            func = getattr(module, "preProcessInputs")
             func(self)
 
     def editCommands(self, commands):
@@ -410,11 +479,13 @@ class SagaAlgorithm(SagaAlgorithmBase):
         Generates edit commands
         """
         try:
-            module = importlib.import_module('processing_saga_nextgen.ext.' + self.name())
+            module = importlib.import_module(
+                "processing_saga_nextgen.ext." + self.name()
+            )
         except ImportError:
             return commands
-        if hasattr(module, 'editCommands'):
-            func = getattr(module, 'editCommands')
+        if hasattr(module, "editCommands"):
+            func = getattr(module, "editCommands")
             return func(commands)
 
         return commands
@@ -428,7 +499,7 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
         cellsize = 0
         for param in self.parameterDefinitions():
-            if param.name() in parameters and param.name() == 'USER_SIZE':
+            if param.name() in parameters and param.name() == "USER_SIZE":
                 cellsize = self.parameterAsDouble(parameters, param.name(), context)
                 break
         return cellsize
@@ -451,17 +522,19 @@ class SagaAlgorithm(SagaAlgorithmBase):
         else:
             filename = os.path.basename(layer.source())
 
-        validChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:'
-        filename = ''.join(c for c in filename if c in validChars)
+        validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:"
+        filename = "".join(c for c in filename if c in validChars)
 
         if len(filename) == 0:
-            filename = 'layer'
+            filename = "layer"
 
-        destFilename = QgsProcessingUtils.generateTempFilename(filename + '.sgrd')
+        destFilename = QgsProcessingUtils.generateTempFilename(filename + ".sgrd")
         sessionExportedLayers[layer.source()] = destFilename
         self.exportedLayers[parameterName] = destFilename
 
-        return 'io_gdal 0 -TRANSFORM 1 -RESAMPLING 3 -GRIDS "{}" -FILES "{}"'.format(destFilename, layer.source())
+        return 'io_gdal 0 -TRANSFORM 1 -RESAMPLING 3 -GRIDS "{}" -FILES "{}"'.format(
+            destFilename, layer.source()
+        )
 
     def checkParameterValues(self, parameters, context):  # pylint: disable=missing-docstring
         """
@@ -476,8 +549,10 @@ class SagaAlgorithm(SagaAlgorithmBase):
 
             if isinstance(param, QgsProcessingParameterRasterLayer):
                 raster_layer_params.append(param.name())
-            elif isinstance(param,
-                            QgsProcessingParameterMultipleLayers) and param.layerType() == QgsProcessing.SourceType.TypeRaster:
+            elif (
+                isinstance(param, QgsProcessingParameterMultipleLayers)
+                and param.layerType() == QgsProcessing.SourceType.TypeRaster
+            ):
                 raster_layer_params.extend(param.name())
 
         for layer_param in raster_layer_params:
@@ -486,13 +561,17 @@ class SagaAlgorithm(SagaAlgorithmBase):
             if layer is None:
                 continue
             if layer.bandCount() > 1:
-                return False, self.tr('Input layer {0} has more than one band.\n'
-                                      'Multiband layers are not supported by SAGA').format(layer.name())
+                return False, self.tr(
+                    "Input layer {0} has more than one band.\n"
+                    "Multiband layers are not supported by SAGA"
+                ).format(layer.name())
             if not self.allow_nonmatching_grid_extents:
                 if extent is None:
                     extent = (layer.extent(), layer.height(), layer.width())
                 else:
                     extent2 = (layer.extent(), layer.height(), layer.width())
                     if extent != extent2:
-                        return False, self.tr("Input layers do not have the same grid extent.")
+                        return False, self.tr(
+                            "Input layers do not have the same grid extent."
+                        )
         return super().checkParameterValues(parameters, context)

@@ -18,5 +18,4 @@ class UtilTests(TestCase):
         """
         path = r"C:\Users\fclementi\AppData\Roaming\QGIS\QGIS3\profiles\new(profile)\processing\saga_batch_job.bat"
         expected = r'"C:\Users\fclementi\AppData\Roaming\QGIS\QGIS3\profiles\new^(profile^)\processing\saga_batch_job.bat"'
-        self.assertEqual(expected,
-                         SagaUtils.make_path_safe(path))
+        self.assertEqual(expected, SagaUtils.make_path_safe(path))

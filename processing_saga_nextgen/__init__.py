@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 /***************************************************************************
  *                                                                         *
@@ -20,4 +19,5 @@ def classFactory(iface):  # pylint: disable=invalid-name
     """
     #
     from .saga_nextgen_plugin import SagaNextGenProviderPlugin  # pylint:disable=import-outside-toplevel
+
     return SagaNextGenProviderPlugin(iface)

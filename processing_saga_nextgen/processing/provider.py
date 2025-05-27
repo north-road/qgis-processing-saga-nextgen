@@ -25,6 +25,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
 
     def load(self):  # pylint:disable=missing-docstring
         ProcessingConfig.settingIcons["SAGANG"] = self.icon()
+
         ProcessingConfig.addSetting(
             Setting(
                 "SAGANG",
@@ -58,6 +59,17 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
                 True,
             )
         )
+
+        ProcessingConfig.addSetting(
+            Setting(
+                "SAGANG",
+                SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH,
+                self.tr('Intermediate output path'),
+                '',
+                valuetype=Setting.FOLDER
+            )
+        )
+
         ProcessingConfig.readSettings()
         self.refreshAlgorithms()
         return True
@@ -66,6 +78,7 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_CONSOLE)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_LOG_COMMANDS)
         ProcessingConfig.removeSetting(SagaUtils.SAGA_FOLDER)
+        ProcessingConfig.removeSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
 
     def loadAlgorithms(self):  # pylint:disable=missing-docstring
         self.algs = []

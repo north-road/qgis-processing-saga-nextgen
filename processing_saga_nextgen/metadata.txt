@@ -9,14 +9,21 @@
 [general]
 name=Processing Saga NextGen Provider
 qgisMinimumVersion=3.22
-description=A Processing provider for SAGA 9.1
+description=A Processing provider for modern SAGA releases
 version=1.0.0
 author=North Road
 email=nyall@north-road.com
 
 supportsQt6=yes
 
-about=Processing provider for SAGA 9.1. Requires manual installation of SAGA 9.1 binaries.
+about=<p>Processing provider for SAGA 9.2 and above. Requires manual installation of SAGA binaries.</p>
+    <p>Since QGIS 3.30 SAGA tools are no included in the standard QGIS installation. In order to use SAGA
+    tools in QGIS you need to install this plugin first, and then manually install SAGA 9.2.0 (or later).</p>
+    <p>To install SAGA visit: <a href="https://sourceforge.net/projects/saga-gis/files/SAGA%20-%209/">https://sourceforge.net/projects/saga-gis/files/SAGA%20-%209/</a>.
+    This plugin is tested on SAGA 9.2 only. It may work for more recent releases.</p>
+    <p>After downloading SAGA, unzip the folder. Then in QGIS go to
+    Settings -> Options -> Processing -> Providers -> SAGANG and point the SAGA folder to your unzipped folder
+    containing the SAGA binaries.</p>
 
 tracker=https://github.com/north-road/qgis-processing-saga-nextgen/issues
 repository=https://github.com/north-road/qgis-processing-saga-nextgen
@@ -35,7 +42,7 @@ changelog=1.0.0 Target SAGA 9.1+. Allow running with older SAGA, but show warnin
     0.0.1 Initial release
 
 # Tags are comma separated with spaces allowed
-tags=python,processing
+tags=python,processing,saga
 
 homepage=https://github.com/north-road/qgis-processing-saga-nextgen
 category=Plugins

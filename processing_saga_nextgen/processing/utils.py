@@ -53,7 +53,7 @@ class SagaUtils:
             filename = "saga_batch_job.bat"
         else:
             filename = 'saga_batch_job.sh'
-        if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH) != "":
+        if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH):
             # explicit output path was set in provider options
             intermediateDir=ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
             batchfile = os.path.join(intermediateDir, filename)

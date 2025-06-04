@@ -20,9 +20,10 @@ import platform
 import stat
 import subprocess
 import time
+import tempfile
 
 from processing.core.ProcessingConfig import ProcessingConfig
-from processing.tools.system import isWindows, isMac, userFolder
+from processing.tools.system import isWindows, isMac, userFolder, mkdir
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import Qgis, QgsApplication, QgsMessageLog
 
@@ -56,7 +57,16 @@ class SagaUtils:
         if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH):
             # explicit output path was set in provider options
             intermediateDir=ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
-            batchfile = os.path.join(intermediateDir, filename)
+            try:
+                # create path if needed
+                mkdir(intermediateDir)
+                with tempfile.NamedTemporaryFile(dir=intermediateDir) as f: # pylint:disable=unused-variable
+                    # temp file will be opened and closed
+                    # we know the path is writable, so use it
+                    batchfile = os.path.join(intermediateDir, filename)
+            except: # pylint:disable=bare-except
+                # cannot write to specified directory, use default
+                batchfile = os.path.join(userFolder(), filename)
         else:
             # default output to userFolder()
             batchfile = os.path.join(userFolder(), filename)

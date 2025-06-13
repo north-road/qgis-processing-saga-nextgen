@@ -22,8 +22,10 @@ import subprocess
 import time
 import tempfile
 
+from pathlib import Path
+
 from processing.core.ProcessingConfig import ProcessingConfig
-from processing.tools.system import isWindows, isMac, userFolder, mkdir
+from processing.tools.system import isWindows, isMac, userFolder
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import Qgis, QgsApplication, QgsMessageLog
 
@@ -59,10 +61,11 @@ class SagaUtils:
             intermediateDir=ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
             try:
                 # create path if needed
-                mkdir(intermediateDir)
+                p = Path(intermediateDir)
+                p.mkdir(parents=True, exist_ok=True)
                 with tempfile.NamedTemporaryFile(dir=intermediateDir) as f: # pylint:disable=unused-variable
-                    # temp file will be opened and closed
-                    # we know the path is writable, so use it
+                    # temp file will be opened and closed, this throws an exception if it fails for some reason (e.g. missing permissions)
+                    # we thus know the path is writable now, so use it
                     batchfile = os.path.join(intermediateDir, filename)
             except: # pylint:disable=bare-except
                 # cannot write to specified directory, use default

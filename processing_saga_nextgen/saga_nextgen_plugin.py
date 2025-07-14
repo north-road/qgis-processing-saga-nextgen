@@ -12,8 +12,6 @@ from qgis.core import QgsApplication
 from qgis.gui import QgisInterface
 from processing_saga_nextgen.processing.provider import SagaNextGenAlgorithmProvider
 
-VERSION = "0.0.4"
-
 
 class SagaNextGenProviderPlugin:
     """QGIS Plugin Implementation."""

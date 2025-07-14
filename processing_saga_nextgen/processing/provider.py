@@ -64,9 +64,9 @@ class SagaNextGenAlgorithmProvider(QgsProcessingProvider):
             Setting(
                 "SAGANG",
                 SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH,
-                self.tr('Intermediate output path'),
-                '',
-                valuetype=Setting.FOLDER
+                self.tr("Intermediate output path"),
+                "",
+                valuetype=Setting.FOLDER,
             )
         )
 

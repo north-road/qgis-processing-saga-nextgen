@@ -20,6 +20,9 @@ import platform
 import stat
 import subprocess
 import time
+import tempfile
+
+from pathlib import Path
 
 from processing.core.ProcessingConfig import ProcessingConfig
 from processing.tools.system import isWindows, isMac, userFolder
@@ -34,10 +37,12 @@ class SagaUtils:
 
     REQUIRED_VERSION = "9.2."
 
+
     SAGA_FOLDER = "SAGA_FOLDER"
     SAGA_LOG_COMMANDS = "SAGANG_LOG_COMMANDS"
     SAGA_LOG_CONSOLE = "SAGANG_LOG_CONSOLE"
     SAGA_IMPORT_EXPORT_OPTIMIZATION = "SAGANG_IMPORT_EXPORT_OPTIMIZATION"
+    SAGA_INTERMEDIATE_OUTPUT_PATH = "SAGA_INTERMEDIATE_OUTPUT_PATH"
 
     _installed_version = None
     _installedVersionFound = False
@@ -45,15 +50,29 @@ class SagaUtils:
     @staticmethod
     def sagaBatchJobFilename():
         """
-        Returns the filename to use for batch files
+        Returns the full pathname to use for batch files
         """
         if isWindows():
             filename = "saga_batch_job.bat"
         else:
-            filename = "saga_batch_job.sh"
-
-        batchfile = os.path.join(userFolder(), filename)
-
+            filename = 'saga_batch_job.sh'
+        if ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH):
+            # explicit output path was set in provider options
+            intermediateDir=ProcessingConfig.getSetting(SagaUtils.SAGA_INTERMEDIATE_OUTPUT_PATH)
+            try:
+                # create path if needed
+                p = Path(intermediateDir)
+                p.mkdir(parents=True, exist_ok=True)
+                with tempfile.NamedTemporaryFile(dir=intermediateDir) as f: # pylint:disable=unused-variable
+                    # temp file will be opened and closed, this throws an exception if it fails for some reason (e.g. missing permissions)
+                    # we thus know the path is writable now, so use it
+                    batchfile = os.path.join(intermediateDir, filename)
+            except: # pylint:disable=bare-except
+                # cannot write to specified directory, use default
+                batchfile = os.path.join(userFolder(), filename)
+        else:
+            # default output to userFolder()
+            batchfile = os.path.join(userFolder(), filename)
         return batchfile
 
     @staticmethod
